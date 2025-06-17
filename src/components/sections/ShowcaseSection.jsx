@@ -75,8 +75,8 @@ gsap.registerPlugin(ScrollTrigger);
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
-              <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+              <div className="image-wrapper p-0 rounded-2xl bg-[#FFE7EB]">
+              <video autoPlay className=" object-fill object-center w-full rounded-2xl h-full" muted loop src="https://res.cloudinary.com/dkbusg4bq/video/upload/v1750162165/flux_video_kbpeex.mp4"></video>
               </div>
               <h2>YC Directory - A Startup Showcase App</h2>
             </div>

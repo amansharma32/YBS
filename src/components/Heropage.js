@@ -1,12 +1,29 @@
+ "use client"
 import { words } from '@/constants/page'
 import React from 'react'
 import Heromodel from './Heromodel'
-
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
  
 
 export default function Heropage() {
 
+useGSAP(()=>{
+    gsap.fromTo('.hero-text .p-anime',
 
+        {
+y:50,
+opacity:0
+        },
+        {
+y:0,
+opacity:1,
+stagger:0.2,
+duration:1,
+ease:'power2.inOut'
+        }
+    )
+})
 
 
     return (
@@ -25,7 +42,7 @@ export default function Heropage() {
                     <header className=' flex flex-col justify-center md:w-full w-screen px-5 md:px-20'>
                         <div className="flex  flex-col gap-7">
                             <div className="hero-text">
-                                <p className=''> Shaping
+                                <p className='p-anime'> Shaping
 
                                     <span className=' slide'>
                                         <span className=' wrapper'>
@@ -43,9 +60,9 @@ export default function Heropage() {
                                     </span>
 
                                 </p>
-                                <p>Into Real Projects</p>
-                                <p> That Deliver Results</p>
-                                <p className=' text-white-50 relative  z-10 md:text-lg  pointer-events-none'> Hi,  We are Flux Digital, a agency based in india with passion for all web services. </p>
+                                <p className='p-anime'>Into Real Projects</p>
+                                <p className='p-anime'> That Deliver Results</p>
+                                <p className=' py-5 text-white-50 relative  z-10 md:text-lg  pointer-events-none'> Hi,  We are Flux Digital, a agency based in india <br /> with passion for all web services. </p>
 
 
  

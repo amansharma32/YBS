@@ -1,9 +1,11 @@
  "use client"
 import { words } from '@/constants/page'
 import React from 'react'
-import Heromodel from './Heromodel'
+import Heromodel from './sections/Heromodel'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { AppShowcase } from './sections/ShowcaseSection'
+import { AnimatedCounter } from './sections/AnimatedCounter'
  
 
 export default function Heropage() {
@@ -86,9 +88,15 @@ ease:'power2.inOut'
                     </figure>
 
                 </div>
+<AnimatedCounter/>
 
             </section>
 
+
+            <AppShowcase/>
+
+            
+            
         </>
     )
 }

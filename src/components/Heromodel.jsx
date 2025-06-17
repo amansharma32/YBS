@@ -5,18 +5,19 @@ import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { Room } from './Room'
+import HeroLight from './HeroLight'
+import Particles from './Particles'
 
 export default function Heromodel() {
   const isTablet = useMediaQuery({ query: '(max-width : 1024px)' })
   const isMobile = useMediaQuery({ query: '(max-width : 768px)' })
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-black">
+    <div className="w-full h-full flex items-center justify-center bg-black">
       <Canvas camera={{ position: [0, 0, 15], fov: 45 }} className="w-full h-full">
         {/* Lights */}
-        <ambientLight intensity={0.3} color="#ffffff" />
-        <directionalLight position={[5, 5, 5]} intensity={4} />
-
+      
+     
         {/* Controls */}
         <OrbitControls
           enablePan={false}
@@ -26,7 +27,8 @@ export default function Heromodel() {
           minPolarAngle={Math.PI / 5}
           maxPolarAngle={Math.PI / 2}
         />
-
+<HeroLight/>
+<Particles count={100} />
         {/* Room Model */}
         <group
           scale={isMobile ? 0.7 : isTablet ? 0.85 : 1}
@@ -34,6 +36,7 @@ export default function Heromodel() {
           rotation={[0, -Math.PI / 4, 0]}
         >
           <Room />
+
         </group>
       </Canvas>
     </div>

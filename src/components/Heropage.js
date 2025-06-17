@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { AppShowcase } from './sections/ShowcaseSection'
 import { AnimatedCounter } from './sections/AnimatedCounter'
+import LogoShowcase from './sections/LogoShowcase'
  
 
 export default function Heropage() {
@@ -95,7 +96,8 @@ ease:'power2.inOut'
 
             <AppShowcase/>
 
-            
+<LogoShowcase/>
+
             
         </>
     )

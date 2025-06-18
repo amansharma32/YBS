@@ -25,10 +25,13 @@ const NavBar = () => {
   }, []);
 
   return (
+
+
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
-        <div href="#hero" className="logo    flex justify-center items-center">
-         <img src="/flux.webp" alt="flux digital agency" className=" w-full  h-20   " />
+
+        <div href="#hero" className="logo  flex justify-center items-center">
+         <img src="/flux.webp" alt="flux digital agency" className=" w-full    h-16  " />
         </div>
 
         <nav className="desktop">
@@ -49,6 +52,8 @@ const NavBar = () => {
             <span>Contact me</span>
           </div>
         </a>
+
+
       </div>
     </header>
   );

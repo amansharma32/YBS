@@ -7,6 +7,8 @@ import gsap from 'gsap'
 import { AppShowcase } from './sections/ShowcaseSection'
 import { AnimatedCounter } from './sections/AnimatedCounter'
 import LogoShowcase from './sections/LogoShowcase'
+import FeatureCards from './sections/FeatureCards'
+import Experience from './sections/Experience'
  
 
 export default function Heropage() {
@@ -98,6 +100,9 @@ ease:'power2.inOut'
 
 <LogoShowcase/>
 
+<FeatureCards/>
+
+<Experience/>
             
         </>
     )

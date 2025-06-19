@@ -12,6 +12,7 @@ import Experience from './sections/Experience'
 import TechStack from './sections/TechStack'
 import Testimonials from './sections/Testimonials'
 import Contact from './sections/Contact'
+import ThunderStroam from './sections/ThunderStroam'
 
 
 export default function Heropage() {
@@ -38,7 +39,7 @@ export default function Heropage() {
 
         <>
 
-
+ <ThunderStroam>
             <section id='hero' className=' relative overflow-hidden'>
 
                 <div className="absolute top-0 left-0 z-10">
@@ -97,7 +98,10 @@ export default function Heropage() {
                 <AnimatedCounter />
 
             </section>
+            
+      
 
+    
 
             <AppShowcase />
 
@@ -113,6 +117,8 @@ export default function Heropage() {
             <Testimonials/>
             
             <Contact/>
+
+        </ThunderStroam>
 
             {/* <SpaceXTrajectory/> */}
 

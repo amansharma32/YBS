@@ -15,6 +15,17 @@ body {
   font-family: "Mona Sans", sans-serif;
 }
 
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('/fonts/my1.ttf') format('truetype');
+ 
+  font-display: swap;
+ 
+}
+
+ 
+
 section {
   width: 100dvw;
 }

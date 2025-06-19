@@ -50,7 +50,7 @@ export default function Heropage() {
                     <header className=' flex flex-col justify-center md:w-full w-screen px-5 md:px-20'>
                         <div className="flex  flex-col gap-7">
                             <div className="hero-text">
-                                <p className='p-anime'> Shaping
+                                <p className=' MyFont p-anime'> Shaping
 
                                     <span className=' slide'>
                                         <span className=' wrapper'>

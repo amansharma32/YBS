@@ -4,39 +4,30 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 
-// GSAP will be loaded via script tags.
-// For production builds, consider installing via npm and importing:
-// import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 /**
- * A reusable layout component that provides a fixed, scroll-animated thunderstorm background.
+ * A reusable layout component that provides a fixed, scroll-animated "Digital Nervous System" background.
  * @param {object} props
  * @param {React.ReactNode} props.children - The content to be rendered on top of the background.
  */
 export default function ThunderStormLayout({ children }) {
     const canvasRef = useRef(null);
-    const contentRef = useRef(null); // Ref for the main scrollable content
+    const contentRef = useRef(null);
 
     useEffect(() => {
         if (!canvasRef.current) return;
 
-        // --- Store references for cleanup ---
         let renderer, animationFrameId;
         const scene = new THREE.Scene();
-        const cleanupGsap = []; // Array to store GSAP triggers for cleanup
+        const cleanupGsap = [];
 
-        // This function contains all the logic that depends on GSAP
         const initAnimation = () => {
             const gsap = window.gsap;
             const ScrollTrigger = window.ScrollTrigger;
             gsap.registerPlugin(ScrollTrigger);
 
-            // --- SCROLL ANIMATION ---
-            // The main timeline now triggers based on the content wrapper
             const mainTimeline = gsap.timeline({
                 scrollTrigger: {
-                    trigger: contentRef.current, // Use the ref to the content wrapper
+                    trigger: contentRef.current,
                     start: "top top",
                     end: "bottom bottom",
                     scrub: 1.5,
@@ -44,32 +35,29 @@ export default function ThunderStormLayout({ children }) {
             });
 
             mainTimeline
-                .to(camera.position, { x: 0, y: 0, z: 25 }, 'start')
+                .to(camera.position, { x: 0, y: 0, z: 35 }, 'start') // Adjusted Z for better view
                 .to(camera.rotation, { x: 0, y: 0, z: 0 }, 'start')
-                .to(camera.position, { x: -20, y: 10, z: 15 }, 'middle')
-                .to(camera.rotation, { x: -0.2, y: -0.5, z: 0 }, 'middle')
-                .to(camera.position, { x: 0, y: -15, z: 20 }, 'end')
-                .to(camera.rotation, { x: 0.4, y: 0.1, z: 0 }, 'end');
+                .to(camera.position, { x: 25, y: 15, z: 25 }, 'middle')
+                .to(camera.rotation, { x: -0.1, y: 0.5, z: 0 }, 'middle')
+                .to(camera.position, { x: -10, y: -15, z: 30 }, 'end')
+                .to(camera.rotation, { x: 0.4, y: -0.2, z: 0 }, 'end');
 
             cleanupGsap.push(mainTimeline.scrollTrigger);
 
-            // --- DYNAMIC LIGHTNING TRIGGERS ---
-            // Find all elements with the class '.lightning-trigger' within the content
             const lightningTriggerElements = gsap.utils.toArray('.lightning-trigger');
             lightningTriggerElements.forEach(el => {
                 const trigger = ScrollTrigger.create({
                     trigger: el,
                     start: "top center",
-                    onEnter: () => { for (let i = 0; i < 8; i++) setTimeout(createLightning, Math.random() * 700); },
-                    onEnterBack: () => { for (let i = 0; i < 4; i++) setTimeout(createLightning, Math.random() * 700); }
+                    onEnter: () => { for (let i = 0; i < 5; i++) setTimeout(createLightning, Math.random() * 400); },
+                    onEnterBack: () => { for (let i = 0; i < 2; i++) setTimeout(createLightning, Math.random() * 400); }
                 });
-                cleanupGsap.push(trigger); // Add to cleanup array
+                cleanupGsap.push(trigger);
             });
         };
 
-        // --- CORE SETUP ---
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.z = 50;
+        camera.position.z = 60; // Start further back to see the whole structure
 
         renderer = new THREE.WebGLRenderer({
             canvas: canvasRef.current,
@@ -79,64 +67,89 @@ export default function ThunderStormLayout({ children }) {
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-        // --- POST-PROCESSING ---
         const composer = new EffectComposer(renderer);
         composer.addPass(new RenderPass(scene, camera));
-        const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.2, 0.1, 0.1);
+        const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.0, 0.1, 0.1);
         composer.addPass(bloomPass);
 
-        // --- LIGHTING ---
         scene.add(new THREE.AmbientLight(0x4040ff, 0.2));
         const flashLight = new THREE.PointLight(0xeeeeff, 0, 500, 2);
         flashLight.position.set(0, 0, 30);
         scene.add(flashLight);
 
-        // --- OBJECT CREATION (Nodes) ---
+        // --- OBJECT CREATION (Nervous System / Star Shape) ---
         const nodesGeometry = new THREE.BufferGeometry();
-        const nodesCount = 500;
+        const nodesCount = 1000; // More points for a more defined shape
         const posArray = new Float32Array(nodesCount * 3);
-        for (let i = 0; i < nodesCount * 3; i++) {
-            const r = Math.random() * 80;
+        
+        const coreSize = 100; // Number of points in the central core
+        const numBranches = 20;
+        const pointsPerBranch = Math.floor((nodesCount - coreSize) / numBranches);
+        const branchLength = 60;
+        let currentIndex = 0;
+
+        // Create the central core (a small, dense sphere)
+        for (let i = 0; i < coreSize; i++) {
+            const r = Math.random() * 4;
             const theta = Math.random() * Math.PI * 2;
             const phi = Math.acos(2 * Math.random() - 1);
-            posArray[i * 3 + 0] = r * Math.sin(phi) * Math.cos(theta);
-            posArray[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
-            posArray[i * 3 + 2] = r * Math.cos(phi);
+            posArray[currentIndex * 3 + 0] = r * Math.sin(phi) * Math.cos(theta);
+            posArray[currentIndex * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+            posArray[currentIndex * 3 + 2] = r * Math.cos(phi);
+            currentIndex++;
         }
+
+        // Create the branches radiating outwards
+        for (let i = 0; i < numBranches; i++) {
+            const branchVector = new THREE.Vector3().setFromSphericalCoords(
+                1, // radius of 1 to get a direction
+                Math.acos(2 * Math.random() - 1),
+                Math.random() * Math.PI * 2
+            );
+
+            for (let j = 0; j < pointsPerBranch; j++) {
+                if (currentIndex >= nodesCount) break;
+                const distance = (Math.random() * 0.75 + 0.25) * branchLength; // Random distance along branch
+                const point = branchVector.clone().multiplyScalar(distance);
+                
+                // Add jitter to make it look more organic
+                point.add(new THREE.Vector3(
+                    (Math.random() - 0.5) * 6,
+                    (Math.random() - 0.5) * 6,
+                    (Math.random() - 0.5) * 6
+                ));
+
+                posArray[currentIndex * 3 + 0] = point.x;
+                posArray[currentIndex * 3 + 1] = point.y;
+                posArray[currentIndex * 3 + 2] = point.z;
+                currentIndex++;
+            }
+        }
+        
         nodesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-        const nodesMaterial = new THREE.PointsMaterial({ size: 0.15, color: 0xa8b2ff, transparent: true, opacity: 0.8, blending: THREE.AdditiveBlending });
+        const nodesMaterial = new THREE.PointsMaterial({ size: 0.1, color: 0xa8b2ff, transparent: true, opacity: 0.7, blending: THREE.AdditiveBlending });
         const nodes = new THREE.Points(nodesGeometry, nodesMaterial);
         scene.add(nodes);
 
         const nodePositions = nodes.geometry.attributes.position.array;
 
-        // --- OBJECT CREATION (Clouds) ---
-        const cloudParticles = [];
-        const cloudLoader = new THREE.TextureLoader();
-        cloudLoader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAABaklEQVR42u3SMQoCMRCE0f//aZo2Q4gqIAjBiNk2d6L/v86HwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzD8J5fL5TJ5n89nsfP5XN7O5/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/M8z/P8/B8wDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMPwF/cDAAD//wMAANs4fgF5AAAAAElFTkSuQmCC', (texture) => {
-            const cloudGeo = new THREE.PlaneGeometry(100, 100);
-            const cloudMaterial = new THREE.MeshLambertMaterial({ map: texture, transparent: true, opacity: 0.04, blending: THREE.AdditiveBlending, depthWrite: false, color: 0x303070 });
-            for (let p = 0; p < 5; p++) {
-                const cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
-                cloud.position.set((Math.random() - 0.5) * 200, (Math.random() - 0.5) * 200, -p * 50);
-                cloud.rotation.set(Math.random() * Math.PI * 2, Math.random() * Math.PI * 2, Math.random() * Math.PI * 2);
-                scene.add(cloud);
-                cloudParticles.push(cloud);
-            }
-        });
-        
-        // --- LIGHTNING CREATION ---
+        // --- LIGHTNING CREATION (Reflex Arc) ---
         let lightningBolts = [];
         const createLightning = () => {
-            // Function remains largely the same
             if (!nodePositions || nodePositions.length === 0) return;
-            const startIndex = Math.floor(Math.random() * nodesCount) * 3;
-            const endIndex = Math.floor(Math.random() * nodesCount) * 3;
+            
+            // **MODIFIED**: Pick a start from a branch and an end from the core.
+            const branchPointsCount = nodesCount - coreSize;
+            const startNodeIndex = coreSize + Math.floor(Math.random() * branchPointsCount);
+            const endNodeIndex = Math.floor(Math.random() * coreSize);
+
+            const startIndex = startNodeIndex * 3;
+            const endIndex = endNodeIndex * 3;
+            
             const startPoint = new THREE.Vector3(nodePositions[startIndex], nodePositions[startIndex + 1], nodePositions[startIndex + 2]);
             const endPoint = new THREE.Vector3(nodePositions[endIndex], nodePositions[endIndex + 1], nodePositions[endIndex + 2]);
 
-            if (startPoint.distanceTo(endPoint) > 60) return;
-
+            // Create a path between the two points
             const points = [startPoint];
             let currentPoint = startPoint.clone();
             const direction = endPoint.clone().sub(startPoint).normalize();
@@ -145,38 +158,41 @@ export default function ThunderStormLayout({ children }) {
 
             while (currentPoint.distanceTo(startPoint) < distance) {
                 currentPoint.add(direction.clone().multiplyScalar(segmentLength));
-                currentPoint.add(new THREE.Vector3((Math.random() - 0.5) * 4, (Math.random() - 0.5) * 4, (Math.random() - 0.5) * 4));
+                // **MODIFIED**: Reduced random offset for a straighter, more signal-like path
+                const randomOffset = new THREE.Vector3((Math.random() - 0.5) * 2, (Math.random() - 0.5) * 2, (Math.random() - 0.5) * 2);
+                currentPoint.add(randomOffset);
                 points.push(currentPoint.clone());
             }
             points.push(endPoint);
 
-            const bolt = new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, linewidth: 2 }));
+            // **MODIFIED**: Thinner, whiter line for a cleaner look
+            const geometry = new THREE.BufferGeometry().setFromPoints(points);
+            const material = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, linewidth: 1.5, opacity: 0.8 });
+            const bolt = new THREE.Line(geometry, material);
             scene.add(bolt);
             lightningBolts.push(bolt);
 
             if (window.gsap) {
-                window.gsap.to(bolt.material, { opacity: 0, duration: 0.8, delay: 0.2, onComplete: () => {
+                window.gsap.to(material, { opacity: 0, duration: 0.5, delay: 0.1, onComplete: () => {
                     scene.remove(bolt);
                     bolt.geometry.dispose();
                     bolt.material.dispose();
                     lightningBolts = lightningBolts.filter(b => b !== bolt);
                 }});
-                window.gsap.to(flashLight, { intensity: 1, duration: 0.1, yoyo: true, repeat: 1 });
+                window.gsap.to(flashLight, { intensity: 0.8, duration: 0.05, yoyo: true, repeat: 1 });
             }
         };
 
-        // --- RENDER LOOP ---
         const clock = new THREE.Clock();
         const animate = () => {
-            nodes.rotation.y = clock.getElapsedTime() * 0.02;
-            cloudParticles.forEach(p => { p.rotation.z += 0.001; });
-            if (Math.random() > 0.995) createLightning();
+            nodes.rotation.y = clock.getElapsedTime() * 0.03;
+            nodes.rotation.x = clock.getElapsedTime() * 0.01;
+            if (Math.random() > 0.992) createLightning();
             composer.render();
             animationFrameId = requestAnimationFrame(animate);
         };
         animate();
 
-        // --- RESIZE HANDLER ---
         const handleResize = () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
@@ -186,7 +202,6 @@ export default function ThunderStormLayout({ children }) {
         };
         window.addEventListener('resize', handleResize);
 
-        // --- DYNAMICALLY LOAD GSAP AND INITIALIZE ANIMATIONS ---
         const gsapScript = document.createElement('script');
         gsapScript.src = "https://unpkg.com/gsap@3.12.4/dist/gsap.min.js";
         gsapScript.async = true;
@@ -199,12 +214,11 @@ export default function ThunderStormLayout({ children }) {
             scrollTriggerScript.onload = initAnimation;
         };
 
-        // --- CLEANUP ---
         return () => {
+            // Comprehensive cleanup
             window.removeEventListener('resize', handleResize);
             cancelAnimationFrame(animationFrameId);
-            cleanupGsap.forEach(st => st.kill()); // Kill all created ScrollTriggers
-            
+            cleanupGsap.forEach(st => st.kill());
             scene.traverse(object => {
                 if (object.geometry) object.geometry.dispose();
                 if (object.material) {
@@ -216,17 +230,12 @@ export default function ThunderStormLayout({ children }) {
                 }
             });
             if(renderer) renderer.dispose();
-            document.body.removeChild(gsapScript);
-            // It's harder to reliably remove the second script, but this is often sufficient
         };
     }, []);
 
     return (
         <div>
-            {/* The canvas is fixed to the background */}
             <canvas ref={canvasRef} className="fixed top-0 left-0   outline-none" />
-
-            {/* The content is rendered here. It's positioned relatively to scroll over the canvas. */}
             <div ref={contentRef} className="relative z-0">
                 {children}
             </div>

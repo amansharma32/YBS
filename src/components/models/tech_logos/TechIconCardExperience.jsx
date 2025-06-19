@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import * as THREE from "three";
 
 const TechIconCardExperience = ({ model }) => {
+    
     const scene = useGLTF(model.modelPath);
 
     useEffect(() => {

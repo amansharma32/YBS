@@ -1,94 +1,149 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import TitleHeader from "./TitleHeader";
-import TechIconCardExperience from "../models/tech_logos/TechIconCardExperience";
-import { techStackIcons } from "@/constants/page";
+'use client';
+
+import { Canvas } from '@react-three/fiber';
+import { Environment, Float, OrbitControls, useGLTF } from '@react-three/drei';
+import { useEffect, Suspense } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import * as THREE from 'three';
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+// --- Data for our 3D models ---
+// Using the file names from the error message to ensure consistency.
+const techIcons = [
+  {
+    name: 'React Developer',
+    modelPath: '/models/react_logo-transformed.glb',
+    scale: 1,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: 'Python Developer',
+    modelPath: '/models/python-transformed.glb',
+    scale: 0.8,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: 'Backend Developer',
+    modelPath: '/models/node-transformed.glb',
+    scale: 5,
+    rotation: [0, -Math.PI / 2, 0],
+  },
+  {
+    name: 'Interactive Developer',
+    modelPath: '/models/three.js-transformed.glb',
+    scale: 0.05,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: 'Project Manager',
+    modelPath: '/models/git-svg-transformed.glb',
+    scale: 0.05,
+    rotation: [0, -Math.PI / 4, 0],
+  },
+];
+
+// --- Reusable Components ---
+
+// Simple title header
+const TitleHeader = ({ title, sub }) => (
+  <div className="text-center mb-10">
+    <h2 className="text-3xl font-bold">{title}</h2>
+    <p className="text-lg text-gray-500">{sub}</p>
+  </div>
+);
+
+// A single 3D model component with lighting and controls
+const ModelViewer = ({ modelPath, scale, rotation, onLoaded }) => {
+  const { scene } = useGLTF(modelPath);
+
+  useEffect(() => {
+    // This effect ensures any custom logic (like changing materials) runs after the model loads.
+    // Example: Applying a white material to a specific part of the Three.js model.
+    if (modelPath.includes('three.js')) {
+      scene.traverse((child) => {
+        if (child.isMesh && child.name === 'Object_5') {
+          child.material = new THREE.MeshStandardMaterial({ color: 'white' });
+        }
+      });
+    }
+  }, [scene, modelPath]);
+
+  return (
+    <group scale={scale} rotation={rotation}>
+      <primitive object={scene} />
+    </group>
+  );
+};
+
+// --- Main TechStack Component ---
 
 const TechStack = () => {
-  // Animate the tech cards in the skills section
+  // Animate cards on scroll
   useGSAP(() => {
-    // This animation is triggered when the user scrolls to the #skills wrapper
-    // The animation starts when the top of the wrapper is at the center of the screen
-    // The animation is staggered, meaning each card will animate in sequence
-    // The animation ease is set to "power2.inOut", which is a slow-in fast-out ease
     gsap.fromTo(
-      ".tech-card",
+      '.tech-card',
+      { y: 50, opacity: 0 },
       {
-        // Initial values
-        y: 50, // Move the cards down by 50px
-        opacity: 0, // Set the opacity to 0
-      },
-      {
-        // Final values
-        y: 0, // Move the cards back to the top
-        opacity: 1, // Set the opacity to 1
-        duration: 1, // Duration of the animation
-        ease: "power2.inOut", // Ease of the animation
-        stagger: 0.2, // Stagger the animation by 0.2 seconds
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.out',
+        stagger: 0.2,
         scrollTrigger: {
-          trigger: "#skills", // Trigger the animation when the user scrolls to the #skills wrapper
-          start: "top center", // Start the animation when the top of the wrapper is at the center of the screen
+          trigger: '#skills',
+          start: 'top 80%', // Start animation when the top of the section is 80% from the top of the viewport
         },
       }
     );
-  });
+  }, []);
+
+  // Preload all models for a smoother experience
+  useEffect(() => {
+    techIcons.forEach((tech) => {
+      useGLTF.preload(tech.modelPath);
+    });
+  }, []);
 
   return (
-    <div id="skills" className="flex-center section-padding">
-      <div className="w-full h-full md:px-10 px-5">
+    <section id="skills" className="flex justify-center items-center py-16 md:py-24">
+      <div className="w-full max-w-6xl mx-auto md:px-10 px-5">
         <TitleHeader
           title="How I Can Contribute & My Key Skills"
           sub="🤝 What I Bring to the Table"
         />
-        <div className="tech-grid">
-          {/* Loop through the techStackIcons array and create a component for each item. 
-              The key is set to the name of the tech stack icon, and the classnames are set to 
-              card-border, tech-card, overflow-hidden, and group. The xl:rounded-full and rounded-lg 
-              classes are only applied on larger screens. */}
-          {techStackIcons.map((techStackIcon) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {techIcons.map((tech) => (
             <div
-              key={techStackIcon.name}
-              className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
+              key={tech.name}
+              className="tech-card card-border group overflow-hidden rounded-xl shadow-lg  "
             >
-              {/* The tech-card-animated-bg div is used to create a background animation when the 
-                  component is hovered. */}
-              <div className="tech-card-animated-bg" />
-              <div className="tech-card-content">
-                {/* The tech-icon-wrapper div contains the TechIconCardExperience component, 
-                    which renders the 3D model of the tech stack icon. */}
-                <div className="tech-icon-wrapper">
-                  <TechIconCardExperience model={techStackIcon} />
-                </div>
-                {/* The padding-x and w-full classes are used to add horizontal padding to the 
-                    text and make it take up the full width of the component. */}
-                <div className="padding-x w-full">
-                  {/* The p tag contains the name of the tech stack icon. */}
-                  <p>{techStackIcon.name}</p>
-                </div>
+              <div className="h-60 w-full cursor-grab active:cursor-grabbing">
+                <Canvas>
+                  <ambientLight intensity={0.5} />
+                  <directionalLight position={[5, 5, 5]} intensity={1.2} />
+                  <Environment preset="city" />
+                  
+                  <Suspense fallback={null}>
+                    <Float speed={2} rotationIntensity={0.5} floatIntensity={0.8}>
+                      <ModelViewer {...tech} />
+                    </Float>
+                  </Suspense>
+
+                  <OrbitControls enableZoom={false} />
+                </Canvas>
+              </div>
+              <div className="text-center p-4  ">
+                <p className="font-medium text-white">{tech.name}</p>
               </div>
             </div>
           ))}
-
-          {/* This is for the img part */}
-          {/* {techStackImgs.map((techStackIcon, index) => (
-            <div
-              key={index}
-              className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
-            >
-              <div className="tech-card-animated-bg" />
-              <div className="tech-card-content">
-                <div className="tech-icon-wrapper">
-                  <img src={techStackIcon.imgPath} alt="" />
-                </div>
-                <div className="padding-x w-full">
-                  <p>{techStackIcon.name}</p>
-                </div>
-              </div>
-            </div>
-          ))} */}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -10,6 +10,8 @@ import LogoShowcase from './sections/LogoShowcase'
 import FeatureCards from './sections/FeatureCards'
 import Experience from './sections/Experience'
 import TechStack from './sections/TechStack'
+import Testimonials from './sections/Testimonials'
+import Contact from './sections/Contact'
 
 
 export default function Heropage() {
@@ -107,6 +109,10 @@ export default function Heropage() {
 
 
             <TechStack />
+
+            <Testimonials/>
+            
+            <Contact/>
 
             {/* <SpaceXTrajectory/> */}
 

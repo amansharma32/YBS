@@ -15,10 +15,7 @@ export default function Heromodel() {
   return (
     <div className="w-full h-full flex items-center justify-center bg-black">
       <Canvas camera={{ position: [0, 0, 15], fov: 45 }} className="w-full h-full">
-        {/* Lights */}
-      
-     
-        {/* Controls */}
+        
         <OrbitControls
           enablePan={false}
           enableZoom={!isTablet}

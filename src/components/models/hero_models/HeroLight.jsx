@@ -25,6 +25,7 @@ color="#4cc9f0"
   />
 
 
+
   <spotLight
    position={[-3,5,5]}
 intensity={60}

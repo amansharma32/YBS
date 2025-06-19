@@ -1,4 +1,4 @@
- "use client"
+"use client"
 import { words } from '@/constants/page'
 import React from 'react'
 import Heromodel from './sections/Heromodel'
@@ -9,26 +9,27 @@ import { AnimatedCounter } from './sections/AnimatedCounter'
 import LogoShowcase from './sections/LogoShowcase'
 import FeatureCards from './sections/FeatureCards'
 import Experience from './sections/Experience'
- 
+import TechStack from './sections/TechStack'
+
 
 export default function Heropage() {
 
-useGSAP(()=>{
-    gsap.fromTo('.hero-text .p-anime',
+    useGSAP(() => {
+        gsap.fromTo('.hero-text .p-anime',
 
-        {
-y:50,
-opacity:0
-        },
-        {
-y:0,
-opacity:1,
-stagger:0.2,
-duration:1,
-ease:'power2.inOut'
-        }
-    )
-})
+            {
+                y: 50,
+                opacity: 0
+            },
+            {
+                y: 0,
+                opacity: 1,
+                stagger: 0.2,
+                duration: 1,
+                ease: 'power2.inOut'
+            }
+        )
+    })
 
 
     return (
@@ -54,7 +55,7 @@ ease:'power2.inOut'
                                             {words.map((word) => (
 
                                                 <span key={word.key} className=' flex items-center md:gap-3 gap-1 pb-2'>
-                                                
+
                                                     <img src={word.imgPath} alt={word.text} className=' xl:size-12 size-7 md:p-2 p-1 rounded-full  bg-white-50 ' />
 
                                                     <span> {word.text} </span>
@@ -70,8 +71,8 @@ ease:'power2.inOut'
                                 <p className=' py-5 text-white-50 relative  z-10 md:text-lg  pointer-events-none'> Hi,  We are Flux Digital, a agency based in india <br /> with passion for all web services. </p>
 
 
- 
-                              
+
+
 
 
                             </div>
@@ -82,28 +83,33 @@ ease:'power2.inOut'
                     {/* {right section 3d model } */}
 
 
-                    <figure> 
-                 <div className="hero-3d-layout   ">
+                    <figure>
+                        <div className="hero-3d-layout   ">
 
-<Heromodel/>
+                            <Heromodel />
 
-                 </div>
+                        </div>
                     </figure>
 
                 </div>
-<AnimatedCounter/>
+                <AnimatedCounter />
 
             </section>
 
 
-            <AppShowcase/>
+            <AppShowcase />
 
-<LogoShowcase/>
+            <LogoShowcase />
 
-<FeatureCards/>
+            <FeatureCards />
 
-<Experience/>
-            
+            <Experience />
+
+
+            <TechStack />
+
+            {/* <SpaceXTrajectory/> */}
+
         </>
     )
 }

@@ -1,12 +1,13 @@
+
 export const words = [
-    { text: "Ideas ", imgPath: "/images/ideas.svg",key:"1"},
-    { text: "Concepts ", imgPath: "/images/concepts.svg",key:"2"},
-    {  text: "Design ", imgPath: "/images/designs.svg",key:"3" },
-    {  text: "Code ", imgPath: "/images/code.svg",key:"4" },
-    { text: "Ideas ", imgPath: "/images/ideas.svg",key:"5"},
-    { text: "Concepts ", imgPath: "/images/concepts.svg",key:"6"},
-    {  text: "Design ", imgPath: "/images/designs.svg",key:"7" },
-    {  text: "Code ", imgPath: "/images/code.svg" ,key:"8"},
+  { text: "Ideas ", imgPath: "/images/ideas.svg", key: "1" },
+  { text: "Concepts ", imgPath: "/images/concepts.svg", key: "2" },
+  { text: "Design ", imgPath: "/images/designs.svg", key: "3" },
+  { text: "Code ", imgPath: "/images/code.svg", key: "4" },
+  { text: "Ideas ", imgPath: "/images/ideas.svg", key: "5" },
+  { text: "Concepts ", imgPath: "/images/concepts.svg", key: "6" },
+  { text: "Design ", imgPath: "/images/designs.svg", key: "7" },
+  { text: "Code ", imgPath: "/images/code.svg", key: "8" },
 
 
 ]
@@ -127,5 +128,39 @@ export const expCards = [
       "Improved app performance and user experience through code optimization and testing.",
       "Coordinated with the product team to implement features based on feedback.",
     ],
+  },
+];
+
+
+export const techStackIcons = [
+  {
+    name: "React Developer",
+    modelPath: "/models/react_logo-transformed.glb",
+    scale: 1,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Python Developer",
+    modelPath: "/models/python-transformed.glb",
+    scale: 0.8,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Backend Developer",
+    modelPath: "/models/node-transformed.glb",
+    scale: 5,
+    rotation: [0, -Math.PI / 2, 0],
+  },
+  {
+    name: "Interactive Developer",
+    modelPath: "/models/three.js-transformed.glb",
+    scale: 0.05,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Project Manager",
+    modelPath: "/models/git-svg-transformed.glb",
+    scale: 0.05,
+    rotation: [0, -Math.PI / 4, 0],
   },
 ];

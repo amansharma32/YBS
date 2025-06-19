@@ -90,7 +90,7 @@ export default function ThunderStormLayout({ children }) {
 
         // Create the central core (a small, dense sphere)
         for (let i = 0; i < coreSize; i++) {
-            const r = Math.random() * 4;
+            const r = Math.random() * 3;
             const theta = Math.random() * Math.PI * 2;
             const phi = Math.acos(2 * Math.random() - 1);
             posArray[currentIndex * 3 + 0] = r * Math.sin(phi) * Math.cos(theta);
@@ -167,7 +167,7 @@ export default function ThunderStormLayout({ children }) {
 
             // **MODIFIED**: Thinner, whiter line for a cleaner look
             const geometry = new THREE.BufferGeometry().setFromPoints(points);
-            const material = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, linewidth: 1.5, opacity: 0.8 });
+            const material = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, linewidth: 1.5, opacity: 0.3 });
             const bolt = new THREE.Line(geometry, material);
             scene.add(bolt);
             lightningBolts.push(bolt);

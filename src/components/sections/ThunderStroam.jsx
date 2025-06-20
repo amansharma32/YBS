@@ -134,60 +134,13 @@ export default function ThunderStormLayout({ children }) {
         const nodePositions = nodes.geometry.attributes.position.array;
 
         // --- LIGHTNING CREATION (Reflex Arc) ---
-        let lightningBolts = [];
-        const createLightning = () => {
-            if (!nodePositions || nodePositions.length === 0) return;
-            
-            // **MODIFIED**: Pick a start from a branch and an end from the core.
-            const branchPointsCount = nodesCount - coreSize;
-            const startNodeIndex = coreSize + Math.floor(Math.random() * branchPointsCount);
-            const endNodeIndex = Math.floor(Math.random() * coreSize);
-
-            const startIndex = startNodeIndex * 3;
-            const endIndex = endNodeIndex * 3;
-            
-            const startPoint = new THREE.Vector3(nodePositions[startIndex], nodePositions[startIndex + 1], nodePositions[startIndex + 2]);
-            const endPoint = new THREE.Vector3(nodePositions[endIndex], nodePositions[endIndex + 1], nodePositions[endIndex + 2]);
-
-            // Create a path between the two points
-            const points = [startPoint];
-            let currentPoint = startPoint.clone();
-            const direction = endPoint.clone().sub(startPoint).normalize();
-            const distance = startPoint.distanceTo(endPoint);
-            let segmentLength = 5;
-
-            while (currentPoint.distanceTo(startPoint) < distance) {
-                currentPoint.add(direction.clone().multiplyScalar(segmentLength));
-                // **MODIFIED**: Reduced random offset for a straighter, more signal-like path
-                const randomOffset = new THREE.Vector3((Math.random() - 0.5) * 2, (Math.random() - 0.5) * 2, (Math.random() - 0.5) * 2);
-                currentPoint.add(randomOffset);
-                points.push(currentPoint.clone());
-            }
-            points.push(endPoint);
-
-            // **MODIFIED**: Thinner, whiter line for a cleaner look
-            const geometry = new THREE.BufferGeometry().setFromPoints(points);
-            const material = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, linewidth: 1.5, opacity: 0.3 });
-            const bolt = new THREE.Line(geometry, material);
-            scene.add(bolt);
-            lightningBolts.push(bolt);
-
-            if (window.gsap) {
-                window.gsap.to(material, { opacity: 0, duration: 0.5, delay: 0.1, onComplete: () => {
-                    scene.remove(bolt);
-                    bolt.geometry.dispose();
-                    bolt.material.dispose();
-                    lightningBolts = lightningBolts.filter(b => b !== bolt);
-                }});
-                window.gsap.to(flashLight, { intensity: 0.8, duration: 0.05, yoyo: true, repeat: 1 });
-            }
-        };
+      
 
         const clock = new THREE.Clock();
         const animate = () => {
             nodes.rotation.y = clock.getElapsedTime() * 0.03;
             nodes.rotation.x = clock.getElapsedTime() * 0.01;
-            if (Math.random() > 0.992) createLightning();
+            if (Math.random() > 0.992)  ;
             composer.render();
             animationFrameId = requestAnimationFrame(animate);
         };

@@ -1,3 +1,5 @@
+
+
 "use client"
 
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -9,13 +11,13 @@ import { Dropdown, DropdownItem } from "flowbite-react";
 
 import Link from 'next/link';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 import { usePathname } from 'next/navigation';
 
 
 
-export  default function Navbar() {
+function Header() {
 
 
 
@@ -33,37 +35,37 @@ export  default function Navbar() {
   };
 
   const links = [
-    { href: '/', text: 'Home' },
+
+    { href: '/', text: 'Services' },
+
+    { href: '/about-Us', text: 'Solutions' },
+
 
     {
       to: '#',
-      text: 'Services',
+      text: ' Service ',
       dropdownItems: [
-        { href: '/our-Company', label: 'Our Company' },
- 
-      ],
-    },
- 
-    {
-      to: '#',
-      text: 'Solutions',
-      dropdownItems: [
-        { href: '/product-overview', label: 'Overview' },
-      
-      ],
-    },
-     
-    {
-      to: '#',
-      text: 'MAINTENANCE ',
-      dropdownItems: [
-        { label: 'Annual Maintenance Contract (AMC)', href: '/annual-maintenance-contract' },
+        { label: 'Branding ', href: '/fire-extinguishers' },
+        { label: "Addressable Fire Alarm System", href: "/addressable-fire-alarm-system-in-delhi-ncr" },
+        { label: "Fire Sprinkler System", href: "/fire-sprinkler-system" },
+        { label: "Fire Hydrant System", href: "/fire-hydrant-system" },
+        { label: "Fire Suppression System", href: "/fire-suppression-system" },
+        { label: "Anti Rodent System", href: "/anti-rodent-system" },
+        { label: "Water Leak Device (WLD)", href: "/water-leak-detection-device" },
+        { label: "Vesda System", href: "/fire-VESDA-system" },
+        { label: "Fire Tubing System", href: "/fire-tubing-system" },
+        { label: "Fire Door Service", href: "/fire-door-service" },
+        { label: "Kitchen Fire Suppression System", href: "/kitchen-fire-suppression-system" },
 
       ],
     },
 
-    { text: 'About', href: '/About' },
-    { text: 'Contact', href: '/support-form' },
+
+    { text: 'Our Works', href: '/our-Works' },
+    { href: '/About', text: 'About' },
+    { href: '/Careers', text: 'Careers' },
+
+    { text: 'Contact', href: '/contact-Us' },
   ];
 
 
@@ -75,7 +77,7 @@ export  default function Navbar() {
   const toggleNestedDropdown = (index) => {
     setNestedDropdown(nestedDropdown === index ? null : index);
   };
- 
+
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -99,7 +101,6 @@ export  default function Navbar() {
       }
     };
 
-
     handleScroll();
 
     window.addEventListener("scroll", handleScroll);
@@ -107,36 +108,21 @@ export  default function Navbar() {
   }, []);
 
 
-
   const pathname = usePathname();
   const [logoSrc, setLogoSrc] = useState('/flux.webp');
   const [logoSize, setLogoSize] = useState({ width: '150', height: '60' });
 
-
   useEffect(() => {
-    if (!pathname) return;
+    if (pathname) {
+      if (pathname === '/') {
+        setLogoSrc('/flux.webp');
+        setLogoSize({ width: '150', height: '60' });
 
-    const firePages = [
-      '/top-Fire-Fighting-Company-in-Delhi-NCR-And-India',
-      '/fire-extinguishers',
-      '/fire-hydrant-system',
-      '/fire-sprinkler-system',
-      '/fire-suppression-system',
-      '/glow-signage-&-emergency-lights',
-      '/fire-tubing-system',
-      '/fire-VESDA-system',
-      '/fire-alarm-system',
-    ];
-    
-    if (firePages.includes(pathname)) {
-      setLogoSrc('/flux.webp');
-      setLogoSize({ width: '180', height: '44' });
-    } else if (pathname === '/flux.webp') {
-      setLogoSrc('/flux.webp');
-      setLogoSize({ width: '150', height: '60' });
-    } else {
-      setLogoSrc('/flux.webp');
-      setLogoSize({ width: '150', height: '60' });
+      } else {
+        setLogoSrc('/flux.webp');
+        setLogoSize({ width: '150', height: '60' });
+      }
+
     }
   }, [pathname]);
 
@@ -144,113 +130,54 @@ export  default function Navbar() {
   const menuItems = [
     {
       label: "Services",
-      dropdown: [
-        { label: "Our Company", href: "/our-Company" },
-     
-      ],
+      href: "/"
     },
-
     {
       label: "Solutions",
-      dropdown: [
-        { label: "Overview", href: "/product-overview" },
-   
-
-      ],
+      href: "/about-Us"
     },
- 
+
+    {
+      label: "Service",
+      dropdown: [],
+    },
+
     {
       label: "Works",
-      dropdown: [
-
-        { label: "Overview", href: "/manufacturing-and-r-&-d" },
-
-      ],
+      href: "/our-Works"
     },
-    
+    {
+      label: "About",
+      href: "/About"
+    },
 
-    { label: "About", href: "/About" },
+    {
+      label: "Careers",
+      href: "/Careers"
+    },
 
-    
-    { label: "Careers", href: "/Careers" },
-
-
-    { label: "Contact", href: "/support-form" },
+    {
+      label: "Contact",
+      href: "/contact-Us"
+    },
   ];
-
 
 
   const handleLinkClick = (href) => {
-    closeMobileMenu(); // Close the mobile menu
-    router.push(href);  // Redirect to the selected page
+    closeMobileMenu();
+    router.push(href);
   };
 
 
-
-
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(null); // Use a ref to manage the audio instance
-
-  // Initialize audio instance only once
-  useEffect(() => {
-    audioRef.current = new Audio("/audio/1.mp3");
-
-    // Cleanup on component unmount
-    return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
-    };
-  }, []);
-
-  const handleAudioToggle = () => {
-    if (!audioRef.current) return;
-
-    if (isPlaying) {
-      // Stop and reset the audio
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-      setIsPlaying(false);
-    } else {
-      // Play the audio
-      audioRef.current.play();
-      setIsPlaying(true);
-
-      // Reset state when audio ends
-      audioRef.current.onended = () => setIsPlaying(false);
-    }
-  };
-
-
-  const searchBarRef = useRef(null); // Ref for the search bar
+  const searchBarRef = useRef(null);
 
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
-  const [showSearch, setShowSearch] = useState(false); // To toggle input visibility
+  const [showSearch, setShowSearch] = useState(false);
   const router = useRouter();
 
-  const items = [
-    { id: "1", name: "Air Washer", link: "/air-washer" },
-    { id: "2", name: "Ducted Air Coolers", link: "/ducted-air-cooler" },
-    { id: "3", name: "Ventilation Exhaust Fan", link: "/ventilation-fans" },
-    { id: "4", name: "Panel Air Conditioner", link: "/panel-air-conditioners" },
-    { id: "5", name: "Oil/Coolant Chiller", link: "/chiller-oil-water-coolant" },
-    { id: "6", name: "Air Handling Unit", link: "/air-handling-unit" },
-    { id: "7", name: " Air Shower & Pass Box ", link: "/air-shower" },
-    { id: "8", name: " Fire Extinguishers", link: "/fire-extinguishers" },
-    { id: "9", name: " Fire Hydrant System", link: "/fire-hydrant-system" },
-    { id: "10", name: " Fire Sprinkler System", link: "/fire-sprinkler-system" },
-    { id: "11", name: " Fire suppression system", link: "/fire-suppression-system" },
-    { id: "12", name: " Glow Signage & Emergency Lights", link: "/glow-signage-&-emergency-lights" },
-    { id: "13", name: " Fire tubing system", link: "/fire-tubing-system" },
-    { id: "14", name: " Fire VESDA System", link: "/fire-VESDA-system" },
-  ];
 
-  const fuse = new Fuse(items, {
-    keys: ["name"],
-    threshold: 0.3,
-  });
+
 
   const handleSearch = (e) => {
     const input = e.target.value;
@@ -272,7 +199,7 @@ export  default function Navbar() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchBarRef.current && !searchBarRef.current.contains(event.target)) {
-        setShowSearch(false); // Close the search bar
+        setShowSearch(false);
       }
     };
 
@@ -284,31 +211,29 @@ export  default function Navbar() {
 
   return (
 
-    <nav className={` fixed       z-20 w-full top-0 transition-all duration-300 ${isScrolled ? " bg-black text-white shadow-md" : " bg-gradient-to-b from-black text-white"
+    <nav className={` fixed        z-20 w-full top-0 transition-all duration-300 ${isScrolled ? " bg-black text-white shadow-md" : " bg-gradient-to-b from-black  text-white"
       }`}
     >
-      <div className="  ">
+      <div className=" md:mx-2 md:px-4">
 
-        <div className="flex lg:flex-row items-center xl:flex-row justify-between px-16 py-2" >
+        <div className="flex lg:flex-row items-center xl:flex-row justify-between p-4" >
 
           <div className="flex space-x-4">
             <div className="row flex  md:flex-col lg:flex-row ">
 
-              <Link href='/'  >
+              <Link href='/'>
 
-                {pathname && (<Image
+                {pathname && (
+                  <Image
+                    src={logoSrc}
+                    width={logoSize.width}
+                    height={logoSize.height}
+                    alt="Picture"
+                    className="md:h-[60px] md:w-auto my-3"
+                    style={{ width: `${logoSize.width}px`, height: `${logoSize.height}px` }}
 
-                  src={logoSrc}
-                  width={logoSize.width}
-                  height={logoSize.height}
-                  alt="Picture"
-                  className="  md:h-[60px] md:w-auto my-3"
-                  style={{ width: `${logoSize.width}px`, height: `${logoSize.height}px` }}  
-
-                />
+                  />
                 )}
-
-
 
 
               </Link>
@@ -322,35 +247,30 @@ export  default function Navbar() {
           <div className="row flex-col  lg:flex lg:px-4  ">
 
 
-           
+
 
 
             <div className="col">
               <div className="hidden xl:flex items-center space-x-1">
 
-                <ul className="flex md:text-[11px] lg:text-[15px] flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                <ul className="flex   flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                   {menuItems.map((item, index) => (
-                    <li className=" after:content-[''] after:block after:w-full after:h-[3px] after:bg-gradient-to-r after:from-blue-500 after:to-blue-700 after:scale-x-0 after:origin-left after:transition-transform after:duration-250 after:ease-in-out hover:after:scale-x-100 " key={index}>
+                    <li className=" md:px-3  after:content-[''] after:block after:w-full after:h-[3px] after:bg-gradient-to-r after:from-cyan-500 after:to-blue-700 after:scale-x-0    after:origin-left after:transition-transform after:duration-250 after:ease-in-out hover:after:scale-x-100 " key={index}>
                       {item.dropdown ? (
-                        <Dropdown label={item.label} inline>
-                          {item.dropdown.map((subItem, subIndex) => (
-                            <div key={subIndex}>
-                              {subItem.dropdown ? (
-                                <Dropdown className='w-44' placement="right" label={subItem.label} inline>
-                                  {subItem.dropdown.map((nestedItem, nestedIndex) => (
-                                    <Link key={nestedIndex} href={nestedItem.href || "#"}>
-                                      <Dropdown.Item onClick={() => handleLinkClick(nestedItem.href)}>{nestedItem.label}</Dropdown.Item>
-                                    </Link>
-                                  ))}
-                                </Dropdown>
-                              ) : (
-                                <Link href={subItem.href || "#"}>
-                                  <Dropdown.Item onClick={() => handleLinkClick(subItem.href)}>{subItem.label}</Dropdown.Item>
-                                </Link>
-                              )}
-                            </div>
-                          ))}
+
+
+                        <Dropdown className='  ' label="Service" inline>
+
+                          <DropdownItem >
+                            <Link className=' text-black' href='/Branding'>
+                              Branding 
+                            </Link>
+                          </DropdownItem>
+
+
                         </Dropdown>
+
+
                       ) : (
                         <Link href={item.href || "#"} onClick={() => handleLinkClick(item.href)}>
                           {item.label}
@@ -367,7 +287,7 @@ export  default function Navbar() {
           </div>
 
 
-       
+
           <div className="xl:hidden flex items-center">
             <button
               className="mobile-menu-button"
@@ -375,12 +295,12 @@ export  default function Navbar() {
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMobileMenuOpen ? (
-               
+
                 <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-              
+
                 <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -392,16 +312,11 @@ export  default function Navbar() {
         </div>
       </div>
 
-     
 
 
-
-
-
-
-      <div className={`mobile-menu xl:hidden  ${isMobileMenuOpen ? 'mobile-menu-open bg-gray-100 text-black' : 'mobile-menu-closed'}`}>
+      <div className={`mobile-menu xl:hidden  ${isMobileMenuOpen ? 'mobile-menu-open py-2 bg-gray-100 text-black border-red-300 border-b-[1px]' : 'mobile-menu-closed'}`}>
         {isMobileMenuOpen && links.map((link, index) => (
-          <div key={index} className="mx-7 mb-2 border-b-2">
+          <div key={index} className="mx-7 mb-2 border-b-[1px] border-red-600 ">
             {link.dropdownItems ? (
               <div>
                 <div
@@ -409,9 +324,9 @@ export  default function Navbar() {
                   onClick={() => toggleDropdown(index)}
                 >
                   <Link
-                    href={link.to || '/'} 
+                    href={link.to || '/'}
                     className="block py-2 px-4 text-sm hover:bg-gray-200"
-                  
+
                   >
                     {link.text}
                   </Link>
@@ -444,9 +359,10 @@ export  default function Navbar() {
                               onClick={() => toggleNestedDropdown(i)}
                             >
                               <Link
-                                href={dropdownItem.href || '/'}  
+                                href={dropdownItem.href || '/'}
                                 className="block py-2 px-4 text-sm hover:bg-gray-200"
-                               >
+
+                              >
                                 {dropdownItem.label}
                               </Link>
                               <div className="transition-transform duration-300 transform">
@@ -473,9 +389,9 @@ export  default function Navbar() {
                                 {dropdownItem.dropdownItems.map((subItem, j) => (
                                   <Link
                                     key={j}
-                                    href={subItem.href || '/'} 
+                                    href={subItem.href || '/'}
                                     className="block py-2 px-4 text-sm hover:bg-gray-200"
-                                    onClick={() => handleLinkClick(subItem.href)} // Call handleLinkClick
+                                    onClick={() => handleLinkClick(subItem.href)}
                                   >
                                     {subItem.label}
                                   </Link>
@@ -485,9 +401,9 @@ export  default function Navbar() {
                           </div>
                         ) : (
                           <Link
-                            href={dropdownItem.href || '/'} 
+                            href={dropdownItem.href || '/'}
                             className="block py-2 px-4 text-sm hover:bg-gray-200"
-                            onClick={() => handleLinkClick(dropdownItem.href)} 
+                            onClick={() => handleLinkClick(dropdownItem.href)}
                           >
                             {dropdownItem.label}
                           </Link>
@@ -499,9 +415,9 @@ export  default function Navbar() {
               </div>
             ) : (
               <Link
-                href={link.href || '/'} // Use a fallback if link.to is undefined
+                href={link.href || '/'}
                 className="block py-2 px-4 text-sm hover:bg-gray-200"
-                onClick={() => handleLinkClick(link.href)} // Call handleLinkClick
+                onClick={() => handleLinkClick(link.href)}
               >
                 {link.text}
               </Link>
@@ -513,13 +429,12 @@ export  default function Navbar() {
       </div>
 
       <div className="search-bar-container">
-      
+
 
         <div className="logo-section">
 
         </div>
 
-        
 
         {showSearch && (
           <div className="search-bar p-5" ref={searchBarRef}>
@@ -527,7 +442,7 @@ export  default function Navbar() {
               type="text"
               value={query}
               onChange={handleSearch}
-              placeholder="Search Solutions..."
+              placeholder="Search products..."
 
 
               className={`search-input ${isScrolled
@@ -569,4 +484,6 @@ export  default function Navbar() {
   );
 }
 
- 
+export default Header;
+
+

@@ -44,7 +44,7 @@ gsap.registerPlugin(ScrollTrigger);
   }, []);
 
   return (
-    <div id="work" ref={sectionRef} className="app-showcase z-50">
+    <div id="work" ref={sectionRef} className="app-showcase  ">
       <div className="w-full">
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">

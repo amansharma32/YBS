@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import TitleHeader from "./TitleHeader";
 import ContactExperience from "../models/contact/ContactExperience";
+import Heromodel from "./Heromodel";
 
 
 const Contact = () => {
@@ -109,7 +110,14 @@ const Contact = () => {
           </div>
           <div className="xl:col-span-7 min-h-96">
             <div className="bg-[#000000] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
-              <ContactExperience />
+           
+                               <figure>
+                                   <div className="hero-3d-layout   ">
+           
+                                       {/* <Heromodel /> */}
+           
+                                   </div>
+                               </figure>
             </div>
           </div>
         </div>

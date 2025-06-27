@@ -1,6 +1,6 @@
 "use client"
 import { words } from '@/constants/page'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Heromodel from './sections/Heromodel'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
@@ -33,23 +33,114 @@ export default function Heropage() {
         )
     })
 
+  const slides = [
+
+    {
+      id: 1,
+      video: 'https://cdn.pixabay.com/video/2016/01/29/1992-153555258_large.mp4',
+    
+    }
+ 
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startPos, setStartPos] = useState(0);
+  const containerRef = useRef(null);
+
+
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((prevSlide) =>
+        prevSlide === slides.length - 1 ? 0 : prevSlide + 1
+      );
+    }, 5000); // Auto-play every 5 seconds
+
+    return () => clearInterval(slideInterval); // Clean up on unmount
+  }, [slides.length]);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartPos(e.clientX);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    const currentPos = e.clientX;
+    const diff = startPos - currentPos;
+
+    // If the user drags left
+    if (diff > 50) {
+      setCurrentSlide((prevSlide) =>
+        prevSlide === slides.length - 1 ? 0 : prevSlide + 1
+      );
+      setIsDragging(false);
+    }
+
+    // If the user drags right
+    if (diff < -50) {
+      setCurrentSlide((prevSlide) =>
+        prevSlide === 0 ? slides.length - 1 : prevSlide - 1
+      );
+      setIsDragging(false);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleDotClick = (index) => {
+    setCurrentSlide(index);
+  };
+
 
     return (
 
         <>
 
- 
-            <section id='hero' className=' relative overflow-hidden'>
+   <div
 
-                <div className="absolute top-0 left-0 z-10">
-                    <img src="/images/bg.png" alt="background" />
-                </div>
+          className="relative  w-full h-screen overflow-hidden"
+          ref={containerRef}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+        >
+          {slides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'
+                }`}
+            >
+              <video
 
-                <div className="hero-layout">
-                    {/* {left section hero content } */}
-                    <header className=' flex flex-col justify-center md:w-full w-screen px-5 md:px-20'>
-                        <div className="flex  flex-col gap-7">
-                            <div className="hero-text">
+                autoPlay
+                loop
+                muted
+                poster="/mv2.webp"
+                playsInline
+                type="video/mp4"
+                className=" w-full h-full object-cover"
+                style={{ position: 'absolute', top: 0, left: 0, zIndex: -1 }}
+
+              >
+                <source src={slide.video} type="video/mp4" />
+
+                {slide.descriptivetext}
+
+              </video>
+
+
+              <div className="  flex items-center h-screen bg-transparent bg-opacity-40">
+
+                <div className=" text-white   text-center md:text-left  lg:px-16">
+                <div className="hero-text">
                                 <p className=' MyFont p-anime'> Shaping
 
                                     <span className=' slide'>
@@ -71,38 +162,36 @@ export default function Heropage() {
                                 <p className='p-anime'>Into Real Projects</p>
                                 <p className='p-anime'> That Deliver Results</p>
                                 <p className=' py-5 text-white-50 relative  z-10 md:text-lg  pointer-events-none'> Hi,  We are Flux Digital, a agency based in india <br /> with passion for all web services. </p>
-
-
-
-
-
-
+ 
                             </div>
-
-                        </div>
-                    </header>
-
-                    {/* {right section 3d model } */}
-
-
-                    <figure>
-                        <div className="hero-3d-layout   ">
-
-                            <Heromodel />
-
-                        </div>
-                    </figure>
-
                 </div>
-                <AnimatedCounter />
+              </div>
 
-            </section>
-            
-      
 
-    
+            </div>
+          ))}
 
-            <AppShowcase />
+
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleDotClick(index)}
+                className={`w-5 h-1 rounded-sm ${index === currentSlide ? 'bg-[#FC6C1E]' : 'bg-gray-400'}`}
+                aria-label={`Go to slide ${index + 1}`}
+                aria-current={index === currentSlide ? "true" : undefined}
+              />
+            ))}
+
+          </div>
+
+
+        </div>
+
+
+<section className=' bg-black'>
+    <AppShowcase />
 
             <LogoShowcase />
 
@@ -118,6 +207,9 @@ export default function Heropage() {
             <Contact/>
 
        
+</section>
+ 
+        
 
             {/* <SpaceXTrajectory/> */}
 

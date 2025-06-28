@@ -201,7 +201,7 @@ function Header() {
   }, []);
 
 
-    const services = [
+  const services = [
     {
       category: "Branding →",
       items: [
@@ -222,6 +222,12 @@ function Header() {
         "Human Machine Interface"
       ]
     },
+     
+  ];
+
+
+  const services2 = [
+    
     {
       category: "Technology →",
       items: [
@@ -293,44 +299,73 @@ function Header() {
               <div className="col">
                 <div className="hidden xl:flex items-center space-x-1">
 
-                  <ul className="flex   flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                  <ul className="flex    flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                     {menuItems.map((item, index) => (
                       <li className=" md:px-3  after:content-[''] after:block after:w-full after:h-[3px] after:bg-gradient-to-r after:from-cyan-500 after:to-blue-700 after:scale-x-0    after:origin-left after:transition-transform after:duration-250 after:ease-in-out hover:after:scale-x-100 " key={index}>
                         {item.dropdown ? (
 
 
-                          <Dropdown className='  mt-1  ' label="Service" inline>
+                          <Dropdown className='  mt-1  border-2 border-black bg-black    ' label="Service" inline>
 
-                            <DropdownItem  className=' w-[100vw] '>
+                            <DropdownItem className=' w-[100vw] '>
 
-                            
-                          <div className="p-6 w-full  ">
-            <h1 className="text-2xl font-bold mb-4">Building Strong Capabilities to Empower Your Brand</h1>
-            <a href="#" className="text-blue-600 mb-6 inline-block">Go to overview →</a>
-            
-            <div className="border-t border-b border-gray-200 my-4"></div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="mb-4">
-                  <h2 className="font-bold text-lg mb-3">{service.category}</h2>
-                  <ul className="space-y-2">
-                    {service.items.map((item, itemIndex) => (
-                      <li key={itemIndex}>
-                        <a href="#" className="text-gray-700 hover:text-blue-600">
-                          {item}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            
-            <div className="border-t border-gray-200 my-4"></div>
-            
-            <a href="#" className="text-blue-600 mt-4 inline-block">Event highlights →</a>
-          </div>
+
+                              <div className="p-6 flex  w-full text-white justify-center items-start flex-row ">
+
+                              <div className="container w-4/12 flex flex-col">
+     <div className="text-5xl  text-left px-7 font-thin mb-4">
+     Building
+Strong
+Capabilities to Empower Your Brand
+     </div>
+                                <a href="#" className="text-cyan-500 px-7 pt-5 text-left mb-6 inline-block">Go to overview →</a>
+
+                              </div>
+                           
+                                <div className="border-t border-b border-gray-200 my-4"></div>
+
+
+<div className="container  flex gap-12 w-6/12">
+
+                                <div className=" flex  justify-start  flex-col items-start      gap-8">
+                                  {services.map((service, index) => (
+                                    <div key={index} className="mb-4">
+                                      <h2 className="font-bold text-lg text-left  mb-3">{service.category}</h2>
+                                      <ul className="space-y-2">
+                                        {service.items.map((item, itemIndex) => (
+                                          <li key={itemIndex} className='text-left '>
+                                            <a href="#" className="text-white    hover:text-cyan-500">
+                                              {item}
+                                            </a>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  ))}
+                                </div>
+
+                                       <div className=" flex  justify-start  flex-row items-start      gap-8">
+                                  {services2.map((service, index) => (
+                                    <div key={index} className="mb-4">
+                                      <h2 className="font-bold text-lg text-left  mb-3">{service.category}</h2>
+                                      <ul className="space-y-2">
+                                        {service.items.map((item, itemIndex) => (
+                                          <li key={itemIndex} className='text-left '>
+                                            <a href="#" className="text-white    hover:text-cyan-500">
+                                              {item}
+                                            </a>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  ))}
+                                </div>
+</div>
+
+                                <div className="border-t border-gray-200 my-4"></div>
+
+                                
+                              </div>
 
                             </DropdownItem>
 

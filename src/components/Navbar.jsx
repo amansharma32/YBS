@@ -46,16 +46,7 @@ function Header() {
       text: ' Service ',
       dropdownItems: [
         { label: 'Branding ', href: '/fire-extinguishers' },
-        { label: "Addressable Fire Alarm System", href: "/addressable-fire-alarm-system-in-delhi-ncr" },
-        { label: "Fire Sprinkler System", href: "/fire-sprinkler-system" },
-        { label: "Fire Hydrant System", href: "/fire-hydrant-system" },
-        { label: "Fire Suppression System", href: "/fire-suppression-system" },
-        { label: "Anti Rodent System", href: "/anti-rodent-system" },
-        { label: "Water Leak Device (WLD)", href: "/water-leak-detection-device" },
-        { label: "Vesda System", href: "/fire-VESDA-system" },
-        { label: "Fire Tubing System", href: "/fire-tubing-system" },
-        { label: "Fire Door Service", href: "/fire-door-service" },
-        { label: "Kitchen Fire Suppression System", href: "/kitchen-fire-suppression-system" },
+
 
       ],
     },
@@ -110,17 +101,17 @@ function Header() {
 
   const pathname = usePathname();
   const [logoSrc, setLogoSrc] = useState('/flux.webp');
-  const [logoSize, setLogoSize] = useState({ width: '150', height: '60' });
+  const [logoSize, setLogoSize] = useState({ width: '140', height: '50' });
 
   useEffect(() => {
     if (pathname) {
       if (pathname === '/') {
         setLogoSrc('/flux.webp');
-        setLogoSize({ width: '150', height: '60' });
+        setLogoSize({ width: '140', height: '50' });
 
       } else {
         setLogoSrc('/flux.webp');
-        setLogoSize({ width: '150', height: '60' });
+        setLogoSize({ width: '140', height: '50' });
       }
 
     }
@@ -209,275 +200,353 @@ function Header() {
     };
   }, []);
 
+
+    const services = [
+    {
+      category: "Branding →",
+      items: [
+        "Brand Consulting",
+        "Logo Design",
+        "Industrial / Product Design",
+        "Graphic Design",
+        "2D / 3D Visualisation"
+      ]
+    },
+    {
+      category: "Experience Design →",
+      items: [
+        "UI/UX Design",
+        "Website Design",
+        "Mobile Experience",
+        "Commerce Experience",
+        "Human Machine Interface"
+      ]
+    },
+    {
+      category: "Technology →",
+      items: [
+        "AI & Machine Learning",
+        "DevOps Consulting",
+        "Data & Analytics",
+        "Web Development",
+        "Mobile App Development",
+        "E-commerce",
+        "Quality Assurance & Testing",
+        "Cloud Services",
+        "Cyber Security"
+      ]
+    },
+    {
+      category: "Digital Marketing →",
+      items: [
+        "Search Engine Optimisation",
+        "Social Media Management",
+        "Performance Marketing",
+        "Content Marketing",
+        "Marketing Automation",
+        "Analytics"
+      ]
+    }
+  ];
+
   return (
+    <>
+      <nav className={` fixed        z-20 w-full top-0 transition-all duration-300 ${isScrolled ? " bg-black text-white shadow-md" : " bg-gradient-to-b from-black  text-white"
+        }`}
+      >
+        <div className=" md:mx-2 md:px-4">
 
-    <nav className={` fixed        z-20 w-full top-0 transition-all duration-300 ${isScrolled ? " bg-black text-white shadow-md" : " bg-gradient-to-b from-black  text-white"
-      }`}
-    >
-      <div className=" md:mx-2 md:px-4">
+          <div className="flex lg:flex-row items-center xl:flex-row justify-between p-4" >
 
-        <div className="flex lg:flex-row items-center xl:flex-row justify-between p-4" >
+            <div className="flex space-x-4">
+              <div className="row flex  md:flex-col lg:flex-row ">
 
-          <div className="flex space-x-4">
-            <div className="row flex  md:flex-col lg:flex-row ">
+                <Link href='/'>
 
-              <Link href='/'>
+                  {pathname && (
+                    <Image
+                      src={logoSrc}
+                      width={logoSize.width}
+                      height={logoSize.height}
+                      alt="Picture"
+                      className="md:h-[60px] md:w-auto my-3"
+                      style={{ width: `${logoSize.width}px`, height: `${logoSize.height}px` }}
 
-                {pathname && (
-                  <Image
-                    src={logoSrc}
-                    width={logoSize.width}
-                    height={logoSize.height}
-                    alt="Picture"
-                    className="md:h-[60px] md:w-auto my-3"
-                    style={{ width: `${logoSize.width}px`, height: `${logoSize.height}px` }}
-
-                  />
-                )}
-
-
-              </Link>
-
-            </div>
+                    />
+                  )}
 
 
-          </div>
-
-
-          <div className="row flex-col  lg:flex lg:px-4  ">
-
-
-
-
-
-            <div className="col">
-              <div className="hidden xl:flex items-center space-x-1">
-
-                <ul className="flex   flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-                  {menuItems.map((item, index) => (
-                    <li className=" md:px-3  after:content-[''] after:block after:w-full after:h-[3px] after:bg-gradient-to-r after:from-cyan-500 after:to-blue-700 after:scale-x-0    after:origin-left after:transition-transform after:duration-250 after:ease-in-out hover:after:scale-x-100 " key={index}>
-                      {item.dropdown ? (
-
-
-                        <Dropdown className='  ' label="Service" inline>
-
-                          <DropdownItem >
-                            <Link className=' text-black' href='/Branding'>
-                              Branding 
-                            </Link>
-                          </DropdownItem>
-
-
-                        </Dropdown>
-
-
-                      ) : (
-                        <Link href={item.href || "#"} onClick={() => handleLinkClick(item.href)}>
-                          {item.label}
-                        </Link>
-                      )}
-                    </li>
-                  ))}
-                </ul>
+                </Link>
 
               </div>
 
+
             </div>
 
-          </div>
+
+            <div className="row flex-col  lg:flex lg:px-4  ">
 
 
 
-          <div className="xl:hidden flex items-center">
-            <button
-              className="mobile-menu-button"
-              onClick={toggleMobileMenu}
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            >
-              {isMobileMenuOpen ? (
-
-                <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-
-                <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
-          </div>
 
 
-        </div>
-      </div>
+              <div className="col">
+                <div className="hidden xl:flex items-center space-x-1">
+
+                  <ul className="flex   flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                    {menuItems.map((item, index) => (
+                      <li className=" md:px-3  after:content-[''] after:block after:w-full after:h-[3px] after:bg-gradient-to-r after:from-cyan-500 after:to-blue-700 after:scale-x-0    after:origin-left after:transition-transform after:duration-250 after:ease-in-out hover:after:scale-x-100 " key={index}>
+                        {item.dropdown ? (
 
 
+                          <Dropdown className='   ' label="Service" inline>
 
-      <div className={`mobile-menu xl:hidden  ${isMobileMenuOpen ? 'mobile-menu-open py-2 bg-gray-100 text-black border-red-300 border-b-[1px]' : 'mobile-menu-closed'}`}>
-        {isMobileMenuOpen && links.map((link, index) => (
-          <div key={index} className="mx-7 mb-2 border-b-[1px] border-red-600 ">
-            {link.dropdownItems ? (
-              <div>
-                <div
-                  className="flex items-center justify-between cursor-pointer"
-                  onClick={() => toggleDropdown(index)}
-                >
-                  <Link
-                    href={link.to || '/'}
-                    className="block py-2 px-4 text-sm hover:bg-gray-200"
+                            <DropdownItem  className=' w-[100vw] '>
 
-                  >
-                    {link.text}
-                  </Link>
-                  <div className="transition-transform duration-300 transform">
-                    <svg
-                      className={`w-4 h-4 ml-2 ${openDropdown === index ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
+                            
+                          <div className="p-6 w-full ">
+            <h1 className="text-2xl font-bold mb-4">Building Strong Capabilities to Empower Your Brand</h1>
+            <a href="#" className="text-blue-600 mb-6 inline-block">Go to overview →</a>
+            
+            <div className="border-t border-b border-gray-200 my-4"></div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="mb-4">
+                  <h2 className="font-bold text-lg mb-3">{service.category}</h2>
+                  <ul className="space-y-2">
+                    {service.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>
+                        <a href="#" className="text-gray-700 hover:text-blue-600">
+                          {item}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
+              ))}
+            </div>
+            
+            <div className="border-t border-gray-200 my-4"></div>
+            
+            <a href="#" className="text-blue-600 mt-4 inline-block">Event highlights →</a>
+          </div>
 
-                {openDropdown === index && (
-                  <div className="ml-2">
-                    {link.dropdownItems.map((dropdownItem, i) => (
-                      <div key={i}>
-                        {dropdownItem.dropdownItems ? (
-                          <div>
-                            <div
-                              className="flex items-center justify-between cursor-pointer"
-                              onClick={() => toggleNestedDropdown(i)}
-                            >
-                              <Link
-                                href={dropdownItem.href || '/'}
-                                className="block py-2 px-4 text-sm hover:bg-gray-200"
+                            </DropdownItem>
 
-                              >
-                                {dropdownItem.label}
-                              </Link>
-                              <div className="transition-transform duration-300 transform">
-                                <svg
-                                  className={`w-4 h-4 ml-2 ${nestedDropdown === i ? 'rotate-180' : ''}`}
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
 
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M19 9l-7 7-7-7"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
+                          </Dropdown>
 
-                            {nestedDropdown === i && (
-                              <div className="ml-4">
-                                {dropdownItem.dropdownItems.map((subItem, j) => (
-                                  <Link
-                                    key={j}
-                                    href={subItem.href || '/'}
-                                    className="block py-2 px-4 text-sm hover:bg-gray-200"
-                                    onClick={() => handleLinkClick(subItem.href)}
-                                  >
-                                    {subItem.label}
-                                  </Link>
-                                ))}
-                              </div>
-                            )}
-                          </div>
+
                         ) : (
-                          <Link
-                            href={dropdownItem.href || '/'}
-                            className="block py-2 px-4 text-sm hover:bg-gray-200"
-                            onClick={() => handleLinkClick(dropdownItem.href)}
-                          >
-                            {dropdownItem.label}
+                          <Link href={item.href || "#"} onClick={() => handleLinkClick(item.href)}>
+                            {item.label}
                           </Link>
                         )}
-                      </div>
+                      </li>
                     ))}
-                  </div>
-                )}
+                  </ul>
+
+                </div>
+
               </div>
-            ) : (
-              <Link
-                href={link.href || '/'}
-                className="block py-2 px-4 text-sm hover:bg-gray-200"
-                onClick={() => handleLinkClick(link.href)}
+
+            </div>
+
+
+
+            <div className="xl:hidden flex items-center">
+              <button
+                className="mobile-menu-button"
+                onClick={toggleMobileMenu}
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               >
-                {link.text}
-              </Link>
-            )}
+                {isMobileMenuOpen ? (
+
+                  <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+
+                  <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                )}
+              </button>
+            </div>
+
+
           </div>
-        ))}
-
-
-      </div>
-
-      <div className="search-bar-container">
-
-
-        <div className="logo-section">
-
         </div>
 
 
-        {showSearch && (
-          <div className="search-bar p-5" ref={searchBarRef}>
-            <input
-              type="text"
-              value={query}
-              onChange={handleSearch}
-              placeholder="Search products..."
+
+        <div className={`mobile-menu xl:hidden  ${isMobileMenuOpen ? 'mobile-menu-open py-2 bg-gray-100 text-black border-red-300 border-b-[1px]' : 'mobile-menu-closed'}`}>
+          {isMobileMenuOpen && links.map((link, index) => (
+            <div key={index} className="mx-7 mb-2 border-b-[1px] border-red-600 ">
+              {link.dropdownItems ? (
+                <div>
+                  <div
+                    className="flex items-center justify-between cursor-pointer"
+                    onClick={() => toggleDropdown(index)}
+                  >
+                    <Link
+                      href={link.to || '/'}
+                      className="block py-2 px-4 text-sm hover:bg-gray-200"
+
+                    >
+                      {link.text}
+                    </Link>
+                    <div className="transition-transform duration-300 transform">
+                      <svg
+                        className={`w-4 h-4 ml-2 ${openDropdown === index ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  {openDropdown === index && (
+                    <div className="ml-2">
+                      {link.dropdownItems.map((dropdownItem, i) => (
+                        <div key={i}>
+                          {dropdownItem.dropdownItems ? (
+                            <div>
+                              <div
+                                className="flex items-center justify-between cursor-pointer"
+                                onClick={() => toggleNestedDropdown(i)}
+                              >
+                                <Link
+                                  href={dropdownItem.href || '/'}
+                                  className="block py-2 px-4 text-sm hover:bg-gray-200"
+
+                                >
+                                  {dropdownItem.label}
+                                </Link>
+                                <div className="transition-transform duration-300 transform">
+                                  <svg
+                                    className={`w-4 h-4 ml-2 ${nestedDropdown === i ? 'rotate-180' : ''}`}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth="2"
+                                      d="M19 9l-7 7-7-7"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+
+                              {nestedDropdown === i && (
+                                <div className="ml-4">
+                                  {dropdownItem.dropdownItems.map((subItem, j) => (
+                                    <Link
+                                      key={j}
+                                      href={subItem.href || '/'}
+                                      className="block py-2 px-4 text-sm hover:bg-gray-200"
+                                      onClick={() => handleLinkClick(subItem.href)}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ) : (
+                            <Link
+                              href={dropdownItem.href || '/'}
+                              className="block py-2 px-4 text-sm hover:bg-gray-200"
+                              onClick={() => handleLinkClick(dropdownItem.href)}
+                            >
+                              {dropdownItem.label}
+                            </Link>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  href={link.href || '/'}
+                  className="block py-2 px-4 text-sm hover:bg-gray-200"
+                  onClick={() => handleLinkClick(link.href)}
+                >
+                  {link.text}
+                </Link>
+              )}
+            </div>
+          ))}
 
 
-              className={`search-input ${isScrolled
-                ? " text-black hover:text-black border-black "
-                : " text-black hover:text-black "
-                }`}
-            />
-            {results.length > 0 && (
-              <ul
-                className={`search-results ${isScrolled
+        </div>
+
+        <div className="search-bar-container">
+
+
+          <div className="logo-section">
+
+          </div>
+
+
+          {showSearch && (
+            <div className="search-bar p-5" ref={searchBarRef}>
+              <input
+                type="text"
+                value={query}
+                onChange={handleSearch}
+                placeholder="Search products..."
+
+
+                className={`search-input ${isScrolled
                   ? " text-black hover:text-black border-black "
                   : " text-black hover:text-black "
                   }`}
+              />
+              {results.length > 0 && (
+                <ul
+                  className={`search-results ${isScrolled
+                    ? " text-black hover:text-black border-black "
+                    : " text-black hover:text-black "
+                    }`}
 
-              >
-                {results.map((item) => (
-                  <li
-                    key={item.id}
-                    className="search-item"
-                    onClick={() => handleSelect(item.link)}
-                  >
-                    {item.name}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        )}
+                >
+                  {results.map((item) => (
+                    <li
+                      key={item.id}
+                      className="search-item"
+                      onClick={() => handleSelect(item.link)}
+                    >
+                      {item.name}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
 
 
 
-      </div>
+        </div>
 
 
-    </nav>
+      </nav>
+
+    </>
 
 
 

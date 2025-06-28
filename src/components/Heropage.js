@@ -126,7 +126,7 @@ export default function Heropage() {
                 poster="/mv2.webp"
                 playsInline
                 type="video/mp4"
-                className=" w-full h-full object-cover"
+                className=" w-full h-full object-cover brightness-[100%]"
                 style={{ position: 'absolute', top: 0, left: 0, zIndex: -1 }}
 
               >
@@ -136,7 +136,7 @@ export default function Heropage() {
 
               </video>
 
-
+  <div className="absolute inset-0  bg-[#0000004d] md:bg-[#0000002d] bg-opacity-50 z-0"></div>
               <div className="  flex items-center h-screen bg-transparent bg-opacity-40">
 
                 <div className=" text-white   text-center md:text-left  lg:px-16">

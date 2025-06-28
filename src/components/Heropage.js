@@ -119,7 +119,6 @@ export default function Heropage() {
                 }`}
             >
               <video
-
                 autoPlay
                 loop
                 muted

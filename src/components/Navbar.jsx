@@ -251,7 +251,7 @@ function Header() {
 
   return (
     <>
-      <nav className={` fixed        z-20 w-full top-0 transition-all duration-300 ${isScrolled ? " bg-black text-white shadow-md" : " bg-gradient-to-b from-black  text-white"
+      <nav className={` fixed  z-90 w-full top-0 transition-all duration-300 ${isScrolled ? " bg-black text-white shadow-md" : " bg-gradient-to-b from-black  text-white"
         }`}
       >
         <div className=" md:mx-2 md:px-4">
@@ -299,12 +299,12 @@ function Header() {
                         {item.dropdown ? (
 
 
-                          <Dropdown className='   ' label="Service" inline>
+                          <Dropdown className='  mt-1  ' label="Service" inline>
 
                             <DropdownItem  className=' w-[100vw] '>
 
                             
-                          <div className="p-6 w-full ">
+                          <div className="p-6 w-full  ">
             <h1 className="text-2xl font-bold mb-4">Building Strong Capabilities to Empower Your Brand</h1>
             <a href="#" className="text-blue-600 mb-6 inline-block">Go to overview →</a>
             

@@ -3,7 +3,7 @@ import { socialImgs } from "@/constants/page";
  
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer bg-black text-white ">
       <div className="footer-container">
         <div className="flex flex-col justify-center">
           <p>Terms & Conditions</p>

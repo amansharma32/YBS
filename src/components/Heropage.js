@@ -190,11 +190,11 @@ export default function Heropage() {
 
 
 <section className=' bg-black'>
-    <AppShowcase />
+
+            <FeatureCards />
 
             <LogoShowcase />
 
-            <FeatureCards />
 
             <Experience />
 

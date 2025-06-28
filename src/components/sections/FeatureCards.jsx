@@ -3,7 +3,7 @@ import { abilities } from "@/constants/page";
  
 const FeatureCards = () => (
 
-  <div className="w-full padding-x-lg">
+  <div className="w-full pt-12 padding-x-lg">
     <div className="mx-auto grid-3-cols">
       {abilities.map(({ imgPath, title, desc }) => (
         <div

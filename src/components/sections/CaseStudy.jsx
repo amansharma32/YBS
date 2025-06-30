@@ -8,8 +8,8 @@ import React, { useRef, useState } from 'react';
       
       title: 'Power Energy HVAC',
       description: 'We developed a comprehensive digital solution for Caribou Coffee\'s Kuwait operations, enhancing customer engagement and streamlining operations.',
-      videoUrl: 'https://videos.pexels.com/video-files/11062245/11062245-uhd_2560_1440_25fps.mp4',
-      thumbnail: 'https://images.pexels.com/photos/3912958/pexels-photo-3912958.jpeg',
+      videoUrl: 'https://videos.pexels.com/video-files/1583289/1583289-hd_712_1366_20fps.mp4',
+      thumbnail: 'https://plus.unsplash.com/premium_photo-1674773521455-e3bb5d0dc9e8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHx8',
       client: 'Adhunik Powertech Private Limited',
      
     },
@@ -18,8 +18,8 @@ import React, { useRef, useState } from 'react';
        
       title: 'Interior Design ',
       description: 'Our solution for LuLu Hypermarket revolutionized their digital shopping experience with intelligent search and one-click purchasing.',
-      videoUrl: 'https://videos.pexels.com/video-files/11062245/11062245-uhd_2560_1440_25fps.mp4',
-      thumbnail: 'https://images.pexels.com/photos/3912958/pexels-photo-3912958.jpeg',
+    videoUrl: 'https://videos.pexels.com/video-files/1583289/1583289-hd_712_1366_20fps.mp4',
+      thumbnail: 'https://plus.unsplash.com/premium_photo-1668881543059-2064918626b5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D',
       client: 'Adhunik DecoDive',
      
     },
@@ -28,8 +28,8 @@ import React, { useRef, useState } from 'react';
      
       title: 'Food',
       description: 'We transformed Middlesex University\'s digital presence with a visually stunning, user-friendly platform that reflects their academic excellence.',
-      videoUrl: 'https://videos.pexels.com/video-files/11062245/11062245-uhd_2560_1440_25fps.mp4',
-      thumbnail: 'https://images.pexels.com/photos/3912958/pexels-photo-3912958.jpeg',
+    videoUrl: 'https://videos.pexels.com/video-files/1583289/1583289-hd_712_1366_20fps.mp4',
+     thumbnail: 'https://plus.unsplash.com/premium_photo-1674773520212-0e3efeafde89?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8',
       client: 'BlackBites',
     
     }
@@ -72,7 +72,7 @@ import React, { useRef, useState } from 'react';
       <div className="rounded-xl overflow-hidden transition-all duration-300   bg-white">
         {/* Media container */}
         <div 
-          className="relative h-60 bg-gray-900 cursor-pointer overflow-hidden"
+          className="relative h-96 bg-gray-900 cursor-pointer overflow-hidden"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >

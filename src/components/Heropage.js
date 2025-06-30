@@ -12,6 +12,7 @@ import TechStack from './sections/TechStack'
 import Testimonials from './sections/Testimonials'
 import Contact from './sections/Contact' 
 import { CaseStudy } from './sections/CaseStudy'
+import OurStorySection from './sections/OurStorySection'
 
 
 export default function Heropage() {
@@ -193,6 +194,8 @@ export default function Heropage() {
 <section className=' bg-black' >
 
 <CaseStudy/>
+
+<OurStorySection/>
             <FeatureCards />
 
             <LogoShowcase />

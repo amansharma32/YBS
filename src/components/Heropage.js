@@ -1,11 +1,10 @@
 "use client"
 import { words } from '@/constants/page'
 import React, { useEffect, useRef, useState } from 'react'
-import Heromodel from './sections/Heromodel'
+ 
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { AppShowcase } from './sections/ShowcaseSection'
-import { AnimatedCounter } from './sections/AnimatedCounter'
+ 
 import LogoShowcase from './sections/LogoShowcase'
 import FeatureCards from './sections/FeatureCards'
 import Experience from './sections/Experience'
@@ -37,8 +36,7 @@ export default function Heropage() {
 
     {
       id: 1,
-      video: 'https://cdn.pixabay.com/video/2016/01/29/1992-153555258_large.mp4',
-    
+      video: 'https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_30fps.mp4',
     }
  
   ];
@@ -127,15 +125,17 @@ export default function Heropage() {
                 type="video/mp4"
                 className=" w-full h-full object-cover brightness-[100%]"
                 style={{ position: 'absolute', top: 0, left: 0, zIndex: -1 }}
-
-              >
-                <source src={slide.video} type="video/mp4" />
+                >
+                <source src={slide.video} type="video/mp4"/>
 
                 {slide.descriptivetext}
 
               </video>
 
-  <div className="absolute inset-0  bg-[#0000004d] md:bg-[#0000002d] bg-opacity-50 z-0"></div>
+  <div className="absolute inset-0  bg-[#0000004d] md:bg-[#0000002d] bg-opacity-50 z-0">
+  
+  </div>
+
               <div className="  flex items-center h-screen bg-transparent bg-opacity-40">
 
                 <div className=" text-white   text-center md:text-left  lg:px-16">
@@ -189,15 +189,13 @@ export default function Heropage() {
         </div>
 
 
-<section className=' bg-black'>
+<section className=' bg-black' >
 
             <FeatureCards />
 
             <LogoShowcase />
 
-
             <Experience />
-
 
             <TechStack />
 
@@ -209,8 +207,7 @@ export default function Heropage() {
 </section>
  
         
-
-            {/* <SpaceXTrajectory/> */}
+ 
 
         </>
     )

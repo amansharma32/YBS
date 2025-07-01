@@ -13,6 +13,7 @@ import Testimonials from './sections/Testimonials'
 import Contact from './sections/Contact' 
 import { CaseStudy } from './sections/CaseStudy'
 import OurStorySection from './sections/OurStorySection'
+import OurServices from './sections/OurServices'
 
 
 export default function Heropage() {
@@ -195,10 +196,16 @@ export default function Heropage() {
 
 <CaseStudy/>
 
+
+
+
 <OurStorySection/>
+
+<OurServices/>
+            <LogoShowcase />
+
             <FeatureCards />
 
-            <LogoShowcase />
 
             <Experience />
 

@@ -47,8 +47,10 @@ const Contact = () => {
           title="Get in Touch – Let’s Connect"
           sub="💬 Have questions or ideas? Let’s talk! 🚀"
         />
-        <div className="grid-12-cols mt-16">
-          <div className="xl:col-span-5">
+        <div className="flex justify-start gap-8 items-start mt-16">
+
+
+          <div className=" w-6/12">
             <div className="flex-center card-border rounded-xl p-10">
               <form
                 ref={formRef}
@@ -108,16 +110,12 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="xl:col-span-7 min-h-96">
+
+
+          <div className="w-6/12 ">
             <div className="bg-[#000000] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
            
-                               <figure>
-                                   <div className="hero-3d-layout   ">
-           
-                                       {/* <Heromodel /> */}
-           
-                                   </div>
-                               </figure>
+                          <img src="https://plus.unsplash.com/premium_photo-1673582724998-986fdf6d5549?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
             </div>
           </div>
         </div>

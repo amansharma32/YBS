@@ -38,7 +38,7 @@ export default function Heropage() {
 
     {
       id: 1,
-      video: 'https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_30fps.mp4',
+      video: 'https://videos.pexels.com/video-files/18069235/18069235-uhd_2560_1440_24fps.mp4',
     }
  
   ];

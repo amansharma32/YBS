@@ -153,7 +153,7 @@ export default function Heropage() {
 
                                                     <img src={word.imgPath} alt={word.text} className=' xl:size-12 size-7 md:p-2 p-1 rounded-full  bg-white-50 ' />
 
-                                                    <span> {word.text} </span>
+                                                    <span > {word.text} </span>
 
                                                 </span>
                                             ))}

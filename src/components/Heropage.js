@@ -39,7 +39,7 @@ export default function Heropage() {
 
     {
       id: 1,
-      video: 'https://videos.pexels.com/video-files/18069235/18069235-uhd_2560_1440_24fps.mp4',
+      video: 'https://res.cloudinary.com/dkbusg4bq/video/upload/v1751448992/we2_urqvbh.mp4',
     }
  
   ];

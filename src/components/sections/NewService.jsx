@@ -1,13 +1,15 @@
 import React from 'react';
-import { Briefcase, Zap, BarChart2, Star, Code, Mail, Menu, X, Wind, Thermometer, EyeOff,   Check, Package, Wrench } from 'lucide-react';
+import { Briefcase, Zap, BarChart2, Star, Code, Mail, Menu, X, Wind, Thermometer, EyeOff,   Check, Package, Wrench, Globe, Settings, PieChart, ClipboardCheck, PhoneCall, Terminal, BookOpen, Cloud, Camera, Cctv } from 'lucide-react';
 import { 
   Palette, Brush, Box, LayoutTemplate, Monitor, 
   Code2, Smartphone, ShoppingCart, BrainCircuit, 
   Server, Database, ShieldCheck, Search, Share2, 
   TrendingUp, FileText, LayoutDashboard, 
-  SmartphoneNfc, ShoppingBag, Cpu, Users, Rocket 
+  SmartphoneNfc, ShoppingBag, Cpu, Users, Rocket ,   Film, Music,   
 } from 'lucide-react';
 
+
+ 
 // --- DATA CONSTANTS ---
 
 const servicesData = {
@@ -96,11 +98,71 @@ const serviceCategories = [
       { name: "Graphic Design", icon: <LayoutTemplate className="w-5 h-5" /> },
       { name: "2D/3D Visualisation", icon: <Monitor className="w-5 h-5" /> }
     ],
-    image: "https://images.unsplash.com/photo-1494172961521-33799ddd43a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+    image: "https://images.unsplash.com/photo-1494172961521-33799ddd43a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
   },
-  // Add other categories similarly...
+  {
+    title: "Technology & Development",
+    icon: <Code2 className="w-8 h-8" />,
+    services: [
+      { name: "Web Development", icon: <Globe className="w-5 h-5" /> },
+      { name: "Frontend Development", icon: <LayoutTemplate className="w-5 h-5" /> },
+      { name: "Backend Development", icon: <Server className="w-5 h-5" /> },
+      { name: "Mobile App Development", icon: <Smartphone className="w-5 h-5" /> },
+      { name: "E-commerce Solutions", icon: <ShoppingCart className="w-5 h-5" /> },
+      { name: "AI & Machine Learning", icon: <BrainCircuit className="w-5 h-5" /> }
+    ],
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    title: "Digital Marketing",
+    icon: <TrendingUp className="w-8 h-8" />,
+    services: [
+      { name: "Search Engine Optimization", icon: <Search className="w-5 h-5" /> },
+      { name: "Social Media Management", icon: <Share2 className="w-5 h-5" /> },
+      { name: "Performance Marketing", icon: <BarChart2 className="w-5 h-5" /> },
+      { name: "Content Marketing", icon: <FileText className="w-5 h-5" /> },
+      { name: "Marketing Automation", icon: <Settings className="w-5 h-5" /> },
+      { name: "Analytics", icon: <PieChart className="w-5 h-5" /> }
+    ],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    title: "Experience Design",
+    icon: <LayoutDashboard className="w-8 h-8" />,
+    services: [
+      { name: "UI/UX Design", icon: <Monitor className="w-5 h-5" /> },
+      { name: "Website Design", icon: <Globe className="w-5 h-5" /> },
+      { name: "Mobile Experience", icon: <SmartphoneNfc className="w-5 h-5" /> },
+      { name: "Commerce Experience", icon: <ShoppingBag className="w-5 h-5" /> },
+      { name: "Human Machine Interface", icon: <Cpu className="w-5 h-5" /> }
+    ],
+    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    title: "Strategic & Consulting",
+    icon: <ClipboardCheck className="w-8 h-8" />,
+    services: [
+      { name: "Online Consultations", icon: <PhoneCall className="w-5 h-5" /> },
+      { name: "Project Management", icon: <Settings className="w-5 h-5" /> },
+      { name: "AI Automation Strategy", icon: <Terminal className="w-5 h-5" /> },
+      { name: "Brand Building", icon: <BookOpen className="w-5 h-5" /> },
+      { name: "Digital Transformation", icon: <Cloud className="w-5 h-5" /> }
+    ],
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    title: "Media Production",
+    icon: <Camera className="w-8 h-8" />,
+    services: [
+      { name: "Photography", icon: <Camera className="w-5 h-5" /> },
+      { name: "Videography", icon: <Film className="w-5 h-5" /> },
+      { name: "Audio Production", icon: <Music className="w-5 h-5" /> },
+      { name: "Motion Graphics", icon: <Monitor className="w-5 h-5" /> },
+      { name: "Live Streaming", icon: <Cctv className="w-5 h-5" /> }
+    ],
+    image: "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+  }
 ];
-
 // --- MAIN PAGE COMPONENT ---
 
 export default function FluxPremiumPage() {

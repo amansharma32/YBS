@@ -1,0 +1,407 @@
+import React from 'react';
+import { Briefcase, Zap, BarChart2, Star, Code, Mail, Menu, X, Wind, Thermometer, EyeOff,   Check, Package, Wrench } from 'lucide-react';
+import { 
+  Palette, Brush, Box, LayoutTemplate, Monitor, 
+  Code2, Smartphone, ShoppingCart, BrainCircuit, 
+  Server, Database, ShieldCheck, Search, Share2, 
+  TrendingUp, FileText, LayoutDashboard, 
+  SmartphoneNfc, ShoppingBag, Cpu, Users, Rocket 
+} from 'lucide-react';
+
+// --- DATA CONSTANTS ---
+
+const servicesData = {
+    "Branding & Design": {
+        icon: Briefcase,
+        items: ["Brand Consulting", "Logo & Identity Design", "Product Design", "Graphic Design", "2D / 3D Visualisation"]
+    },
+    "Technology & Development": {
+        icon: Code,
+        items: ["Web & Mobile App Development", "E-commerce Solutions", "AI & Machine Learning", "DevOps & Cloud Services", "QA & Cyber Security"]
+    },
+    "Experience & Strategy": {
+        icon: Zap,
+        items: ["UI/UX Design", "Website & Mobile Experience", "AI Automation Strategy", "Project Management", "Online Consultations"]
+    },
+    "Digital Marketing": {
+        icon: BarChart2,
+        items: ["SEO & Content Marketing", "Performance Marketing (PPC)", "Social Media Management", "Marketing Automation & CRM", "Data & Analytics"]
+    }
+};
+
+const designFeatures = [
+    {
+        icon: <Wind size={32} />,
+        title: "High-Velocity & Mini-Duct Systems",
+        content: "These systems utilize small, flexible tubes instead of large, obtrusive ducts. These can be seamlessly integrated within walls, ceilings, and floors, preserving your design's integrity while delivering powerful and efficient heating and cooling."
+    },
+    {
+        icon: <Thermometer size={32} />,
+        title: "Ductless Mini-Split Systems",
+        content: "Offering exceptional flexibility, ductless systems consist of a quiet outdoor unit and one or more indoor units that can be mounted discreetly on walls or ceilings. They provide zoned comfort."
+    },
+    {
+        icon: <EyeOff size={32} />,
+        title: "Concealed & Linear Vents",
+        content: "Modern vent solutions can be integrated directly into the wall material, painted to match, or designed as sleek, linear slots that blend into the architectural details of the room, becoming virtually invisible."
+    },
+    {
+        icon: <Cpu size={32} />,
+        title: "Smart Thermostats & Integrated Controls",
+        content: "Elegant, minimalist thermostats with intuitive touchscreen interfaces replace bulky, outdated controls, offering both aesthetic appeal and advanced, energy-saving functionality."
+    }
+];
+
+const integratedPackagesData = [
+    {
+        name: "Launchpad",
+        idealFor: "For new ventures",
+        price: "$3,500+",
+        features: ["Custom Website (5-7 Pages)", "Basic CMS & SEO", "Social Media Setup", "Monthly Performance Snapshot"],
+        highlight: false
+    },
+    {
+        name: "Accelerator",
+        idealFor: "For growing businesses",
+        price: "$7,000+",
+        features: ["Everything in Launchpad", "Enhanced Website (10-15 Pages)", "Content Marketing (2 Blogs/mo)", "Basic Google Ads"],
+        highlight: true
+    },
+    {
+        name: "Enterprise Impact",
+        idealFor: "For market leaders",
+        price: "Custom",
+        features: ["Everything in Accelerator", "Enterprise-Grade Platform", "Mobile App Development", "Advanced AI & DevOps"],
+        highlight: false
+    }
+];
+
+
+const specializedSolutionsData = [
+    { name: "Brand Builder Package", desc: "Establish a cohesive brand identity from scratch.", icon: Star },
+    { name: "Website Refresh & Optimization", desc: "Enhance your site's UI/UX, speed, and SEO.", icon: Zap },
+    { name: "SEO & Content Retainer", desc: "Sustained organic growth through high-quality content and technical SEO.", icon: BarChart2 },
+    { name: "Performance Marketing Retainer", desc: "Maximize ad spend efficiency and drive leads with strategic PPC campaigns.", icon: Briefcase }
+];
+
+
+const serviceCategories = [
+  {
+    title: "Branding",
+    icon: <Palette className="w-8 h-8" />,
+    services: [
+      { name: "Brand Consulting", icon: <Users className="w-5 h-5" /> },
+      { name: "Logo Design", icon: <Brush className="w-5 h-5" /> },
+      { name: "Industrial/Product Design", icon: <Box className="w-5 h-5" /> },
+      { name: "Graphic Design", icon: <LayoutTemplate className="w-5 h-5" /> },
+      { name: "2D/3D Visualisation", icon: <Monitor className="w-5 h-5" /> }
+    ],
+    image: "https://images.unsplash.com/photo-1494172961521-33799ddd43a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+  },
+  // Add other categories similarly...
+];
+
+// --- MAIN PAGE COMPONENT ---
+
+export default function FluxPremiumPage() {
+   
+
+    const ArchitecturalDivider = ({ title, id }) => (
+        <div id={id} className="relative h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent max-w-7xl mx-auto my-20 md:my-28">
+            <h2 className="absolute left-1/2 -translate-x-1/2 -top-4 bg-slate-50 px-4 text-gray-500 text-lg font-semibold text-center md:text-2xl">
+                {title}
+            </h2>
+        </div>
+    );
+
+    return (
+        <div className="bg-slate-50 min-h-screen font-sans text-slate-800 antialiased">
+          
+
+            <main>
+                <section className="py-20 md:py-28 bg-slate-50">
+                    <div className="container mx-auto px-6">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Tailored Packages for Every Business Need</h2>
+                            <p className="text-lg text-gray-600 mt-3 max-w-3xl mx-auto">Strategic solutions designed to scale with your business from launch to market leadership.</p>
+                        </div>
+                        
+                        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                            {integratedPackagesData.map((pkg) => (
+                                <div key={pkg.name} className={`relative overflow-hidden rounded-xl bg-white border shadow-lg transition-all duration-300 ${pkg.highlight ? 'border-blue-500 shadow-blue-200/50 transform md:-translate-y-4' : 'border-gray-200 hover:shadow-xl'}`}>
+                                    {pkg.highlight && (
+                                        <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold tracking-wider uppercase py-1.5 px-4 rounded-bl-xl rounded-tr-xl">
+                                            Most Popular
+                                        </div>
+                                    )}
+                                    <div className="p-8">
+                                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
+                                        <p className="text-blue-600 font-medium mb-4">{pkg.idealFor}</p>
+                                        <p className="text-4xl font-extrabold text-gray-900 mb-6">
+                                            {pkg.price}
+                                            {pkg.price !== "Custom" && <span className="text-sm font-normal text-gray-500"> / starting at</span>}
+                                        </p>
+                                        
+                                        <p className="text-gray-600 mb-6">{pkg.description}</p>
+                                        
+                                        <ul className="space-y-3 text-gray-600 mb-8">
+                                            {pkg.features.map((feature, index) => (
+                                                <li key={index} className="flex items-start">
+                                                    <Check className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
+                                                    <span>{feature}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        
+                                        <a 
+                                            href="#contact" 
+                                            className={`w-full block text-center font-bold py-3 px-6 rounded-lg transition-colors ${pkg.highlight ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                                        >
+                                            Get Started
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+                {/* --- Hero Section --- */}
+              
+
+                {/* --- Core Services Section --- */}
+                <section id="services" className="py-20 md:py-28">
+                    <div className="container mx-auto px-6">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Core Capabilities</h2>
+                            <p className="text-lg text-gray-600 mt-3 max-w-2xl mx-auto">A holistic suite of services designed to build, market, and elevate your brand in the digital landscape.</p>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {Object.entries(servicesData).map(([category, data]) => {
+                                const Icon = data.icon;
+                                return (
+                                    <div key={category} className="bg-white border border-slate-200/80 rounded-xl p-6 text-center transition-all hover:shadow-xl hover:-translate-y-2">
+                                        <div className="inline-block bg-cyan-100 text-cyan-600 rounded-full p-4 mb-5">
+                                            <Icon className="h-8 w-8" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-3">{category}</h3>
+                                        <p className="text-slate-500 text-sm">{data.items.join(', ')}.</p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+
+                <ArchitecturalDivider id="philosophy" title="Design Integration Philosophy" />
+
+                {/* ===== Zig-Zag Section 1: Philosophy ===== */}
+          <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="text-center mb-20">
+      <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Our <span className="text-cyan-600">Core Services</span>
+      </h3>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Comprehensive digital solutions to transform your business
+      </p>
+    </div>
+
+    <div className="space-y-32">
+      {serviceCategories.map((category, index) => (
+        <div 
+          key={index}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start`}
+        >
+          {/* Content Column */}
+          <div className={`${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
+            <div className="bg-gradient-to-br from-white to-cyan-50 p-8 rounded-2xl shadow-lg border border-gray-100">
+              <div className="flex items-center mb-6">
+                <div className="bg-cyan-100 p-3 rounded-xl text-cyan-600 mr-4">
+                  {category.icon}
+                </div>
+                <h4 className="text-3xl font-bold text-gray-900">
+                  {category.title}
+                </h4>
+              </div>
+              
+              <div className="space-y-4">
+                {category.services.map((service, i) => (
+                  <div key={i} className="flex items-start p-4 hover:bg-cyan-50/50 rounded-lg transition-all group">
+                    <div className="bg-cyan-100/50 p-2 rounded-lg mr-4 text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white transition-colors">
+                      {service.icon}
+                    </div>
+                    <div>
+                      <h5 className="text-lg font-semibold text-gray-800 group-hover:text-cyan-700 transition-colors">
+                        {service.name}
+                      </h5>
+                      <p className="text-gray-600 text-sm mt-1">
+                        Professional {service.name.toLowerCase()} services tailored to your needs
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <button className="mt-8 px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-500 hover:from-cyan-700 hover:to-cyan-600 text-white font-medium rounded-lg shadow-md transition-all flex items-center group">
+                <Rocket className="mr-2 group-hover:animate-bounce" />
+                Explore {category.title}
+              </button>
+            </div>
+          </div>
+
+          {/* Sticky Image Column */}
+          <div className={`lg:sticky lg:top-32 h-[500px] ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-full w-full">
+              <img
+                src={category.image}
+                alt={category.title}
+                className="w-full h-full object-cover absolute inset-0"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-8 text-white">
+                <div className="bg-cyan-600/90 backdrop-blur-sm inline-block px-4 py-2 rounded-lg mb-3">
+                  <span className="font-medium">Featured Work</span>
+                </div>
+                <h5 className="text-2xl font-bold mb-2">{category.title} Solutions</h5>
+                <p className="mb-4 max-w-md">See our award-winning work in {category.title.toLowerCase()}</p>
+                <button className="flex items-center text-cyan-200 hover:text-white transition-colors font-medium">
+                  View portfolio
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+                <ArchitecturalDivider id="packages" title="Integrated Growth Packages" />
+
+                {/* ===== Zig-Zag Section 2: Packages (Reversed) ===== */}
+                <section className="relative max-w-7xl mx-auto px-6 mb-20 md:mb-32">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-16">
+                        <div className="lg:sticky lg:top-32 h-fit lg:order-last">
+                             <h3 className="text-center md:text-left text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                                Scalable Solutions<br />
+                                <span className="text-cyan-600">From Launch to Enterprise</span>
+                            </h3>
+                            <p className="text-gray-600 text-justify text-base mb-8">
+                                Our integrated packages are designed to provide a clear growth path. Whether you're a startup laying the groundwork or an established business aiming for market leadership, we have a comprehensive solution that scales with your ambition, ensuring you have the right tools at every stage of your journey.
+                            </p>
+                             <div className="hidden lg:block">
+                                <img
+                                    src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Business growth and scaling"
+                                    className="rounded-xl shadow-2xl border-4 border-white w-full"
+                                />
+                            </div>
+                        </div>
+                        <div className="lg:col-start-1 lg:row-start-1 space-y-10 md:space-y-12 mt-12 lg:mt-0">
+                            {integratedPackagesData.map((pkg) => (
+                                <div key={pkg.name} className={`relative overflow-hidden rounded-2xl bg-white border shadow-lg transition-all duration-300 ${pkg.highlight ? 'border-cyan-500 shadow-cyan-200/50' : 'border-gray-100 hover:shadow-xl'}`}>
+                                    {pkg.highlight && <div className="absolute top-0 right-0 bg-cyan-600 text-white text-xs font-bold tracking-wider uppercase py-1.5 px-4 rounded-bl-xl rounded-tr-xl">Most Popular</div>}
+                                    <div className="p-8 lg:p-10">
+                                        <h4 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h4>
+                                        <p className="text-gray-500 mb-6">{pkg.idealFor}</p>
+                                        <p className="text-4xl font-extrabold text-gray-900 mb-6">{pkg.price}</p>
+                                        <ul className="space-y-3 text-gray-600 mb-8">
+                                            {pkg.features.map(feature => (
+                                                <li key={feature} className="flex items-center">
+                                                    <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                                                    <span>{feature}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <a href="#contact" className={`w-full block text-center font-bold py-3 px-6 rounded-lg transition-colors ${pkg.highlight ? 'bg-cyan-600 text-white hover:bg-cyan-700' : 'bg-slate-100 text-slate-800 hover:bg-slate-200'}`}>
+                                            Select Package
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <ArchitecturalDivider id="solutions" title="Specialized Project-Based Solutions" />
+
+                {/* ===== Zig-Zag Section 3: Solutions ===== */}
+                 <section className="relative max-w-7xl mx-auto px-6 mb-20 md:mb-32">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-16">
+                        <div className="lg:sticky lg:top-32 h-fit">
+                            <h3 className="text-center md:text-left text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                                Targeted Expertise<br />
+                                <span className="text-cyan-600">For Your Unique Needs</span>
+                            </h3>
+                            <p className="text-gray-600 text-justify text-base mb-8">
+                                Beyond our integrated packages, we offer specialized retainers and project-based solutions. These are designed to address specific challenges and opportunities, providing focused expertise to kickstart a new initiative, refresh an existing asset, or power ongoing growth in a key area.
+                            </p>
+                            <div className="hidden lg:block">
+                                <img
+                                    src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Team collaborating on a specialized project"
+                                    className="rounded-xl shadow-2xl border-4 border-white w-full"
+                                />
+                            </div>
+                        </div>
+                        <div className="lg:col-start-2 space-y-10 md:space-y-12 mt-12 lg:mt-0">
+                           {specializedSolutionsData.map((solution) => {
+                                const Icon = solution.icon;
+                                return (
+                                    <div key={solution.name} className="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                                        <div className="absolute inset-0 bg-gradient-to-br from-white to-cyan-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                        <div className="relative p-8 lg:p-10 flex flex-col md:flex-row md:items-start gap-8">
+                                            <div className="bg-orange-100 border border-orange-200/50 p-4 rounded-xl text-orange-600 flex-shrink-0 mt-1 self-center md:self-start">
+                                                <Icon size={32} />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-xl md:text-2xl text-center md:text-left font-bold text-gray-900 mb-4">{solution.name}</h4>
+                                                <p className="text-gray-600 text-base leading-relaxed">{solution.desc}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+
+
+                {/* --- Contact Section --- */}
+                <section id="contact" className="bg-white py-20 md:py-28">
+                    <div className="container mx-auto px-6">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Let's Build Something Extraordinary</h2>
+                            <p className="text-lg text-gray-600 mt-3 max-w-2xl mx-auto">Ready to elevate your digital presence? Reach out to us to discuss your project.</p>
+                        </div>
+                        <div className="max-w-2xl mx-auto bg-white border border-slate-200/80 rounded-xl p-8 shadow-2xl">
+                            <form className="space-y-6">
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">Name</label>
+                                        <input type="text" id="name" className="w-full px-4 py-3 bg-slate-100 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Your Name" />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">Email</label>
+                                        <input type="email" id="email" className="w-full px-4 py-3 bg-slate-100 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="you@example.com" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
+                                    <textarea id="message" rows="5" className="w-full px-4 py-3 bg-slate-100 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Tell us about your project..."></textarea>
+                                </div>
+                                <button type="submit" className="w-full md:w-auto bg-cyan-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-cyan-700 transition-colors flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl">
+                                    <Mail className="h-5 w-5" />
+                                    <span>Send Message</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                
+            </main>
+     
+        </div>
+    );
+}

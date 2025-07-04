@@ -14,6 +14,7 @@ import Contact from './sections/Contact'
 import { CaseStudy } from './sections/CaseStudy'
 import OurStorySection from './sections/OurStorySection'
 import OurServices from './sections/OurServices'
+import NewService from './sections/NewService'
 
 
 export default function Heropage() {
@@ -215,6 +216,7 @@ export default function Heropage() {
             
             <Contact/>
 
+<NewService/>
        
 </section>
  

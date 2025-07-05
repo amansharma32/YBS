@@ -205,6 +205,10 @@ export default function Heropage() {
 <OurServices/>
             <LogoShowcase />
 
+
+
+<NewService/>
+
             <FeatureCards />
 
 
@@ -216,7 +220,6 @@ export default function Heropage() {
             
             <Contact/>
 
-<NewService/>
        
 </section>
  

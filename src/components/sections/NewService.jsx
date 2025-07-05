@@ -1,5 +1,5 @@
-import React from 'react';
-import { Briefcase, Zap, BarChart2, Star, Code, Mail, Menu, X, Wind, Thermometer, EyeOff,   Check, Package, Wrench, Globe, Settings, PieChart, ClipboardCheck, PhoneCall, Terminal, BookOpen, Cloud, Camera, Cctv } from 'lucide-react';
+import React, { useState } from 'react';
+import { Briefcase, Zap, BarChart2, Star, Code, Mail, Menu, X, Wind, Thermometer, EyeOff,   Check, Package, Wrench, Globe, Settings, PieChart, ClipboardCheck, PhoneCall, Terminal, BookOpen, Cloud, Camera, Cctv, Layers, FileCode, EyeIcon, TrendingUpIcon, LayersIcon, ArrowRight, PaletteIcon, CodeIcon, LucideTrendingUp, LayoutIcon, UsersIcon, FileCheck, ChevronDown, CheckCheckIcon, ChevronUp } from 'lucide-react';
 import { 
   Palette, Brush, Box, LayoutTemplate, Monitor, 
   Code2, Smartphone, ShoppingCart, BrainCircuit, 
@@ -7,10 +7,83 @@ import {
   TrendingUp, FileText, LayoutDashboard, 
   SmartphoneNfc, ShoppingBag, Cpu, Users, Rocket ,   Film, Music,   
 } from 'lucide-react';
-
-
+import { motion } from "framer-motion";
+import {  AnimatePresence } from 'framer-motion';
  
 // --- DATA CONSTANTS ---
+const services = [
+  {
+    title: "Branding",
+    icon: <PaletteIcon className="w-5 h-5" />,
+    items: [
+      "Brand Consulting",
+      "Logo Design",
+      "Industrial / Product Design",
+      "Graphic Design",
+      "2D / 3D Visualisation"
+    ],
+    color: "from-purple-100 to-indigo-100"
+  },
+  {
+    title: "Technology & Development",
+    icon: <CodeIcon className="w-5 h-5" />,
+    items: [
+      "Web Development (React, Next.js, Python, HTML, WordPress, Shopify)",
+      "Frontend Development",
+      "Backend Development",
+      "Interactive Development",
+      "On-Demand 3D Website Creation",
+      "AR Menu Development",
+      "Mobile App Development",
+      "E-commerce Solutions",
+      "AI & Machine Learning",
+      "DevOps Consulting",
+      "Data & Analytics",
+      "Quality Assurance & Testing",
+      "Cloud Services",
+      "Cyber Security"
+    ],
+    color: "from-blue-100 to-cyan-100"
+  },
+  {
+    title: "Digital Marketing",
+    icon: <LucideTrendingUp className="w-5 h-5" />,
+    items: [
+      "Search Engine Optimisation (SEO)",
+      "Social Media Management",
+      "Performance Marketing (PPC & Paid Social)",
+      "Content Marketing",
+      "Marketing Automation",
+      "Analytics",
+      "Lead Generation",
+      "CRM Solutions"
+    ],
+    color: "from-green-100 to-teal-100"
+  },
+  {
+    title: "Experience Design",
+    icon: <LayoutIcon className="w-5 h-5" />,
+    items: [
+      "UI/UX Design",
+      "Website Design",
+      "Mobile Experience",
+      "Commerce Experience",
+      "Human Machine Interface"
+    ],
+    color: "from-amber-100 to-orange-100"
+  },
+  {
+    title: "Strategic & Consulting",
+    icon: <UsersIcon className="w-5 h-5" />,
+    items: [
+      "Online Consultations (all sorts)",
+      "Project Management",
+      "AI Automation Strategy & Implementation",
+      "Brand Building from Scratch"
+    ],
+    color: "from-red-100 to-pink-100"
+  }
+];
 
 const servicesData = {
     "Branding & Design": {
@@ -163,10 +236,78 @@ const serviceCategories = [
     image: "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
   }
 ];
+
+const capabilities = [
+  {
+    title: "Branding & Design",
+    icon: <Layers className="w-6 h-6" />,
+    services: [
+      "Brand Consulting",
+      "Logo & Identity Design",
+      "Product Design",
+      "Graphic Design",
+      "2D / 3D Visualisation"
+    ],
+    color: "from-cyan-100 to-teal-100"
+  },
+  {
+    title: "Technology & Development",
+    icon: <FileCode className="w-6 h-6" />,
+    services: [
+      "Web & Mobile App Development",
+      "E-commerce Solutions",
+      "AI & Machine Learning",
+      "DevOps & Cloud Services",
+      "QA & Cyber Security"
+    ],
+    color: "from-teal-100 to-cyan-100"
+  },
+  {
+    title: "Experience & Strategy",
+    icon: <EyeIcon className="w-6 h-6" />,
+    services: [
+      "UI/UX Design",
+      "Website & Mobile Experience",
+      "AI Automation Strategy",
+      "Project Management",
+      "Online Consultations"
+    ],
+    color: "from-cyan-100 to-teal-100"
+  },
+  {
+    title: "Digital Marketing",
+    icon: <TrendingUpIcon className="w-6 h-6" />,
+    services: [
+      "SEO & Content Marketing",
+      "Performance Marketing (PPC)",
+      "Social Media Management",
+      "Marketing Automation & CRM",
+      "Data & Analytics"
+    ],
+    color: "from-teal-100 to-cyan-100"
+  }
+];
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 // --- MAIN PAGE COMPONENT ---
 
 export default function FluxPremiumPage() {
    
+
+
+    const [expandedServices, setExpandedServices] = useState({});
+
+  const toggleService = (index) => {
+    setExpandedServices(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
 
     const ArchitecturalDivider = ({ title, id }) => (
         <div id={id} className="relative h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent max-w-7xl mx-auto my-20 md:my-28">
@@ -231,28 +372,180 @@ export default function FluxPremiumPage() {
               
 
                 {/* --- Core Services Section --- */}
-                <section id="services" className="py-20 md:py-28">
-                    <div className="container mx-auto px-6">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Core Capabilities</h2>
-                            <p className="text-lg text-gray-600 mt-3 max-w-2xl mx-auto">A holistic suite of services designed to build, market, and elevate your brand in the digital landscape.</p>
-                        </div>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {Object.entries(servicesData).map(([category, data]) => {
-                                const Icon = data.icon;
-                                return (
-                                    <div key={category} className="bg-white border border-slate-200/80 rounded-xl p-6 text-center transition-all hover:shadow-xl hover:-translate-y-2">
-                                        <div className="inline-block bg-cyan-100 text-cyan-600 rounded-full p-4 mb-5">
-                                            <Icon className="h-8 w-8" />
-                                        </div>
-                                        <h3 className="text-xl font-bold text-slate-900 mb-3">{category}</h3>
-                                        <p className="text-slate-500 text-sm">{data.items.join(', ')}.</p>
-                                    </div>
-                                );
-                            })}
-                        </div>
+        <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 overflow-hidden bg-gradient-to-b from-white to-cyan-50/20">
+    {/* Background elements */}
+    <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-200/20 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-teal-300/20 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+    </div>
+
+    {/* Header section */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeIn}
+      transition={{ duration: 0.8 }}
+      className="text-center mb-20 relative z-10"
+    >
+      <div className="inline-flex items-center justify-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-full text-white text-sm font-medium mb-6 shadow-lg">
+        <LayersIcon className="mr-2" />
+        Our Expertise
+      </div>
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Our <span className="text-cyan-600">Core Capabilities</span>
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        A holistic suite of services designed to build, market, and elevate your brand in the digital landscape
+      </p>
+    </motion.div>
+
+    {/* Capabilities grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+      {capabilities.map((capability, index) => (
+        <motion.div
+          key={index}
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="group"
+        >
+          <div className="h-full bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+            <div className={`bg-gradient-to-r ${capability.color} p-6 flex items-center`}>
+              <div className="bg-white w-12 h-12 rounded-lg flex items-center justify-center text-cyan-600 shadow-sm mr-4">
+                {capability.icon}
+              </div>
+              <h3 className="text-xl font-bold text-gray-900">{capability.title}</h3>
+            </div>
+            <div className="p-6">
+              <ul className="space-y-3">
+                {capability.services.map((service, i) => (
+                  <li key={i} className="flex items-start">
+                    <div className="bg-cyan-100/50 rounded-full p-1 mr-3 mt-0.5">
+                      <svg className="w-3 h-3 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
                     </div>
-                </section>
+                    <span className="text-gray-700">{service}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="mt-24 text-center relative z-10"
+    >
+      <button className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white font-medium rounded-lg shadow-lg transition-all flex items-center mx-auto group">
+        Explore All Services
+        <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+      </button>
+    </motion.div>
+  </section>
+
+
+       
+
+
+
+
+
+        <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Our <span className="text-blue-600">Core Service Offerings</span>
+        </h2>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Comprehensive solutions tailored to elevate your digital presence
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service, index) => (
+          <motion.div 
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow"
+          >
+            <div className={`bg-gradient-to-r ${service.color} p-6 flex items-center`}>
+              <div className="bg-white/90 p-2 rounded-lg mr-4 text-blue-600">
+                {service.icon}
+              </div>
+              <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+            </div>
+
+            <div className="p-6">
+              <ul className="space-y-3 mb-6">
+                {service.items.slice(0, 5).map((item, i) => (
+                  <li key={i} className="flex items-start">
+                    <FileCheck className="text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <AnimatePresence>
+                {expandedServices[index] && (
+                  <motion.ul
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="space-y-3 overflow-hidden"
+                  >
+                    {service.items.slice(5).map((item, i) => (
+                      <motion.li 
+                        key={i + 5}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: i * 0.05 }}
+                        className="flex items-start"
+                      >
+                        <CheckCheckIcon className="text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+                        <span className="text-gray-700">{item}</span>
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+
+              {service.items.length > 5 && (
+                <button
+                  onClick={() => toggleService(index)}
+                  className="mt-4 flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium"
+                >
+                  {expandedServices[index] ? (
+                    <>
+                      <ChevronUp className="mr-1" />
+                      Show Less
+                    </>
+                  ) : (
+                    <>
+                      <ChevronDown className="mr-1" />
+                      View More ({service.items.length - 5} more)
+                    </>
+                  )}
+                </button>
+              )}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+
 
                 <ArchitecturalDivider id="philosophy" title="Design Integration Philosophy" />
 

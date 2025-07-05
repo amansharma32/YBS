@@ -387,7 +387,7 @@ export default function FluxPremiumPage() {
                   {service.items.length > 5 && (
                     <button
                       onClick={() => toggleService(index)}
-                      className="mt-4 flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium"
+                      className="mt-4 flex items-center text-cyan-700 relative z-10 hover:text-cyan-600 text-sm font-medium"
                     >
                       {expandedServices[index] ? (
                         <>

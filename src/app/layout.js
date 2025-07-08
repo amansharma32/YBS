@@ -14,11 +14,87 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata = {
+  title: {
+
+    default: "Website Designing Company in Delhi, Web Development Company India |  Flux Digital",
+    template: "%s"
+
+  },
+  description: "Web Development Company in India. Flux Digital is Best Website Designing Company in Delhi, India. Get Responsive Ecommerce Website Design, SEO Services, B2B and B2C portal, Web Services , Digital Marketing, Web Designing in India, Delhi",
+
+  
+  keywords: [
+   " Website Designing",
+    "Web Designing Company",
+     "Website Designing In Delhi"
+     , "Best Website Designing Company In Delhi",
+      SEO Services In Delhi, 
+      Web Development Company In Delhi 
+      ,Website Designing Company India ,
+       Web Development India, Best SEO Services India ,
+        E-commerce Website Development India ,
+         Web Design Agency India ,
+          Digital Marketing Company India ,
+           Responsive Website Design ,
+            Custom Website Development ,
+            SEO Company in India ,
+             Web Development Services ,
+  ],
+
+  robots: "index,follow",
+  appleMobileWebAppCapable: "yes",
+  appleMobileWebAppTitle: "Adhunik Powertech",
+  appleMobileWebAppStatusBarStyle: "default",
+  robots: "index, follow",
+
+  alternates: {
+    canonical: "https://www.adhunikpowertech.com/",
+  },
+
+  twitter: {
+    site: "@adhunikpowertech",
+    title: "Adhunik Powertech | Top HVAC & Air Cooling Systems Gurugram",
+    description: "Discover Adhunik Powertech Private Limited, a leader in HVAC solutions and air cooling systems. Based in Gurugram, India, we specialize in innovative, turnkey projects for industrial and commercial cooling needs.",
+    card: "summary",
+    image: "https://adhunikpowertech.com/apple-touch-icon.png",
+    imageAlt: "Adhunik Powertech - HVAC & Air Cooling Solutions"
+  },
+  openGraph: {
+    title: "Adhunik Powertech",
+    type: "website",
+    url: "https://www.adhunikpowertech.com/",
+    siteName: "Adhunik Powertech - HVAC Experts",
+    image: "https://adhunikpowertech.com/apple-touch-icon.png",
+    locale: "en_IN",
+    creator: "Adhunik Powertech",
+
+
+    images: [
+      {
+        url: "https://adhunikpowertech.com/apple-touch-icon.png",
+        width: 1200,
+        height: 630,
+        alt: "Adhunik Powertech HVAC Solutions"
+      }
+    ]
+  },
+
+  additionalMeta: [
+    { httpEquiv: "X-UA-Compatible", content: "IE=EmulateIE7" },
+    { httpEquiv: "Accept-CH", content: "DPR, Viewport-Width, Width, Save-Data" }
+  ],
+
+  link: [
+    { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" },
+  ]
+};
+
 
 
 export const metadata = {
-  title: 'Website Designing Company in Delhi, Web Development Company India |  Flux Digital',
-  description: "Web Development Company in India. Flux Digital is Best Website Designing Company in Delhi, India. Get Responsive Ecommerce Website Design, SEO Services, B2B and B2C portal, Web Services , Digital Marketing, Web Designing in India, Delhi ",
+  title: '',
+  description: " ",
 
   keywords: 'Website Designing, Web Designing Company, Website Designing In Delhi, Best Website Designing Company In Delhi, SEO Services In Delhi, Web Development Company In Delhi ,Website Designing Company India, Web Development India, Best SEO Services India, E-commerce Website Development India, Web Design Agency India, Digital Marketing Company India, Responsive Website Design, Custom Website Development, SEO Company in India, Web Development Services',
 

@@ -186,7 +186,7 @@ const Firespark = () => {
       }
 
       // Create Fumes
-      for (let i = 0; i < 25; i++) {
+      for (let i = 0; i < 50; i++) {
         const particle = document.createElement('div');
         particle.className = 'absolute rounded-full particle-element';
         particle.style.width = `${Math.random() * 15 + 8}px`;
@@ -201,7 +201,7 @@ const Firespark = () => {
       const ignitionLine = document.createElement('div');
       ignitionLine.className = 'absolute ignition-line';
       ignitionLine.style.background = 'linear-gradient(to bottom, rgba(255, 120, 0, 0.8), rgba(252, 211, 77, 0.8))';
-      ignitionLine.style.width = '4px';
+      ignitionLine.style.width = '8px';
       ignitionLine.style.filter = 'blur(4px)';
       section.appendChild(ignitionLine);
 

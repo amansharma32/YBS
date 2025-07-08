@@ -10,6 +10,7 @@ import {
 import { motion } from "framer-motion";
 import { AnimatePresence } from 'framer-motion';
 import { TbRocket, TbBolt, TbBuildingSkyscraper, TbCircleCheck, TbArrowRight } from 'react-icons/tb';
+import Firespark from './Firespark';
 
 // --- DATA CONSTANTS ---
 
@@ -445,7 +446,7 @@ const packagesData = [
   return (
     <>
 
-    <div className="bg-slate-50 min-h-screen font-sans text-slate-800 antialiased">
+    <div className="bg-slate-50  font-sans text-slate-800 antialiased">
 
 
       <main>
@@ -805,8 +806,10 @@ const packagesData = [
 
         <ArchitecturalDivider id="solutions" title="Specialized Project-Based Solutions" />
 
+
+
         {/* ===== Zig-Zag Section 3: Solutions ===== */}
-        <section className="relative max-w-7xl mx-auto px-6 mb-20 md:mb-32">
+        <section className="relative max-w-7xl mx-auto px-6 pb-20 md:pb-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-16">
             <div className="lg:sticky lg:top-32 h-fit">
               <h3 className="text-center md:text-left text-2xl md:text-3xl font-bold text-gray-900 mb-6">
@@ -854,122 +857,9 @@ const packagesData = [
     </div>
 
     
+  <Firespark/>
 
-
-        <div className="bg-slate-50 font-sans antialiased text-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-24">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
-            Integrated Growth Packages
-          </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            These packages offer comprehensive, integrated solutions for businesses seeking holistic digital transformation and sustained growth.
-          </p>
-        </div>
-
-        {/* Packages Container */}
-        <div className="space-y-24">
-          {packagesData.map((pkg, index) => {
-            const Icon = pkg.icon;
-            const isReversed = index % 2 !== 0;
-            const colors = pkg.colorConfig;
-
-            const summaryCard = (
-              <div 
-                className="p-8 lg:p-10 rounded-3xl shadow-2xl flex flex-col h-full"
-                style={{
-                  background: `linear-gradient(135deg, ${colors.gradientFrom}, ${colors.gradientTo})`,
-                  color: colors.text
-                }}
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <div 
-                    className="p-3 rounded-2xl backdrop-blur-sm border"
-                    style={{
-                      backgroundColor: colors.iconBg,
-                      borderColor: colors.border
-                    }}
-                  >
-                    <Icon className="w-8 h-8" />
-                  </div>
-                  <h2 className="text-3xl font-bold">{pkg.title}</h2>
-                </div>
-                <p className="text-white/90 font-medium mb-2 mt-4 text-sm uppercase tracking-wider">Ideal for:</p>
-                <p className="text-white/80 mb-6 flex-grow leading-relaxed">{pkg.idealFor}</p>
-                
-                <div className="mt-auto pt-6 border-t" style={{ borderColor: colors.border }}>
-                  <p className="text-white/90 font-semibold mb-2">Value Proposition:</p>
-                  <p className="text-white/80 text-sm leading-relaxed mb-8">{pkg.valueProp}</p>
-                  <button 
-                    className={`group w-full font-bold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center`}
-                    style={{
-                      backgroundColor: colors.primary,
-                      color: colors.text,
-                      '--tw-shadow-color': colors.hover,
-                      '&:hover': {
-                        backgroundColor: colors.hover
-                      }
-                    }}
-                  >
-                    Get Started
-                    <TbArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                  </button>
-                </div>
-              </div>
-            );
-
-            const detailsCard = (
-              <div className="bg-white p-8 lg:p-10 rounded-3xl shadow-xl ring-1 ring-slate-200/50 h-full">
-                <h3 className="text-2xl font-bold text-gray-900 mb-8">Key Inclusions</h3>
-                <div className="space-y-8">
-                  {pkg.inclusions.map((inclusion) => (
-                    <div key={inclusion.category}>
-                      <h4 
-                        className="text-lg font-semibold mb-4 pb-3 border-b border-slate-200"
-                        style={{ color: colors.primary }}
-                      >
-                        {inclusion.category}
-                      </h4>
-                      <ul className="space-y-3">
-                        {inclusion.details.map((item, i) => (
-                          <li key={i} className="flex items-start">
-                            <div 
-                              className="p-1 rounded-full mr-4 mt-1 flex-shrink-0"
-                              style={{
-                                backgroundColor: `${colors.primary}10`,
-                                color: colors.primary
-                              }}
-                            >
-                              <TbCircleCheck className="w-4 h-4" />
-                            </div>
-                            <span className="text-gray-600 leading-relaxed">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            );
-            
-            return (
-              <section key={pkg.id} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                {/* The sticky column */}
-                <div className={`lg:sticky lg:top-24 h-fit ${isReversed ? 'lg:order-last' : ''}`}>
-                  {summaryCard}
-                </div>
-
-                {/* The scrolling column */}
-                <div className={`${isReversed ? 'lg:order-first' : ''}`}>
-                  {detailsCard}
-                </div>
-              </section>
-            );
-          })}
-        </div>
-      </div>
-    </div>
+        
 
     </>
 

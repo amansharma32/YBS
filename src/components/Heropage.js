@@ -16,6 +16,7 @@ import OurStorySection from './sections/OurStorySection'
 import OurServices from './sections/OurServices'
 import NewService from './sections/NewService'
 import Firespark from './sections/Firespark'
+import ProjectBasedPackages from './sections/ProjectBasedPackages'
 
 
 export default function Heropage() {
@@ -219,6 +220,8 @@ export default function Heropage() {
             <Testimonials/>
             
             <Contact/>
+
+            <ProjectBasedPackages/>
           
 
        

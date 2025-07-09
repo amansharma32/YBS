@@ -134,8 +134,42 @@ const specializedSolutionsData = [
 
   return (
     <>
-       <ArchitecturalDivider id="philosophy" title="Design Integration Philosophy" />
 
+        <section>
+
+
+                <div className="relative flex  h-[86vh] md:h-[67vh] w-full">
+                 
+
+
+                       <div className="box w-full h-full">
+                               <img src="https://images.unsplash.com/photo-1727125893979-5d81a3443ca1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  className=' hidden md:block  h-full w-full  object-center object-cover'
+                  alt="  Addressable Fire Alarm System"
+                  
+                />
+
+                <img
+                src="https://images.unsplash.com/photo-1727125893979-5d81a3443ca1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  className=' md:hidden  h-full w-full object-center object-cover'
+                       alt="  Addressable Fire Alarm System"
+                 
+                />
+                       </div>
+
+
+                    <div className="absolute w-full h-full p-9 bottom-0 flex flex-col md:flex-row justify-center md:justify-between items-center md:text-center mx-auto">
+                        <p className="text-center font-sans md:text-left font-thin text-red-50 text-3xl md:text-6xl font-bold flex flex-col justify-center items-center h-full my-auto">
+                         Our Services
+                            <br />
+                            <span className="text-center font-sans  text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">Home /  Our Services
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                
+            </section>
+       
         {/* ===== Zig-Zag Section 1: Philosophy ===== */}
         <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-20">

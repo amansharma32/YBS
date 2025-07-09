@@ -159,7 +159,7 @@ const specializedSolutionsData = [
 
 
                     <div className="absolute w-full h-full p-9 bottom-0 flex flex-col md:flex-row justify-center md:justify-between items-center md:text-center mx-auto">
-                        <p className="text-center font-sans md:text-left font-thin text-red-50 text-3xl md:text-6xl font-bold flex flex-col justify-center items-center h-full my-auto">
+                        <p className="text-center font-sans md:text-left font-thin text-orange-800 text-3xl md:text-6xl flex flex-col justify-center items-center h-full my-auto">
                          Our Services
                             <br />
                             <span className="text-center font-sans  text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">Home /  Our Services

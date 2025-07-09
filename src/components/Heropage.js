@@ -210,8 +210,7 @@ export default function Heropage() {
 
 <NewService/>
 
-            <FeatureCards />
-
+          
 
             <Experience />
 

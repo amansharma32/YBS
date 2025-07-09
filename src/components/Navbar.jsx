@@ -36,8 +36,7 @@ function Header() {
 
   const links = [
 
-    { href: '/', text: 'Services' },
-
+    
     { href: '/about-Us', text: 'Solutions' },
 
 
@@ -46,9 +45,8 @@ function Header() {
       text: ' Service ',
       dropdownItems: [
         { label: 'Branding ', href: '/fire-extinguishers' },
-
-
       ],
+      
     },
 
 
@@ -119,10 +117,7 @@ function Header() {
 
 
   const menuItems = [
-    {
-      label: "Services",
-      href: "/"
-    },
+ 
     {
       label: "Solutions",
       href: "/about-Us"
@@ -318,7 +313,9 @@ function Header() {
 Strong
 Capabilities to Empower Your Brand
      </div>
-                                <a href="#" className="text-cyan-500 px-7 pt-5 text-left mb-6 inline-block">Go to overview →</a>
+                                <Link  href="/services-overview" className="text-cyan-500 px-7 pt-5 text-left mb-6 inline-block">
+                                Go to overview →
+                                </Link>
 
                               </div>
                            

@@ -32,7 +32,7 @@ export default function OurStorySection() {
           </div>
           
           {/* Video Side */}
-          <div className="relative w-6/12 h-full  rounded-xl overflow-hidden shadow-lg  ">
+          <div className="relative w-6/12  h-96 rounded-xl overflow-hidden shadow-lg  ">
           
             <video
               className="w-full h-full  object-center object-cover"

@@ -251,7 +251,7 @@ const Firespark = () => {
                         opacity: 0, scale: 0,
                         duration: 0.6 + Math.random() * 1.0,
                         ease: 'power3.out',
-                        delay: Math.random() * 0.3, // Stagger start time
+                        delay: Math.random() * 0.3, // Stagger start time 
                     });
                 } else { // Fume animation
                     gsap.to(p.element, {

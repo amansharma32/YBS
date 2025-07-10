@@ -142,9 +142,9 @@ export default function Heropage() {
   
   </div>
 
-              <div className="  flex items-center h-screen bg-transparent bg-opacity-40">
+              <div className="  flex    items-center h-screen bg-transparent bg-opacity-40">
 
-                <div className=" text-white   text-center md:text-left  lg:px-16">
+                <div className=" text-white   px-8 text-left md:text-left  lg:px-16">
                 <div className="hero-text">
                                 <p className=' MyFont p-anime'> Shaping
 
@@ -166,7 +166,9 @@ export default function Heropage() {
                                 </p>
                                 <p className='p-anime'>Into Real Projects</p>
                                 <p className='p-anime'> That Deliver Results</p>
-                                <p className=' py-5 text-white-50 relative  z-10 md:text-lg  pointer-events-none'> Hi,  We are Flux Digital, a agency based in india <br /> with passion for all web services. </p>
+                                <p className=' py-5 text-white-50 relative  z-10 text-sm md:text-lg  pointer-events-none'>
+                                 Hi,  We are Flux Digital, a agency based in india   <br /> 
+                               with passion for all web services. </p>
  
                             </div>
                 </div>

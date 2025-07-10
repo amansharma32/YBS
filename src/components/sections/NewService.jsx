@@ -450,7 +450,7 @@ const packagesData = [
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our <span className="text-cyan-600">Core Capabilities</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="md:text-xl text-gray-600 max-w-3xl mx-auto">
               A holistic suite of services designed to build, market, and elevate your brand in the digital landscape
             </p>
           </motion.div>
@@ -566,12 +566,12 @@ const packagesData = [
       </div>
 
       <div className="relative z-10 text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 className=" text-2xl md:text-4xl  font-bold text-gray-900 mb-4">
           <span className="bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
             Tailored Packages
           </span> for Every Business Need
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="md:text-md text-gray-600 max-w-3xl mx-auto">
           Strategic solutions designed to scale with your business from launch to market leadership
         </p>
       </div>

@@ -106,7 +106,7 @@ import React, { useRef, useState } from 'react';
         </div>
 
        
-        <div className="p-6  bg-gray-50">
+        <div className="p-6 text-center md:text-left  bg-gray-50">
           <h3 className="text-xl mb-2 text-gray-900">{study.title}</h3>
           <p className="text-gray-500 text-sm mb-4">{study.description}</p>
           
@@ -134,11 +134,11 @@ import React, { useRef, useState } from 'react';
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 flex">
-          <h2 className="text-3xl md:text-5xl text-left end-full font-sans font-thin mb-4 text-gray-900">
+        <div className=" py-7 text-center md:text-left   mb-12 flex flex-col md:flex-row  justify-center items-start">
+          <h2 className="text-3xl md:text-5xl   end-full font-sans font-thin mb-4 text-gray-900">
             Our Impactful Case Studies
           </h2>
-           <p className="text-lg text-left text-gray-600 max-w-2xl mx-auto">
+           <p className=" text-sm md:text-lg   text-gray-600 max-w-2xl mx-auto">
             Discover how we've helped industry leaders transform their digital presence and achieve remarkable results.
           </p>
         </div>

@@ -124,7 +124,7 @@ export default function ServiceCards() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl text-left    pt-20 text-gray-900 sm:text-5xl lg:text-6xl tracking-tight"
+            className="text-4xl md:text-left    pt-20 text-gray-900 sm:text-5xl lg:text-6xl tracking-tight"
           >
             Our <span className="bg-clip-text text-transparent bg-gradient-to-r to-[#0093E9] from-cyan-600">Premium</span> Services
           </motion.h2>
@@ -163,7 +163,7 @@ export default function ServiceCards() {
                 </motion.div>
 
                 {/* Content */}
-                <div className="p-8 h-fit flex flex-col">
+                <div className="p-8 h-fit text-center md:text-left justify-center items-center md:justify-start md:items-start flex flex-col">
                   <h3 className="text-2xl font-thin font-sans text-gray-900 mb-3">
                     {service.title}
                   </h3>

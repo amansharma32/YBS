@@ -8,9 +8,9 @@ export default function OurStorySection() {
 
         <div className="bg-gray-900  py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className=" flex flex-col  md:flex-row  gap-12 items-center">
+        <div className=" flex flex-col-reverse  md:flex-row  gap-12 items-center">
           {/* Content Side */}
-          <div className="space-y-6 w-6/12">
+          <div className="space-y-6 w-full text-center md:text-left md:w-6/12">
             <h2 className="text-6xl font-thin font-sans text-white ">
               Our Story
             </h2>
@@ -32,7 +32,7 @@ export default function OurStorySection() {
           </div>
           
           {/* Video Side */}
-          <div className="relative w-6/12  h-96 rounded-xl overflow-hidden shadow-lg  ">
+          <div className="relative w-full md:w-6/12  h-96 rounded-xl overflow-hidden shadow-lg  ">
           
             <video
               className="w-full h-full  object-center object-cover"

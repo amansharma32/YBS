@@ -7,6 +7,9 @@ import {
   TbBrandInstagram 
 } from 'react-icons/tb';
 
+import {   FiTrendingUp, FiDollarSign, FiShoppingCart } from 'react-icons/fi';
+
+
 const ProjectPackages = () => {
   const packages = [
     {
@@ -81,6 +84,62 @@ const ProjectPackages = () => {
         "Follower Growth Strategy (organic focus)"
       ],
       deliverable: "Polished social media profiles and a content roadmap to kickstart engagement."
+    }
+  ];
+
+
+    const retainers = [
+    {
+      id: 1,
+      title: "Dedicated SEO & Content Growth",
+      icon: <FiTrendingUp className="w-5 h-5" />,
+      color: "from-teal-500 to-cyan-500",
+      idealFor: "Businesses prioritizing organic traffic and aiming to become thought leaders in their industry.",
+      focus: "Consistent content creation, technical SEO, and link building for sustained organic growth.",
+      features: [
+        "Monthly Comprehensive Keyword Research & Trend Analysis",
+        "Technical SEO Monitoring & Maintenance",
+        "High-Quality Blog Content Creation (4-6 posts/month) & Optimization",
+        "Link Building & Digital PR Outreach",
+        "Monthly Performance Reporting: Detailed analytics on organic traffic, rankings, and conversions",
+        "Competitor Monitoring"
+      ],
+      cta: "Boost Organic Growth"
+    },
+    {
+      id: 2,
+      title: "Performance Marketing Power-Up",
+      icon: <FiDollarSign className="w-5 h-5" />,
+      color: "from-blue-500 to-cyan-500",
+      idealFor: "Businesses focused on immediate lead generation, sales, and maximizing ad spend efficiency.",
+      focus: "Strategic planning, execution, and optimization of paid advertising campaigns.",
+      features: [
+        "Multi-Platform Ad Strategy & Setup (Google Ads, Facebook/Instagram Ads, LinkedIn Ads - chosen 2-3 platforms)",
+        "Ongoing Campaign Management & Optimization: Daily bid adjustments, ad copy testing, audience refinement",
+        "Conversion Tracking & Analytics Setup",
+        "Monthly Budget Management & Recommendations",
+        "A/B Testing & Creative Optimization",
+        "Detailed Monthly Performance Reports: Focus on ROI, cost-per-lead/sale, and ROAS"
+      ],
+      cta: "Maximize Ad Performance"
+    },
+    {
+      id: 3,
+      title: "E-commerce Accelerator",
+      icon: <FiShoppingCart className="w-5 h-5" />,
+      color: "from-fuchsia-500 to-orange-500",
+      idealFor: "E-commerce businesses needing specialized support to boost online sales and user experience.",
+      focus: "Optimizing the online store for conversions and customer lifetime value.",
+      features: [
+        "E-commerce Platform Optimization (Shopify, WooCommerce): Product page optimization, checkout flow improvements",
+        "Product Listing Optimization (SEO for products)",
+        "Conversion Rate Optimization (CRO) Implementation: A/B testing, user behavior analysis",
+        "Email Marketing Automation: Abandoned cart recovery, post-purchase sequences",
+        "Retargeting & Dynamic Product Ads Management",
+        "Inventory & Product Feed Management Support",
+        "Monthly E-commerce Sales & Conversion Reporting"
+      ],
+      cta: "Accelerate Online Sales"
     }
   ];
 
@@ -183,6 +242,82 @@ const ProjectPackages = () => {
             </button>
           </div>
         </div>
+
+         <div className="bg-gray-50 py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <span className="inline-block bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full mb-4 tracking-wider">
+            ONGOING STRATEGIC SERVICES
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Highly Specialized <span className="bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">Retainer Packages</span>
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Continuous optimization and execution for businesses with specific, ongoing needs in core digital areas.
+          </p>
+        </div>
+
+        {/* Packages Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {retainers.map((retainer) => (
+            <div key={retainer.id} className="group relative h-full">
+              {/* Gradient Border Effect */}
+              <div className={`absolute inset-0 bg-gradient-to-r ${retainer.color} rounded-xl p-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+              
+              <div className="relative h-full bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
+                {/* Header */}
+                <div className={`bg-gradient-to-r ${retainer.color} p-6`}>
+                  <div className="flex items-center">
+                    <div className="bg-white/20 p-2 rounded-lg backdrop-blur-sm mr-4">
+                      {retainer.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-white">{retainer.title}</h3>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="mb-6">
+                    <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Ideal For</h4>
+                    <p className="text-gray-700">{retainer.idealFor}</p>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Primary Focus</h4>
+                    <p className="text-gray-700">{retainer.focus}</p>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Core Inclusions</h4>
+                    <ul className="space-y-3">
+                      {retainer.features.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <FiCheck className="flex-shrink-0 mt-1 mr-3 text-cyan-500" />
+                          <span className="text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Footer */}
+                <div className="px-6 pb-6">
+                  <button className={`w-full py-3 px-6 rounded-lg font-medium text-white bg-gradient-to-r ${retainer.color} hover:shadow-lg transition-all`}>
+                    {retainer.cta}
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Enterprise CTA */}
+     
+      </div>
+    </div>
+
+
       </div>
     </div>
   );

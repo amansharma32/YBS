@@ -215,14 +215,17 @@ export default function Heropage() {
 
             <Experience />
 
+
             <TechStack />
 
+  <ProjectBasedPackages/>
+            
             <Testimonials/>
             
-            <Contact/>
+        
 
-            <ProjectBasedPackages/>
           
+              <Contact/>
 
        
 </section>

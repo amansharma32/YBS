@@ -8,7 +8,8 @@ import {
 } from 'react-icons/tb';
 
 import {   FiTrendingUp, FiDollarSign, FiShoppingCart } from 'react-icons/fi';
-
+import { motion } from 'framer-motion';
+ 
 
 const ProjectPackages = () => {
   const packages = [
@@ -88,12 +89,12 @@ const ProjectPackages = () => {
   ];
 
 
-    const retainers = [
+   const retainers = [
     {
       id: 1,
       title: "Dedicated SEO & Content Growth",
-      icon: <FiTrendingUp className="w-5 h-5" />,
-      color: "from-teal-500 to-cyan-500",
+      icon: <FiTrendingUp className="w-6 h-6" />,
+      color: "bg-gradient-to-br from-teal-400 to-cyan-500",
       idealFor: "Businesses prioritizing organic traffic and aiming to become thought leaders in their industry.",
       focus: "Consistent content creation, technical SEO, and link building for sustained organic growth.",
       features: [
@@ -108,9 +109,9 @@ const ProjectPackages = () => {
     },
     {
       id: 2,
-      title: "Performance Marketing Power-Up",
-      icon: <FiDollarSign className="w-5 h-5" />,
-      color: "from-blue-500 to-cyan-500",
+      title: "Performance Marketing Power-Up (PPC & Paid Social)",
+      icon: <FiDollarSign className="w-6 h-6" />,
+      color: "bg-gradient-to-br from-blue-400 to-indigo-500",
       idealFor: "Businesses focused on immediate lead generation, sales, and maximizing ad spend efficiency.",
       focus: "Strategic planning, execution, and optimization of paid advertising campaigns.",
       features: [
@@ -125,16 +126,16 @@ const ProjectPackages = () => {
     },
     {
       id: 3,
-      title: "E-commerce Accelerator",
-      icon: <FiShoppingCart className="w-5 h-5" />,
-      color: "from-fuchsia-500 to-orange-500",
+      title: "E-commerce Accelerator (Specific for Online Stores)",
+      icon: <FiShoppingCart className="w-6 h-6" />,
+      color: "bg-gradient-to-br from-purple-400 to-fuchsia-500",
       idealFor: "E-commerce businesses needing specialized support to boost online sales and user experience.",
       focus: "Optimizing the online store for conversions and customer lifetime value.",
       features: [
-        "E-commerce Platform Optimization (Shopify, WooCommerce): Product page optimization, checkout flow improvements",
+        "E-commerce Platform Optimization (e.g., Shopify, WooCommerce): Product page optimization, checkout flow improvements",
         "Product Listing Optimization (SEO for products)",
-        "Conversion Rate Optimization (CRO) Implementation: A/B testing, user behavior analysis",
-        "Email Marketing Automation: Abandoned cart recovery, post-purchase sequences",
+        "Conversion Rate Optimization (CRO) Implementation: A/B testing, user behavior analysis (heatmaps, session recordings)",
+        "Email Marketing Automation for E-commerce: Abandoned cart recovery, post-purchase sequences",
         "Retargeting & Dynamic Product Ads Management",
         "Inventory & Product Feed Management Support",
         "Monthly E-commerce Sales & Conversion Reporting"
@@ -143,7 +144,10 @@ const ProjectPackages = () => {
     }
   ];
 
+
   return (
+    <>
+
     <div className="bg-white py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -243,83 +247,157 @@ const ProjectPackages = () => {
           </div>
         </div>
 
-         <div className="bg-gray-50 py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full mb-4 tracking-wider">
-            ONGOING STRATEGIC SERVICES
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Highly Specialized <span className="bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">Retainer Packages</span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Continuous optimization and execution for businesses with specific, ongoing needs in core digital areas.
-          </p>
-        </div>
 
-        {/* Packages Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {retainers.map((retainer) => (
-            <div key={retainer.id} className="group relative h-full">
-              {/* Gradient Border Effect */}
-              <div className={`absolute inset-0 bg-gradient-to-r ${retainer.color} rounded-xl p-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+
+           <div className="relative bg-[#f8fafc] py-24 px-4 overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+        {[...Array(12)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-cyan-300"
+            style={{
+              width: Math.random() * 300 + 100,
+              height: Math.random() * 300 + 100,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`
+            }}
+            animate={{
+              x: [0, Math.random() * 100 - 50],
+              y: [0, Math.random() * 100 - 50],
+              transition: {
+                duration: Math.random() * 20 + 10,
+                repeat: Infinity,
+                repeatType: 'reverse'
+              }
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative max-w-7xl mx-auto">
+        {/* Section Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
+        >
+          <span className="inline-block bg-white text-cyan-600 text-xs font-medium px-3 py-1 rounded-full mb-4 shadow-sm">
+            HIGHLY SPECIALIZED RETAINER PACKAGES
+          </span>
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
+              Ongoing Services
+            </span> for Core Digital Areas
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            For clients with very specific and ongoing needs in one core area, requiring continuous strategic input and execution.
+          </p>
+        </motion.div>
+
+        {/* 3D Card Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 perspective-1000">
+          {retainers.map((retainer, index) => (
+            <motion.div
+              key={retainer.id}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              whileHover={{ y: -10 }}
+              className="relative transform-style-preserve-3d group"
+            >
+              {/* Card Back Glow */}
+              <div className={`absolute inset-0 rounded-2xl ${retainer.color} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300`}></div>
               
-              <div className="relative h-full bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
-                {/* Header */}
-                <div className={`bg-gradient-to-r ${retainer.color} p-6`}>
-                  <div className="flex items-center">
-                    <div className="bg-white/20 p-2 rounded-lg backdrop-blur-sm mr-4">
+              {/* Main Card */}
+              <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden h-full border border-gray-100 transform transition-all duration-500 group-hover:shadow-2xl">
+                {/* Floating Icon */}
+                <div className="absolute -top-6 -right-6 w-24 h-24 opacity-10">
+                  <div className={`w-full h-full rounded-full ${retainer.color}`}></div>
+                </div>
+                
+                {/* Card Content */}
+                <div className="p-8 h-full flex flex-col">
+                  <div className="mb-8">
+                    <div className={`w-14 h-14 ${retainer.color} rounded-xl flex items-center justify-center mb-6 shadow-lg`}>
                       {retainer.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-white">{retainer.title}</h3>
+                    <h3 className="text-xl  font-sans font-bold text-cyan-900 mb-2">{retainer.title}</h3>
+                    <div className="space-y-3">
+                      <div>
+                        <h4 className="text-xs font-semibold text-cyan-600 uppercase tracking-wider mb-1">Ideal For</h4>
+                        <p className="text-gray-600 text-sm">{retainer.idealFor}</p>
+                      </div>
+                      <div>
+                        <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Focus</h4>
+                        <p className=" text-sm text-gray-600">{retainer.focus}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <div className="mb-6">
-                    <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Ideal For</h4>
-                    <p className="text-gray-700">{retainer.idealFor}</p>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Primary Focus</h4>
-                    <p className="text-gray-700">{retainer.focus}</p>
-                  </div>
-
-                  <div className="mb-6">
+                  
+                  <div className="mb-8 flex-grow">
                     <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Core Inclusions</h4>
                     <ul className="space-y-3">
-                      {retainer.features.map((feature, index) => (
-                        <li key={index} className="flex items-start">
+                      {retainer.features.map((feature, i) => (
+                        <li key={i} className="flex items-start">
                           <FiCheck className="flex-shrink-0 mt-1 mr-3 text-cyan-500" />
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                </div>
-
-                {/* Footer */}
-                <div className="px-6 pb-6">
-                  <button className={`w-full py-3 px-6 rounded-lg font-medium text-white bg-gradient-to-r ${retainer.color} hover:shadow-lg transition-all`}>
+                  
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`w-full py-4 px-6 rounded-xl font-bold text-white ${retainer.color} shadow-lg flex items-center justify-center`}
+                  >
                     {retainer.cta}
-                  </button>
+                    <FiArrowRight className="ml-2 w-5 h-5" />
+                  </motion.button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Enterprise CTA */}
-     
+        {/* Floating CTA */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mt-20 text-center"
+        >
+          <div className="inline-block bg-white rounded-xl p-8 shadow-2xl border border-gray-100">
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Custom Retainer Solutions</h3>
+            <p className="text-gray-600 mb-6 max-w-lg">
+              We can tailor retainer packages to match your specific business requirements and growth objectives.
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-xl font-bold shadow-lg"
+            >
+              Discuss Custom Retainer
+              <FiArrowRight className="inline ml-2 w-5 h-5" />
+            </motion.button>
+          </div>
+        </motion.div>
       </div>
     </div>
 
 
       </div>
     </div>
+
+    
+
+    
+    </>
+
+
+
   );
 };
 

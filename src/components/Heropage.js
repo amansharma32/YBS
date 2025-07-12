@@ -126,7 +126,7 @@ export default function Heropage() {
                 autoPlay
                 loop
                 muted
-                poster="/mv2.webp"
+                poster="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.1.0&auto=format&fit=crop&w=900&q=60"
                 playsInline
                 type="video/mp4"
                 className=" w-full h-full object-cover brightness-[100%]"

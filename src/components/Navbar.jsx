@@ -37,7 +37,7 @@ function Header() {
   const links = [
 
     
-    { href: '/about-Us', text: 'Solutions' },
+    { href: '/', text: 'Solutions' },
 
 
     {
@@ -50,11 +50,11 @@ function Header() {
     },
 
 
-    { text: 'Our Works', href: '/our-Works' },
-    { href: '/About', text: 'About' },
-    { href: '/Careers', text: 'Careers' },
+    { text: 'Our Works', href: '/' },
+    { href: '/', text: 'About' },
+    { href: '/', text: 'Careers' },
 
-    { text: 'Contact', href: '/contact-Us' },
+    { text: 'Contact', href: '/' },
   ];
 
 
@@ -120,7 +120,7 @@ function Header() {
  
     {
       label: "Solutions",
-      href: "/about-Us"
+      href: "/"
     },
 
     {
@@ -130,21 +130,21 @@ function Header() {
 
     {
       label: "Works",
-      href: "/our-Works"
+      href: "/"
     },
     {
       label: "About",
-      href: "/About"
+      href: "/"
     },
 
     {
       label: "Careers",
-      href: "/Careers"
+      href: "/"
     },
 
     {
       label: "Contact",
-      href: "/contact-Us"
+      href: "/"
     },
   ];
 

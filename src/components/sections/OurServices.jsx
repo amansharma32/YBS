@@ -116,7 +116,8 @@ export default function ServiceCards() {
   };
 
   return (
-    <section className="pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+
+    <section className="pb-20 px-4 sm:px-6 relative lg:px-8   z-1">
       <div className="max-w-7xl mx-auto">
         {/* Premium Header */}
         <div className="text-center mb-20">

@@ -109,7 +109,7 @@ export default function Heropage() {
 
    <div
 
-          className="relative  w-full h-screen overflow-hidden"
+          className="relative  z-10 w-full h-screen overflow-hidden"
           ref={containerRef}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
@@ -207,6 +207,7 @@ export default function Heropage() {
 <OurStorySection/>
 
 <OurServices/>
+
             <LogoShowcase />
 
 

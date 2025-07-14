@@ -418,7 +418,7 @@ const packagesData = [
   return (
     <>
 
-    <div className="bg-slate-50  font-sans text-slate-800 antialiased">
+    <div className="   relative z-1 bg-transparent font-sans text-slate-800 antialiased">
 
 
       <main>

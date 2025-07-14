@@ -8,7 +8,7 @@ const Footer = () => {
 
 
 
-    <footer className="footer bg-black text-white ">
+    <footer className="footer bg-black relative z-1 text-white ">
       <div className="footer-container">
         <div className="flex flex-col justify-center">
           <p>Terms & Conditions</p>

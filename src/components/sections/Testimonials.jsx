@@ -5,7 +5,7 @@ import TitleHeader from "./TitleHeader";
  
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="flex-center section-padding">
+    <section id="testimonials" className=" relative z-2 bg-black   flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
           title="What People Say About Me?"

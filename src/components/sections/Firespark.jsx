@@ -286,7 +286,7 @@ const Firespark = () => {
   }, []);
 
   return (
-    <div className="bg-slate-50 font-sans antialiased text-gray-800">
+    <div className="  relative z-1 bg-transparent font-sans antialiased text-gray-800">
       <div className="flex flex-col justify-center items-center mx-auto px-4 sm:px-6 py-20 md:py-24" ref={containerRef}>
         {/* Header */}
         <div className="relative z-10 text-center mb-16">

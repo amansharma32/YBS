@@ -199,14 +199,14 @@ export default function Heropage() {
 
 
 <section className=' bg-black ' >
-
-<CaseStudy/>
-
 <OurStorySection/>
 
 <OurServices/>
 
+
+
 <LogoShowcase />
+<CaseStudy/>
 
 <NewService/>
 

@@ -37,24 +37,45 @@ const TypeWriterNew = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [controls, isVisible]);
 
+    const [particles, setParticles] = useState([]);
+
+  useEffect(() => {
+    // Generate particles only on client side
+    const generatedParticles = Array.from({ length: 30 }).map((_, i) => ({
+      id: `particle-${i}`,
+      size: `${Math.random() * 20 + 5}px`,
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      animation: `float${Math.floor(Math.random() * 4) + 1}`,
+      duration: `${Math.random() * 20 + 10}s`
+    }));
+    setParticles(generatedParticles);
+  }, []);
+
   return (
     <section className="relative min-h-screen rounded-4xl py-28 overflow-hidden bg-gray-900">
       {/* 3D Floating Particles Background */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        {[...Array(30)].map((_, i) => (
-          <div 
-            key={i}
-            className="absolute rounded-full bg-cyan-500/30"
-            style={{
-              width: `${Math.random() * 20 + 5}px`,
-              height: `${Math.random() * 20 + 5}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `float${Math.floor(Math.random() * 4) + 1} ${Math.random() * 20 + 10}s infinite alternate ease-in-out`
-            }}
-          />
-        ))}
-      </div>
+       <motion.div 
+      className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 0.2 }}
+      viewport={{ once: true, margin: "-20%" }}
+      transition={{ duration: 0.5 }}
+    >
+      {particles.map((particle) => (
+        <motion.div
+          key={particle.id}
+          className="absolute rounded-full bg-cyan-500/30"
+          style={{
+            width: `${particle.size}px`,
+            height: `${particle.size}px`,
+            left: `${particle.left}%`,
+            top: `${particle.top}%`
+          }}
+          animate={particle.animate}
+        />
+      ))}
+    </motion.div>
 
       {/* Holographic Card */}
       <div className="relative max-w-6xl mx-auto px-6">

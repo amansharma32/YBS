@@ -652,8 +652,7 @@ const packagesData = [
     </div>
 
     
-  <Firespark/>
-
+ 
         
 
     </>

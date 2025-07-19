@@ -206,7 +206,7 @@ export default function Heropage() {
 
 <OurServices/>
 
-            <LogoShowcase />
+<LogoShowcase />
 
 <NewService/>
 

@@ -25,7 +25,7 @@ function Header() {
   };
 
   const links = [
-    { href: "/", text: "Solutions" },
+    { href: "/solutions", text: "Solutions" },
 
     {
       to: "#",
@@ -91,7 +91,7 @@ function Header() {
   const menuItems = [
     {
       label: "Solutions",
-      href: "/",
+      href: "/solutions",
     },
 
     {

@@ -272,7 +272,7 @@ const FluxCustomSection = () => {
             Exclusive Offering
           </span>
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-cyan-600 to-blue-700 bg-clip-text text-transparent">FLUX Custom</span> Solution
+            <span className="bg-gradient-to-r from-cyan-600 to-teal-500 bg-clip-text text-transparent">FLUX Custom</span> Solution
           </h2>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
             Your dedicated digital innovation team, seamlessly integrating with your organization to deliver exceptional results.
@@ -293,7 +293,7 @@ const FluxCustomSection = () => {
               <div className="bg-gradient-to-r from-gray-50 to-gray-100/50 px-10 pt-10 pb-8 border-b border-gray-200/50">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mr-6">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-600 to-blue-700 flex items-center justify-center shadow-lg">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-900 flex items-center justify-center shadow-lg">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                       </svg>
@@ -311,7 +311,7 @@ const FluxCustomSection = () => {
                 <div className="grid md:grid-cols-2 gap-10">
                   {/* Ideal For */}
                   <div className="relative">
-                    <div className="absolute -left-3 top-0 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full"></div>
+                    <div className="absolute -left-3 top-0 w-1 h-full bg-gradient-to-b from-cyan-400 to-teal-500 rounded-full"></div>
                     <div className="pl-8">
                       <div className="flex items-center mb-4">
                         <span className="w-8 h-8 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center font-bold mr-3">1</span>
@@ -325,7 +325,7 @@ const FluxCustomSection = () => {
 
                   {/* Approach */}
                   <div className="relative">
-                    <div className="absolute -left-3 top-0 w-1 h-full bg-gradient-to-b from-blue-400 to-indigo-500 rounded-full"></div>
+                    <div className="absolute -left-3 top-0 w-1 h-full bg-gradient-to-b from-blue-400 to-teal-500 rounded-full"></div>
                     <div className="pl-8">
                       <div className="flex items-center mb-4">
                         <span className="w-8   h-8 rounded-full bg-blue-100 text-gray-50 flex items-center justify-center font-bold mr-3">2</span>
@@ -358,7 +358,7 @@ const FluxCustomSection = () => {
                             <div className="max-w-4xl mx-auto text-center mb-20">
                                 <span className="inline-block py-1 px-3 mb-4 text-xs font-semibold text-cyan-600 bg-cyan-100 rounded-full uppercase tracking-widest">Workflow</span>
                                 <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                                    Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">Refined Process</span>
+                                    Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-600">Refined Process</span>
                                 </h2>
                                 <p className="text-xl text-gray-500 font-light">
                                     Meticulously crafted methodology delivering exceptional digital experiences
@@ -382,7 +382,7 @@ const FluxCustomSection = () => {
                                             <div className="flex items-start mb-6">
                                                 <div className="flex-shrink-0 relative">
                                                     <div className="absolute -inset-4 bg-cyan-100 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                                    <div className="relative flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-to-br from-cyan-600 to-blue-600 text-white text-2xl font-bold shadow-lg">
+                                                    <div className="relative flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-to-br from-cyan-500 to-cyan-700 text-white text-2xl font-bold shadow-lg">
                                                         {index + 1}
                                                     </div>
                                                 </div>
@@ -420,22 +420,90 @@ const AddonSection = () => {
     const isInView = useInView(ref, { once: true, amount: 0.1 });
 
     return (
-        <section ref={ref} className="py-20 md:py-28">
-            <div className="container mx-auto px-4">
-                <motion.div initial={{ opacity: 0, y: -20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }} className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Add-on Services</h2>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">Available for any package, or for custom quotes.</p>
-                </motion.div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                    {addonServices.map((service, index) => (
-                        <motion.div key={service.title} initial={{ opacity: 0, scale: 0.8 }} animate={isInView ? { opacity: 1, scale: 1 } : {}} transition={{ duration: 0.5, delay: index * 0.03 }} className="text-center bg-white/60 backdrop-blur-xl p-4 rounded-xl border border-gray-200/80 shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-1 transition-all duration-300">
-                            <div className="flex justify-center items-center mb-3 text-cyan-600">{service.icon}</div>
-                            <h4 className="font-semibold text-sm text-gray-700">{service.title}</h4>
-                        </motion.div>
-                    ))}
-                </div>
+      <section ref={ref} className="relative py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+  {/* Luxury decorative elements */}
+  <div className="absolute inset-0 opacity-10 pointer-events-none">
+    <div className="absolute top-20 left-1/4 w-80 h-80 bg-cyan-400/20 rounded-full blur-3xl"></div>
+    <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"></div>
+  </div>
+
+  <div className="relative container mx-auto px-6">
+    <motion.div 
+      initial={{ opacity: 0, y: -40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ 
+        duration: 0.8, 
+        ease: [0.22, 1, 0.36, 1] 
+      }}
+      className="text-center mb-20"
+    >
+      <span className="inline-block py-2.5 px-5 mb-6 text-xs font-semibold tracking-widest text-cyan-600 uppercase bg-cyan-100/50 rounded-full border border-cyan-200 backdrop-blur-sm">
+        Value-Added Services
+      </span>
+      <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        Premium <span className="bg-gradient-to-r from-cyan-500 to-teal-600 bg-clip-text text-transparent">Add-ons</span>
+      </h2>
+      <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
+        Enhance your package with our specialized services, available à la carte or bundled.
+      </p>
+    </motion.div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+      {addonServices.map((service, index) => (
+        <motion.div
+          key={service.title}
+          initial={{ opacity: 0, y: 20, scale: 0.95 }}
+          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+          transition={{
+            duration: 0.6,
+            delay: index * 0.05,
+            ease: [0.16, 1, 0.3, 1]
+          }}
+          whileHover={{ 
+            y: -8,
+            boxShadow: "0 20px 25px -5px rgba(6, 182, 212, 0.1), 0 10px 10px -5px rgba(6, 182, 212, 0.04)"
+          }}
+          className="relative group"
+        >
+          {/* Card background layer */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg shadow-gray-300/20 transform group-hover:scale-[1.02] transition-all duration-500"></div>
+          
+          {/* Main card */}
+          <div className="relative h-full bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200/60 group-hover:border-cyan-200 transition-all duration-500 flex flex-col">
+            {/* Icon container */}
+            <div className="p-6 pb-0 flex justify-center">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center text-white shadow-lg group-hover:shadow-cyan-500/30 transition-shadow duration-500">
+                {React.cloneElement(service.icon, { className: "w-8 h-8" })}
+              </div>
             </div>
-        </section>
+            
+            {/* Content */}
+            <div className="p-6 pt-4 text-center flex-grow">
+              <h4 className="text-lg font-semibold text-gray-800 mb-2">{service.title}</h4>
+              <p className="text-sm text-gray-500 mb-4">{service.description}</p>
+            </div>
+            
+            {/* Footer */}
+           
+            
+            {/* Hover accent */}
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-teal-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay: 0.4, duration: 0.6 }}
+      className="text-center mt-16"
+    >
+     
+    </motion.div>
+  </div>
+</section>
     );
 };
 

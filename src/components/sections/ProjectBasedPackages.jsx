@@ -211,6 +211,7 @@ const ParticlesBackground = () => {
 
         script.onload = () => {
             if (window.tsParticles) {
+                
                 window.tsParticles.load("tsparticles", {
                     background: { color: { value: '#f9fafb' } },
                     fpsLimit: 60,
@@ -316,7 +317,7 @@ const FluxCustomSection = () => {
     const isInView = useInView(ref, { once: true, amount: 0.2 });
 
     return (
-        <section ref={ref} className="py-20  ">
+        <section ref={ref} className="py-20  container-fluid ">
             <div className=" mx-auto px-4">
                 <motion.div initial={{ opacity: 0, y: -20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }} className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">The "FLUX Custom" Solution</h2>
@@ -554,10 +555,11 @@ const ProjectPackages = () => {
   return (
     <>
 
-    <div className="    py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="    py-24 px-4 ">
+      <div className=" mx-auto flex flex-col  justify-center items-center">
         {/* Section Header */}
-     <div className="  relative z-1 bg-transparent">
+
+     <div className=" max-w-7xl  relative z-1 bg-transparent">
                <div className="text-center mb-16">
           <span className="inline-block bg-teal-50 text-cyan-700 text-xs font-medium px-3 py-1 rounded-full mb-4 tracking-wider">
             SPECIALIZED PACKAGES
@@ -660,7 +662,7 @@ const ProjectPackages = () => {
          
 
 
-{/* <div className="relative min-h-screen bg-gray-50 font-sans text-gray-800 overflow-x-hidden">
+<div className="relative min-h-screen bg-gray-50 font-sans text-gray-800 overflow-x-hidden">
             <AuroraBackground />
             <div className="relative z-10 container mx-auto px-4 py-20 md:py-28">
                 <motion.div
@@ -686,22 +688,22 @@ const ProjectPackages = () => {
                     ))}
                 </div>
             </div>
-        </div> */}
+        </div>
 
 
 
-  <div className="relative  bg-gray-50 font-sans text-gray-800 overflow-x-hidden">
+  <div className="relative  bg-gray-50 font-sans text-gray-800 overflow-x-hidden py-9">
             <ParticlesBackground />
             <div className="relative z-10">
            
                 <main>
-                    <div className="container mx-auto px-4">
-                        <div className="relative h-[250px] flex justify-center items-center">
+                    <div className="container-fluid mx-auto px-4">
+                        <div className="relative  h-[78vh] flex justify-center items-center">
                             <AnimatePresence>
                                 {selectedPackage ? (
                                     <PackageDetailView pack={selectedPackage} onDeselect={() => setSelectedPackage(null)} />
                                 ) : (
-                                    <motion.div className="flex justify-center items-center gap-8 md:gap-16">
+                                    <motion.div className="flex justify-center items-center gap-8  ">
                                         {retainerPackages.map((pack) => (
                                             <PackageNode key={pack.id} pack={pack} onSelect={setSelectedPackage} isSelected={false} isAnySelected={false} />
                                         ))}
@@ -711,7 +713,7 @@ const ProjectPackages = () => {
                         </div>
                     </div>
                     
-                    <div className={`transition-all duration-500 ${selectedPackage ? 'mt-[30rem] md:mt-[25rem]' : 'mt-24'}`}>
+                    <div className={`transition-all duration-500 ${selectedPackage ? ' ' : ' '}`}>
                         <FluxCustomSection />
                         <AddonSection />
                     </div>

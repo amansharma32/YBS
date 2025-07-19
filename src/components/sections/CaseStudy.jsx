@@ -132,7 +132,7 @@ import React, { useRef, useState } from 'react';
   };
 
   return (
-    <section className="py-16 bg-gray-50 relative z-1 bg-transparent">
+    <section className="py-16   relative z-1 bg-transparent">
       <div className="container mx-auto px-4">
         <div className=" py-7 text-center md:text-left   mb-12 flex flex-col md:flex-row  justify-center items-start">
           <h2 className="text-3xl md:text-5xl   end-full font-sans font-thin mb-4 text-gray-900">

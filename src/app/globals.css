@@ -18,9 +18,7 @@ body {
   font-display: swap;
 }
 
-section {
-  width: 100dvw;
-}
+ 
 
 @theme {
   --font-sans: "Mona Sans", sans-serif;
@@ -33,9 +31,11 @@ section {
 }
 
 @layer utilities {
+
   .flex-center {
     @apply flex justify-center items-center;
   }
+  
   .flex-col-center {
     @apply flex flex-col justify-center items-center;
   }
@@ -401,7 +401,7 @@ section {
 
 /* marquee */
 .marquee {
-  width: 100dvw;
+ 
   overflow: hidden;
   position: relative;
 }

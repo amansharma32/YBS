@@ -354,7 +354,7 @@ const FluxCustomSection = () => {
                     <div>
 
 
-                        <div className="max-w-8xl mx-auto px-6 py-24 bg-gradient-to-b from-gray-50 to-white">
+                        <div className="max-w-8xl mx-auto px-6 py-24 bg-gradient-to-b from-gray-50  to-transparent">
                             <div className="max-w-4xl mx-auto text-center mb-20">
                                 <span className="inline-block py-1 px-3 mb-4 text-xs font-semibold text-cyan-600 bg-cyan-100 rounded-full uppercase tracking-widest">Workflow</span>
                                 <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -420,7 +420,7 @@ const AddonSection = () => {
     const isInView = useInView(ref, { once: true, amount: 0.1 });
 
     return (
-      <section ref={ref} className="relative py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      <section ref={ref} className="relative py-20 md:py-32  overflow-hidden">
   {/* Luxury decorative elements */}
   <div className="absolute inset-0 opacity-10 pointer-events-none">
     <div className="absolute top-20 left-1/4 w-80 h-80 bg-cyan-400/20 rounded-full blur-3xl"></div>

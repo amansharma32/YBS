@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+
   title: {
     default: "Website Designing Company in Delhi, Web Development Company India |  Flux Digital",
     template: "%s"
@@ -105,6 +107,30 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+
+
+  
+
+<head>
+
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-2VTHRMSF8W"></Script>
+
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-2VTHRMSF8W');
+          `
+        }} />
+
+       
+       
+
+
+</head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

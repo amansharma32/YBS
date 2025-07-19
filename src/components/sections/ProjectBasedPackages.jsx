@@ -116,6 +116,7 @@ const addonServices = [
 // --- UI COMPONENTS ---
 
 const ParticlesBackground = () => {
+    
     useEffect(() => {
         const scriptId = 'tsparticles-script';
         if (document.getElementById(scriptId)) {
@@ -538,7 +539,7 @@ const ProjectPackages = () => {
                         <div className="relative z-10">
 
                             <main>
-                                <div className="container-fluid mx-auto px-4">
+                                <div className="container-fluid mx-auto relative z-1 px-4">
                                     <div className="relative  h-[78vh] flex justify-center items-center">
                                         <AnimatePresence>
                                             {selectedPackage ? (

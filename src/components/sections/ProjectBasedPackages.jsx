@@ -11,6 +11,7 @@ import { Target, BarChart2, ShoppingCart, CheckCircle } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, } from 'framer-motion';
 import { ArrowRight, Zap, PenTool, Camera, Smartphone, Shield, Handshake, Search, BookOpen, BarChart, Code, Layers, Bot, Orbit, Menu, TestTube, Cloud, BrainCircuit, X } from 'lucide-react';
+import TypeWriterNew from './TypeWriterNew';
 
 // --- DATA ---
 const retainerPackages = [
@@ -370,7 +371,7 @@ const FluxCustomSection = () => {
                                     <motion.div
                                         key={item.title}
                                         initial={{ opacity: 0, y: 40 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
+                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true, margin: "-100px" }}
                                         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: index * 0.08 }}
                                         whileHover={{ y: -8 }}
@@ -525,7 +526,7 @@ const ProjectPackages = () => {
     return (
         <>
 
-            <div className="    py-24 px-4 ">
+            <div className="    py-14 px-4 ">
                 <div className=" mx-auto flex flex-col  justify-center items-center">
                     {/* Section Header */}
 
@@ -565,6 +566,12 @@ const ProjectPackages = () => {
 
 
                 </div>
+
+
+<TypeWriterNew/>
+
+
+                
             </div>
 
 

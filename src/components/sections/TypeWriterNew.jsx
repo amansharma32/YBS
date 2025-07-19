@@ -98,7 +98,7 @@ const TypeWriterNew = () => {
             <div className="flex flex-col lg:flex-row items-center gap-12">
               {/* Left Column - Interactive Typography */}
               <div className="lg:w-1/2">
-                <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-8 leading-tight">
+                <h2 className="text-5xl md:text-6xl font-bold text-transparent  text-white mb-8 leading-tight">
                   <Typewriter text="FLUX Digital Partnership" speed={80} />
                 </h2>
                 

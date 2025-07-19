@@ -89,7 +89,7 @@ const fluxCustomProcess = [
 const addonServices = [
     { icon: <PenTool />, title: "Graphic Design" },
     { icon: <Zap />, title: "Branding & Logo" },
-    { icon: <Camera />, title: "Photography & Videography" },
+ 
     { icon: <Smartphone />, title: "App Development" },
     { icon: <Shield />, title: "Reputation Management" },
     { icon: <Handshake />, title: "CRM Implementation" },
@@ -422,7 +422,7 @@ const AddonSection = () => {
     const isInView = useInView(ref, { once: true, amount: 0.1 });
 
     return (
-      <section ref={ref} className="relative py-20 md:py-32  overflow-hidden">
+      <section ref={ref} className=" flex relative py-20 md:py-32  overflow-hidden">
   {/* Luxury decorative elements */}
   <div className="absolute inset-0 opacity-10 pointer-events-none">
     <div className="absolute top-20 left-1/4 w-80 h-80 bg-cyan-400/20 rounded-full blur-3xl"></div>
@@ -474,7 +474,7 @@ const AddonSection = () => {
           <div className="relative h-full bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200/60 group-hover:border-cyan-200 transition-all duration-500 flex flex-col">
             {/* Icon container */}
             <div className="p-6 pb-0 flex justify-center">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center text-white shadow-lg group-hover:shadow-cyan-500/30 transition-shadow duration-500">
+              <div className="w-16 h-16 rounded-xl  bg-gray-600 flex items-center justify-center text-white shadow-lg group-hover:shadow-cyan-500/30 transition-shadow duration-500">
                 {React.cloneElement(service.icon, { className: "w-8 h-8" })}
               </div>
             </div>
@@ -512,9 +512,96 @@ const AddonSection = () => {
 
 
 // --- UI COMPONENTS ---
+const PackageCard = ({ pack, index }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.3 });
 
+    const colorClasses = {
+        cyan: {
+            icon: 'text-cyan-600',
+            button: 'bg-cyan-600 hover:bg-cyan-700',
+            shadow: 'hover:shadow-cyan-500/20'
+        },
+        violet: {
+            icon: 'text-violet-600',
+            button: 'bg-violet-500 hover:bg-violet-600',
+            shadow: 'hover:shadow-violet-500/20'
+        },
+        fuchsia: {
+            icon: 'text-fuchsia-600',
+            button: 'bg-fuchsia-500 hover:bg-fuchsia-600',
+            shadow: 'hover:shadow-fuchsia-500/20'
+        }
+    };
+    
+    const currentTheme = colorClasses[pack.color] || colorClasses.cyan;
 
+    return (
+        <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
+            className={`bg-white/60 backdrop-blur-xl p-8 rounded-2xl border border-gray-200/80 transition-all duration-300 flex flex-col h-full shadow-lg ${currentTheme.shadow}`}
+        >
+            <div className={`mb-6 ${currentTheme.icon}`}>
+                {pack.icon}
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800">{pack.title}</h3>
+            {pack.subtitle && <p className="text-sm text-gray-500 mb-4">{pack.subtitle}</p>}
+            
+            <div className="my-6 border-t border-gray-200"></div>
 
+            <div className="space-y-2 mb-6">
+                <p className="text-gray-600"><strong className="text-gray-800">Ideal For:</strong> {pack.idealFor}</p>
+                <p className="text-gray-600"><strong className="text-gray-800">Focus:</strong> {pack.focus}</p>
+            </div>
+            
+            <div className="mb-8 flex-grow">
+                <h4 className="font-semibold text-gray-800 mb-4">Core Inclusions:</h4>
+                <ul className="space-y-3">
+                    {pack.inclusions.map((item, i) => (
+                        <li key={i} className="flex items-start">
+                            <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                            <span className="text-gray-600">{item}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            
+            <motion.button
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className={`w-full mt-auto py-3 px-6 text-white font-bold rounded-lg transition-all duration-300 shadow-lg ${currentTheme.button}`}
+            >
+                {pack.cta}
+            </motion.button>
+        </motion.div>
+    );
+};
+
+const AuroraBackground = () => (
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <motion.div
+            initial={{ opacity: 0, x: '-50%', y: '-50%' }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-300/30 rounded-full filter blur-3xl animate-pulse"
+        />
+        <motion.div
+            initial={{ opacity: 0, x: '50%', y: '50%' }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, delay: 0.5 }}
+            className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-cyan-300/30 rounded-full filter blur-3xl animate-pulse animation-delay-2000"
+        />
+         <motion.div
+            initial={{ opacity: 0, y: '100%' }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, delay: 1 }}
+            className="absolute bottom-0 left-1/3 w-[400px] h-[400px] bg-violet-300/30 rounded-full filter blur-3xl animate-pulse animation-delay-4000"
+        />
+    </div>
+);
 
 const ProjectPackages = () => {
 
@@ -531,16 +618,42 @@ const ProjectPackages = () => {
                 <div className=" mx-auto flex flex-col  justify-center items-center">
                     {/* Section Header */}
 
+<div className="  block md:hidden relative min-h-screen bg-gray-50 font-sans text-gray-800 overflow-x-hidden">
+            <AuroraBackground />
+            <div className="relative z-10 container mx-auto px-4 py-20 md:py-28">
+                <motion.div
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="text-center mb-16"
+                >
+                    <h1 className="text-sm font-bold uppercase tracking-widest text-cyan-600 mb-4">
+                        HIGHLY SPECIALIZED RETAINER PACKAGES
+                    </h1>
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+                        Ongoing Services for Core Digital Areas
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
+                        For clients with very specific and ongoing needs in one core area, requiring continuous strategic input and execution.
+                    </p>
+                </motion.div>
+
+                <div className="grid lg:grid-cols-3 gap-8">
+                    {retainerPackages.map((pack, index) => (
+                        <PackageCard key={pack.title} pack={pack} index={index} />
+                    ))}
+                </div>
+            </div>
+        </div>
 
 
-
-                    <div className="relative  bg-gray-50 font-sans text-gray-800 overflow-x-hidden py-9">
+                    <div className=" bg-gray-50 font-sans text-gray-800 overflow-x-hidden py-9">
                         <ParticlesBackground />
                         <div className="relative z-10">
 
                             <main>
-                                <div className="container-fluid mx-auto relative z-1 px-4">
-                                    <div className="relative  h-[78vh] flex justify-center items-center">
+                                <div className="relative md:block hidden  container-fluid mx-auto  z-1 px-4">
+                                    <div className="relative flex-col  h-[78vh] flex justify-center items-center">
                                         <AnimatePresence>
                                             {selectedPackage ? (
                                                 <PackageDetailView pack={selectedPackage} onDeselect={() => setSelectedPackage(null)} />

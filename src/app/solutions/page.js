@@ -99,7 +99,7 @@ function PricingCard({ icon, title, price, idealFor, popular = false }) {
       <motion.button 
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className={`w-full ${popular ? 'bg-gradient-to-r from-cyan-500 to-teal-500' : 'bg-gray-800'} text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group`}
+        className={`w-full ${popular ? 'bg-gradient-to-r from-cyan-500 text-sm to-teal-500' : 'bg-gray-800'} text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center text-sm group`}
       >
         Enquire Now
         

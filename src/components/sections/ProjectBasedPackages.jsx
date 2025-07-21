@@ -132,7 +132,7 @@ const ParticlesBackground = () => {
                         color: { value: '#6b7280' }, // gray-500
                         links: { color: '#60a5fa', distance: 150, enable: true, opacity: 0.3, width: 1 },
                         move: { direction: 'none', enable: true, outModes: { default: 'bounce' }, random: true, speed: 0.5, straight: false },
-                        number: { density: { enable: true }, value: 50 },
+                        number: { density: { enable: true }, value: 100 },
                         opacity: { value: 0.4 },
                         shape: { type: 'circle' },
                         size: { value: { min: 1, max: 3 } }
@@ -162,7 +162,7 @@ const ParticlesBackground = () => {
                         color: { value: '#6b7280' },
                         links: { color: '#60a5fa', distance: 150, enable: true, opacity: 0.3, width: 1 },
                         move: { direction: 'none', enable: true, outModes: { default: 'bounce' }, random: true, speed: 0.5, straight: false },
-                        number: { density: { enable: true }, value: 50 },
+                        number: { density: { enable: true }, value: 100 },
                         opacity: { value: 0.4 },
                         shape: { type: 'circle' },
                         size: { value: { min: 1, max: 3 } }

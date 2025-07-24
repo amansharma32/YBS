@@ -308,11 +308,8 @@ const ContactPage = () => {
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start" // New grid for map & details
           >
             {/* Left Side: Map Container */}
-            <div className="w-full h-[400px] lg:h-[500px] rounded-xl overflow-hidden shadow-lg border border-gray-200">
-              <div
-                ref={mapContainerRef}
-                className="w-full h-full"
-              />
+            <div className="w-full   rounded-xl overflow-hidden shadow-lg border border-gray-200">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.937462191515!2d77.02752827554416!3d28.39095677579762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d22c3ae1907e1%3A0x3f36ee7e064eac62!2sREACH%20MY%20TOWER!5e0!3m2!1sen!2sin!4v1753353636367!5m2!1sen!2sin" width="600" height="450"   allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             {/* Right Side: Contact Details */}
@@ -321,7 +318,7 @@ const ContactPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="space-y-7 p-6 rounded-xl bg-gray-50 border border-gray-100 shadow-inner lg:h-[500px] flex flex-col justify-center" // Added flex-col & justify-center for vertical alignment
+              className="space-y-7 p-14    rounded-xl bg-gray-50 border border-gray-100 shadow-inner   flex flex-col justify-center" // Added flex-col & justify-center for vertical alignment
             >
               <h3 className="text-3xl font-bold text-gray-800">
                 {activeLocation === 'india' ? 'Digital Flux India' : 'Digital Flux Inc. USA'}
@@ -336,9 +333,10 @@ const ContactPage = () => {
                     <p className="text-lg font-medium text-gray-800">Address</p>
                     {activeLocation === 'india' ? (
                       <>
-                        <p className="text-gray-600 mt-1">123 Tech Park, Sector 18</p>
-                        <p className="text-gray-600">Gurugram, Haryana 122015</p>
-                        <p className="text-gray-600">India</p>
+                        <p className="text-gray-600 mt-1"></p>
+                        <p className="text-gray-600">#603, Reach My Tower
+Sec-70, </p>
+                        <p className="text-gray-600">Gurugram-122001</p>
                       </>
                     ) : (
                       <>
@@ -358,8 +356,8 @@ const ContactPage = () => {
                   <div>
                     <p className="text-lg font-medium text-gray-800">Email</p>
                     <p className="text-cyan-600 hover:underline mt-1 transition-colors duration-200">
-                      <a href={`mailto:${activeLocation === 'india' ? 'india@digitalflux.com' : 'usa@digitalflux.com'}`}>
-                        {activeLocation === 'india' ? 'india@digitalflux.com' : 'usa@digitalflux.com'}
+                      <a href={`mailto:${activeLocation === 'india' ? 'fluxdigital2005@gmail.com' : 'fluxdigital2005@gmail.com'}`}>
+                        {activeLocation === 'india' ? 'fluxdigital2005@gmail.com' : 'fluxdigital2005@gmail.com'}
                       </a>
                     </p>
                   </div>
@@ -373,7 +371,7 @@ const ContactPage = () => {
                   <div>
                     <p className="text-lg font-medium text-gray-800">Phone</p>
                     <p className="text-gray-600 mt-1">
-                      {activeLocation === 'india' ? '+91 98765 43210' : '+1 (212) 555-7890'}
+                      {activeLocation === 'india' ? '7017915594' : 'processing...'}
                     </p>
                     <p className="text-gray-500 text-sm">
                       {activeLocation === 'india' ? 'Mon-Sat: 9am-6pm IST' : 'Mon-Fri: 9am-6pm EST'}

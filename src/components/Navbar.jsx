@@ -37,7 +37,7 @@ function Header() {
     { href: "/", text: "About" },
     { href: "/", text: "Careers" },
 
-    { text: "Contact", href: "/" },
+    { text: "Contact", href: "/contact-us" },
   ];
 
   const [nestedDropdown, setNestedDropdown] = useState(null);
@@ -115,7 +115,7 @@ function Header() {
 
     {
       label: "Contact",
-      href: "/",
+      href: "/contact-us",
     },
   ];
 
@@ -218,11 +218,10 @@ function Header() {
   return (
     <>
       <nav
-        className={` fixed  z-90 w-full top-0 transition-all duration-300 ${
-          isScrolled
+        className={` fixed  z-90 w-full top-0 transition-all duration-300 ${isScrolled
             ? " bg-black text-white shadow-md"
             : " bg-gradient-to-b from-black  text-white"
-        }`}
+          }`}
       >
         <div className=" md:mx-2 md:px-4">
           <div className="flex lg:flex-row items-center xl:flex-row justify-between p-4">
@@ -273,7 +272,7 @@ function Header() {
                                     className="text-cyan-500 px-7 pt-5 text-left mb-6 inline-block"
                                   >
                                     Go to overview →
-                                    
+
                                   </Link>
                                 </div>
 
@@ -397,11 +396,10 @@ function Header() {
         </div>
 
         <div
-          className={`mobile-menu xl:hidden  ${
-            isMobileMenuOpen
+          className={`mobile-menu xl:hidden  ${isMobileMenuOpen
               ? "mobile-menu-open py-2 bg-gray-100 text-black border-red-300 border-b-[1px]"
               : "mobile-menu-closed"
-          }`}
+            }`}
         >
           {isMobileMenuOpen &&
             links.map((link, index) => (
@@ -423,9 +421,8 @@ function Header() {
                       </Link>
                       <div className="transition-transform duration-300 transform">
                         <svg
-                          className={`w-4 h-4 ml-2 ${
-                            openDropdown === index ? "rotate-180" : ""
-                          }`}
+                          className={`w-4 h-4 ml-2 ${openDropdown === index ? "rotate-180" : ""
+                            }`}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -459,9 +456,8 @@ function Header() {
                                   </Link>
                                   <div className="transition-transform duration-300 transform">
                                     <svg
-                                      className={`w-4 h-4 ml-2 ${
-                                        nestedDropdown === i ? "rotate-180" : ""
-                                      }`}
+                                      className={`w-4 h-4 ml-2 ${nestedDropdown === i ? "rotate-180" : ""
+                                        }`}
                                       fill="none"
                                       stroke="currentColor"
                                       viewBox="0 0 24 24"
@@ -535,19 +531,17 @@ function Header() {
                 value={query}
                 onChange={handleSearch}
                 placeholder="Search products..."
-                className={`search-input ${
-                  isScrolled
+                className={`search-input ${isScrolled
                     ? " text-black hover:text-black border-black "
                     : " text-black hover:text-black "
-                }`}
+                  }`}
               />
               {results.length > 0 && (
                 <ul
-                  className={`search-results ${
-                    isScrolled
+                  className={`search-results ${isScrolled
                       ? " text-black hover:text-black border-black "
                       : " text-black hover:text-black "
-                  }`}
+                    }`}
                 >
                   {results.map((item) => (
                     <li

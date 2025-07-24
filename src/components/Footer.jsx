@@ -62,7 +62,7 @@ const Footer = () => {
 
 
 
-   <footer className="bg-neutral-950 text-neutral-200 py-16 px-4 sm:px-6 lg:px-8 w-full ">
+   <footer className=" relative z-50 bg-neutral-950 text-neutral-200 py-16 px-4 sm:px-6 lg:px-8 w-full ">
       <div className="max-w-6xl mx-auto">
       
         {/* Top Section: Get Started */}

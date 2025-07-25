@@ -32,6 +32,8 @@ import {
   RefreshCw,
   LineChart,
   BrickWallFire,
+  Menu,
+  X,
 } from "lucide-react";
 
 // 1. Unified and Enriched Service Data
@@ -222,12 +224,118 @@ import Link from "next/link";
 
 import { usePathname } from "next/navigation";
 
+
+const MobileMenu = ({ isOpen, onLinkClick }) => {
+    const [openCategory, setOpenCategory] = useState(null);
+
+    const toggleCategory = (categoryId) => setOpenCategory(openCategory === categoryId ? null : categoryId);
+
+    const menuVariants = {
+        closed: { opacity: 0, height: 0, transition: { duration: 0.3, ease: 'easeOut' } },
+        open: { opacity: 1, height: '100vh', transition: { duration: 0.4, ease: 'easeIn' } }
+    };
+    
+    const contentVariants = {
+        collapsed: { height: 0, opacity: 0, marginTop: 0 },
+        open: { height: 'auto', opacity: 1, marginTop: '0.5rem', transition: { duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] } }
+    };
+
+    return (
+        <AnimatePresence>
+            {isOpen && (
+                <motion.div
+                    variants={menuVariants}
+                    initial="closed"
+                    animate="open"
+                    exit="closed"
+                    className="xl:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg overflow-y-auto"
+                >
+                    <div className="p-4">
+                        <Link href="/solutions" onClick={onLinkClick} className="block text-lg font-medium text-neutral-200 hover:text-white py-3 px-4 rounded-md hover:bg-neutral-800">Solutions</Link>
+                   
+                        {/* Accordion for Services */}
+                        <div className="mt-2 border-t border-neutral-800">
+                             {serviceCategories.map(cat => (
+                                <div key={cat.id} className="border-b border-neutral-800">
+                                    <button onClick={() => toggleCategory(cat.id)} className="flex items-center justify-between w-full py-4 px-4 text-left">
+                                        <div className="flex items-center">
+                                            <span className={`mr-4 ${colorClasses[cat.color].text}`}>{cat.icon}</span>
+                                            <span className="text-lg font-medium text-white">{cat.category}</span>
+                                        </div>
+                                        <ChevronDown className={`w-5 h-5 text-neutral-500 transition-transform duration-300 ${openCategory === cat.id ? 'rotate-180' : ''}`} />
+                                    </button>
+                                    <AnimatePresence initial={false}>
+                                        {openCategory === cat.id && (
+                                            <motion.div variants={contentVariants} initial="collapsed" animate="open" exit="collapsed" className="overflow-hidden pl-8 pr-4 pb-2">
+                                                <ul className="space-y-1 pb-2">
+                                                    {cat.items.map(item => (
+                                                        <li key={item.id}>
+                                                            <a href={item.href} onClick={onLinkClick} className="flex items-center py-3 px-3 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors">
+                                                                <span className={`mr-4 ${colorClasses[cat.color].text}`}>{item.icon}</span>
+                                                                {item.name}
+                                                            </a>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+                            ))}
+                        </div>
+
+                             <Link href="/" onClick={onLinkClick} className="block text-lg font-medium text-neutral-200 hover:text-white py-3 px-4 rounded-md hover:bg-neutral-800">Works</Link>
+                        
+                             <Link href="/" onClick={onLinkClick} className="block text-lg font-medium text-neutral-200 hover:text-white py-3 px-4 rounded-md hover:bg-neutral-800">Works</Link>
+                        
+                         <div className="p-6 mt-4">
+                             <Link to="/contact-us" onClick={onLinkClick} className="w-full block text-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 rounded-lg text-white font-medium transition-all hover:shadow-lg hover:shadow-cyan-400/20">
+                                Start Your Journey
+                             </Link>
+                        </div>
+                    </div>
+                </motion.div>
+            )}
+        </AnimatePresence>
+    );
+};
+
+
+
 function Header() {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   const toggleDropdown = (dropdownIndex) => {
     setOpenDropdown(openDropdown === dropdownIndex ? null : dropdownIndex);
   };
+
+   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+
+     // Effect to handle scroll state
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    // Effect to lock body scroll when mobile menu is open
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+        return () => { document.body.style.overflow = 'auto'; };
+    }, [isMobileMenuOpen]);
+
+    const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+    const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+
 
   const stopPropagation = (e) => {
     e.stopPropagation();
@@ -255,16 +363,8 @@ function Header() {
     setNestedDropdown(nestedDropdown === index ? null : index);
   };
 
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen((prev) => !prev);
-  }, []);
-
-  const closeMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen(false);
-  }, []);
+ 
+ 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -372,57 +472,7 @@ function Header() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
-  // const services = [
-  //   {
-  //     category: "Branding →",
-  //     items: [
-  //       "Brand Consulting",
-  //       "Logo Design",
-  //       "Industrial / Product Design",
-  //       "Graphic Design",
-  //       "2D / 3D Visualisation",
-  //     ],
-  //   },
-  //   {
-  //     category: "Experience Design →",
-  //     items: [
-  //       "UI/UX Design",
-  //       "Website Design",
-  //       "Mobile Experience",
-  //       "Commerce Experience",
-  //       "Human Machine Interface",
-  //     ],
-  //   },
-  // ];
-
-  // const services2 = [
-  //   {
-  //     category: "Technology →",
-  //     items: [
-  //       "AI & Machine Learning",
-  //       "DevOps Consulting",
-  //       "Data & Analytics",
-  //       "Web Development",
-  //       "Mobile App Development",
-  //       "E-commerce",
-  //       "Quality Assurance & Testing",
-  //       "Cloud Services",
-  //       "Cyber Security",
-  //     ],
-  //   },
-  //   {
-  //     category: "Digital Marketing →",
-  //     items: [
-  //       "Search Engine Optimisation",
-  //       "Social Media Management",
-  //       "Performance Marketing",
-  //       "Content Marketing",
-  //       "Marketing Automation",
-  //       "Analytics",
-  //     ],
-  //   },
-  // ];
+ 
 
   const [activeCategory, setActiveCategory] = useState(serviceCategories[0]);
 
@@ -445,6 +495,8 @@ function Header() {
       },
     },
   };
+
+  
 
   return (
     <>
@@ -667,215 +719,29 @@ function Header() {
               </div>
             </div>
 
-            <div className="xl:hidden flex items-center">
-              <button
-                className="mobile-menu-button"
-                onClick={toggleMobileMenu}
-                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-              >
-                {isMobileMenuOpen ? (
-                  <svg
-                    className="w-6 h-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="w-6 h-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                )}
-              </button>
-            </div>
+              <div className="xl:hidden flex items-center">
+                        <button onClick={toggleMobileMenu} className="text-white" aria-label="Toggle menu">
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={isMobileMenuOpen ? 'close' : 'open'}
+                                    initial={{ rotate: -45, opacity: 0 }}
+                                    animate={{ rotate: 0, opacity: 1 }}
+                                    exit={{ rotate: 45, opacity: 0 }}
+                                    transition={{ duration: 0.2 }}
+                                >
+                                    {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+                                </motion.div>
+                            </AnimatePresence>
+                        </button>
+                    </div>
           </div>
         </div>
 
-        <div
-          className={`mobile-menu xl:hidden  ${
-            isMobileMenuOpen
-              ? "mobile-menu-open py-2 bg-gray-100 text-black border-red-300 border-b-[1px]"
-              : "mobile-menu-closed"
-          }`}
-        >
-          {isMobileMenuOpen &&
-            links.map((link, index) => (
-              <div
-                key={index}
-                className="mx-7 mb-2 border-b-[1px] border-red-600 "
-              >
-                {link.dropdownItems ? (
-                  <div>
-                    <div
-                      className="flex items-center justify-between cursor-pointer"
-                      onClick={() => toggleDropdown(index)}
-                    >
-                      <Link
-                        href={link.to || "/"}
-                        className="block py-2 px-4 text-sm hover:bg-gray-200"
-                      >
-                        {link.text}
-                      </Link>
-                      <div className="transition-transform duration-300 transform">
-                        <svg
-                          className={`w-4 h-4 ml-2 ${
-                            openDropdown === index ? "rotate-180" : ""
-                          }`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      </div>
-                    </div>
+       
+ 
 
-                    {openDropdown === index && (
-                      <div className="ml-2">
-                        {link.dropdownItems.map((dropdownItem, i) => (
-                          <div key={i}>
-                            {dropdownItem.dropdownItems ? (
-                              <div>
-                                <div
-                                  className="flex items-center justify-between cursor-pointer"
-                                  onClick={() => toggleNestedDropdown(i)}
-                                >
-                                  <Link
-                                    href={dropdownItem.href || "/"}
-                                    className="block py-2 px-4 text-sm hover:bg-gray-200"
-                                  >
-                                    {dropdownItem.label}
-                                  </Link>
-                                  <div className="transition-transform duration-300 transform">
-                                    <svg
-                                      className={`w-4 h-4 ml-2 ${
-                                        nestedDropdown === i ? "rotate-180" : ""
-                                      }`}
-                                      fill="none"
-                                      stroke="currentColor"
-                                      viewBox="0 0 24 24"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M19 9l-7 7-7-7"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-
-                                {nestedDropdown === i && (
-                                  <div className="ml-4">
-                                    {dropdownItem.dropdownItems.map(
-                                      (subItem, j) => (
-                                        <Link
-                                          key={j}
-                                          href={subItem.href || "/"}
-                                          className="block py-2 px-4 text-sm hover:bg-gray-200"
-                                          onClick={() =>
-                                            handleLinkClick(subItem.href)
-                                          }
-                                        >
-                                          {subItem.label}
-                                        </Link>
-                                      )
-                                    )}
-                                  </div>
-                                )}
-                              </div>
-                            ) : (
-                              <Link
-                                href={dropdownItem.href || "/"}
-                                className="block py-2 px-4 text-sm hover:bg-gray-200"
-                                onClick={() =>
-                                  handleLinkClick(dropdownItem.href)
-                                }
-                              >
-                                {dropdownItem.label}
-                              </Link>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link
-                    href={link.href || "/"}
-                    className="block py-2 px-4 text-sm hover:bg-gray-200"
-                    onClick={() => handleLinkClick(link.href)}
-                  >
-                    {link.text}
-                  </Link>
-                )}
-              </div>
-            ))}
-        </div>
-
-        <div className="search-bar-container">
-          <div className="logo-section"></div>
-
-          {showSearch && (
-            <div className="search-bar p-5" ref={searchBarRef}>
-              <input
-                type="text"
-                value={query}
-                onChange={handleSearch}
-                placeholder="Search products..."
-                className={`search-input ${
-                  isScrolled
-                    ? " text-black hover:text-black border-black "
-                    : " text-black hover:text-black "
-                }`}
-              />
-              {results.length > 0 && (
-                <ul
-                  className={`search-results ${
-                    isScrolled
-                      ? " text-black hover:text-black border-black "
-                      : " text-black hover:text-black "
-                  }`}
-                >
-                  {results.map((item) => (
-                    <li
-                      key={item.id}
-                      className="search-item"
-                      onClick={() => handleSelect(item.link)}
-                    >
-                      {item.name}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          )}
-        </div>
+              <MobileMenu isOpen={isMobileMenuOpen} onLinkClick={closeMobileMenu} />
+       
       </nav>
     </>
   );

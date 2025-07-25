@@ -263,7 +263,7 @@ const FluxCustomSection = () => {
         <div className="absolute bottom-1/3 -right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -647,18 +647,18 @@ const ProjectPackages = () => {
         </div>
 
 
-                    <div className=" bg-gray-50 font-sans text-gray-800 overflow-x-hidden py-9">
+                    <div className=" bg-gray-50 font-sans  text-gray-800 overflow-x-hidden py-9">
                         <ParticlesBackground />
                         <div className="relative z-10">
 
                             <main>
                                 <div className="relative md:block hidden  container-fluid mx-auto  z-1 px-4">
-                                    <div className="relative flex-col  h-[78vh] flex justify-center items-center">
+                                    <div className="relative flex-col  z-10 h-[78vh] flex justify-center items-center">
                                         <AnimatePresence>
                                             {selectedPackage ? (
                                                 <PackageDetailView pack={selectedPackage} onDeselect={() => setSelectedPackage(null)} />
                                             ) : (
-                                                <motion.div className="flex justify-center items-center gap-8  ">
+                                                <motion.div className="  flex justify-center items-center gap-8  ">
                                                     {retainerPackages.map((pack) => (
                                                         <PackageNode key={pack.id} pack={pack} onSelect={setSelectedPackage} isSelected={false} isAnySelected={false} />
                                                     ))}
@@ -668,7 +668,7 @@ const ProjectPackages = () => {
                                     </div>
                                 </div>
 
-                                <div className={`transition-all duration-500 ${selectedPackage ? ' ' : ' '}`}>
+                                <div className={`  transition-all duration-500 ${selectedPackage ? ' ' : ' '}`}>
                                     <FluxCustomSection />
                                     <AddonSection />
                                 </div>

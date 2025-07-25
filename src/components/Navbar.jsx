@@ -31,6 +31,7 @@ import {
   FileText,
   RefreshCw,
   LineChart,
+  BrickWallFire,
 } from "lucide-react";
 
 // 1. Unified and Enriched Service Data
@@ -148,6 +149,16 @@ const serviceCategories = [
         id: "qa-testing",
         name: "Quality Assurance",
         icon: <TestTube2 className="w-4 h-4" />,
+      },
+      {
+        id: "cloud-service",
+        name: "Cloud Service",
+        icon: <Cloud  className="w-4 h-4" />,
+      },
+      {
+        id: "cyber-security",
+        name: "Cyber Security",
+        icon: <BrickWallFire className="w-4 h-4" />,
       },
     ],
   },

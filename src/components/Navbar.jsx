@@ -289,7 +289,7 @@ const MobileMenu = ({ isOpen, onLinkClick }) => {
                              <Link href="/" onClick={onLinkClick} className="block text-lg font-medium text-neutral-200 hover:text-white py-3 px-4 rounded-md hover:bg-neutral-800">Works</Link>
                         
                          <div className="p-6 mt-4">
-                             <Link to="/contact-us" onClick={onLinkClick} className="w-full block text-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 rounded-lg text-white font-medium transition-all hover:shadow-lg hover:shadow-cyan-400/20">
+                             <Link href="/contact-us" onClick={onLinkClick} className="w-full block text-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 rounded-lg text-white font-medium transition-all hover:shadow-lg hover:shadow-cyan-400/20">
                                 Start Your Journey
                              </Link>
                         </div>

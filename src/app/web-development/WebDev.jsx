@@ -1,6 +1,6 @@
 "use client"
-import { useInView,motion } from 'framer-motion';
-import React, { useRef } from 'react';
+import { useInView,motion ,AnimatePresence } from 'framer-motion';
+import React, { useRef, useState } from 'react';
 
 // Main App component as required for the immersive
 export default function WebDev() {
@@ -127,6 +127,222 @@ export default function WebDev() {
     }
   ];
 
+
+    const technologyStacks = {
+    frontend: [
+      {
+        title: "React",
+        img:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441834/react_4cfc715018_mr4li8.svg",
+        description: "Build fast-loading and optimized web applications with rapid page rendering features from the constructive and interactive technology of React.",
+        link: "#"
+      },
+      {
+        title: "Next.js",
+          img:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441832/next_js_7413084cb7_jy987e.svg",
+        description: "Build web applications of bespoke quality and quick loading times with the exceptional performance of the Next.js technology framework.",
+        link: "#"
+      },
+
+      {
+        title: "Vue.js",
+            img:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441832/Vuejs_9db22dd83c_eijjga.svg",
+        description: "Elevate customer engagement with visually stunning, scalable and reliable interfaces for web applications through the boundless possibilities of Vue.js.",
+        link: "#"
+      },
+      {
+        title: "Angular",
+            img:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441832/Angular_56306ec9d8_gocdng.svg",
+        description: "Elevate customer engagement with visually stunning, scalable and reliable interfaces for web applications through the boundless possibilities of Vue.js.",
+        link: "#"
+      }
+    ],
+    backend: [
+      {
+        title: "Python",
+        description: "Revolutionize your business with top-notch web applications, dynamic websites, and desktop apps to rewrite your brand’s success story with the promise of Python.",
+        link: "#"
+      },
+      {
+        title: "Node.js",
+        description: "Develop quick and scalable web pages with real-time Node.js technology to highlight your business’s digital strength with solution-focused applications.",
+        link: "#"
+      },
+      {
+        title: "PHP",
+        description: "Get assistance from a robust codebase to get dynamic, swift and flexible PHP web development solutions for highly interactive web pages.",
+        link: "#"
+      }
+    ],
+    database: [
+      {
+        title: "MySQL",
+        description: "Well-suited for database management, MySQL is easy to install. Get the most robust database system to build mission-critical applications.",
+        link: "#"
+      },
+      {
+        title: "MongoDB",
+        description: "Incorporate the flexible schema of MongoDB to scale up and make queries much faster, while following all key features of modern databases.",
+        link: "#"
+      }
+    ]
+  };
+
+  // TechnologyStackSection Component Definition with Category Selection and Grid Display
+  const TechnologyStackSection = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.2 });
+    const [activeCategory, setActiveCategory] = useState('frontend'); // Default to frontend
+
+    const currentTechnologies = technologyStacks[activeCategory];
+
+    // Animation variants for the grid items - simplified
+    const containerVariants = {
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: {
+          staggerChildren: 0.08, // Slightly faster stagger
+          delayChildren: 0.1
+        },
+      },
+    };
+
+    const itemVariants = {
+      hidden: { y: 40, opacity: 0, scale: 0.95 }, // Less extreme initial position
+      visible: {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        transition: {
+          type: "spring",
+          stiffness: 80, // Softer spring
+          damping: 12,
+        },
+      },
+    };
+
+    return (
+      <section ref={ref} className="py-24 md:py-40 bg-gradient-to-br from-gray-100 to-white relative overflow-hidden">
+        {/* Professional Decorative background elements - static and subtle */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none"> {/* Reduced opacity */}
+          {/* Larger, more spread out, static blobs */}
+          <div className="absolute top-1/4 left-[5%] w-[400px] h-[400px] bg-cyan-400/10 rounded-full mix-blend-multiply filter blur-3xl"></div>
+          <div className="absolute bottom-1/3 right-[5%] w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 w-[1000px] h-[1000px] bg-teal-300/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+
+          {/* Subtle grid pattern overlay */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23a0aec0\' fill-opacity=\'0.03\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'17\' cy=\'17\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E')] opacity-5"></div>
+        </div>
+
+        <div className="relative z-10 max-w-8xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: -40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="text-center mb-24"
+          >
+            <span className="inline-block py-3 px-6 mb-8 text-sm font-bold tracking-widest text-cyan-700 uppercase bg-cyan-100 rounded-full border border-cyan-300 shadow-md backdrop-blur-sm">
+              Our Stack
+            </span>
+            <h2 className="text-4xl  font-extrabold text-gray-900 mb-8 leading-tight drop-shadow-lg">
+              Web Development <span  >Technology Stack</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
+              Leveraging cutting-edge technologies to build robust, scalable, and future-proof digital solutions.
+            </p>
+          </motion.div>
+
+          {/* Category Selection Tabs/Buttons - Clean and elegant */}
+    <div className=" mx-auto flex justify-center items-center">
+              <div className="flex justify-center mb-20 space-x-4 md:space-x-8 flex-wrap p-2 w-fit px-12 rounded-full bg-white/70 backdrop-blur-lg shadow-xl border border-gray-100">
+            <AnimatePresence>
+              {Object.keys(technologyStacks).map((categoryKey) => (
+                <button
+                  key={categoryKey}
+                  onClick={() => setActiveCategory(categoryKey)}
+                  className={`relative py-3 px-8 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out z-10
+                              ${activeCategory === categoryKey
+                                  ? '   text-black' // Removed scale on active
+                                  : 'text-gray-700 hover:text-white hover:bg-cyan-600'
+                              }`}
+                >
+                  {categoryKey.charAt(0).toUpperCase() + categoryKey.slice(1)}
+                  {activeCategory === categoryKey && (
+                    <motion.span
+                      layoutId="activeTabIndicator"
+                      className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
+                    />
+                  )}
+                </button>
+              ))}
+            </AnimatePresence>
+          </div>
+    </div>
+
+          {/* Technology Cards Grid - Professional and refined layout */}
+          <motion.div
+            key={activeCategory}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="grid  px-4 md:px-24 grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6  "
+          >
+            {currentTechnologies.map((tech, index) => (
+              <motion.div
+                key={tech.title}
+                variants={itemVariants}
+                whileHover={{
+                  y: -10, // Subtle lift
+                  boxShadow: "0 25px 50px -12px rgba(6, 182, 212, 0.2), 0 10px 20px -5px rgba(6, 182, 212, 0.08)", // Softer, less intense shadow
+                  scale: 1.02, // Subtle scale
+                  rotateX: 0, // Removed 3D rotation
+                  rotateY: 0, // Removed 3D rotation
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
+                className="group relative overflow-hidden bg-white rounded-3xl shadow-xl border border-gray-100 hover:border-cyan-300 transition-all duration-300 flex flex-col h-full
+                           transform-gpu" // Removed perspective
+              >
+                {/* Subtle inner gradient on hover - less vibrant */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+
+                {/* Decorative overlay for a premium look - static and subtle */}
+                <div className="absolute -top-8 -right-8 w-32 h-32 bg-cyan-200/20 rounded-full mix-blend-overlay blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div> {/* Removed scale and rotate */}
+
+                <div className="relative z-10 p-10 flex flex-col flex-grow">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 rounded-full   text-white flex items-center justify-center text-3xl font-bold mr-6   transform group-hover:rotate-[10deg] transition-transform duration-300"> {/* Reduced rotation */}
+                      {/* Icon placeholder - could be dynamic based on tech.title */}
+                    <img src={tech.img} alt={tech.title} />
+                    </div>
+                    <h3 className="text-2xl font-extrabold text-gray-900 leading-tight mb-4">
+                      {tech.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-700 text-md leading-relaxed mb-8 flex-grow">
+                    {tech.description}
+                  </p>
+                  <a
+                    href={tech.link}
+                    className="inline-flex items-center text-cyan-700 font-bold group-hover:text-cyan-900 transition-colors duration-300 mt-auto
+                               relative overflow-hidden group-hover:after:w-full group-hover:after:left-0 after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-1 after:bg-gradient-to-r from-cyan-500 to-blue-500 after:transition-all after:duration-300" // Slightly thinner, gradient underline
+                  >
+                    Learn more
+                    <svg className="ml-3 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+                {/* Bottom accent line with gradient on hover - less prominent */}
+                <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+    );
+  };
+
+
   return (
  
 <>
@@ -220,6 +436,7 @@ export default function WebDev() {
       
       <WebDevServicesSection />
   
+   <TechnologyStackSection />
      
     </div>
 </>

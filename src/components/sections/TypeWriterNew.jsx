@@ -53,7 +53,7 @@ const TypeWriterNew = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen rounded-4xl py-28 overflow-hidden bg-gray-900">
+    <section className="relative min-h-screen rounded-4xl py-12 md:py-28 overflow-hidden bg-gray-900">
       {/* 3D Floating Particles Background */}
        <motion.div 
       className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none"
@@ -94,24 +94,24 @@ const TypeWriterNew = () => {
           </div>
 
           {/* Main Content */}
-          <div className="relative z-10 p-12">
+          <div className="relative z-10 p-4 md:p-12">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               {/* Left Column - Interactive Typography */}
               <div className="lg:w-1/2">
-                <h2 className="text-5xl md:text-6xl font-bold text-transparent  text-white mb-8 leading-tight">
+                <h2 className="text-3xl md:text-6xl font-bold   text-white mb-8 leading-tight">
                   <Typewriter text="FLUX Digital Partnership" speed={80} />
                 </h2>
                 
                 <div className="space-y-6">
-                  <p className="text-xl text-gray-300 leading-relaxed border-l-4 border-cyan-500 pl-6 py-2">
+                  <p className="md:text-xl text-gray-300 leading-relaxed border-l-4 border-cyan-500 pl-6 py-2">
                     <span className="font-medium text-white">Transparent</span>, <span className="font-medium text-white">results-driven</span> solutions tailored to your vision.
                   </p>
                   
-                  <p className="text-xl text-gray-300 leading-relaxed border-l-4 border-blue-500 pl-6 py-2">
+                  <p className="md:text-xl text-gray-300 leading-relaxed border-l-4 border-blue-500 pl-6 py-2">
                     <span className="font-medium text-white">Strategic partnerships</span> that evolve with your business needs.
                   </p>
                   
-                  <p className="text-xl text-gray-300 leading-relaxed border-l-4 border-indigo-500 pl-6 py-2">
+                  <p className="md:text-xl text-gray-300 leading-relaxed border-l-4 border-indigo-500 pl-6 py-2">
                     Unleashing your <span className="font-medium text-white">full digital potential</span> through innovation.
                   </p>
                 </div>
@@ -119,8 +119,8 @@ const TypeWriterNew = () => {
 
               {/* Right Column - Interactive Console */}
               <div className="lg:w-1/2 mt-12 lg:mt-0">
-                <div className="bg-gray-900/80 border border-gray-700 rounded-xl p-6 shadow-inner">
-                  <div className="flex items-center mb-4">
+                <div className="bg-gray-900/80 border border-gray-700 rounded-xl p-2 md:p-6 shadow-inner">
+                  <div className="flex items-center mb-4 ">
                     <div className="flex space-x-2 mr-4">
                       <div className="w-3 h-3 rounded-full bg-red-500"></div>
                       <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -133,7 +133,7 @@ const TypeWriterNew = () => {
                   
                   <div className="mt-6 pt-4 border-t border-gray-800">
                     <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-medium rounded-lg hover:shadow-cyan-500/20 hover:shadow-lg transition-all duration-300 flex items-center justify-center group">
-                      <span>Connect With Our Team</span>
+                      <span className=' text-sm md:text-lg'>Connect With Our Team</span>
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-3 group-hover:animate-pulse" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd" />
                       </svg>
@@ -200,16 +200,16 @@ const ConsoleAnimation = () => {
   return (
     <>
       {lines.map((line, i) => (
-        line.show && <div key={i} className={`font-mono mb-2 ${line.color}`}>{line.text}</div>
+        line.show && <div key={i} className={` text-sm md:text-lg px-2 font-mono mb-2 ${line.color}`}>{line.text}</div>
       ))}
       
       <div className="ml-4 space-y-3">
         {features.map((feature, i) => (
           feature.show && (
             <div key={i} className="font-mono text-white flex items-center">
-              <span className="text-green-500 mr-2">→</span> 
-              {feature.text}
-              {i === 3 && <span className="ml-2 px-2 py-0.5 bg-blue-500/20 text-blue-400 rounded text-xs animate-pulse">NEW</span>}
+              <span className="text-green-500  mr-2">→</span> 
+             <span className=' text-sm md:text-lg'> {feature.text}</span>
+              {i === 3 && <span className="ml-2  px-2 py-0.5 bg-blue-500/20 text-blue-400 rounded text-xs animate-pulse">NEW</span>}
             </div>
           )
         ))}

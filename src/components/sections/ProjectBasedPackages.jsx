@@ -263,11 +263,9 @@ const FluxCustomSection = () => {
         <div className="absolute bottom-1/3 -right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z1 max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: -40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          
           className="text-center mb-20"
         >
           <span className="inline-block py-2.5 px-5 mb-6 text-xs font-semibold tracking-widest text-cyan-600 uppercase bg-cyan-100/50 rounded-full border border-cyan-200 backdrop-blur-sm">
@@ -282,9 +280,7 @@ const FluxCustomSection = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          
           className="max-w-4xl mx-auto"
         >
           <div className="relative group">

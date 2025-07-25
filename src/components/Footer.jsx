@@ -3,9 +3,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FiArrowRight } from 'react-icons/fi';
-import { socialImgs } from "@/constants/page"; // Ensure this path is correct
+import { socialImgs } from "@/constants/page"; 
 
-// --- Footer Data Structures ---
+
+
 const footerLinks = {
   company: {
     title: "Company",
@@ -37,8 +38,8 @@ const footerLinks = {
       { name: "Resource Augmentation", href: "/resource-augmentation" },
       { name: "Testimonials", href: "/testimonials" },
       { name: "Our Clients", href: "/clients" },
-      { name: "Submit Feedback to Our CEO", href: "#" }, // Assuming this is not a Next.js route
-      { name: "Download Brochure", href: "#" }, // Assuming this is not a Next.js route
+      { name: "Submit Feedback to Our CEO", href: "#" },  
+      { name: "Download Brochure", href: "#" }, 
       { name: "Sitemap", href: "/sitemap" },
     ],
   },

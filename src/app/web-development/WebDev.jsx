@@ -1,5 +1,6 @@
 "use client"
 import { useInView,motion ,AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import React, { useRef, useState } from 'react';
 
 // Main App component as required for the immersive
@@ -355,6 +356,155 @@ export default function WebDev() {
   };
 
 
+    const webDevelopmentProcessSteps = [
+    {
+      id: 'req-gathering',
+      title: "Requirement Gathering",
+      content: "As the initial focus of the web development process is to gather relevant information, our business analysts discuss the scope of web development with the clients to understand their business needs. We closely analyse your requirements and define the purpose and goals for the project.",
+      image: "https://plus.unsplash.com/premium_photo-1661376664649-821d586ef9f0?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      id: 'wireframe-prototyping',
+      title: "Wireframe & Prototyping",
+      content: "The collected information is used to create a sitemap and visual wireframe. This tangible blueprint clarifies the website's structure and functionality, ensuring everyone is aligned before design begins.",
+      image: "https://images.unsplash.com/photo-1618788372246-79faff0c3742?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      id: 'ui-ux-design',
+      title: "UI/UX Design",
+      content: "With a solid blueprint, our UI/UX experts craft a visually appealing and user-centric design. We focus on creating an intuitive experience that aligns with your brand and engages your target audience.",
+      image: "https://images.unsplash.com/photo-1542289539-059dea254938?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      id: 'development',
+      title: "Development",
+      content: "Our experienced developers bring the design to life, defining the functionality, technologies, and integrations. We perform front-end and back-end development with adherence to all technical specifications and coding standards.",
+      image: "https://images.unsplash.com/photo-1634838128617-efdf64411694?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+    },
+    {
+      id: 'quality-assurance',
+      title: "Quality Assurance",
+      content: "To ensure an exceptional end-user experience, we conduct rigorous testing across various browsers and devices. Our QA process checks for bugs, performance issues, and user acceptance to guarantee a flawless launch.",
+      image: "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      id: 'deployment',
+      title: "Deployment",
+      content: "After successful testing, the website is deployed to a live server. We manage the entire launch process to ensure a smooth transition from development to a publicly accessible, high-performing website.",
+      image: "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      id: 'maintenance-support',
+      title: "Maintenance & Support",
+      content: "Our partnership extends beyond launch. We offer ongoing support and maintenance for bug fixes, software updates, and backups to ensure your website remains secure, active, and performs flawlessly.",
+      image: "https://images.unsplash.com/photo-1635875060146-80ec95d47043?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ];
+
+  // WebDevelopmentProcessSection Component Definition
+  const WebDevelopmentProcessSection = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.2 });
+    const [openItemId, setOpenItemId] = useState(webDevelopmentProcessSteps[0].id);
+
+    const activeItem = webDevelopmentProcessSteps.find(item => item.id === openItemId);
+
+    return (
+      <section ref={ref} className="py-24 md:py-32 bg-gray-900 text-gray-200">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-center mb-16 md:mb-24"
+          >
+            <span className="inline-block py-2 px-5 mb-6 text-xs font-semibold tracking-widest text-cyan-300 uppercase bg-cyan-900/50 rounded-full border border-cyan-800">
+              Our Methodology
+            </span>
+            <h2 className="text-4xl md:text-6xl font-bold text-gray-50 mb-6 leading-tight">
+              A Refined Development <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Workflow</span>
+            </h2>
+            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+              From initial concept to final deployment, we follow a structured process to ensure quality, efficiency, and exceptional results.
+            </p>
+          </motion.div>
+
+          <div className="lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-16 items-start">
+            {/* Left Column: Accordion */}
+            <div className="lg:col-span-6 space-y-2">
+              {webDevelopmentProcessSteps.map((item, index) => (
+                <div
+                  key={item.id}
+                  className="rounded-lg bg-gray-800/50 border border-white/10 transition-colors duration-300"
+                >
+                  <button
+                    type="button"
+                    className="flex justify-between items-center w-full p-5 md:p-6 text-left"
+                    onClick={() => setOpenItemId(item.id)}
+                  >
+                    <span className={`text-lg md:text-xl font-medium transition-colors duration-300 ${openItemId === item.id ? 'text-cyan-400' : 'text-gray-100 hover:text-cyan-400'}`}>
+                      <span className="text-cyan-500 mr-3">0{index + 1}</span>
+                      {item.title}
+                    </span>
+                    <motion.div
+                      animate={{ rotate: openItemId === item.id ? 180 : 0 }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                      className={`transition-colors duration-300 ${openItemId === item.id ? 'text-cyan-400' : 'text-gray-500'}`}
+                    >
+                      <ChevronDown size={24} />
+                    </motion.div>
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {openItemId === item.id && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto', transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }}
+                        exit={{ opacity: 0, height: 0, transition: { duration: 0.3, ease: [0.36, 0, 0.66, -0.56] } }}
+                        className="overflow-hidden"
+                      >
+                        <p className="px-6 pb-6 pt-2 text-gray-400 text-base md:text-lg leading-relaxed">
+                          {item.content}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ))}
+            </div>
+
+            {/* Right Column: Sticky Image */}
+            <div className="lg:col-span-6 mt-12 lg:mt-0 lg:sticky lg:top-24">
+              <div className="relative w-full h-[400px] md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-cyan-900/20">
+                <AnimatePresence mode='wait'>
+                  {activeItem && (
+                    <motion.img
+                      key={activeItem.id}
+                      src={activeItem.image}
+                      alt={activeItem.title}
+                      initial={{ opacity: 0, scale: 1.05 }}
+                      animate={{ opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } }}
+                      exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.3, ease: 'easeIn' } }}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </AnimatePresence>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-6">
+                  <h3 className="text-2xl font-bold text-white drop-shadow-lg">
+                    {activeItem?.title}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  };
+
+
+
   return (
  
 <>
@@ -449,6 +599,11 @@ export default function WebDev() {
       <WebDevServicesSection />
   
    <TechnologyStackSection />
+
+
+ <WebDevelopmentProcessSection />
+
+
      
     </div>
 </>

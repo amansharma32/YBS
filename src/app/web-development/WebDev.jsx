@@ -152,23 +152,30 @@ export default function WebDev() {
       {
         title: "Angular",
             img:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441832/Angular_56306ec9d8_gocdng.svg",
-        description: "Elevate customer engagement with visually stunning, scalable and reliable interfaces for web applications through the boundless possibilities of Vue.js.",
+        description: "Transform your industry with the combination of agile concepts and the broad expertise of our Angular developers to give life to thoughtful web applications.",
         link: "#"
       }
     ],
     backend: [
       {
         title: "Python",
+              img:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441834/Python_54b43ad500_q2jriq.svg",
+      
+            
         description: "Revolutionize your business with top-notch web applications, dynamic websites, and desktop apps to rewrite your brand’s success story with the promise of Python.",
         link: "#"
       },
       {
         title: "Node.js",
+          img:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441832/Node_js_bdf692ea23_itlxxm.svg",
+      
         description: "Develop quick and scalable web pages with real-time Node.js technology to highlight your business’s digital strength with solution-focused applications.",
         link: "#"
       },
       {
         title: "PHP",
+            img:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441833/php_a3a7eccfb0_phmctj.svg",
+      
         description: "Get assistance from a robust codebase to get dynamic, swift and flexible PHP web development solutions for highly interactive web pages.",
         link: "#"
       }
@@ -176,11 +183,16 @@ export default function WebDev() {
     database: [
       {
         title: "MySQL",
+
+            img:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441833/Mysql_8dd00fedbf_fckj9c.svg",
+
         description: "Well-suited for database management, MySQL is easy to install. Get the most robust database system to build mission-critical applications.",
         link: "#"
       },
       {
         title: "MongoDB",
+
+            img:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441832/Mongo_1af6329c73_las3o5.svg",
         description: "Incorporate the flexible schema of MongoDB to scale up and make queries much faster, while following all key features of modern databases.",
         link: "#"
       }
@@ -263,7 +275,7 @@ export default function WebDev() {
                   className={`relative py-3 px-8 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out z-10
                               ${activeCategory === categoryKey
                                   ? '   text-black' // Removed scale on active
-                                  : 'text-gray-700 hover:text-white hover:bg-cyan-600'
+                                  : 'text-gray-700    cursor-pointer '
                               }`}
                 >
                   {categoryKey.charAt(0).toUpperCase() + categoryKey.slice(1)}

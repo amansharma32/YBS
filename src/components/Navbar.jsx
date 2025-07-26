@@ -155,7 +155,7 @@ const serviceCategories = [
       {
         id: "cloud-service",
         name: "Cloud Service",
-        icon: <Cloud  className="w-4 h-4" />,
+        icon: <Cloud className="w-4 h-4" />,
       },
       {
         id: "cyber-security",
@@ -213,7 +213,6 @@ const colorClasses = {
     shadow: "hover:shadow-cyan-500/50",
     border: "border-cyan-500/30",
   },
- 
 };
 
 import { useRouter } from "next/navigation";
@@ -224,83 +223,143 @@ import Link from "next/link";
 
 import { usePathname } from "next/navigation";
 
-
 const MobileMenu = ({ isOpen, onLinkClick }) => {
-    const [openCategory, setOpenCategory] = useState(null);
+  const [openCategory, setOpenCategory] = useState(null);
 
-    const toggleCategory = (categoryId) => setOpenCategory(openCategory === categoryId ? null : categoryId);
+  const toggleCategory = (categoryId) =>
+    setOpenCategory(openCategory === categoryId ? null : categoryId);
 
-    const menuVariants = {
-        closed: { opacity: 0, height: 0, transition: { duration: 0.3, ease: 'easeOut' } },
-        open: { opacity: 1, height: '100vh', transition: { duration: 0.4, ease: 'easeIn' } }
-    };
-    
-    const contentVariants = {
-        collapsed: { height: 0, opacity: 0, marginTop: 0 },
-        open: { height: 'auto', opacity: 1, marginTop: '0.5rem', transition: { duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] } }
-    };
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      height: 0,
+      transition: { duration: 0.3, ease: "easeOut" },
+    },
+    open: {
+      opacity: 1,
+      height: "100vh",
+      transition: { duration: 0.4, ease: "easeIn" },
+    },
+  };
 
-    return (
-        <AnimatePresence>
-            {isOpen && (
-                <motion.div
-                    variants={menuVariants}
-                    initial="closed"
-                    animate="open"
-                    exit="closed"
-                    className="xl:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg overflow-y-auto"
-                >
-                    <div className="p-4">
-                        <Link href="/solutions" onClick={onLinkClick} className="block text-lg font-medium text-neutral-200 hover:text-white py-3 px-4 rounded-md hover:bg-neutral-800">Solutions</Link>
-                   
-                        {/* Accordion for Services */}
-                        <div className="mt-2 border-t border-neutral-800">
-                             {serviceCategories.map(cat => (
-                                <div key={cat.id} className="border-b border-neutral-800">
-                                    <button onClick={() => toggleCategory(cat.id)} className="flex items-center justify-between w-full py-4 px-4 text-left">
-                                        <div className="flex items-center">
-                                            <span className={`mr-4 ${colorClasses[cat.color].text}`}>{cat.icon}</span>
-                                            <span className="text-lg font-medium text-white">{cat.category}</span>
-                                        </div>
-                                        <ChevronDown className={`w-5 h-5 text-neutral-500 transition-transform duration-300 ${openCategory === cat.id ? 'rotate-180' : ''}`} />
-                                    </button>
-                                    <AnimatePresence initial={false}>
-                                        {openCategory === cat.id && (
-                                            <motion.div variants={contentVariants} initial="collapsed" animate="open" exit="collapsed" className="overflow-hidden pl-8 pr-4 pb-2">
-                                                <ul className="space-y-1 pb-2">
-                                                    {cat.items.map(item => (
-                                                        <li key={item.id}>
-                                                            <a href={item.href} onClick={onLinkClick} className="flex items-center py-3 px-3 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors">
-                                                                <span className={`mr-4 ${colorClasses[cat.color].text}`}>{item.icon}</span>
-                                                                {item.name}
-                                                            </a>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-                                </div>
-                            ))}
-                        </div>
+  const contentVariants = {
+    collapsed: { height: 0, opacity: 0, marginTop: 0 },
+    open: {
+      height: "auto",
+      opacity: 1,
+      marginTop: "0.5rem",
+      transition: { duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] },
+    },
+  };
 
-                             <Link href="/" onClick={onLinkClick} className="block text-lg font-medium text-neutral-200 hover:text-white py-3 px-4 rounded-md hover:bg-neutral-800">Works</Link>
-                        
-                             <Link href="/" onClick={onLinkClick} className="block text-lg font-medium text-neutral-200 hover:text-white py-3 px-4 rounded-md hover:bg-neutral-800">Works</Link>
-                        
-                         <div className="p-6 mt-4">
-                             <Link href="/contact-us" onClick={onLinkClick} className="w-full block text-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 rounded-lg text-white font-medium transition-all hover:shadow-lg hover:shadow-cyan-400/20">
-                                Start Your Journey
-                             </Link>
-                        </div>
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          variants={menuVariants}
+          initial="closed"
+          animate="open"
+          exit="closed"
+          className="xl:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg overflow-y-auto"
+        >
+          <div className="p-4">
+            <Link
+              href="/solutions"
+              onClick={onLinkClick}
+              className="block text-lg font-medium text-neutral-200 hover:text-white py-3 px-4 rounded-md hover:bg-neutral-800"
+            >
+              Solutions
+            </Link>
+
+            {/* Accordion for Services */}
+            <div className="mt-2 border-t border-neutral-800">
+              {serviceCategories.map((cat) => (
+                <div key={cat.id} className="border-b border-neutral-800">
+                  <button
+                    onClick={() => toggleCategory(cat.id)}
+                    className="flex items-center justify-between w-full py-4 px-4 text-left"
+                  >
+                    <div className="flex items-center">
+                      <span className={`mr-4 ${colorClasses[cat.color].text}`}>
+                        {cat.icon}
+                      </span>
+                      <span className="text-lg font-medium text-white">
+                        {cat.category}
+                      </span>
                     </div>
-                </motion.div>
-            )}
-        </AnimatePresence>
-    );
+                    <ChevronDown
+                      className={`w-5 h-5 text-neutral-500 transition-transform duration-300 ${
+                        openCategory === cat.id ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {openCategory === cat.id && (
+                      <motion.div
+                        variants={contentVariants}
+                        initial="collapsed"
+                        animate="open"
+                        exit="collapsed"
+                        className="overflow-hidden pl-8 pr-4 pb-2"
+                      >
+                        <ul className="space-y-1 pb-2">
+                          {cat.items.map((item) => (
+                            <li key={item.id}>
+                              <a
+                                href={item.href}
+                                onClick={onLinkClick}
+                                className="flex items-center py-3 px-3 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors"
+                              >
+                                <span
+                                  className={`mr-4 ${
+                                    colorClasses[cat.color].text
+                                  }`}
+                                >
+                                  {item.icon}
+                                </span>
+                                {item.name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ))}
+            </div>
+
+            <Link
+              href="/"
+              onClick={onLinkClick}
+              className="block text-lg font-medium text-neutral-200 hover:text-white py-3 px-4 rounded-md hover:bg-neutral-800"
+            >
+              Works
+            </Link>
+
+            <Link
+              href="/"
+              onClick={onLinkClick}
+              className="block text-lg font-medium text-neutral-200 hover:text-white py-3 px-4 rounded-md hover:bg-neutral-800"
+            >
+              Works
+            </Link>
+
+            <div className="p-6 mt-4">
+              <Link
+                href="/contact-us"
+                onClick={onLinkClick}
+                className="w-full block text-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 rounded-lg text-white font-medium transition-all hover:shadow-lg hover:shadow-cyan-400/20"
+              >
+                Start Your Journey
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
 };
-
-
 
 function Header() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -309,33 +368,32 @@ function Header() {
     setOpenDropdown(openDropdown === dropdownIndex ? null : dropdownIndex);
   };
 
-   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  // Effect to handle scroll state
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-     // Effect to handle scroll state
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+  // Effect to lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMobileMenuOpen]);
 
-    // Effect to lock body scroll when mobile menu is open
-    useEffect(() => {
-        if (isMobileMenuOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
-        return () => { document.body.style.overflow = 'auto'; };
-    }, [isMobileMenuOpen]);
-
-    const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-    const closeMobileMenu = () => setIsMobileMenuOpen(false);
-
-
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   const stopPropagation = (e) => {
     e.stopPropagation();
@@ -362,9 +420,6 @@ function Header() {
   const toggleNestedDropdown = (index) => {
     setNestedDropdown(nestedDropdown === index ? null : index);
   };
-
- 
- 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -472,7 +527,6 @@ function Header() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
- 
 
   const [activeCategory, setActiveCategory] = useState(serviceCategories[0]);
 
@@ -496,12 +550,10 @@ function Header() {
     },
   };
 
-  
-
   return (
     <>
       <nav
-        className={` fixed  z-90 w-full top-0 transition-all duration-300 ${
+        className={`fixed  z-90 w-full top-0 transition-all duration-300 ${
           isScrolled
             ? " bg-black text-white shadow-md"
             : " bg-gradient-to-b from-black  text-white"
@@ -529,184 +581,176 @@ function Header() {
               </div>
             </div>
 
-            <div className="row flex-col  lg:flex lg:px-2  ">
+            <div className="row flex-col lg:flex lg:px-2  ">
               <div className="col">
                 <div className="hidden xl:flex items-center space-x-1">
-                  <ul className="flex    flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                  <ul className="flex  flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                     {menuItems.map((item, index) => (
                       <li
-                        className=" md:px-3 flex items-center justify-center  after:content-[''] after:block after:w-full after:h-[3px] after:bg-gradient-to-r after:from-cyan-500 after:to-blue-700 after:scale-x-0    after:origin-left after:transition-transform after:duration-250 after:ease-in-out  hover:after:scale-x-100 "
+                        className=" md:px-3 flex items-center justify-center  after:content-[''] after:block after:w-full after:h-[3px] after:bg-gradient-to-r after:from-cyan-500 after:to-blue-700 after:scale-x-0  after:origin-left after:transition-transform after:duration-250 after:ease-in-out  hover:after:scale-x-100 "
                         key={index}
                       >
                         {item.dropdown ? (
-                          <Dropdown
-                            className="  bg-transparent group"
-                            label={
-                              <div className="flex items-center   py-2 text-white hover:text-cyan-300 transition-colors duration-300 rounded-lg group-hover:bg-neutral-800/50">
-                                <span className="font-medium">Services</span>
-                                <ChevronDown className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
-                              </div>
-                            }
-                            inline
-                            arrowIcon={false}
-                          >
-                            <DropdownItem
-                              as="div"
-                              className="p-0   focus:bg-transparent"
-                            >
-                              <motion.div
-                                variants={containerVariants}
-                                initial="hidden"
-                                animate="visible"
-                                exit="exit"
-                                className="w-[95vw]     p-0 bg-black/80 backdrop-blur-2xl rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl shadow-black/50"
-                                style={{
-                                  backgroundImage:
-                                    "radial-gradient(circle at top left, rgba(255,255,255,0.03), transparent 30%), radial-gradient(circle at bottom right, rgba(255,255,255,0.03), transparent 30%)",
-                                }}
-                              >
-                                <div className="flex w-full text-white">
-                                  {/* Left Panel: Category Selection */}
-                                  <div className="w-1/3 border-r border-neutral-800">
-                                    <div className="p-6">
-                                      <h3 className="text-xl font-bold text-white mb-1">
-                                        Our Services
-                                      </h3>
-                                      <p className="text-sm text-neutral-400">
-                                        Select a category to explore.
-                                      </p>
-                                    </div>
-                                    <div className="flex flex-col">
-                                      {serviceCategories.map((cat) => (
-                                        <button
-                                          key={cat.id}
-                                          onMouseEnter={() =>
-                                            setActiveCategory(cat)
-                                          }
-                                          className={`flex items-center w-full text-left px-6 py-4 transition-all duration-300 relative ${
-                                            activeCategory.id === cat.id
-                                              ? "bg-neutral-800/50"
-                                              : "hover:bg-neutral-900/50"
-                                          }`}
-                                        >
-                                          {activeCategory.id === cat.id && (
-                                            <motion.div
-                                              layoutId="activePill"
-                                              className={`absolute left-0 top-0 bottom-0 w-1 ${colorClasses[
-                                                cat.color
-                                              ].text.replace("text", "bg")}`}
-                                              transition={{
-                                                type: "spring",
-                                                stiffness: 300,
-                                                damping: 30,
-                                              }}
-                                            ></motion.div>
-                                          )}
-                                          <div
-                                            className={`mr-4 p-2 rounded-lg bg-neutral-800 ${
-                                              colorClasses[cat.color].text
-                                            }`}
-                                          >
-                                            {cat.icon}
-                                          </div>
-                                          <div>
-                                            <p className="font-semibold text-white">
-                                              {cat.category}
-                                            </p>
-                                          </div>
-                                          <ArrowRight
-                                            className={`ml-auto h-5 w-5 text-neutral-600 transition-all duration-300 ${
-                                              activeCategory.id === cat.id
-                                                ? "translate-x-0 text-neutral-400"
-                                                : "-translate-x-2"
-                                            }`}
-                                          />
-                                        </button>
-                                      ))}
-                                    </div>
-                                  </div>
 
-                                  {/* Right Panel: Active Category Details */}
-                                  <div className="w-2/3 p-8">
-                                    <AnimatePresence mode="wait">
-                                      <motion.div
-                                        key={activeCategory.id}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: -20 }}
-                                        transition={{
-                                          duration: 0.3,
-                                          ease: "easeInOut",
-                                        }}
-                                        className="h-full"
-                                      >
-                                        <div className="flex items-start mb-6">
-                                          <div
-                                            className={`p-3 rounded-xl bg-neutral-900 mr-5 ${
-                                              colorClasses[activeCategory.color]
-                                                .text
-                                            }`}
-                                          >
-                                            {activeCategory.icon}
-                                          </div>
-                                          <div>
-                                            <h2
-                                              className={`text-2xl font-bold ${
-                                                colorClasses[
-                                                  activeCategory.color
-                                                ].text
-                                              }`}
-                                            >
-                                              {activeCategory.category}
-                                            </h2>
-                                            <p className="text-neutral-400 mt-1">
-                                              {activeCategory.description}
-                                            </p>
-                                          </div>
-                                        </div>
-                                        <div
-                                          className={`grid grid-cols-2 gap-4 border-t ${
-                                            colorClasses[activeCategory.color]
-                                              .border
-                                          } pt-6`}
-                                        >
-                                          {activeCategory.items.map((item) => (
-                                            <Link
-                                              key={item.id}
-                                              href={`/services/${activeCategory.id}/${item.id}`}
-                                              className={`group flex items-center p-3 rounded-lg transition-all duration-300 hover:bg-neutral-800/80 ${
-                                                colorClasses[
-                                                  activeCategory.color
-                                                ].shadow
-                                              }`}
-                                            >
-                                              <div
-                                                className={`mr-4 ${
-                                                  colorClasses[
-                                                    activeCategory.color
-                                                  ].text
-                                                }`}
-                                              >
-                                                {item.icon}
-                                              </div>
-                                              <span className="text-neutral-200">
-                                                {item.name}
-                                              </span>
-                                              <ArrowRight className="h-4 w-4 ml-auto text-neutral-600 group-hover:text-white group-hover:translate-x-1 transition-all" />
-                                            </Link>
-                                          ))}
-                                        </div>
-                                      </motion.div>
-                                    </AnimatePresence>
-                                  </div>
-                                </div>
-                              </motion.div>
-                            </DropdownItem>
-                          </Dropdown>
+                   <Dropdown
+  className="bg-transparent group"
+  label={
+    <div className="flex items-center py-2 text-white hover:text-cyan-300 transition-colors duration-300 rounded-lg group-hover:bg-neutral-800/50">
+      <span className="font-medium">Services</span>
+      <ChevronDown className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+    </div>
+  }
+  inline
+  arrowIcon={false}
+>
+  <DropdownItem
+    as="div"
+    className="p-0 focus:bg-transparent" // Keep this clean, let the motion.div handle positioning
+  >
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      // *** MODIFIED CLASSES HERE ***
+      className="fixed top-[50%] -right-[328%]   w-[75vw] h-[65vh] bg-black/80 backdrop-blur-2xl rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl shadow-black/50 z-50" // Added fixed, top-1/2, left-1/2, -translate-x-1/2, -translate-y-1/2, and z-50
+      style={{
+        backgroundImage:
+          "radial-gradient(circle at top left, rgba(255,255,255,0.03), transparent 30%), radial-gradient(circle at bottom right, rgba(255,255,255,0.03), transparent 30%)",
+      }}
+    >
+      <div className="flex w-full text-white">
+        {/* Left Panel: Category Selection */}
+        <div className="w-1/3 border-r border-neutral-800">
+          <div className="p-6">
+            <h3 className="text-xl font-bold text-white mb-1">
+              Our Services
+            </h3>
+            <p className="text-sm text-neutral-400">
+              Select a category to explore.
+            </p>
+          </div>
+          <div className="flex flex-col">
+            {serviceCategories.map((cat) => (
+              <button
+                key={cat.id}
+                onMouseEnter={() => setActiveCategory(cat)}
+                className={`flex items-center w-full text-left px-6 py-4 transition-all duration-300 relative ${
+                  activeCategory.id === cat.id
+                    ? "bg-neutral-800/50"
+                    : "hover:bg-neutral-900/50"
+                }`}
+              >
+                {activeCategory.id === cat.id && (
+                  <motion.div
+                    layoutId="activePill"
+                    className={`absolute left-0 top-0 bottom-0 w-1 ${colorClasses[
+                      cat.color
+                    ].text.replace("text", "bg")}`}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 30,
+                    }}
+                  ></motion.div>
+                )}
+                <div
+                  className={`mr-4 p-2 rounded-lg bg-neutral-800 ${
+                    colorClasses[cat.color].text
+                  }`}
+                >
+                  {cat.icon}
+                </div>
+                <div>
+                  <p className="font-semibold text-white">
+                    {cat.category}
+                  </p>
+                </div>
+                <ArrowRight
+                  className={`ml-auto h-5 w-5 text-neutral-600 transition-all duration-300 ${
+                    activeCategory.id === cat.id
+                      ? "translate-x-0 text-neutral-400"
+                      : "-translate-x-2"
+                  }`}
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Panel: Active Category Details */}
+        <div className="w-2/3 p-8">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeCategory.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{
+                duration: 0.3,
+                ease: "easeInOut",
+              }}
+              className="h-full"
+            >
+              <div className="flex items-start mb-6">
+                <div
+                  className={`p-3 rounded-xl bg-neutral-900 mr-5 ${
+                    colorClasses[activeCategory.color].text
+                  }`}
+                >
+                  {activeCategory.icon}
+                </div>
+                <div>
+                  <h2
+                    className={`text-2xl font-bold ${
+                      colorClasses[activeCategory.color].text
+                    }`}
+                  >
+                    {activeCategory.category}
+                  </h2>
+                  <p className="text-neutral-400 mt-1">
+                    {activeCategory.description}
+                  </p>
+                </div>
+              </div>
+              <div
+                className={`grid grid-cols-2 gap-4 border-t ${
+                  colorClasses[activeCategory.color].border
+                } pt-6`}
+              >
+                {activeCategory.items.map((item) => (
+                  <Link
+                    key={item.id}
+                    href={`/services/${activeCategory.id}/${item.id}`}
+                    className={`group flex items-center p-3 rounded-lg transition-all duration-300 hover:bg-neutral-800/80 ${
+                      colorClasses[activeCategory.color].shadow
+                    }`}
+                  >
+                    <div
+                      className={`mr-4 ${
+                        colorClasses[activeCategory.color].text
+                      }`}
+                    >
+                      {item.icon}
+                    </div>
+                    <span className="text-neutral-200">
+                      {item.name}
+                    </span>
+                    <ArrowRight className="h-4 w-4 ml-auto text-neutral-600 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+    </motion.div>
+  </DropdownItem>
+</Dropdown>
                         ) : (
                           <Link
                             href={item.href || "#"}
-                            className=" "
+                            className="  "
                             onClick={() => handleLinkClick(item.href)}
                           >
                             {item.label}
@@ -719,29 +763,33 @@ function Header() {
               </div>
             </div>
 
-              <div className="xl:hidden flex items-center">
-                        <button onClick={toggleMobileMenu} className="text-white" aria-label="Toggle menu">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={isMobileMenuOpen ? 'close' : 'open'}
-                                    initial={{ rotate: -45, opacity: 0 }}
-                                    animate={{ rotate: 0, opacity: 1 }}
-                                    exit={{ rotate: 45, opacity: 0 }}
-                                    transition={{ duration: 0.2 }}
-                                >
-                                    {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-                                </motion.div>
-                            </AnimatePresence>
-                        </button>
-                    </div>
+            <div className="xl:hidden flex items-center">
+              <button
+                onClick={toggleMobileMenu}
+                className="text-white"
+                aria-label="Toggle menu"
+              >
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={isMobileMenuOpen ? "close" : "open"}
+                    initial={{ rotate: -45, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 45, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {isMobileMenuOpen ? (
+                      <X className="w-7 h-7" />
+                    ) : (
+                      <Menu className="w-7 h-7" />
+                    )}
+                  </motion.div>
+                </AnimatePresence>
+              </button>
+            </div>
           </div>
         </div>
 
-       
- 
-
-              <MobileMenu isOpen={isMobileMenuOpen} onLinkClick={closeMobileMenu} />
-       
+        <MobileMenu isOpen={isMobileMenuOpen} onLinkClick={closeMobileMenu} />
       </nav>
     </>
   );

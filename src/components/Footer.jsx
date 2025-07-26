@@ -48,11 +48,9 @@ const footerLinks = {
 const footerConnect = {
   title: "Connect",
   items: [
-    { label: "General Enquiry", value: "7017915594", type: "tel", href: "tel:7017915594" },
-    { label: "Sales Enquiry", value: "7017915594", type: "tel", href: "tel:7017915594" },
+    { label: "Contact Number", value: "7017915594", type: "tel", href: "tel:7017915594" }, 
     { label: "Email", value: "fluxdigital2005@gmail.com", type: "email", href: "mailto:fluxdigital2005@gmail.com" },
-    { label: "HR Enquiry", value: "7017915594", type: "tel", href: "tel:7017915594" },
-    { label: "Whatsapp (Sales)", value: "7017915594", type: "whatsapp", href: "https://wa.me/7017915594" },
+    
   ],
 };
 

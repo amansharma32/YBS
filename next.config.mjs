@@ -63,6 +63,20 @@ const baseConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+
+    async rewrites() {
+    return [
+      {
+        source: '/services/:path*',
+        destination: '/:path*'
+      },
+      {
+        source: '/services',
+        destination: '/'
+      }
+    ]
+  }
+
  
 };
 

@@ -91,9 +91,9 @@ function PricingCard({ icon, title, price, idealFor, popular = false }) {
         <h3 className="text-xl font-bold text-gray-900 mb-1">{title}</h3>
         <p className="text-gray-500 text-sm h-10 mb-4">{idealFor}</p>
         
-        <div className="mb-6 flex self-end">
+        {/* <div className="mb-6 flex self-end">
           <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-teal-700">{price}</span>
-        </div>
+        </div> */}
       </div>
 
       <motion.button 
@@ -440,30 +440,33 @@ const addOnServices = [
         </div>
   
   
+  
         {/* Market Toggle */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex justify-center md:justify-start md:items-start items-center mb-16"
+          className="flex justify-center   md:items-start items-center mb-16"
         >
+    
           <div className="bg-white/60 border border-gray-200 rounded-full p-1 flex space-x-1 backdrop-blur-sm">
             <button 
               onClick={() => setMarket('domestic')}
               className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors relative ${market === 'domestic' ? 'text-white' : 'text-gray-600 hover:bg-gray-100'}`}
             >
               {market === 'domestic' && <motion.div layoutId="pill" className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full" />}
-              <span className="relative z-10">Domestic (INR)</span>
+              <span className="relative z-10">Domestic</span>
             </button>
             <button 
               onClick={() => setMarket('international')}
               className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors relative ${market === 'international' ? 'text-white' : 'text-gray-600 hover:bg-gray-100'}`}
             >
               {market === 'international' && <motion.div layoutId="pill" className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full" />}
-              <span className="relative z-10">International (USD)</span>
+              <span className="relative z-10">International </span>
             </button>
           </div>
         </motion.div>
+
 
         {/* --- RENDER SECTIONS --- */}
         {Object.values(packagesData).map((section, sectionIndex) => (

@@ -2,6 +2,8 @@
 import { useInView,motion ,AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import React, { useRef, useState } from 'react';
+import { Store, Cpu, Palette, ArrowRight } from 'lucide-react';
+import WhyUsInnovativeSection from '@/components/sections/WhyUsInnovativeSection';
 
 // Main App component as required for the immersive
 export default function WebDev() {
@@ -46,14 +48,14 @@ export default function WebDev() {
   ];
 
     return (
-      <section ref={ref} className="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      <section ref={ref} className="py-20 md:py-32   bg-transparent  relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-cyan-300/15 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
           <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-blue-300/15 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-6  ">
           <motion.div
             initial={{ opacity: 0, y: -40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -236,14 +238,14 @@ export default function WebDev() {
 
     return (
       <section ref={ref} className="py-24 md:py-40 bg-gradient-to-br from-gray-100 to-white relative overflow-hidden">
-        {/* Professional Decorative background elements - static and subtle */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none"> {/* Reduced opacity */}
-          {/* Larger, more spread out, static blobs */}
+        
+        <div className="absolute inset-0 opacity-10 pointer-events-none">  
+        
           <div className="absolute top-1/4 left-[5%] w-[400px] h-[400px] bg-cyan-400/10 rounded-full mix-blend-multiply filter blur-3xl"></div>
           <div className="absolute bottom-1/3 right-[5%] w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-3xl"></div>
           <div className="absolute top-1/2 left-1/2 w-[1000px] h-[1000px] bg-teal-300/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
 
-          {/* Subtle grid pattern overlay */}
+         
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23a0aec0\' fill-opacity=\'0.03\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'17\' cy=\'17\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E')] opacity-5"></div>
         </div>
 
@@ -505,6 +507,114 @@ export default function WebDev() {
 
 
 
+// Data for the industry service cards
+const industryServices = [
+  {
+    icon: <Store size={28} className="text-blue-600" />,
+    title: "Retail",
+    description: "Discover transformative IT services in the digital era that drive seamless omnichannel experiences."
+  },
+  {
+    icon: <Cpu size={28} className="text-green-600" />,
+    title: "Information Technology",
+    description: "Drive efficiency, innovation, and growth in the dynamic landscape of the information technology industry."
+  },
+  {
+    icon: <Palette size={28} className="text-purple-600" />,
+    title: "Fashion",
+    description: "Craft captivating narratives through visually stunning websites & immersive brand experiences."
+  }
+];
+
+// Component for the "Services for Various Industries" section
+const IndustriesSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  return (
+    <section ref={ref} className="py-20 md:py-28 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center mb-12 md:mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 tracking-tight">
+            Web Development Services
+          </h2>
+          <p className="mt-4 text-lg md:text-xl text-gray-600">
+            For Various Industries
+          </p>
+        </motion.div>
+
+        {/* Grid of Service Cards */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {industryServices.map((service, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 flex flex-col"
+            >
+              {/* Icon */}
+              <div className="flex items-center justify-center h-14 w-14 rounded-full bg-gray-100 mb-6">
+                {service.icon}
+              </div>
+
+              {/* Content */}
+              <div className="flex-grow">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+
+              {/* Learn More Link */}
+              <a
+                href="#"
+                className="inline-flex items-center mt-6 font-semibold text-blue-600 hover:text-blue-800 group"
+              >
+                Learn more
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
   return (
  
 <>
@@ -594,7 +704,7 @@ export default function WebDev() {
       </div>
     </div>
 
-      <div className="min-h-screen bg-gray-50 font-inter antialiased overflow-hidden">
+      <div className="min-h-screen  bg-transparent font-inter antialiased overflow-hidden">
       
       <WebDevServicesSection />
   
@@ -604,7 +714,11 @@ export default function WebDev() {
  <WebDevelopmentProcessSection />
 
 
-     
+
+      <IndustriesSection />
+
+
+     <WhyUsInnovativeSection/>
     </div>
 </>
     

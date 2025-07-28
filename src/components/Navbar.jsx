@@ -337,13 +337,7 @@ const MobileMenu = ({ isOpen, onLinkClick }) => {
               Works
             </Link>
 
-            <Link
-              href="/"
-              onClick={onLinkClick}
-              className="block text-lg font-medium text-neutral-200 hover:text-white py-3 px-4 rounded-md hover:bg-neutral-800"
-            >
-              Works
-            </Link>
+           
 
             <div className="p-6 mt-4">
               <Link
@@ -623,12 +617,13 @@ function Header() {
         {/* Left Panel: Category Selection */}
         <div className="w-1/3 border-r border-neutral-800">
           <div className="p-6">
-            <h3 className="text-xl font-bold text-white mb-1">
-              Our Services
-            </h3>
-            <p className="text-sm text-neutral-400">
+            <Link href='/services-overview' className="text-xl font-bold text-white mb-1">
+              Our Services Overview    <ArrowRight className="h-4 w-4 ml-auto text-neutral-600 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                 <p className="text-sm text-neutral-400">
               Select a category to explore.
             </p>
+            </Link>
+         
           </div>
           <div className="flex flex-col">
             {serviceCategories.map((cat) => (
@@ -721,7 +716,7 @@ function Header() {
                 {activeCategory.items.map((item) => (
                   <Link
                     key={item.id}
-                    href={`/services/${activeCategory.id}/${item.id}`}
+                    href={`/services/${item.id}`}
                     className={`group flex items-center p-3 rounded-lg transition-all duration-300 hover:bg-neutral-800/80 ${
                       colorClasses[activeCategory.color].shadow
                     }`}

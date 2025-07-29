@@ -635,7 +635,7 @@ const PremiumCaseStudies = () => {
                   {/* Content */}
 
                   <div className="row gap-3  justify-around items-center flex flex-row">
-                    <div className="col w-6/12"> 
+                    <div className="col w-4/12"> 
 
   <div className={` w-16 h-16 rounded-xl  text-gray-600   flex items-center justify-center backdrop-blur-sm`}>
                     {React.cloneElement(study.icon, { className: "w-8 h-8 text-black" })}

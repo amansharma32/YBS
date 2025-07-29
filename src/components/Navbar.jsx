@@ -306,7 +306,7 @@ const MobileMenu = ({ isOpen, onLinkClick }) => {
                           {cat.items.map((item) => (
                             <li key={item.id}>
                               <a
-                                href={item.href}
+                               href={`/services/${item.id}`}
                                 onClick={onLinkClick}
                                 className="flex items-center py-3 px-3 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors"
                               >

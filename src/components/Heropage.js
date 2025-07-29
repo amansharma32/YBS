@@ -204,22 +204,18 @@ export default function Heropage() {
 
 <OurServices/>
 
-
-
 <LogoShowcase />
+
 <CaseStudy/>
 
 <NewService/>
 
-           
-  <ProjectBasedPackages/>
+<ProjectBasedPackages/>
             
-            <Testimonials/>
+<Testimonials/>
             
-        
-              <Contact/>
+<Contact/>
 
-       
 </section>
  
         

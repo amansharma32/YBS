@@ -714,6 +714,7 @@ function Header() {
                 } pt-6`}
               >
                 {activeCategory.items.map((item) => (
+
                   <Link
                     key={item.id}
                     href={`/services/${item.id}`}
@@ -721,21 +722,29 @@ function Header() {
                       colorClasses[activeCategory.color].shadow
                     }`}
                   >
+
                     <div
                       className={`mr-4 ${
                         colorClasses[activeCategory.color].text
                       }`}
                     >
+
                       {item.icon}
+
                     </div>
+
                     <span className="text-neutral-200">
                       {item.name}
                     </span>
+
                     <ArrowRight className="h-4 w-4 ml-auto text-neutral-600 group-hover:text-white group-hover:translate-x-1 transition-all" />
                   </Link>
+
                 ))}
               </div>
+
             </motion.div>
+            
           </AnimatePresence>
         </div>
       </div>

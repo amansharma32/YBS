@@ -5,6 +5,64 @@ import React, { useRef, useState } from 'react';
 import { Store, Cpu, Palette, ArrowRight } from 'lucide-react';
 import WhyUsInnovativeSection from '@/components/sections/WhyUsInnovativeSection';
 
+
+import {
+  BarChart4,
+  Users,
+  Globe2,
+  GraduationCap,
+  ShieldCheck,
+} from 'lucide-react';
+
+const caseStudies = [
+  {
+    title: "Enterprise Analytics Dashboard",
+    subtitle: "Real-time business intelligence",
+    description: "Transformed decision-making with predictive analytics and custom visualization",
+    icon: <BarChart4 className="w-8 h-8" />,
+    cta: "View Case Study",
+    color: "bg-gradient-to-br from-teal-500 to-emerald-600",
+    results: ["+300% insights", "92% adoption rate"]
+  },
+  {
+    title: "Customer Intelligence Platform",
+    subtitle: "360° customer profiling",
+    description: "Integrated 12 data sources into unified customer profiles with AI-driven recommendations",
+    icon: <Users className="w-8 h-8" />,
+    cta: "Explore Project",
+    color: "bg-gradient-to-br from-pink-500 to-rose-600",
+    results: ["42% conversion lift", "28% retention boost"]
+  },
+  {
+    title: "Global SaaS Platform",
+    subtitle: "Enterprise-grade web application",
+    description: "Built scalable architecture supporting 50k+ concurrent users with 99.99% uptime",
+    icon: <Globe2 className="w-8 h-8" />,
+    cta: "See Results",
+    color: "bg-gradient-to-br from-blue-500 to-indigo-600",
+    results: ["5x performance", "Global deployment"]
+  },
+  {
+    title: "EdTech Learning System",
+    subtitle: "Next-gen education platform",
+    description: "Created immersive learning experience with real-time collaboration and progress tracking",
+    icon: <GraduationCap className="w-8 h-8" />,
+    cta: "Learn More",
+    color: "bg-gradient-to-br from-indigo-500 to-violet-600",
+    results: ["60% faster onboarding", "94% satisfaction"]
+  },
+  {
+    title: "Secure Matchmaking Platform",
+    subtitle: "Privacy-first architecture",
+    description: "Engineered military-grade security with blockchain verification and biometric auth",
+    icon: <ShieldCheck className="w-8 h-8" />,
+    cta: "View Security",
+    color: "bg-gradient-to-br from-red-500 to-amber-600",
+    results: ["Zero breaches", "ISO 27001 certified"]
+  },
+];
+
+
 // Main App component as required for the immersive
 export default function WebDev() {
   // Define the content data for Flux Digital's web development services
@@ -526,6 +584,110 @@ const industryServices = [
   }
 ];
 
+
+
+const PremiumCaseStudies = () => {
+  return (
+    <section className="relative   overflow-hidden py-28 px-4 sm:px-6 lg:px-8">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
+        <div className="absolute top-0 left-0 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-gradient-to-r from-teal-500/10 to-purple-500/10 blur-[100px]"></div>
+      </div>
+      
+      <div className="max-w-8xl mx-auto relative z-10">
+        <motion.div 
+          className="text-center text-gray-600 mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-sm uppercase tracking-widest   mb-4">
+            Success Stories
+          </p>
+          <h2 className=" text-2xl md:text-4xl  font-bold    mb-4">
+          Featured Web Development Case Studies
+
+          </h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            Where innovation meets measurable business impact
+          </p>
+        </motion.div>
+
+        {/* Enhanced card carousel */}
+        <div className="relative  border-r-2  border-gray-50">
+          <div className="flex space-x-8  overflow-x-auto p-5 pb-8 scrollbar-hide">
+            {caseStudies.map((study, index) => (
+
+              <motion.div
+                key={index}
+                className={` flex-shrink-0 rounded-3xl overflow-hidden border-[1px] border-gray-600   p-0.5`}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="relative h-full   rounded-[calc(1.5rem-1px)] p-8 flex flex-col">
+                  {/* Icon with gradient background */}
+            
+                  
+                  {/* Content */}
+
+                  <div className="row gap-3  justify-around items-center flex flex-row">
+                    <div className="col w-6/12"> 
+
+  <div className={` w-16 h-16 rounded-xl  text-gray-600   flex items-center justify-center backdrop-blur-sm`}>
+                    {React.cloneElement(study.icon, { className: "w-8 h-8 text-black" })}
+                  </div>
+
+                     <div className="mt-auto">
+                    <h3 className="text-2xl font-bold    text-gray-600 mb-2">{study.title}</h3>
+                    <p className="   text-gray-600 mb-4">{study.subtitle}</p>
+                    <p className="   text-gray-600 mb-6">{study.description}</p>
+                    
+                    {/* Results chips */}
+                    <div className="flex  flex-wrap gap-2 mb-8">
+                      {study.results.map((result, i) => (
+                        <span key={i} className="inline-flex border-gray-200 border-[1px] items-center px-3 py-1 rounded-full text-xs font-medium bg-white/10  text-gray-600  ">
+                          {result}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    {/* CTA button */}
+                    <button className={`w-full py-3 px-6 rounded-xl  font-medium  text-gray-600  r} hover:opacity-90 transition-all flex items-center justify-between`}>
+                      {study.cta}
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </button>
+                  </div>
+                  
+                  
+                  </div>
+                    <div className="col  w-5/12">
+                     
+                   <div className=" flex justify-center items-center card w-96 h-full">
+                        <img className=' h-full object-center object-cover w-full' src="https://res.cloudinary.com/dkbusg4bq/image/upload/v1753788701/decodive_11zon_o02wag.webp" alt="" />
+                   </div>
+                     </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+
+          </div>
+          
+          {/* Scroll hint */}
+     
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // Component for the "Services for Various Industries" section
 const IndustriesSection = () => {
   const ref = useRef(null);
@@ -719,6 +881,9 @@ const IndustriesSection = () => {
 
 
      <WhyUsInnovativeSection/>
+
+<PremiumCaseStudies/>
+
     </div>
 </>
     

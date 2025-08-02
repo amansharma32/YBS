@@ -51,10 +51,10 @@ const WhyFluxDigital = () => {
       <div className="container mx-auto px-5 relative z-10">
         {/* Headline */}
         <div className={`text-center mb-16 transition-all duration-700 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-            Why <span className="      ">Flux Digital</span>?
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-5xl   font-bold text-gray-900 mb-4">
+            Why <span className=" ">Flux Digital</span>?
+          </p>
+          <p className=" text-sm md:text-xl text-gray-600 max-w-3xl mx-auto">
             We blend strategy, design, and technology to create digital experiences that drive real business results.
           </p>
         </div>
@@ -110,8 +110,8 @@ const WhyFluxDigital = () => {
             {feature.icon}
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-gray-600 mb-2 ">{feature.title}</h3>
-            <p className="text-gray-500">{feature.description}</p>
+            <h3 className=" text-lg md:text-2xl font-bold text-gray-600 mb-2 ">{feature.title}</h3>
+            <p className="text-gray-500 text-sm">{feature.description}</p>
           </div>
         </div>
       </div>
@@ -157,10 +157,10 @@ const WhyFluxDigital = () => {
       key={index}
       className={`p-5 rounded-xl   bg-white border border-gray-300 ${stat.hoverBorder} transition-colors`}
     >
-      <div className={`text-4xl md:text-5xl font-bold  text-gray-500 mb-2`}>
+      <div className={` text-lg md:text-4xl  font-bold  text-gray-500 mb-2`}>
         {stat.value}{stat.suffix}
       </div>
-      <div className="text-gray-600 font-medium">
+      <div className="text-gray-600 text-sm font-medium">
         {stat.label}
       </div>
     </div>
@@ -168,7 +168,7 @@ const WhyFluxDigital = () => {
 </div>
 
               <div className="bg-white p-6 rounded-xl border border-gray-100">
-                <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Our Methodology</h4>
+                <h4 className=" text-lg md:text-xl font-bold text-gray-900 mb-4 text-center">Our Methodology</h4>
                 <div className="space-y-4">
                   {[
                     { label: 'Discovery & Strategy', width: '100%' },
@@ -177,8 +177,8 @@ const WhyFluxDigital = () => {
                     { label: 'Quality Assurance', width: '100%' }
                   ].map((item, index) => (
                     <div key={index}>
-                      <div className="flex justify-between text-sm text-gray-600 mb-1">
-                        <span>{item.label}</span>
+                      <div className="flex justify-between text-sm text-cyan-800 mb-1">
+                        <span className=' '>{item.label}</span>
                         <span>{item.width}</span>
                       </div>
                       <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">

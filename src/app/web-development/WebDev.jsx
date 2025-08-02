@@ -639,7 +639,7 @@ const PremiumCaseStudies = () => {
         <div className="absolute top-0 left-0 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-gradient-to-r from-teal-500/10 to-purple-500/10 blur-[100px]"></div>
       </div>
       
-      <div className="max-w-8xl mx-auto relative z-10">
+      <div className=" max-w-2xl  md:max-w-8xl mx-auto relative z-10">
         <motion.div 
           className="text-center text-gray-600 mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -650,11 +650,11 @@ const PremiumCaseStudies = () => {
           <p className="text-sm uppercase tracking-widest   mb-4">
             Success Stories
           </p>
-          <h2 className=" text-2xl md:text-4xl  font-bold    mb-4">
+          <h2 className=" text-xl md:text-4xl  font-bold    mb-4">
           Featured Web Development Case Studies
 
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className=" text-sm md:text-xl text-gray-400 max-w-3xl mx-auto">
             Where innovation meets measurable business impact
           </p>
         </motion.div>
@@ -673,23 +673,25 @@ const PremiumCaseStudies = () => {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="relative h-full bg-gray-50  rounded-[calc(1.5rem-1px)] p-8 flex flex-col">
+                <div className="relative h-full bg-gray-50  rounded-[calc(1.5rem-1px)] md:p-8 flex flex-col">
 
                   {/* Icon with gradient background */}
             
                   
 
-                  <div className="row    justify-evenly items-center flex flex-row">
-                    <div className="col w-4/12"> 
+                  <div className="row  justify-start items-start   md:justify-evenly md:items-center flex flex-col-reverse md:flex-row">
+
+
+                    <div className="col w-full md:w-4/12 p-4"> 
 
   <div className={`  w-28 h-fit pb-5 rounded-xl  text-gray-600   flex items-center justify-center backdrop-blur-sm`}>
               <img src={study.logoimg} alt="" />
                   </div>
 
-                     <div className="mt-auto">
-                    <h3 className="text-2xl font-bold    text-gray-600 mb-2">{study.title}</h3>
-                    <p className="   text-gray-600 mb-4">{study.subtitle}</p>
-                    <div className="   text-gray-600 mb-6">{study.description}</div>
+                     <div className="mt-auto ">
+                    <h3 className=" w-[50%] md:w-full text-lg md:text-2xl font-bold    text-gray-600 mb-2">{study.title}</h3>
+                    <p className="  text-sm  text-gray-600 mb-4">{study.subtitle}</p>
+                    <div className="  text-sm  text-gray-600 mb-6">{study.description}</div>
                     
                     {/* Results chips */}
                     <div className="flex  flex-wrap gap-2 mb-8">
@@ -712,12 +714,13 @@ const PremiumCaseStudies = () => {
                   
                   </div>
 
-                    <div className="col  w-5/12">
+                    <div className="col  w-full md:w-5/12">
                      
-                   <div className=" flex justify-center items-center card w-full h-[40vh]  ">
-                        <img className=' h-full object-center object-contain w-full' src={study.imgsrc} alt="" />
+                   <div className=" flex  md:justify-center md:items-center card w-full h-96   md:h-[40vh]  ">
+                        <img className=' h-full object-center  object-contain w-full' src={study.imgsrc} alt="" />
                    </div>
                      </div>
+                     
                   </div>
                 </div>
               </motion.div>
@@ -772,10 +775,10 @@ const IndustriesSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 tracking-tight">
+          <h2 className=" text-lg md:text-4xl   font-bold text-gray-800 tracking-tight">
             Web Development Services
           </h2>
-          <p className="mt-4 text-lg md:text-xl text-gray-600">
+          <p className="  md:mt-4  text-sm md:text-lg   text-gray-600">
             For Various Industries
           </p>
         </motion.div>
@@ -800,10 +803,10 @@ const IndustriesSection = () => {
 
               {/* Content */}
               <div className="flex-grow">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+                <h3 className="  text-lg md:text-2xl font-semibold text-gray-800 mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className=" text-sm text-gray-600 leading-relaxed">
                   {service.description}
                 </p>
               </div>

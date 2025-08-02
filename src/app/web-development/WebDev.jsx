@@ -633,13 +633,13 @@ const industryServices = [
 
 const PremiumCaseStudies = () => {
   return (
-    <section className="relative   overflow-hidden py-28 px-4 sm:px-6 lg:px-8">
+    <section className="relative   overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
         <div className="absolute top-0 left-0 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-gradient-to-r from-teal-500/10 to-purple-500/10 blur-[100px]"></div>
       </div>
       
-      <div className=" max-w-2xl  md:max-w-8xl mx-auto relative z-10">
+      <div className="  max-w-8xlmx-auto relative z-10">
         <motion.div 
           className="text-center text-gray-600 mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -661,7 +661,7 @@ const PremiumCaseStudies = () => {
 
         {/* Enhanced card carousel */}
         <div className="relative  border-r-2  border-gray-50">
-          <div className="flex space-x-8  overflow-x-auto p-5 pb-8 scrollbar-hide">
+          <div className="flex space-x-8  border-r-gray-400  border-[1px]   overflow-x-auto p-5 pb-8 scrollbar-hide">
             {caseStudies.map((study, index) => (
 
               <motion.div

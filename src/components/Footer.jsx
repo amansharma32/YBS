@@ -65,7 +65,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
       
         {/* Top Section: Get Started */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between pb-12 border-b border-neutral-700 mb-12">
+        <div className="flex flex-col  md:flex-row md:items-center md:justify-between pb-12 border-b border-neutral-700 mb-12">
           <div>
             <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-3">Get started now! </h2>
             <p className="text-lg text-neutral-400">It takes less than a minute of your time.</p>
@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section: Links and Contact Info - Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 text-sm">
+        <div className="grid  text-center md:text-left grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 text-sm">
           {/* Render Company, Services, Other sections using map */}
           {Object.values(footerLinks).map((section, sectionIndex) => (
             <div key={sectionIndex}>

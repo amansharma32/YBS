@@ -490,7 +490,7 @@ export default function WebDev() {
             </p>
           </motion.div>
 
-          <div className="lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-16 items-start">
+          <div className="lg:grid flex  flex-col-reverse lg:grid-cols-12 lg:gap-12 xl:gap-16 items-start">
             {/* Left Column: Accordion */}
             <div className="lg:col-span-6 space-y-2">
               {webDevelopmentProcessSteps.map((item, index) => (
@@ -534,8 +534,8 @@ export default function WebDev() {
             </div>
 
             {/* Right Column: Sticky Image */}
-            <div className="lg:col-span-6 mt-12 lg:mt-0 lg:sticky lg:top-24">
-              <div className="relative w-full h-[400px] md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-cyan-900/20">
+            <div className=" lg:col-span-6 mt-12 flex justify-center items-center lg:mt-0 lg:sticky lg:top-24">
+              <div className="relative w-full  h-full md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-cyan-900/20">
                 <AnimatePresence mode='wait'>
                   {activeItem && (
                     <motion.img

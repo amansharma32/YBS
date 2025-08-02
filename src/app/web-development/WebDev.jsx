@@ -16,50 +16,95 @@ import {
 
 const caseStudies = [
   {
-    title: "Enterprise Analytics Dashboard",
-    subtitle: "Real-time business intelligence",
-    description: "Transformed decision-making with predictive analytics and custom visualization",
+    title: "Translating Interior Aesthetics into Intuitive Web Experiences",
+    imgsrc:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753788701/decodive_11zon_o02wag.webp",
+    logoimg:"https://res.cloudinary.com/dq14b7xie/image/upload/v1747811688/Adhunik_DecoDive_Logo_povt7l.webp",
+  
+    description: <>
+      <ul className=' list-disc ps-4 '>
+      
+
+        <li>Modern Website for a Premium Interior Brand</li>
+        <li>Elegant UI That Reflects Aesthetic Expertise</li>
+        <li>High-Performance, Mobile-First Experience</li>
+        <li>Built with SEO & Speed in Mind</li>
+      </ul>
+    </>,
     icon: <BarChart4 className="w-8 h-8" />,
     cta: "View Case Study",
     color: "bg-gradient-to-br from-teal-500 to-emerald-600",
     results: ["+300% insights", "92% adoption rate"]
   },
+
   {
-    title: "Customer Intelligence Platform",
-    subtitle: "360° customer profiling",
-    description: "Integrated 12 data sources into unified customer profiles with AI-driven recommendations",
+    title: "  Intuitive Interface for Complex Engineering Products",
+     logoimg:"https://www.adhunikpowertech.com/we.svg",
+     imgsrc:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753788701/adhunik_11zon_shrb78.webp",
+    description: <>
+   
+ 
+      <ul className=' list-disc ps-4 '>
+     
+        <li>Fast, Secure, and Mobile-Optimized</li>
+        <li>Built for Search. Designed for Impact.</li>
+        <li>High-Performance Website, Minimal Load Times</li>
+        <li>Optimized Digital Experience for Technical Audiences</li>
+        
+      </ul>
+    </>,
     icon: <Users className="w-8 h-8" />,
     cta: "Explore Project",
     color: "bg-gradient-to-br from-pink-500 to-rose-600",
     results: ["42% conversion lift", "28% retention boost"]
   },
+  
   {
-    title: "Global SaaS Platform",
-    subtitle: "Enterprise-grade web application",
-    description: "Built scalable architecture supporting 50k+ concurrent users with 99.99% uptime",
+    title: "Fueling Growth for a Fast-Moving FMCG Brand Online",
+    imgsrc:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1753788701/blackbites_11zon_gxi5nn.webp",
+      logoimg:"https://blackbites.in/cdn/shop/files/BB-BHgi6px2-modified.png?v=1723010888&width=300",
+  
+    description: <>
+      <ul className=' list-disc ps-4 '>
+     
+ 
+
+        <li> Integrated Cart & Smooth Checkout Flow</li>
+        <li>Performance-Optimized E-commerce Platform
+</li>
+        <li>Custom CMS for Easy Inventory & Offers Management</li>
+        <li>Built for FMCG Scale and Digital Reach</li>
+      </ul>
+    </>,
     icon: <Globe2 className="w-8 h-8" />,
     cta: "See Results",
     color: "bg-gradient-to-br from-blue-500 to-indigo-600",
     results: ["5x performance", "Global deployment"]
   },
+
   {
-    title: "EdTech Learning System",
-    subtitle: "Next-gen education platform",
-    description: "Created immersive learning experience with real-time collaboration and progress tracking",
+    title: "Building a Reliable Digital Presence for Fire Safety Experts",
+  imgsrc:"https://res.cloudinary.com/dkbusg4bq/image/upload/v1754127636/zedex_fire_krrzfc.webp",
+      logoimg:"https://www.zedexfire.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgx5cntyb%2Fimage%2Fupload%2Fv1747476068%2FZedex_Fire_Logo_2025_PNG_New_1_1_ec1hlx.webp&w=384&q=75",
+   
+    description: <>
+ 
+      <ul className=' list-disc ps-4 '>
+        <li>Smooth Navigation Through Products & Solutions</li>
+        <li>B2B-Focused Webflow with Enquiry Conversion in Mind
+</li>
+        <li>Mobile-Optimized & SEO-Ready
+</li>
+        <li>Clean Architecture for Complex Service Offerings
+</li>
+      </ul>
+    </>,
     icon: <GraduationCap className="w-8 h-8" />,
     cta: "Learn More",
     color: "bg-gradient-to-br from-indigo-500 to-violet-600",
     results: ["60% faster onboarding", "94% satisfaction"]
   },
-  {
-    title: "Secure Matchmaking Platform",
-    subtitle: "Privacy-first architecture",
-    description: "Engineered military-grade security with blockchain verification and biometric auth",
-    icon: <ShieldCheck className="w-8 h-8" />,
-    cta: "View Security",
-    color: "bg-gradient-to-br from-red-500 to-amber-600",
-    results: ["Zero breaches", "ISO 27001 certified"]
-  },
+
+  
 ];
 
 
@@ -123,7 +168,7 @@ export default function WebDev() {
             <span className="inline-block py-2.5 px-5 mb-6 text-xs font-semibold tracking-widest text-cyan-600 uppercase bg-cyan-100/50 rounded-full border border-cyan-200 backdrop-blur-sm">
               Our Expertise
             </span>
-            <h2 className="text-4xl  font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className=" text-lg md:text-4xl  font-bold text-gray-900  mb-3 md:mb-6 leading-tight">
               Web Development <span className=" ">Services We Offer</span>
             </h2>
             <p className="text-sm text-gray-500 max-w-3xl mx-auto leading-relaxed">
@@ -151,11 +196,11 @@ export default function WebDev() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-semibold text-gray-900 leading-tight">
+                    <h3 className=" text-lg md:text-2xl font-semibold text-gray-900 leading-tight">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-gray-600 text-lg leading-relaxed mb-6 flex-grow">
+                  <p className="text-gray-600 text-sm md:text-lg leading-relaxed mb-6 flex-grow">
                     {service.description}
                   </p>
                   <a
@@ -317,10 +362,10 @@ export default function WebDev() {
             <span className="inline-block py-3 px-6 mb-8 text-sm font-bold tracking-widest text-cyan-700 uppercase bg-cyan-100 rounded-full border border-cyan-300 shadow-md backdrop-blur-sm">
               Our Stack
             </span>
-            <h2 className="text-4xl  font-extrabold text-gray-900 mb-8 leading-tight drop-shadow-lg">
+            <h2 className=" text-lg md:text-4xl  font-extrabold text-gray-900 mb-3 md:mb-8 leading-tight drop-shadow-lg">
               Web Development <span  >Technology Stack</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className=" text-sm md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
               Leveraging cutting-edge technologies to build robust, scalable, and future-proof digital solutions.
             </p>
           </motion.div>
@@ -333,7 +378,7 @@ export default function WebDev() {
                 <button
                   key={categoryKey}
                   onClick={() => setActiveCategory(categoryKey)}
-                  className={`relative py-3 px-8 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out z-10
+                  className={`  relative py-3   md:px-8 rounded-full text-sm   md:text-lg font-semibold transition-all duration-300 ease-in-out z-10
                               ${activeCategory === categoryKey
                                   ? '   text-black' // Removed scale on active
                                   : 'text-gray-700    cursor-pointer '
@@ -387,11 +432,11 @@ export default function WebDev() {
                       {/* Icon placeholder - could be dynamic based on tech.title */}
                     <img src={tech.img} alt={tech.title} />
                     </div>
-                    <h3 className="text-2xl font-extrabold text-gray-900 leading-tight mb-4">
+                    <h3 className=" text-lg md:text-2xl font-extrabold text-gray-900 leading-tight mb-4">
                       {tech.title}
                     </h3>
                   </div>
-                  <p className="text-gray-700 text-md leading-relaxed mb-8 flex-grow">
+                  <p className="text-gray-700  text-sm md:text-md leading-relaxed mb-8 flex-grow">
                     {tech.description}
                   </p>
                   <a
@@ -482,17 +527,17 @@ export default function WebDev() {
             <span className="inline-block py-2 px-5 mb-6 text-xs font-semibold tracking-widest text-cyan-300 uppercase bg-cyan-900/50 rounded-full border border-cyan-800">
               Our Methodology
             </span>
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-50 mb-6 leading-tight">
+            <h2 className=" text-lg md:text-4xl  font-bold text-gray-50 mb-6 leading-tight">
               A Refined Development <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Workflow</span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto">
               From initial concept to final deployment, we follow a structured process to ensure quality, efficiency, and exceptional results.
             </p>
           </motion.div>
 
           <div className="lg:grid flex  flex-col-reverse lg:grid-cols-12 lg:gap-12 xl:gap-16 items-start">
             {/* Left Column: Accordion */}
-            <div className="lg:col-span-6 space-y-2">
+            <div className="lg:col-span-6 space-y-2 ">
               {webDevelopmentProcessSteps.map((item, index) => (
                 <div
                   key={item.id}
@@ -534,7 +579,7 @@ export default function WebDev() {
             </div>
 
             {/* Right Column: Sticky Image */}
-            <div className=" lg:col-span-6 mt-12 flex justify-center items-center lg:mt-0 lg:sticky lg:top-24">
+            <div className=" pb-4 lg:col-span-6 mt-12 flex justify-center items-center lg:mt-0 lg:sticky lg:top-24">
               <div className="relative w-full  h-full md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-cyan-900/20">
                 <AnimatePresence mode='wait'>
                   {activeItem && (
@@ -621,30 +666,30 @@ const PremiumCaseStudies = () => {
 
               <motion.div
                 key={index}
-                className={` flex-shrink-0 rounded-3xl overflow-hidden border-[1px] border-gray-600   p-0.5`}
+                className={` flex-shrink-0 rounded-3xl overflow-hidden     p-0.5`}
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="relative h-full   rounded-[calc(1.5rem-1px)] p-8 flex flex-col">
+                <div className="relative h-full bg-gray-50  rounded-[calc(1.5rem-1px)] p-8 flex flex-col">
+
                   {/* Icon with gradient background */}
             
                   
-                  {/* Content */}
 
-                  <div className="row gap-3  justify-around items-center flex flex-row">
+                  <div className="row    justify-evenly items-center flex flex-row">
                     <div className="col w-4/12"> 
 
-  <div className={` w-16 h-16 rounded-xl  text-gray-600   flex items-center justify-center backdrop-blur-sm`}>
-                    {React.cloneElement(study.icon, { className: "w-8 h-8 text-black" })}
+  <div className={`  w-28 h-fit pb-5 rounded-xl  text-gray-600   flex items-center justify-center backdrop-blur-sm`}>
+              <img src={study.logoimg} alt="" />
                   </div>
 
                      <div className="mt-auto">
                     <h3 className="text-2xl font-bold    text-gray-600 mb-2">{study.title}</h3>
                     <p className="   text-gray-600 mb-4">{study.subtitle}</p>
-                    <p className="   text-gray-600 mb-6">{study.description}</p>
+                    <div className="   text-gray-600 mb-6">{study.description}</div>
                     
                     {/* Results chips */}
                     <div className="flex  flex-wrap gap-2 mb-8">
@@ -666,10 +711,11 @@ const PremiumCaseStudies = () => {
                   
                   
                   </div>
+
                     <div className="col  w-5/12">
                      
-                   <div className=" flex justify-center items-center card w-96 h-full">
-                        <img className=' h-full object-center object-cover w-full' src="https://res.cloudinary.com/dkbusg4bq/image/upload/v1753788701/decodive_11zon_o02wag.webp" alt="" />
+                   <div className=" flex justify-center items-center card w-full h-[40vh]  ">
+                        <img className=' h-full object-center object-contain w-full' src={study.imgsrc} alt="" />
                    </div>
                      </div>
                   </div>
@@ -828,17 +874,17 @@ const IndustriesSection = () => {
               </div>
 
               {/* Content Section - More structured and visually appealing */}
-              <div className="  bg-white p-8 rounded-3xl shadow-xl border border-cyan-100 relative z-10"> {/* Added background, padding, shadow, border */}
+              <div className=" text-center  bg-white p-8 rounded-3xl shadow-xl border border-cyan-100 relative z-10"> {/* Added background, padding, shadow, border */}
                 <h2 className="text-base font-extrabold leading-7 text-cyan-600 uppercase tracking-wide">
                   Web Development
                 </h2>
                 {webDevelopmentContent.map((section) => (
                   <React.Fragment key={section.id}>
-                    <p className="mt-3 text-2xl font-extrabold tracking-tight text-gray-900   leading-tight"> {/* Larger, bolder title */}
+                    <p className="mt-3 text-lg md:text-2xl font-extrabold tracking-tight text-gray-900   leading-tight"> {/* Larger, bolder title */}
                       {section.title}
                     </p>
                     {section.paragraphs.map((paragraph, index) => (
-                      <p key={index} className={`mt-${index === 0 ? '6' : '4'} text-sm leading-8 text-gray-700`}>
+                      <p key={index} className={`mt-${index === 0 ? '6' : '4'} text-justify  text-sm md:leading-6 text-gray-700`}>
                         {paragraph}
                       </p>
                     ))}

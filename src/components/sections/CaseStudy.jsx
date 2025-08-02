@@ -1,3 +1,5 @@
+import { MoveRight, Palette } from 'lucide-react';
+import Link from 'next/link';
 import React, { useRef, useState } from 'react';
 
  export const CaseStudy = () => {
@@ -128,11 +130,13 @@ import React, { useRef, useState } from 'react';
         </div>
 
       </div>
+
+      
     );
   };
 
   return (
-    <section className="py-16   relative z-1 bg-transparent">
+    <section className="py-16    relative z-1 bg-transparent">
       <div className="container mx-auto px-4">
         <div className=" py-7 text-center md:text-left   mb-12 flex flex-col md:flex-row  justify-center items-start">
           <h2 className="text-3xl md:text-5xl   end-full font-sans font-thin mb-4 text-gray-900">
@@ -143,11 +147,24 @@ import React, { useRef, useState } from 'react';
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className=" pb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudies.map((study) => (
             <CaseStudyCard key={study.id} study={study} />
           ))}
+
+         
         </div>
+
+         <div className=" w-full relative  text-center">
+            <Link href="/services/web-development" className="relative px-6 py-3 font-bold   group">
+    <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-gradient-to-r from-cyan-600 to-teal-500  group-hover:translate-x-0 group-hover:translate-y-0"></span>
+    <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+    <span className="relative font-medium font-sans p-5">View All Works  
+</span>
+
+</Link>
+
+          </div>
       </div>
     </section>
   );

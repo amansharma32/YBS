@@ -416,13 +416,13 @@ const ContactPage = () => {
             onClick={() => setActiveLocation('india')}
             className={`flex-1 py-3 px-4 rounded-xl   text-base font-medium transition-colors duration-200 flex items-center justify-center gap-2 ${activeLocation === 'india' ? 'bg-cyan-500 text-white shadow-md' : 'text-gray-700 hover:bg-gray-200'}`}
           >
-           <img src="https://cdn-icons-png.flaticon.com/512/14009/14009677.png" className=' h-15 w-15' alt="" /> <strong>India  </strong>
+           <img src="https://cdn-icons-png.flaticon.com/512/14009/14009677.png" className=' h-9 w-9' alt="" /> <strong>INDIA  </strong>
           </button>
           <button
             onClick={() => setActiveLocation('usa')}
             className={`flex-1 py-3 px-4 rounded-xl text-base font-medium transition-colors duration-200 flex items-center justify-center gap-2 ${activeLocation === 'usa' ? 'bg-cyan-500 text-white shadow-md' : 'text-gray-700 hover:bg-gray-200'}`}
           > 
-            <img src="https://cdn-icons-png.flaticon.com/512/206/206626.png"  className=' h-15 w-15' alt="" /><strong> USA  </strong>
+            <img src="https://cdn-icons-png.flaticon.com/512/206/206626.png"  className=' h-9 w-9' alt="" /><strong> USA  </strong>
           </button>
         </div>
 
@@ -504,7 +504,7 @@ Sec-70, </p>
                       {activeLocation === 'india' ? '7017915594' : 'processing...'}
                     </p>
                     <p className="text-gray-500 text-sm">
-                      {activeLocation === 'india' ? 'Mon-Sat: 9am-6pm IST' : 'Mon-Fri: 9am-6pm EST'}
+                      {activeLocation === 'india' ? 'Mon - Fri : 10am - 6pm IST' : 'Mon - Fri: 9am - 6pm EST'}
                     </p>
                   </div>
                 </div>

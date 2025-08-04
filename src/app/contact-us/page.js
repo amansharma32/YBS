@@ -4,16 +4,16 @@ import { useState, useRef, useEffect } from 'react';
 import { FiMail, FiPhone, FiMapPin, FiSend, FiCheck } from 'react-icons/fi';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-
+import emailjs from "@emailjs/browser"; 
+import { useRouter } from 'next/navigation';
+ 
 // Set your Mapbox access token
 mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN'; // REMEMBER TO REPLACE THIS WITH YOUR ACTUAL TOKEN
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+
+  const router = useRouter();
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [activeLocation, setActiveLocation] = useState('india');
   const [showMap, setShowMap] = useState(false);
@@ -24,41 +24,7 @@ const ContactPage = () => {
   const mapInstanceRef = useRef(null);
   const mapMarkerRef = useRef(null); // Ref to store the Mapbox marker instance
 
-  // Country Flag SVGs (for a more professional look than emojis)
-  const IndiaFlag = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="24" height="24" rx="12" fill="white"/>
-      <mask id="mask0_24_1156" style={{maskType: 'alpha'}} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-        <rect width="24" height="24" rx="12" fill="white"/>
-      </mask>
-      <g mask="url(#mask0_24_1156)">
-        <path fillRule="evenodd" clipRule="evenodd" d="M0 8H24V16H0V8Z" fill="#F93F16"/>
-        <path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V8H0V0Z" fill="#FF8D00"/>
-        <path fillRule="evenodd" clipRule="evenodd" d="M0 16H24V24H0V16Z" fill="#118600"/>
-        <path fillRule="evenodd" clipRule="evenodd" d="M12 12C10.6667 12 10 11.3333 10 10C10 8.66667 10.6667 8 12 8C13.3333 8 14 8.66667 14 10C14 11.3333 13.3333 12 12 12Z" fill="#000080"/>
-        <path fillRule="evenodd" clipRule="evenodd" d="M12 10.5C11.5 10.5 11.5 10 12 10C12.5 10 12.5 10.5 12 10.5Z" fill="white"/>
-      </g>
-    </svg>
-  );
-
-  const USAFlag = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="24" height="24" rx="12" fill="white"/>
-      <mask id="mask0_24_1158" style={{maskType: 'alpha'}} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-        <rect width="24" height="24" rx="12" fill="white"/>
-      </mask>
-      <g mask="url(#mask0_24_1158)">
-        <path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V24H0V0Z" fill="#0A3161"/>
-        <path fillRule="evenodd" clipRule="evenodd" d="M0 24L24 0V24H0Z" fill="#B22234"/>
-        <path fillRule="evenodd" clipRule="evenodd" d="M24 0L0 24V0H24Z" fill="#B22234"/>
-        <path fillRule="evenodd" clipRule="evenodd" d="M0 24L24 0V24H0Z" fill="#FFFFFF"/>
-        <path fillRule="evenodd" clipRule="evenodd" d="M24 0L0 24V0H24Z" fill="#FFFFFF"/>
-        <path fillRule="evenodd" clipRule="evenodd" d="M0 0V24H24V0H0ZM2 2H22V22H2V2ZM4 4H20V20H4V4ZM6 6H18V18H6V6ZM8 8H16V16H8V8ZM10 10H14V14H10V10ZM12 12H12.01V12.01H12V12Z" fill="white"/>
-      </g>
-    </svg>
-  );
-
-  // Effect for Intersection Observer
+ 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -140,10 +106,7 @@ const ContactPage = () => {
     };
   }, [showMap, activeLocation]); // Re-run effect when showMap or activeLocation changes
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -153,14 +116,94 @@ const ContactPage = () => {
     setTimeout(() => setIsSubmitted(false), 3000);
   };
 
+
+
+    const [formData, setFormData] = useState({
+        name: "",
+        phoneNumber: "",
+        email: "",
+        city: "",
+        state: "",
+        message: "",
+    });
+
+    const [errors, setErrors] = useState({});
+    const form = useRef();
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const validateForm = () => {
+        const newErrors = {};
+        // Basic validation rules
+        if (formData.name.trim() === "") {
+            newErrors.name = "Name is required";
+        }
+        if (formData.phoneNumber.trim() === "") {
+            newErrors.phoneNumber = "Phone Number is required";
+            
+        }
+     else if (!/^\d{10}$/.test(formData.phoneNumber)) {
+        newErrors.phoneNumber = "Phone Number must be exactly 10 digits";
+    }
+        if (formData.email.trim() === "") {
+            newErrors.email = "Email is required";
+        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            newErrors.email = "Invalid email address";
+        }
+        if (formData.city.trim() === "") {
+            newErrors.city = "City is required";
+        }
+        if (formData.state.trim() === "") {
+            newErrors.state = "State is required";
+        }
+        if (formData.message.trim() === "") {
+            newErrors.message = "Message is required";
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        if (validateForm()) {
+          
+            emailjs
+                .sendForm("service_v8aigeg", "template_9niaqbr", form.current, {
+                    publicKey: "KKPUCueXdqx5nscVL",
+                })
+                .then(() => {
+                 
+                    console.log("SUCCESS!");
+                   
+                    setTimeout(() => {
+                        router.push("/");
+                    }, 1000);
+                })
+                .catch((error) => {
+                    console.log("FAILED...", error);
+                });
+            console.log("Form validate");
+        } else {
+            // Form validation failed
+            console.log("Form validation failed");
+            notifye();
+        }
+    };
+
+
   return (
-    <div className="    pt-28  bg-gray-50 text-gray-800 font-sans antialiased flex flex-col items-center py-16 px-4 sm:px-6 lg:px-8">
+
+    <div className=" pt-28  bg-gray-50 text-gray-800 font-sans antialiased flex flex-col items-center py-16 px-4 sm:px-6 lg:px-8">
       {/* Header Section */}
       <motion.div
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="  mb-16   "
+        className="  mb-16  text-center md:text-left  "
       >
         <h1 className="text-4xl   font-extrabold mb-4 text-gray-900 leading-tight">
           Let's Connect and Build Together
@@ -171,18 +214,20 @@ const ContactPage = () => {
         </p>
       </motion.div>
 
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-20">
+      <div className="w-full max-w-7xl flex flex-col-reverse md:flex-row mx-auto   gap-16 items-start mb-20">
         {/* Left Side: Contact Form */}
-        <div className="flex flex-col gap-16">
+        <div className="flex flex-col w-full md:w-6/12  gap-16">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-gray-100 flex-grow"
           >
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+            <h2 className="  text-3xl font-semibold mb-3 text-gray-900">
             Get a Quote
             </h2>
+                <p className="text-4xl pb-7 capitalize">Talk to our Experts.</p>
+                             
 
             {isSubmitted ? (
               <motion.div
@@ -199,59 +244,140 @@ const ContactPage = () => {
                 <p className="text-gray-600">We'll get back to you within 24-48 hours. Thank you!</p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-7">
-                <div>
-                  <label htmlFor="name" className="block text-base font-medium text-gray-700 mb-2">Your Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-5 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none transition-all duration-200 text-gray-800 placeholder-gray-400"
-                    placeholder="John Doe"
-                    required
-                  />
-                </div>
+              <form
+                                className="w-auto m-3 md:m-7"
+                                onSubmit={sendEmail}
+                                ref={form}
+                            >
+                               <div className="flex flex-wrap -mx-3 mb-6">
+                                    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                        <label
+                                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                            htmlFor="grid-first-name"
+                                        >
+                                            Name
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                                            placeholder="Enter Name"
+                                        />
+                                        {errors.name && (
+                                            <p className="text-red-500">{errors.name}</p>
+                                        )}
+                                    </div>
+                                    <div className="w-full md:w-1/2 px-3">
+                                        <label
+                                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                            htmlFor="grid-last-name"
+                                        >
+                                            Phone Number
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="phoneNumber"
+                                            value={formData.phoneNumber}
+                                            onChange={handleChange}
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            placeholder="Enter Phone Number"
+                                        />
+                                        {errors.phoneNumber && (
+                                            <p className="text-red-500">{errors.phoneNumber}</p>
+                                        )}
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap -mx-3 mb-6">
+                                    <div className="w-full px-3">
+                                        <label
+                                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                            htmlFor="grid-password"
+                                        >
+                                            Email ID
+                                        </label>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            placeholder="Enter Email ID"
+                                        />
+                                        {errors.email && (
+                                            <p className="text-red-500">{errors.email}</p>
+                                        )}
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap -mx-3 mb-6">
+                                    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                        <label
+                                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                            htmlFor="grid-city"
+                                        >
+                                            City
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="city"
+                                            value={formData.city}
+                                            onChange={handleChange}
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            placeholder="Gurugram"
+                                        />
+                                        {errors.city && (
+                                            <p className="text-red-500">{errors.city}</p>
+                                        )}
+                                    </div>
+                                    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                        <label
+                                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                            htmlFor="grid-state"
+                                        >
+                                            State
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="state"
+                                            value={formData.state}
+                                            onChange={handleChange}
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            placeholder="Haryana"
+                                        />
+                                        {errors.state && (
+                                            <p className="text-red-500">{errors.state}</p>
+                                        )}
+                                    </div>
+                                </div>
+                                <div className="text-area mt-5">
+                                    <label
+                                        htmlFor="message"
+                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                    >
+                                        Your message
+                                    </label>
+                                    <textarea
+                                        name="message"
+                                        id="message"
+                                        rows="4"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Write here..."
+                                    ></textarea>
+                                    {errors.message && (
+                                        <p className="text-red-500">{errors.message}</p>
+                                    )}
+                                </div>
+                                <button
+                                    type="submit"
 
-                <div>
-                  <label htmlFor="email" className="block text-base font-medium text-gray-700 mb-2">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-5 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none transition-all duration-200 text-gray-800 placeholder-gray-400"
-                    placeholder="you@example.com"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-base font-medium text-gray-700 mb-2">Your Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-5 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none transition-all duration-200 text-gray-800 placeholder-gray-400 resize-y"
-                    placeholder="Tell us about your project or inquiry..."
-                    required
-                  ></textarea>
-                </div>
-
-                <motion.button
-                  whileHover={{ scale: 1.01, boxShadow: "0 8px 25px -5px rgba(6, 182, 212, 0.4)" }}
-                  whileTap={{ scale: 0.99 }}
-                  type="submit"
-                  className="w-full flex items-center justify-center px-6 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 transition-all duration-300"
-                >
-                  <FiSend className="mr-3 text-xl" />
-                  Send Message
-                </motion.button>
-              </form>
+                                    className="w-full button bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded mt-5"
+                                >
+                                    Send Enquiry
+                                </button>
+                            </form>
             )}
           </motion.div>
         </div>
@@ -261,7 +387,7 @@ const ContactPage = () => {
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex items-center h-full justify-center    rounded-2xl   border border-gray-100 overflow-hidden"
+          className="flex items-center w-full md:w-6/12 h-full justify-center    rounded-2xl   border border-gray-100 overflow-hidden"
         >
           <img
             src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -273,6 +399,7 @@ const ContactPage = () => {
       </div>
 
       {/* New Section: Our Global Offices with Map & Details Side-by-Side */}
+
       <motion.div
         ref={globalOfficesRef}
         initial={{ y: 50, opacity: 0 }}

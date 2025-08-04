@@ -6,9 +6,8 @@ import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import emailjs from "@emailjs/browser"; 
 import { useRouter } from 'next/navigation';
- 
-// Set your Mapbox access token
-mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN'; // REMEMBER TO REPLACE THIS WITH YOUR ACTUAL TOKEN
+  
+mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';  
 
 const ContactPage = () => {
 
@@ -22,7 +21,7 @@ const ContactPage = () => {
   const mapContainerRef = useRef(null);
   const globalOfficesRef = useRef(null);
   const mapInstanceRef = useRef(null);
-  const mapMarkerRef = useRef(null); // Ref to store the Mapbox marker instance
+  const mapMarkerRef = useRef(null); 
 
  
   useEffect(() => {
@@ -53,7 +52,7 @@ const ContactPage = () => {
     };
   }, []);
 
-  // Effect for Mapbox initialization and updates
+ 
   useEffect(() => {
     if (showMap && mapContainerRef.current) {
       // Initialize map if it doesn't exist
@@ -104,7 +103,7 @@ const ContactPage = () => {
         mapMarkerRef.current = null;
       }
     };
-  }, [showMap, activeLocation]); // Re-run effect when showMap or activeLocation changes
+  }, [showMap, activeLocation]);  
 
  
 
@@ -136,7 +135,7 @@ const ContactPage = () => {
 
     const validateForm = () => {
         const newErrors = {};
-        // Basic validation rules
+        
         if (formData.name.trim() === "") {
             newErrors.name = "Name is required";
         }
@@ -188,7 +187,7 @@ const ContactPage = () => {
                 });
             console.log("Form validate");
         } else {
-            // Form validation failed
+          
             console.log("Form validation failed");
             notifye();
         }
@@ -363,7 +362,7 @@ const ContactPage = () => {
                                         rows="4"
                                         value={formData.message}
                                         onChange={handleChange}
-                                        className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-cyan-500 focus:border-cyan-500 "
                                         placeholder="Write here..."
                                     ></textarea>
                                     {errors.message && (
@@ -373,7 +372,7 @@ const ContactPage = () => {
                                 <button
                                     type="submit"
 
-                                    className="w-full button bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded mt-5"
+                                    className="w-full button bg-transparent hover:bg-cyan-600 text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded mt-5"
                                 >
                                     Send Enquiry
                                 </button>

@@ -154,7 +154,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen pt-24 bg-gray-50 text-gray-800 font-sans antialiased flex flex-col items-center py-16 px-4 sm:px-6 lg:px-8">
+    <div className="    pt-28  bg-gray-50 text-gray-800 font-sans antialiased flex flex-col items-center py-16 px-4 sm:px-6 lg:px-8">
       {/* Header Section */}
       <motion.div
         initial={{ y: -50, opacity: 0 }}
@@ -318,31 +318,35 @@ const ContactPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="space-y-7 p-14    rounded-xl bg-gray-50 border border-gray-100 shadow-inner   flex flex-col justify-center" // Added flex-col & justify-center for vertical alignment
+              className=" md:space-y-7  p-4 md:p-14    rounded-xl bg-gray-50 border border-gray-100 shadow-inner   flex flex-col justify-center" // Added flex-col & justify-center for vertical alignment
             >
-              <h3 className="text-3xl font-bold text-gray-800">
+              <h3 className=" text-lg md:text-3xl font-bold text-gray-800">
                 {activeLocation === 'india' ? 'Digital Flux India' : 'Digital Flux Inc. USA'}
               </h3>
               <div className="space-y-6"> {/* Changed grid to space-y for vertical stacking */}
                 {/* Address */}
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 pt-4">
                   <div className="flex-shrink-0 bg-cyan-100 p-4 rounded-full shadow-sm">
                     <FiMapPin className="w-6 h-6 text-cyan-600" />
                   </div>
-                  <div>
-                    <p className="text-lg font-medium text-gray-800">Address</p>
+                  <div >
+                    <p className=" md:text-lg font-medium text-gray-800">Address</p>
                     {activeLocation === 'india' ? (
                       <>
+                       <div className=' text-sm'>
                         <p className="text-gray-600 mt-1"></p>
                         <p className="text-gray-600">#603, Reach My Tower
 Sec-70, </p>
                         <p className="text-gray-600">Gurugram-122001</p>
+                        </div>
                       </>
                     ) : (
                       <>
-                        <p className="text-gray-600 mt-1">456 Innovation Drive</p>
+                       <div className=' text-sm'>
+                         <p className="text-gray-600 mt-1">456 Innovation Drive</p>
                         <p className="text-gray-600">New York, NY 10001</p>
                         <p className="text-gray-600">United States</p>
+                       </div>
                       </>
                     )}
                   </div>
@@ -354,9 +358,9 @@ Sec-70, </p>
                     <FiMail className="w-6 h-6 text-cyan-600" />
                   </div>
                   <div>
-                    <p className="text-lg font-medium text-gray-800">Email</p>
+                    <p className=" md:text-lg font-medium text-gray-800">Email</p>
                     <p className="text-cyan-600 hover:underline mt-1 transition-colors duration-200">
-                      <a href={`mailto:${activeLocation === 'india' ? 'fluxdigital2005@gmail.com' : 'fluxdigital2005@gmail.com'}`}>
+                      <a   className=' text-sm' href={`mailto:${activeLocation === 'india' ? 'fluxdigital2005@gmail.com' : 'fluxdigital2005@gmail.com'}`}>
                         {activeLocation === 'india' ? 'fluxdigital2005@gmail.com' : 'fluxdigital2005@gmail.com'}
                       </a>
                     </p>
@@ -369,7 +373,7 @@ Sec-70, </p>
                     <FiPhone className="w-6 h-6 text-cyan-600" />
                   </div>
                   <div>
-                    <p className="text-lg font-medium text-gray-800">Phone</p>
+                    <p className=" md:text-lg font-medium text-gray-800">Phone</p>
                     <p className="text-gray-600 mt-1">
                       {activeLocation === 'india' ? '7017915594' : 'processing...'}
                     </p>

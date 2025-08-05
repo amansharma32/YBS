@@ -2,65 +2,81 @@
 import Solutions from './Solutions';
 
 export const metadata = {
-  // Main SEO Information
-  title: "Digital Service Package Pricing Guide | FLUX Digital",
-  description: "Explore FLUX Digital's approximate pricing for web development, digital marketing & IT solutions. Get a transparent pricing guide for domestic (India) & international clients.",
-  keywords: [
-    "digital service pricing",
-    "website development cost",
-    "digital marketing packages",
-    "IT solutions pricing",
-    "approximate service pricing",
-    "pricing guide digital agency",
-    "web design packages India",
-    "SEO service packages",
-    "performance marketing pricing",
-    "IT support packages",
-    "custom project quotes",
-    "transparent pricing guide",
-    "FLUX Digital pricing",
-    "FLUX Digital packages",
-    "FLUX Digital solutions",
-    "web development cost India",
-    "digital marketing USA",
-    "IT solutions international",
-    "value-driven services",
-    "ongoing support and maintenance",
-    "website services Delhi",
-    "digital agency Gurugram",
-    "IT solutions Noida",
-  ],
-  robots: "index, follow",
+   
+  title: "Transparent Digital Service Pricing | India & Global | FLUX Digital",
+  
+  
+  description: "Explore FLUX Digital's transparent pricing guide for web development, digital marketing, and IT solutions. Approximate costs for clients in India and worldwide.",
 
-  // Open Graph (for social sharing on platforms like Facebook, LinkedIn)
+   
+  keywords: [
+    "FLUX Digital pricing",
+    "digital service cost",
+    "web development pricing",
+    "digital marketing rates",
+    "IT solutions cost",
+    "service packages",
+    "approximate pricing guide",
+    "transparent digital agency pricing",
+    "web design cost India",
+    "SEO packages India",
+    "digital marketing pricing USA",
+    "web development cost Europe",
+    "IT solutions Australia pricing",
+    "digital services Dubai cost",
+    "pricing guide for digital services",
+    "online marketing cost",
+    "website maintenance pricing",
+    "custom software development cost",
+    "enterprise digital services pricing",
+    "value-driven digital solutions",
+    "digital agency India pricing",
+    "global digital service pricing",
+  ],
+  
+  
+  robots: "index, follow",
+ 
+  
   openGraph: {
-    title: "Digital Service Package Pricing Guide | FLUX Digital",
-    description: "Explore FLUX Digital's approximate pricing for web development, digital marketing & IT solutions. A guide for both domestic & international clients.",
-    url: "https://www.fluxdigital.online/solutions", // Replace with your actual URL
+   
+    title: "Transparent Pricing: Web Dev, Marketing & IT Solutions | FLUX Digital",
+   
+    description: "Get a clear understanding of FLUX Digital's approximate pricing for comprehensive digital services, designed for businesses globally and in India.",
+     
+    url: "https://www.fluxdigital.online/solutions",  
+     
     type: "website",
+    
     images: [
       {
-        url: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.1.0&auto=format&fit=crop&w=900&q=60", // Replace with your actual image URL
+        url: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&h=630&q=75", 
         width: 1200,
         height: 630,
-        alt: "A guide to FLUX Digital's pricing packages for web and marketing services.",
+        alt: "FLUX Digital's transparent pricing guide for digital services.",
       },
+    
     ],
   },
 
-  // Canonical URL to prevent duplicate content issues
+  
   alternates: {
-    canonical: "https://www.fluxdigital.online/solutions", // Replace with your actual URL
+    canonical: "https://www.fluxdigital.online/solutions",  
   },
 
-  // Twitter Card (for sharing on Twitter)
+  
   twitter: {
+  
     card: "summary_large_image",
-    title: "Transparent Pricing for Digital Services | FLUX Digital",
-    description: "Get a clear idea of costs for web, marketing, and IT projects. Our pricing guide considers scope, market, and value delivered.",
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.1.0&auto=format&fit=crop&w=900&q=60", // Replace with your actual image URL
+   
+    title: "Clear Digital Service Costs | FLUX Digital Pricing Guide",
+   
+    description: "Understand the approximate costs for web, marketing, and IT projects with FLUX Digital's transparent pricing guide for global and Indian markets.",
+   
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&h=630&q=75",  
   },
 };
+
 
 export default function page() {
   return (

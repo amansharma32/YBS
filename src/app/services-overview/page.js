@@ -4,67 +4,66 @@ import ServicePage from './ServicePage'
 
 
 export const metadata = {
-  // Main SEO Information
-  title: "Digital Services & Solutions | FLUX Digital",
-  description: "Explore FLUX Digital's comprehensive range of digital services, including web development, digital marketing, and IT solutions. Empower your business with our expert offerings.",
+   
+  // Max ~60-70 characters.
+  title: "Premium Web Dev, Digital Marketing & IT Solutions Worldwide | FLUX Digital",
+  
+   
+  description: "Elevate your enterprise with FLUX Digital's bespoke web development, advanced digital marketing, and robust IT solutions. Serving discerning clients in the USA, Europe, Australia, Switzerland, Dubai, and beyond.",
+
+  
   keywords: [
+    "FLUX Digital",
     "digital services",
-    "web development services",
-    "digital marketing services",
-    "IT solutions",
+    "web development company",
+    "digital marketing agency",
+    "IT solutions provider",
     "custom web solutions",
     "SEO services",
-    "social media marketing",
-    "PPC management",
-    "content marketing",
-    "website design",
     "e-commerce development",
     "mobile app development",
     "cloud services",
-    "cybersecurity solutions",
-    "IT consulting",
-    "business digital transformation",
-    "digital agency India",
-    "digital agency USA",
-    "FLUX Digital services",
-    "FLUX Digital solutions",
-    "expert digital services",
-    "full-service digital agency",
-    "website services Delhi",
-    "digital agency Gurugram",
-    "IT solutions Noida",
+    "cybersecurity consulting",
+    "business digital transformation", 
+    "web development USA", "digital marketing USA", "IT solutions USA", "tech agency USA",
+    "web development Europe", "digital marketing Europe", "IT solutions Europe", "tech agency Europe",
+    "web development Australia", "digital marketing Australia", "IT solutions Australia", "tech agency Australia",
+    "web development Switzerland", "digital marketing Switzerland", "IT solutions Switzerland", "tech agency Switzerland",
+    "web development Dubai", "digital marketing Dubai", "IT solutions Dubai", "tech agency Dubai",
+    "global digital agency", "premium digital services", "enterprise IT solutions", "luxury web design",
   ],
+   
   robots: "index, follow",
-
-  // Open Graph (for social sharing on platforms like Facebook, LinkedIn)
+  
   openGraph: {
-    title: "Comprehensive Digital Services | FLUX Digital",
-    description: "Discover FLUX Digital's expert web development, digital marketing, and IT solutions tailored to accelerate your business growth.",
-    url: "https://www.fluxdigital.online/services-overview", // Replace with your actual URL for the services page
+    title: "Global Digital Excellence: Web Dev, Marketing & IT by FLUX Digital",
+    description: "Partner with FLUX Digital for cutting-edge web development, strategic digital campaigns, and secure IT infrastructure across the USA, Europe, Australia, Switzerland, and Dubai.",
+    url: "https://www.fluxdigital.online/services-overview",  
     type: "website",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.1.0&auto=format&fit=crop&w=900&q=60", // Replace with a relevant image for services overview
+        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&h=630&q=75",  
         width: 1200,
         height: 630,
-        alt: "An overview of FLUX Digital's comprehensive digital services.",
+        alt: "FLUX Digital's comprehensive digital services for global businesses.",
       },
     ],
   },
 
-  // Canonical URL to prevent duplicate content issues
+ 
   alternates: {
-    canonical: "https://www.fluxdigital.online/services-overview", // Replace with your actual URL for the services page
+    canonical: "https://www.fluxdigital.online/services-overview",  
   },
 
-  // Twitter Card (for sharing on Twitter)
+   
   twitter: {
     card: "summary_large_image",
-    title: "Digital Services for Business Growth | FLUX Digital",
-    description: "From web development to digital marketing and IT, FLUX Digital offers a complete suite of services to transform your online presence.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.1.0&auto=format&fit=crop&w=900&q=60", // Replace with a relevant image for services overview
+    title: "Transform Your Business Globally | FLUX Digital Services",
+    description: "FLUX Digital offers innovative web solutions, strategic digital campaigns, and robust IT services for businesses in key markets worldwide, including USA, Europe, and UAE.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&h=630&q=75",  
   },
 };
+
 
 export default function page() {
   return (

@@ -110,7 +110,7 @@ const caseStudies = [
 
 
 // Main App component as required for the immersive
-export default function WebDev() {
+export default function BrandingConsultingService() {
   // Define the content data for Flux Digital's web development services
 
    const WebDevServicesSection = () => {
@@ -509,18 +509,16 @@ export default function WebDev() {
 
   // WebDevelopmentProcessSection Component Definition
   const WebDevelopmentProcessSection = () => {
-
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.2 });
     const [openItemId, setOpenItemId] = useState(webDevelopmentProcessSteps[0].id);
+
     const activeItem = webDevelopmentProcessSteps.find(item => item.id === openItemId);
 
     return (
-
       <section ref={ref} className="py-24 md:py-32 bg-gray-900 text-gray-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -606,7 +604,6 @@ export default function WebDev() {
               </div>
             </div>
           </div>
-
         </div>
       </section>
     );
@@ -833,7 +830,8 @@ const IndustriesSection = () => {
   return (
  
 <>
- <section>
+
+  <section>
 
 
                 <div className="relative flex  h-[86vh] md:h-[67vh] w-full">
@@ -857,17 +855,17 @@ const IndustriesSection = () => {
 
 
                     <div className="absolute w-full h-full p-9 bottom-0 flex flex-col md:flex-row justify-center md:justify-between items-center md:text-center mx-auto">
-                        <p className="text-center font-sans md:text-left font-thin text-white text-3xl md:text-4xl flex flex-col justify-center items-center h-full my-auto">
-                    Web Development Services
+                        <p className="text-center font-sans md:text-left font-thin text-white text-3xl md:text-5xl flex flex-col justify-center items-center h-full my-auto">
+                    Brand Consulting Services
                             <br />
-                            <span className="text-center font-sans  text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">Home / Web Development Services
+                            <span className="text-center font-sans  text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">Home /  Brand Consulting Services
                             </span>
                         </p>
                     </div>
                 </div>
                 
             </section>
-      
+       
 
   <section className=" md:mt-0 px-4 relative h-auto  flex items-center justify-center bg-gradient-to-br from-red-50/20 to-white">
 
@@ -900,19 +898,19 @@ const IndustriesSection = () => {
 
 
                       <span className="text-sm font-medium  flex justify-center md:justify-start mb-3 pt-6 items-center md:items-center  text-cyan-800">
-                      <Sparkles className="w-4 h-4 text-cyan-600 mr-4" /> Technology
+                      <Sparkles className="w-4 h-4 text-cyan-600 mr-4" /> Branding
                       </span>
 
 
                       <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                         <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
                           <Link href='https://www.fluxdigital.online/' >
-                   Web Development Services to Make 
+                        Brand Consulting  Services to Make 
                           </Link>
                         </span><br />
                         <span className="font-light text-gray-700">   <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
                            <span  className='  '>
-             Your Project a Digital Stand-Out
+                  Your Project a Digital Stand-Out
  
                           </span> 
                         </span>   
@@ -922,8 +920,10 @@ const IndustriesSection = () => {
                     <p className=" font-sans text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
 
-        Web development services at Flux Digital empower businesses to build cutting-edge web-based software, ensuring an exceptional digital user experience. As a leading web development partner, we combine a team of seasoned experts, advanced technologies, and innovative tools, adhering to the latest industry trends to form the cornerstone of your business’s online growth.
+          Brand Consulting Services – Elevate Your Business Identity with Strategic Branding
+A strong brand is the foundation of business success, shaping customer perceptions and fostering long-term loyalty. At Flux Digital, our Brand Consulting services empower businesses to develop a distinctive and memorable brand identity that stands out in today’s competitive market. We go beyond aesthetics, crafting a strategic brand narrative that aligns with your vision, values, and audience expectations.
 
+Our Logo Design service creates a unique and impactful visual identity that differentiates your business while maintaining professionalism and appeal. To ensure consistency across all platforms, our Brand Collateral service develops cohesive design elements for business cards, letterheads, packaging, and marketing materials. With Graphic Design, we transform complex ideas into visually engaging content that enhances communication and strengthens brand messaging.
 
 
                     </p>

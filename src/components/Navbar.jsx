@@ -48,7 +48,7 @@ const serviceCategories = [
       "Crafting unique brand identities that resonate and endure, from strategy to visual design.",
     items: [
       {
-        id: "brand-consulting",
+        id: "brand-consulting-services",
         name: "Brand Consulting",
         icon: <PenTool className="w-4 h-4" />,
       },

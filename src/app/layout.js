@@ -16,8 +16,6 @@ const geistMono = Geist_Mono({
 });
 
  
-
-
 export const metadata = {
   
   title: {
@@ -43,6 +41,7 @@ export const metadata = {
     "IT Solutions",
     "B2B portal development",
     "B2C portal development",
+    
     "Website Designing in Delhi",
     "Web Development Company in Delhi",
     "Best Website Designing Company in Delhi",

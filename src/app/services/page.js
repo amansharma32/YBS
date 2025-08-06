@@ -12,7 +12,8 @@ import { Briefcase, Zap, BarChart2, Star, Code, Mail, Menu, X, Wind, Thermometer
 
 export default function ServicePage() {
 
-     const ArchitecturalDivider = ({ title, id }) => (
+
+  const ArchitecturalDivider = ({ title, id }) => (
     <div id={id} className="relative h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent max-w-7xl mx-auto my-20 md:my-28">
       <h2 className="absolute left-1/2 -translate-x-1/2 -top-4 bg-slate-50 px-4 text-gray-500 text-lg font-semibold text-center md:text-2xl">
         {title}
@@ -129,8 +130,6 @@ const specializedSolutionsData = [
   { name: "SEO & Content Retainer", desc: "Sustained organic growth through high-quality content and technical SEO.", icon: BarChart2 },
   { name: "Performance Marketing Retainer", desc: "Maximize ad spend efficiency and drive leads with strategic PPC campaigns.", icon: Briefcase }
 ];
-
-
 
 
   return (

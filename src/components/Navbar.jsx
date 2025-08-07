@@ -53,7 +53,7 @@ const serviceCategories = [
         icon: <PenTool className="w-4 h-4" />,
       },
       {
-        id: "logo-design",
+        id: "logo-design-services",
         name: "Logo Design",
         icon: <Box className="w-4 h-4" />,
       },

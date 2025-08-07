@@ -930,29 +930,30 @@ export default function BrandingConsultingService() {
                 <div className="relative flex  h-[86vh] md:h-[67vh] w-full">
 
                     <div className="box w-full h-full">
+
                         <img src="https://images.unsplash.com/photo-1681680603996-eb85ec3ceee9?q=80&w=2099&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             className=' hidden md:block  h-full w-full  object-center object-cover'
                             alt="  Addressable Fire Alarm System"
-
                         />
 
                         <img
                             src="https://images.unsplash.com/photo-1681680603996-eb85ec3ceee9?q=80&w=2099&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             className=' md:hidden  h-full w-full object-center object-cover'
                             alt="  Addressable Fire Alarm System"
-
                         />
+
                     </div>
 
 
                     <div className="absolute w-full h-full p-9 bottom-0 flex flex-col md:flex-row justify-center md:justify-between items-center md:text-center mx-auto">
                         <p className="text-center font-sans md:text-left font-thin text-white text-3xl md:text-5xl flex flex-col justify-center items-center h-full my-auto">
-                            Brand Consulting Services
+                          Brand Consulting Services
                             <br />
                             <span className="text-center font-sans  text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">Home /  Brand Consulting Services
                             </span>
                         </p>
                     </div>
+
                 </div>
 
             </section>
@@ -1048,10 +1049,9 @@ export default function BrandingConsultingService() {
 
                 <WebDevServicesSection />
 
-
                 <WebDevelopmentProcessSection />
 
-     <IndustriesSection />
+                <IndustriesSection />
 
 
                 <section className="py-12 px-4 bg-white">
@@ -1086,14 +1086,6 @@ export default function BrandingConsultingService() {
                         </div>
                     </div>
                 </section>
-
-
-
-
-
-           
-
-
 
 
             </div>

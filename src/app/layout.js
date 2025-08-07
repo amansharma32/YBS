@@ -41,7 +41,6 @@ export const metadata = {
     "IT Solutions",
     "B2B portal development",
     "B2C portal development",
-    
     "Website Designing in Delhi",
     "Web Development Company in Delhi",
     "Best Website Designing Company in Delhi",
@@ -123,7 +122,6 @@ export default function RootLayout({ children }) {
 
 
   
-
 <head>
 <meta name="google-site-verification" content="Ftz7mm5nTrwASoP0ex_oUdViQV9o6beKbbYaMI8RTBM" />
 

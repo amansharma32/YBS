@@ -79,6 +79,7 @@ export default function ProductDesign() {
         ];
 
         return (
+            
             <section ref={ref} className="py-12    bg-transparent  relative overflow-hidden">
                 {/* Decorative background elements */}
                 <div className="absolute inset-0 opacity-10 pointer-events-none">

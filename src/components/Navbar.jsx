@@ -58,7 +58,7 @@ const serviceCategories = [
         icon: <Box className="w-4 h-4" />,
       },
       {
-        id: "product-design",
+        id: "product-design-services",
         name: "Industrial/Product Design",
         icon: <Image className="w-4 h-4" />,
       },

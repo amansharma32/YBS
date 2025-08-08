@@ -1,44 +1,57 @@
+
 "use client"
 import { useInView, motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronRight, Sparkles } from 'lucide-react';
+import { ChevronDown, ChevronRight, FileText, Sparkles } from 'lucide-react';
 import React, { useRef, useState } from 'react';
 import { Store, Cpu, Palette, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
+import {
+  
+  Share2,
+  Package,
+  FileEdit,
+  Megaphone,
+  Image,
+  PenTool,
+  Monitor,
+  BookOpen,
+  BarChart2,
+  Feather,
+  Layout
+} from 'lucide-react';
 
 
 // Main App component as required for the immersive
 
-export default function LogoDesignService() {
+export default function GraphicDesign() {
 
     const faqs = [
+
         {
-            question: "What is the timeline for a logo design project ?",
-            answer: "The timeline for a logo design project can vary, but it typically ranges from a few weeks to a couple of months. The duration is influenced by factors such as the complexity of the design, the number of revisions requested, and the speed of client feedback. Our goal is to work efficiently while ensuring the final product perfectly captures your brand's vision."
+            question: "How long does it take to complete an industrial product design project ?",
+            answer: "The timeline for an industrial product design project is highly dependent on its scope and complexity. After a detailed analysis of the product's features and requirements, we provide an estimated timeline. While some projects can be completed in a few weeks, more intricate designs involving extensive engineering and prototyping may take several months. Our focus is on delivering exceptional quality without unnecessary delays."
         },
 
         {
-            question: "What is included in a logo design package ?",
-            answer: "Our logo design packages are comprehensive, providing you with everything you need to use your new logo effectively. Depending on the package, this may include the final logo design in multiple formats such as JPEG, PNG, and vector files (AI, SVG, or EPS). We also provide a set of brand guidelines to ensure consistent and correct usage across all your marketing materials."
+            question: "How do you ensure the final product meets the client's expectations ?",
+            answer: "Our process is built on a foundation of collaboration and quality assurance. We ensure the final product exceeds your expectations through multiple stages of client feedback and approval. This iterative process, combined with rigorous testing and prototyping, guarantees that all functional and aesthetic requirements are met, resulting in a product that aligns perfectly with your vision."
         },
 
         {
-            question: "What makes a logo effective ?",
-            answer: "An effective logo is simple, memorable, and versatile. It should be easy to recognize and recall, and it must function well across various mediums, from a website to a billboard. A successful logo is always relevant to the brand's identity and speaks directly to its intended audience, helping to build credibility and trust."
+            question: "Do you offer prototyping and manufacturing services in addition to design ?",
+            answer: "Yes, our services are comprehensive. We not only provide expert industrial product design, but we also offer prototyping and manufacturing support to bring the design to life. Our team ensures the design is optimized for efficient and cost-effective mass production, helping you seamlessly transition from concept to a market-ready product."
         },
 
-        
+
 
         {
-            question: "Why is a professional logo important for my business ?",
-            answer: "A professional logo is the foundation of your brand identity and a crucial asset for your business. It is often the first impression a customer has of your company, and a well-designed logo can instantly communicate your professionalism and credibility. An effective logo helps you stand out from the competition, forges an emotional connection with your audience, and drives brand recognition and customer loyalty."
+            question: "How do you manage revisions and edits during the design process ?",
+            answer: "We view revisions as a critical part of our collaborative process. Our team is well-equipped to address modifications in a timely and efficient manner, ensuring the project stays on track. We welcome your feedback at every stage, as it helps us refine the design and ensures the final product is exactly what you envisioned."
         },
-        {
-            question: "Do you offer rebranding services ?",
-            answer: "Yes, we offer comprehensive rebranding services. If you are looking to refresh your brand identity, modernize an existing logo, or completely transform your visual presence, our team can help. We work with you to understand your new brand goals and create a design that aligns with your updated vision while leveraging the equity of your original brand."
-        },
-
        
+
+
 
 
     ];
@@ -53,30 +66,67 @@ export default function LogoDesignService() {
 
 
         const webDevServicesData = [
-            {
-                title: "Brand Consulting",
-                description: "Helping businesses dissolve complexity and stay focused on core competencies for rapid results. We craft strategic brand narratives that resonate with your audience and drive long-term success.",
-                link: "#" // Placeholder link
-            },
-            {
-                title: "Brand Collateral",
-                description: "Maintain a consistent and professional visual identity with our brand collateral design services. We create uniform design elements for all your marketing materials, from business cards to digital assets, ensuring your brand is instantly recognizable and memorable.",
-                link: "#"
-            },
-            {
-                title: "Graphic Design",
-                description: "Convey complex ideas, data, and instructions in a visually engaging and easily understandable manner. Our graphic design services transform your concepts into powerful visuals that enhance communication and strengthen your brand's message across all platforms.",
-                link: "#"
-            },
-            {
-                title: "Social Media Management",
-                description: "Ensure consistent and meaningful interactions with your audience through a strategic calendar of scheduled activities. Our social media management services drive engagement, build community, and strengthen your brand's presence on key platforms.",
-                link: "#"
-            },
-         
+
+           {
+    icon: FileText,
+    title: 'Brochures',
+    description: 'Transforming your ideas into fascinating visuals, our graphic design services for brochures will leave a lasting impact on your audience.'
+  },
+  {
+    icon: Share2,
+    title: 'Social Media Designs',
+    description: 'Engage your followers with eye-catching social media designs crafted by our talented graphic design team.'
+  },
+  {
+    icon: Package,
+    title: 'Packaging Labels',
+    description: 'Our innovative graphic design solutions for packaging labels integrate aesthetics and functionality to make your merchandise stand out on the shelves.'
+  },
+  {
+    icon: FileEdit,
+    title: 'Stationery Designs',
+    description: 'Elevate your brand identity with our professionally designed stationery that reflects your brand style and professionalism.'
+  },
+  {
+    icon: Megaphone,
+    title: 'Advertisements',
+    description: 'Grab attention and drive conversions with our compelling and visually appealing graphic designs for advertisements.'
+  },
+  {
+    icon: Image,
+    title: 'Graphics & Signage',
+    description: 'Enhance your brand visibility and create a memorable experience with our head-turning graphics and signage.'
+  },
+  {
+    icon: PenTool,
+    title: 'Custom Illustration',
+    description: 'Our professional illustrators bring creativity to life with custom illustrations that add a unique touch to your projects.'
+  },
+  {
+    icon: Monitor,
+    title: 'Web Banners',
+    description: 'Maximize your online presence and boost click-through-rates with our captivating web banner designs.'
+  },
+  {
+    icon: BookOpen,
+    title: 'Book/Magazine Covers',
+    description: 'Captivate readers at a single glance with our visually stunning book and magazine cover designs that reflect the core essence of your content.'
+  },
+  {
+    icon: BarChart2,
+    title: 'Infographics',
+    description: 'Simplify complex information and engage your target audience with our visually appealing and informative infographics.'
+  },
+  {
+    icon: Feather,
+    title: 'Custom Icons',
+    description: 'Leave a lasting visual impression with our custom icon designs that enhance user engagement and strengthen brand recognition.'
+  },
+
         ];
 
         return (
+            
             <section ref={ref} className="py-12    bg-transparent  relative overflow-hidden">
                 {/* Decorative background elements */}
                 <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -111,18 +161,20 @@ export default function LogoDesignService() {
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: index * 0.08 }}
                                 whileHover={{ y: -8 }}
-                                className="group relative overflow-hidden bg-white rounded-2xl shadow-xl border border-gray-100 hover:border-cyan-200 transition-all duration-500 flex flex-col h-full"
-                            >
+                                className="group relative overflow-hidden bg-white rounded-2xl shadow-xl border border-gray-100 hover:border-cyan-200 transition-all duration-500 flex flex-col h-full" >
                                 <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
                                 <div className="relative z-10 p-8 flex flex-col flex-grow">
-                                    <div className="flex items-center mb-4">
-                                        <div className="w-12 h-12 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center text-xl font-bold mr-4">
-                                            {/* Placeholder for icon, could be dynamic based on service */}
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                                            </svg>
-                                        </div>
-                                        <h3 className=" text-lg md:text-2xl font-semibold text-gray-900 leading-tight">
+
+                                    <div className=" flex  justify-start items-center pb-6 " >
+
+              <div className="flex items-center justify-center w-12 h-12 bg-cyan-600 text-white rounded-full  ">
+
+                <service.icon strokeWidth={2.5} />
+
+              </div>
+              
+                                        <h3 className=" ps-4 text-lg md:text-2xl font-semibold text-gray-900 leading-tight">
                                             {service.title}
                                         </h3>
                                     </div>
@@ -148,48 +200,54 @@ export default function LogoDesignService() {
         );
     };
 
-   
+
     const webDevelopmentProcessSteps = [
         {
             id: 'req-gathering',
-            title: "Our Expert Logo Design Process",
-            content: "Our process is a collaborative journey, meticulously designed to transform your vision into a powerful and memorable brand identity.",
+            title: "Our Industrial Product Design Process",
+            content: "We transform concepts into market-ready products by following a comprehensive, user-centric design process. Our structure approach ensures every product is innovative, functional, and built for success.",
             image: "https://images.unsplash.com/photo-1681949103006-70066fb25dfe?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             id: 'wireframe-prototyping',
-            title: "Discovery & Strategy",
-            content: "We begin by thoroughly understanding your business, target audience, and competitive landscape. This crucial first step informs our entire logo design strategy and ensures the final result is perfectly aligned with your brand's mission.",
+            title: "Expertise",
+            content: "We offer industrial product design services focused on developing innovative and functional designs for a wide range of products, from consumer goods to specialized industrial equipment. Our experienced team uses a comprehensive design process to create products that meet the needs of both the client and the end-user.",
             image: "https://images.unsplash.com/photo-1618788372246-79faff0c3742?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
-            id: 'ui-ux-design',
+            id: 'Research & Insights',
             title: "Research & Analysis",
-            content: "Our team conducts in-depth research into industry trends and design best practices. This analysis guarantees your logo is not only unique but also positioned to stand out and attract the right customers.",
+            content: "In this crucial phase, our team conducts thorough market research, competitor analysis, and user testing to gain insights. These findings are used to inform the design process, ensuring the final product effectively meets the needs and expectations of the target audience.",
             image: "https://images.unsplash.com/photo-1542289539-059dea254938?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             id: 'development',
             title: "Brainstorming & Ideation",
-            content: "We collaborate with you to generate a wide range of creative ideas and concepts for your brand. This phase is all about exploring possibilities and defining the core message your logo will convey.",
+            content: "During the brainstorming phase, our industrial product design team generates diverse ideas and concepts. We collaboratively explore different approaches to meet the project’s vision, pushing creative boundaries to find the most innovative solutions.",
             image: "https://images.unsplash.com/photo-1634838128617-efdf64411694?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
         },
         {
             id: 'quality-assurance',
-            title: "Sketching & Conceptualization",
-            content: "The best ideas from our brainstorming sessions are translated into initial sketches. This allows us to quickly visualize different directions and refine the strongest concepts before any digital work begins.",
+            title: "Concept Sketching",
+            content: "This phase involves sketching and refining the most promising concepts to create clear, visual representations of the product's design. This allows us to quickly explore potential forms and functions before moving to detailed digital modeling.",
             image: "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             id: 'deployment',
-            title: "Digital Design & Refinement",
-            content: "We bring the chosen concept to life, meticulously refining the logo's typography and color palette. This phase results in a polished, professional digital rendition of your brand that is ready for the world.",
+            title: "Detailed Design",
+            content: "Once a concept is selected, it is developed into a detailed design. Our team works to create a practical, aesthetically appealing, and manufacturable product, meticulously considering every aspect of its form and function.",
             image: "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             id: 'maintenance-support',
-            title: "Presentation & Feedback",
-            content: "We present the final logo design to you, seeking your feedback and collaborating on any necessary revisions. We believe in a transparent process that ensures you are thrilled with the final result.",
+            title: "Presentation & Refinement",
+            content: "The completed design is presented to the client for feedback. We work closely with you to incorporate any necessary revisions, ensuring the final product design aligns perfectly with your expectations and vision.",
+            image: "https://images.unsplash.com/photo-1635875060146-80ec95d47043?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            id: 'final-delivery',
+            title: "Final Delivery",
+            content: "The final stage of the industrial product design process involves delivering the complete product design. This includes all essential documentation, files, and specifications, giving you everything you need to move confidently into production.",
             image: "https://images.unsplash.com/photo-1635875060146-80ec95d47043?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
     ];
@@ -217,10 +275,13 @@ export default function LogoDesignService() {
                             Our Methodology
                         </span>
                         <p className=" text-lg md:text-4xl text-gray-500  font-bold  mb-6 leading-tight">
-                            Structured Workflow for Exceptional  <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Results</span>
+                            Our Meticulous Process From <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Concept to Deployment</span>
                         </p>
                         <p className="text-sm   text-gray-500 max-w-3xl mx-auto">
-                     From initial concept to final deployment, we follow a structured process to ensure quality, efficiency, and exceptional results. Our meticulous approach guarantees a smooth and transparent journey, giving you confidence in the outcome. Every step is a collaboration, designed to transform your vision into a powerful brand identity that stands out in the digital world. </p>
+
+                           From initial concept to final deployment, we follow a structured process to ensure quality, efficiency, and exceptional results. Our meticulous approach guarantees a smooth and transparent journey, giving you confidence in the outcome. Every step is a collaboration, designed to transform your vision into a powerful brand identity that stands out in the digital world.
+
+                        </p>
                     </motion.div>
 
                     <div className="lg:grid flex  flex-col-reverse lg:grid-cols-12 lg:gap-12 xl:gap-16 items-start">
@@ -300,32 +361,30 @@ export default function LogoDesignService() {
 
     // Data for the industry service cards
     const industryServices = [
-        {
-            icon: <Store size={28} className="text-blue-600" />,
-            title: "Healthcare",
-            description: "Empower your healthcare practice with patient-focused digital and IT solutions. We develop secure patient portals, streamline appointment booking, and implement digital marketing strategies that build trust and engagement. Our services are dedicated to enhancing patient care, improving operational efficiency, and ensuring data security in the healthcare sector."
+
+           {
+            icon: <Cpu size={28} className="text-green-600" />,
+            title: "Retail",
+            description: "Discover transformative IT services and digital solutions for the retail industry that drive seamless omnichannel experiences. We specialize in building robust e-commerce platforms, optimizing supply chain logistics, and implementing data-driven digital marketing strategies. Our goal is to help you connect with customers in a meaningful way, increase sales, and thrive in the fast-paced digital era."
         },
+        
         {
             icon: <Cpu size={28} className="text-green-600" />,
             title: "Information Technology",
             description: "Drive efficiency, innovation, and sustainable growth within the dynamic information technology industry. We provide specialized IT consulting and digital solutions, including cloud migration, automation, and cybersecurity enhancements. Our services are designed to help your business optimize operations, solve complex challenges, and stay ahead of the curve."
         },
-       
+
         {
             icon: <Palette size={28} className="text-purple-600" />,
             title: "Food & Beverage",
             description: "Whisk your food business to new heights with our specialized digital marketing and branding services. We design captivating websites with integrated online ordering systems and craft strategic social media campaigns that engage food enthusiasts. Our expertise helps you build a strong online presence, foster long-term customer loyalty, and stand out in the competitive culinary landscape."
         },
-         {
-            icon: <Cpu size={28} className="text-green-600" />,
-            title: "Retail",
-            description: "Discover transformative IT services and digital solutions for the retail industry that drive seamless omnichannel experiences. We specialize in building robust e-commerce platforms, optimizing supply chain logistics, and implementing data-driven digital marketing strategies. Our goal is to help you connect with customers in a meaningful way, increase sales, and thrive in the fast-paced digital era."
-        },
+     
     ];
 
 
 
-    
+
     // Component for the "Services for Various Industries" section
     const IndustriesSection = () => {
         const ref = useRef(null);
@@ -365,7 +424,7 @@ export default function LogoDesignService() {
                         className="text-center mb-12 md:mb-16"
                     >
                         <h2 className=" text-lg md:text-4xl   font-bold text-gray-800 tracking-tight">
-                          Industry Applications
+                            Industry Applications
                         </h2>
                         <p className="  md:mt-4  text-sm md:text-lg   text-gray-600">
                             For Various Industries
@@ -439,10 +498,10 @@ export default function LogoDesignService() {
 
 
                     <div className="absolute w-full h-full p-9 bottom-0 flex flex-col md:flex-row justify-center md:justify-between items-center md:text-center mx-auto">
-                        <p className="text-center font-sans md:text-left font-thin text-white text-3xl md:text-5xl flex flex-col justify-center items-center h-full my-auto">
-                           Logo Design Services
+                        <p className="text-center font-sans md:text-left font-thin text-white text-2xl md:text-4xl flex flex-col justify-center items-center h-full my-auto">
+                            Graphic Design Services
                             <br />
-                            <span className="text-center font-sans  text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">Home /  Logo Design Services
+                            <span className="text-center font-sans  text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">Home /   Graphic Design Services
                             </span>
                         </p>
                     </div>
@@ -489,12 +548,12 @@ export default function LogoDesignService() {
                                         <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                                             <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
                                                 <Link href='https://www.fluxdigital.online/' >
-                                                   Expert Logo Designing
+                                                   Unleash Your Brand's Visual Power
                                                 </Link>
                                             </span><br />
                                             <span className="font-light text-gray-700">   <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
                                                 <span className='  '>
-                                                 Crafting Your Brand's Visual Identity
+                                                    Our End-to-End Design Services
                                                 </span>
                                             </span>
                                             </span>
@@ -503,15 +562,16 @@ export default function LogoDesignService() {
                                     <p className=" font-sans text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
 
-                                      At FLUX Digital, our expert logo designing service is the cornerstone of a powerful brand. We believe a logo is more than just an image; it's the visual representation of your brand's essence, values, and vision. Our professional designers work closely with you to understand your business and audience, crafting a custom logo that is unique, memorable, and impactful. Whether you're a startup or an established enterprise, our creative process is driven by strategy to ensure your brand's new visual identity stands out in a competitive global market and resonates deeply with your target customers
+                                 At FLUX Digital, our Graphic Design Services are a core part of our brand-building expertise. We believe that visually captivating content is essential for communicating complex ideas and leaving a lasting impression. Our designers transform your initial concepts into powerful, visually engaging graphics that not only enhance communication but also reinforce your brand's message. We work closely with you to understand your audience and business goals, ensuring every design is both beautiful and strategic. From a single social media post to a full marketing campaign, our creative process is focused on delivering designs that make your brand stand out in a competitive global market.
 
-                                   
+
+
 
                                     </p>
 
                                     <p className=" pb-4 font-sans text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
-                                      What sets us apart as a top logo creation agency is our strategic approach. We don’t just design a logo; we build a foundation for your entire brand identity. Our expert team combines market analysis with creative flair to produce a design that is not only aesthetically pleasing but also highly effective. We consider color psychology, typography, and scalability to ensure your logo looks perfect across all mediums—from a business card to a billboard. This meticulous process makes us a trusted logo design agency for clients in India, the USA, and globally.
+                                    What sets our graphic design agency apart is our strategic approach. We begin with a deep dive into your brand's identity, market, and target audience. Our team conducts extensive research and brainstorming sessions to develop innovative concepts that align with your business objectives. This phase is crucial for defining the visual language, style, and messaging, setting a solid foundation for every creative project.
 
                                     </p>
 

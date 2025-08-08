@@ -63,7 +63,7 @@ const serviceCategories = [
         icon: <Image className="w-4 h-4" />,
       },
       {
-        id: "graphic-design",
+        id: "graphic-design-services",
         name: "Graphic Design",
         icon: <BoxSelect className="w-4 h-4" />,
       },

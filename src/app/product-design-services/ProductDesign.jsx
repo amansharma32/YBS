@@ -157,7 +157,7 @@ export default function ProductDesign() {
             id: 'req-gathering',
             title: "Our Industrial Product Design Process",
             content: "We transform concepts into market-ready products by following a comprehensive, user-centric design process. Our structure approach ensures every product is innovative, functional, and built for success.",
-            image: "https://plus.unsplash.com/premium_photo-1661376664649-821d586ef9f0?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            image: "https://images.unsplash.com/photo-1681949103006-70066fb25dfe?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             id: 'wireframe-prototyping',

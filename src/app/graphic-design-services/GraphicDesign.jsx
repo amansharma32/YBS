@@ -7,7 +7,6 @@ import { Store, Cpu, Palette, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 import {
-  
   Share2,
   Package,
   FileEdit,
@@ -22,32 +21,31 @@ import {
 } from 'lucide-react';
 
 
-// Main App component as required for the immersive
-
+ 
 export default function GraphicDesign() {
 
     const faqs = [
 
         {
-            question: "How long does it take to complete an industrial product design project ?",
-            answer: "The timeline for an industrial product design project is highly dependent on its scope and complexity. After a detailed analysis of the product's features and requirements, we provide an estimated timeline. While some projects can be completed in a few weeks, more intricate designs involving extensive engineering and prototyping may take several months. Our focus is on delivering exceptional quality without unnecessary delays."
+            question: "What graphic design services does FLUX Digital provide ?",
+            answer: "FLUX Digital offers a comprehensive range of graphic design services to help businesses establish a strong visual brand presence. Our expertise includes everything from web design and app interface design to branding and logo design, social media creatives, and print collateral design. We cater to diverse design requirements to ensure your brand stands out across all digital and print channels."
         },
 
         {
-            question: "How do you ensure the final product meets the client's expectations ?",
-            answer: "Our process is built on a foundation of collaboration and quality assurance. We ensure the final product exceeds your expectations through multiple stages of client feedback and approval. This iterative process, combined with rigorous testing and prototyping, guarantees that all functional and aesthetic requirements are met, resulting in a product that aligns perfectly with your vision."
+            question: "How does FLUX Digital ensure top-quality graphic design ?",
+            answer: "At FLUX Digital, we have a team of highly experienced graphic designers who blend creativity with industry best practices to deliver outstanding results. We follow a collaborative approach, working closely with clients to understand their vision and deliver designs that perfectly align with their brand identity and business goals. Our commitment to quality and attention to detail is what sets us apart."
         },
 
         {
-            question: "Do you offer prototyping and manufacturing services in addition to design ?",
-            answer: "Yes, our services are comprehensive. We not only provide expert industrial product design, but we also offer prototyping and manufacturing support to bring the design to life. Our team ensures the design is optimized for efficient and cost-effective mass production, helping you seamlessly transition from concept to a market-ready product."
+            question: "Can FLUX Digital handle projects of all sizes ?",
+            answer: "Absolutely! We have the expertise and resources to handle both small and large-scale graphic design projects. Whether you need a single social media creative, a full suite of marketing materials, or a complete branding overhaul, our team is prepared to meet your needs and deliver exceptional results efficiently."
         },
 
 
 
         {
-            question: "How do you manage revisions and edits during the design process ?",
-            answer: "We view revisions as a critical part of our collaborative process. Our team is well-equipped to address modifications in a timely and efficient manner, ensuring the project stays on track. We welcome your feedback at every stage, as it helps us refine the design and ensures the final product is exactly what you envisioned."
+            question: "How does the graphic design process work at FLUX Digital ?",
+            answer: "Our graphic design process is structured to be transparent and collaborative. It begins with a detailed discovery phase to understand your specific requirements. We then move to conceptualizing and creating initial drafts. The final design is refined through an iterative feedback loop with you, ensuring the end product not only meets but exceeds your expectations and elevates your brand's visual presence."
         },
        
 
@@ -57,9 +55,7 @@ export default function GraphicDesign() {
     ];
 
     const [activeFaq, setActiveFaq] = useState(null);
-
-    // Define the content data for Flux Digital's web development services
-
+ 
     const WebDevServicesSection = () => {
         const ref = useRef(null);
         const isInView = useInView(ref, { once: true, amount: 0.2 });
@@ -202,54 +198,42 @@ export default function GraphicDesign() {
 
 
     const webDevelopmentProcessSteps = [
-        {
-            id: 'req-gathering',
-            title: "Our Industrial Product Design Process",
-            content: "We transform concepts into market-ready products by following a comprehensive, user-centric design process. Our structure approach ensures every product is innovative, functional, and built for success.",
-            image: "https://images.unsplash.com/photo-1681949103006-70066fb25dfe?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            id: 'wireframe-prototyping',
-            title: "Expertise",
-            content: "We offer industrial product design services focused on developing innovative and functional designs for a wide range of products, from consumer goods to specialized industrial equipment. Our experienced team uses a comprehensive design process to create products that meet the needs of both the client and the end-user.",
-            image: "https://images.unsplash.com/photo-1618788372246-79faff0c3742?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            id: 'Research & Insights',
-            title: "Research & Analysis",
-            content: "In this crucial phase, our team conducts thorough market research, competitor analysis, and user testing to gain insights. These findings are used to inform the design process, ensuring the final product effectively meets the needs and expectations of the target audience.",
-            image: "https://images.unsplash.com/photo-1542289539-059dea254938?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            id: 'development',
-            title: "Brainstorming & Ideation",
-            content: "During the brainstorming phase, our industrial product design team generates diverse ideas and concepts. We collaboratively explore different approaches to meet the project’s vision, pushing creative boundaries to find the most innovative solutions.",
-            image: "https://images.unsplash.com/photo-1634838128617-efdf64411694?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
-        },
-        {
-            id: 'quality-assurance',
-            title: "Concept Sketching",
-            content: "This phase involves sketching and refining the most promising concepts to create clear, visual representations of the product's design. This allows us to quickly explore potential forms and functions before moving to detailed digital modeling.",
-            image: "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            id: 'deployment',
-            title: "Detailed Design",
-            content: "Once a concept is selected, it is developed into a detailed design. Our team works to create a practical, aesthetically appealing, and manufacturable product, meticulously considering every aspect of its form and function.",
-            image: "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            id: 'maintenance-support',
-            title: "Presentation & Refinement",
-            content: "The completed design is presented to the client for feedback. We work closely with you to incorporate any necessary revisions, ensuring the final product design aligns perfectly with your expectations and vision.",
-            image: "https://images.unsplash.com/photo-1635875060146-80ec95d47043?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            id: 'final-delivery',
-            title: "Final Delivery",
-            content: "The final stage of the industrial product design process involves delivering the complete product design. This includes all essential documentation, files, and specifications, giving you everything you need to move confidently into production.",
-            image: "https://images.unsplash.com/photo-1635875060146-80ec95d47043?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        }
+       {
+        id: 'overview',
+        title: "Our Graphic Design Process",
+        content: "We transform your brand's vision into powerful visual stories. Our structured approach ensures every design project is creative, strategic, and built to achieve your business goals.",
+        image: "https://images.unsplash.com/photo-1681949103006-70066fb25dfe?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        id: 'discovery',
+        title: "Discovery & Strategy",
+        content: "We begin with an in-depth consultation to understand your brand, target audience, and business objectives. Our team conducts research to inform a strategic direction, ensuring every design decision aligns with your goals.",
+        image: "https://images.unsplash.com/photo-1618788372246-79faff0c3742?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        id: 'conceptualization',
+        title: "Conceptualization & Ideation",
+        content: "Our creative team generates diverse ideas and concepts, exploring various visual directions. We develop preliminary sketches and mockups to present a range of creative possibilities that will resonate with your audience.",
+        image: "https://images.unsplash.com/photo-1542289539-059dea254938?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        id: 'design',
+        title: "Design & Execution",
+        content: "Once a concept is approved, we move to the detailed design phase. Our designers bring the vision to life, creating professional and polished assets for print, digital, or any other medium, with meticulous attention to detail.",
+        image: "https://images.unsplash.com/photo-1634838128617-efdf64411694?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+    },
+    {
+        id: 'refinement',
+        title: "Review & Refinement",
+        content: "We present the completed designs for your feedback. This collaborative phase allows us to refine and perfect the work, incorporating your input to ensure the final product exceeds your expectations.",
+        image: "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        id: 'delivery',
+        title: "Final Delivery",
+        content: "The final stage involves delivering all the complete design assets and files. We provide everything you need to confidently launch and utilize your new graphics across all platforms.",
+        image: "https://images.unsplash.com/photo-1635875060146-80ec95d47043?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
     ];
 
     // WebDevelopmentProcessSection Component Definition
@@ -279,7 +263,8 @@ export default function GraphicDesign() {
                         </p>
                         <p className="text-sm   text-gray-500 max-w-3xl mx-auto">
 
-                           From initial concept to final deployment, we follow a structured process to ensure quality, efficiency, and exceptional results. Our meticulous approach guarantees a smooth and transparent journey, giving you confidence in the outcome. Every step is a collaboration, designed to transform your vision into a powerful brand identity that stands out in the digital world.
+                       Our meticulous process is the engine behind every project, from initial concept to final deployment. We've designed a structured workflow to guarantee a smooth, transparent journey, ensuring exceptional quality and efficiency. Every step is a true collaboration, transforming your vision into a powerful brand identity that commands attention in the digital world.
+
 
                         </p>
                     </motion.div>

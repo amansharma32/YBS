@@ -68,7 +68,7 @@ const serviceCategories = [
         icon: <BoxSelect className="w-4 h-4" />,
       },
       {
-        id: "visualisation",
+        id: "2d-3d-visualization-services",
         name: "2D/3D Visualisation",
         icon: <Cpu className="w-4 h-4" />,
       },

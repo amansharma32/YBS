@@ -7,17 +7,20 @@ import { Store, Cpu, Palette, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 import {
+    
   Share2,
   Package,
   FileEdit,
   Megaphone,
+
   Image,
   PenTool,
   Monitor,
   BookOpen,
   BarChart2,
   Feather,
-  Layout
+  Layout,
+
 } from 'lucide-react';
 
 

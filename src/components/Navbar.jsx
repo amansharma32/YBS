@@ -36,9 +36,10 @@ import {
   X,
 } from "lucide-react";
 
-// 1. Unified and Enriched Service Data
-// All services are merged into one array. Each category has a unique color and description.
+
+
 const serviceCategories = [
+
   {
     id: "branding",
     category: "Branding",
@@ -74,6 +75,7 @@ const serviceCategories = [
       },
     ],
   },
+
   {
     id: "experience-design",
     category: "Experience Design",
@@ -83,7 +85,7 @@ const serviceCategories = [
       "Designing intuitive and beautiful user interfaces that deliver exceptional user experiences.",
     items: [
       {
-        id: "ui-ux-design",
+        id: "ui-ux-design-services",
         name: "UI/UX Design",
         icon: <Smartphone className="w-4 h-4" />,
       },

@@ -9,53 +9,58 @@ import { Layout } from "lucide-react";
 
 import { Users, Grid, Zap, ClipboardList, Puzzle } from "lucide-react";
 
-export default function UIUXDesign() {
+import { Laptop, ShoppingBag, ShieldCheck,  RefreshCw } from 'lucide-react';
+
+export default function WebsiteDesignService() {
+
   const faqs = [
-    {
-      question:
-        "How much do your UI/UX services cost ?",
-      answer:
-        "Our pricing is tailored to the specific needs of each project. We offer customized quotes based on factors such as project complexity, required services (e.g., research, wireframing, prototyping), and the desired timeline. We focus on providing exceptional value and a transparent pricing structure.",
-    },
-
-    {
-      question: "How long does a typical UI/UX design project take ?",
-      answer:
-        "The duration of a project can vary significantly based on its scope and complexity. A small project, like an audit or a single-page design, might take a few weeks, while a comprehensive end-to-end application design can take several months. We will provide a detailed project timeline and clear milestones after our initial discovery call.",
-    },
-
-    {
-      question: "Can you perform a UX audit for my website or mobile application ?",
-      answer:
-        "Yes, as an experienced UI/UX company, we specialize in performing detailed UX audits for both websites and mobile applications. We conduct in-depth studies to understand how users interact with your digital platforms. By meticulously analyzing every design component, we can identify how effectively it aligns with your business objectives and provide a clear roadmap for improvement.",
-    },
 
     {
       question:
-        "When is a UI/UX audit recommended ?",
+        "How much do your web design services cost ?",
       answer:
-        "A UI/UX audit is highly recommended if you notice a lack of user engagement or interaction with your website or web application. A comprehensive audit can help you identify flaws in your existing design system, pinpoint usability issues, and reveal opportunities for improvement to enhance the overall user experience.",
+        "The cost of our website design services is customized to fit your specific needs and the scope of your project. As a leading website design company, we focus on delivering exceptional value. We will provide a detailed quote after discussing your unique requirements and the expected project timeline.",
+    },
+
+    {
+      question: "How do I get started with your website design services ?",
+      answer:
+        "Getting started is simple. Just contact us for a consultation. We'll discuss your project in detail, understand your vision, and provide a clear, comprehensive quote. Once you agree, we can begin transforming your ideas into a stunning and functional website.",
+    },
+
+    {
+      question: "Do you make websites mobile-friendly and responsive ?",
+      answer:
+        "Yes, we deliver fully responsive website design services to ensure your site works flawlessly across all devices—from desktops to tablets and smartphones. This approach gives you significant advantages in search engine rankings, helps you reach a wider audience, and ensures your message is delivered effectively to every user.",
     },
 
     {
       question:
-        "What kinds of applications do you design ?",
+        "Why should I choose your website design services ?",
       answer:
-        "We are an experienced UI/UX design company that can help you design all of your digital products. Our customized services range from designing a simple website to developing a complex application, all built to your unique specifications. We are committed to creating seamless and engaging user experiences for iOS, Android, and cross-platform applications that contribute positively to your business growth.",
+        "As an established and trusted name in the industry, we have a proven track record of creating hundreds of successful website designs. We offer a combination of exceptional design themes, value-for-money services, and a cost-effective approach that sets us apart. Our team is dedicated to building a high-quality website that helps your business grow.",
+    },
+
+    {
+      question:
+        "Do your web design services include Search Engine Optimization (SEO) ?",
+      answer:
+        "Yes, we build every website with SEO best practices in mind. Our design process includes structured code, fast loading speeds, and responsive layouts that are crucial for high search engine rankings. We ensure your website has a strong technical foundation to attract organic traffic from day one.",
     },
 
 
     {
       question:
-        "What's the difference between UI and UX ?",
+        "Do you provide ongoing website maintenance ?",
       answer:
-        "User Experience (UX) is the overall feeling a user has while interacting with a product. It focuses on the product's functionality, usability, and the emotions it evokes. User Interface (UI) refers to the visual design of the product—the colors, typography, layout, and interactive elements. Essentially, UX is about how the product works, and UI is about how it looks. We believe both are equally crucial for a successful digital product.",
+        "Yes, we offer various maintenance and support packages to keep your website secure, up-to-date, and running smoothly after launch. We can handle everything from software updates and security monitoring to content changes and technical support, allowing you to focus on your business.",
     },
+
     {
       question:
-        "What is the role of a UX Service Designer ?",
+        "Who is responsible for providing the website content ?",
       answer:
-        "A UX service designer is a specialist who develops a holistic, customer-centric design strategy. Their primary focus is to understand the entire customer journey by conducting extensive user research, building user personas, and creating wireframes and prototypes. The core objective is to ensure the final product offers an exceptional user experience by contributing to the user's needs and enhancing engagement and satisfaction.",
+        "While our focus is on design and functionality, clients are typically responsible for providing all website content, including text, images, and brand assets. However, we can also offer professional copywriting and content creation services as an add-on to ensure your message is compelling and optimized for the web.",
     },
   ];
 
@@ -68,31 +73,33 @@ export default function UIUXDesign() {
     const webDevServicesData = [
       {
         icon: Users,
-        title: "User Experience Design (UX)",
+        title: "Graphic Design",
         description:
-          "We create designs that are centered around your target audience, conducting in-depth research to understand their needs, behaviors, and motivations. The result is a seamless, logical flow that guides users through your product with ease, leading to higher engagement and customer satisfaction.",
+          "We help you communicate complex ideas, data, or instructions in a visually compelling and easily understandable manner. Our graphic design services create stunning visuals that capture attention, convey your message with clarity, and strengthen your brand's identity across all platforms.",
       },
+
       {
         icon: Grid,
-        title: "User Interface Design (UI)",
+        title: "Human-Machine Interface (HMI)",
         description:
-          "Our UI design process focuses on crafting functional and aesthetically pleasing digital interfaces. We combine thoughtful visual design with a deep understanding of user psychology to create an interface that is not only beautiful but also intuitive, helping to attract and retain your users.",
+          "Our HMI designs are meticulously engineered for ergonomic soundness, helping to prevent errors and significantly reduce operator workload. We create intuitive control systems that simplify complex tasks and ensure reliable, efficient operations.",
       },
+
       {
         icon: Zap,
-        title: "Interaction Design",
+        title: "Commerce Experience",
         description:
-          "We specialize in designing how users interact with your digital products, systems, and services. By meticulously planning every click, swipe, and animation, we create dynamic and responsive experiences that feel natural and engaging, enhancing overall usability and product enjoyment.",
+          "We design and optimize digital touchpoints to create a positive user experience that directly impacts your bottom line. Our commerce experience services are built to enhance customer interactions, streamline the purchasing journey, and ultimately, increase sales and customer loyalty.",
       },
       {
         icon: Layout,
-        title: "Cross-Platform Experience Design",
+        title: "Mobile Experience",
         description:
-          "We ensure your brand's digital presence is uniform and consistent across all platforms—from desktop and mobile to tablets and beyond. Our designs are optimized for every screen size, providing a cohesive and reliable experience that strengthens brand identity and customer loyalty.",
+          "Unleash the full potential of mobile platforms with our specialized mobile experience services. We design and develop engaging mobile interfaces that make every moment of navigation effortless and enjoyable, fostering a strong connection with your users.",
       },
       {
         icon: ClipboardList,
-        title: "UI/UX Consulting & Auditing",
+        title: "UI/UX Design",
         description:
           "Leverage our expert insights to refine and enhance your existing digital products. Our consulting services provide a comprehensive audit of your current design, offering actionable recommendations to improve usability, accessibility, and overall design effectiveness.",
       },
@@ -109,7 +116,7 @@ export default function UIUXDesign() {
         ref={ref}
         className="py-12    bg-transparent  relative overflow-hidden"
       >
-        {/* Decorative background elements */}
+        
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-cyan-300/15 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
           <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-blue-300/15 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
@@ -193,16 +200,19 @@ export default function UIUXDesign() {
             ))}
           </div>
         </div>
+
       </section>
     );
   };
 
+ 
+
   const webDevelopmentProcessSteps = [
     {
       id: "overview",
-      title: "Research",
+      title: "User Research",
       content:
-        "The process begins with an in-depth research phase. We meticulously examine existing systems, analyze industry benchmarks, and explore the latest UI/UX principles and trends. This foundational work ensures our design is strategic, informed, and positioned for success.",
+        "We begin by deeply understanding your target audience's expectations and needs. By analyzing market trends and your business goals, we lay the foundation for a website that is not only visually appealing but also user-friendly and engaging.",
 
       image:
         "https://images.unsplash.com/photo-1681949103006-70066fb25dfe?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -210,9 +220,9 @@ export default function UIUXDesign() {
 
     {
       id: "discovery",
-      title: "Ideation and Brainstorming",
+      title: "Wireframes",
       content:
-        "Once we have a solid understanding of the landscape, we move to ideation and brainstorming. We use a variety of creative methods, including sketching, wireframing, and storyboarding, to develop potential solutions that address your specific needs and challenges.",
+        "We create a visual blueprint of your website's structure and layout. This early-stage prototype gives you a clear picture of the final product and allows for valuable feedback before we move to more detailed design work.",
 
       image:
         "https://images.unsplash.com/photo-1618788372246-79faff0c3742?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -220,9 +230,9 @@ export default function UIUXDesign() {
 
     {
       id: "conceptualization",
-      title: "Wireframes",
+      title: "High-Fidelity Prototyping",
       content:
-        "Our wire-framing strategy is the backbone of the product's structure. We develop low-fidelity wireframes to outline the placement of elements on a screen and plan the layout, which is essential for initial concept validation before focusing on visual aesthetics.",
+        "This phase brings the wireframe to life with realistic, interactive mockups. This allows us to test and refine the design and functionality, ensuring a seamless user experience before a single line of code is written.",
 
       image:
         "https://images.unsplash.com/photo-1542289539-059dea254938?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -230,9 +240,9 @@ export default function UIUXDesign() {
 
     {
       id: "design",
-      title: "Design",
+      title: "User Flows",
       content:
-        "This is where our designers concentrate on the visual aspects of the product. This phase includes defining the ideal color palettes, typography, and layout to create an intuitive and engaging user interface that captivates your target audience.",
+        "We map out the complete journey a user will take on your website, from their first click to their final desired action (like making a purchase). This helps us optimize every step of their interaction.",
 
       image:
         "https://images.unsplash.com/photo-1634838128617-efdf64411694?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
@@ -240,39 +250,33 @@ export default function UIUXDesign() {
 
     {
       id: "refinement",
-      title: "High-Fidelity Prototyping",
+      title: "Visual Design",
       content:
-        "While wireframes focus on structure, our high-fidelity prototypes are all about the interaction experience. We create detailed, functional simulations of the product to give you a realistic feel of the final application.",
+        "This is where the magic happens. We focus on the aesthetics and presentation, incorporating your brand identity, color palettes, and typography to create a custom website that is visually stunning and organized.",
       image:
         "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
 
     {
       id: "refinement1",
-      title: "User Feedback",
+      title: "Development Handover",
       content:
-        "To ensure the design meets the needs of real people, we test our prototypes with users to gather valuable feedback. This feedback is crucial for refining the design and confirming that it delivers a seamless and satisfying user experience.",
+        "Once the design is finalized, our design team hands over all assets and documentation to our skilled development team, who begin the engineering process. We ensure a smooth transition from design to development to build a robust and well-maintained website.",
+
       image:
         "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
 
     {
       id: "refinement2",
-      title: "Design Handoff",
+      title: "QA & Validation",
       content:
-        "Once the designs are finalized and approved, we prepare a detailed design handoff for the development team. This includes all necessary documentation, such as wireframes, mockups, style guides, and assets, to ensure a smooth and efficient implementation.",
+        "In the final stage, we perform a thorough review to ensure the website meets all project goals, user experience standards, and accessibility requirements. This validation guarantees that the new release is polished and ready to go live.",
       image:
         "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
 
-    {
-      id: "refinement3",
-      title: "Analysis and Integration",
-      content:
-        "We understand that a product's journey doesn't end at launch. We perform continuous analysis and integration of user data and feedback, allowing us to implement further refinements and ensure the design remains effective and relevant.",
-      image:
-        "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
+    
   ];
 
   const WebDevelopmentProcessSection = () => {
@@ -300,7 +304,7 @@ export default function UIUXDesign() {
               Our Methodology
             </span>
             <p className=" text-lg md:text-4xl text-gray-500  font-bold  mb-6 leading-tight">
-              Our Meticulous UI/UX Design Process {" "}
+              Our Meticulous Website Design Process {" "}
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 {" "}
                 Concept to Deployment
@@ -314,7 +318,7 @@ export default function UIUXDesign() {
           <div className="lg:grid flex  flex-col-reverse lg:grid-cols-12 lg:gap-12 xl:gap-16 items-start">
             {/* Left Column: Accordion */}
             <div className="lg:col-span-6 space-y-2 ">
-              {webDevelopmentProcessSteps.map((item, index) => (
+              {webDevelopmentProcessSteps.map((item, id) => (
                 <div
                   key={item.id}
                   className="rounded-lg   border-[1px] border-gray-200 transition-colors duration-300"
@@ -528,6 +532,115 @@ export default function UIUXDesign() {
       </section>
     );
   };
+
+
+
+  const Ourservice = () => {
+
+  // An array of objects, where each object represents a specific service.
+  const services = [
+    {
+      title: "E-commerce Website Design",
+      description: "Boost your online sales with our conversion-focused E-commerce website design. We build powerful, functional platforms that turn visitors into customers.",
+      icon: <ShoppingBag className="text-4xl text-cyan-500" />
+    },
+    {
+      title: "Corporate Website Design",
+      description: "Build a professional online presence with our Corporate Website Design. We create sites that perfectly align with your brand identity and business objectives.",
+      icon: <ShieldCheck className="text-4xl text-cyan-500" />
+    },
+    {
+      title: "Applications & Dashboard",
+      description: "Solve business challenges and delight users with our Application & Dashboard design. We create intuitive web apps that are as effective as they are easy to use.",
+      icon: <Laptop className="text-4xl text-cyan-500" />
+    },
+    {
+      title: "Custom Website Design",
+      description: "Stand out from the crowd with our Custom Website Design. We create unique, personalized websites that are a perfect reflection of your brand's unique identity.",
+      icon: <Sparkles className="text-4xl text-cyan-500" />
+    },
+    {
+      title: "Redesign and Website Revamp",
+      description: "Maximize your results with our Redesign and Website Revamp services. We overhaul your existing site with a responsive design to drive more traffic, leads, and revenue.",
+      icon: <RefreshCw className="text-4xl text-cyan-500" />
+    },
+  ];
+
+  // Animation variants for the main container to create a staggered effect
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  // Animation variants for each service card
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  };
+
+  return (
+    <div className="bg-gray-50  antialiased p-8 lg:p-16 min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="max-w-7xl w-full mx-auto">
+        <header className="text-center mb-16">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-3xl font-extrabold text-gray-900 mb-4 tracking-tight leading-tight"
+          >
+            <span className=" ">
+              Website Design
+            </span>{" "}
+            Services We Offer
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            className="text-sm text-gray-600 max-w-2xl mx-auto font-light"
+          >
+            We've honed a strategic, results-driven approach to website design, empowering businesses to achieve their goals. Ready to see what our expertise can do for you?
+          </motion.p>
+        </header>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+            >
+              <div className="flex items-center mb-6">
+                <div className="flex-shrink-0 p-3 bg-cyan-50 rounded-xl">
+                  {service.icon}
+                </div>
+                <h3 className="ml-4 text-xl font-bold text-gray-900">
+                  {service.title}
+                </h3>
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {service.description}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </div>
+  );
+}
+
+
   return (
     <>
       <section>
@@ -547,11 +660,11 @@ export default function UIUXDesign() {
           </div>
 
           <div className="absolute w-full h-full p-9 bottom-0 flex flex-col md:flex-row justify-center md:justify-between items-center md:text-center mx-auto">
-            <p className="text-center font-sans md:text-left font-thin text-white text-2xl md:text-4xl flex flex-col justify-center items-center h-full my-auto">
-              UI/UX Design Services
+            <p className="text-center  md:text-left font-thin text-white text-2xl md:text-4xl flex flex-col justify-center items-center h-full my-auto">
+              Website Design Services
               <br />
-              <span className="text-center font-sans  text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">
-                Home / UI/UX Design Services
+              <span className="text-center   text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">
+                Home / Website Design Services
               </span>
             </p>
           </div>
@@ -587,7 +700,7 @@ export default function UIUXDesign() {
                     <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                       <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
                         <Link href="https://www.fluxdigital.online/">
-                          Unleash Your UI/UX Design Power
+                          Unleash Your Website Design Power
                         </Link>
                       </span>
                       <br />
@@ -601,33 +714,12 @@ export default function UIUXDesign() {
                       </span>
                     </p>
                   </div>
-                  <p className=" font-sans text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
-                    At FLUX Digital, we design intuitive and engaging digital
-                    experiences that put the user first. Our UI/UX design
-                    services are at the heart of our digital offerings, helping
-                    brands build websites, applications, and platforms that are
-                    not only visually stunning but also seamless to navigate. We
-                    believe that a great user experience is the key to driving
-                    higher conversions, building brand loyalty, and simplifying
-                    complex user journeys. Our expert designers meticulously
-                    craft every element of the user interface, ensuring it's not
-                    just beautiful, but also functional, accessible, and
-                    perfectly aligned with your brand's identity.
+                  <p className="  text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
+                    At FLUX Digital, we craft intuitive and engaging websites that put the user first. Our website design services are at the heart of our digital offerings, helping brands build online platforms that are not only visually stunning but also seamless to navigate. We believe that a great user experience is the key to driving higher conversions, building brand loyalty, and simplifying complex user journeys. Our expert designers meticulously craft every element of the website interface, ensuring it's not just beautiful, but also functional, accessible, and perfectly aligned with your brand's identity.
                   </p>
 
-                  <p className=" pb-4 font-sans text-sm md:text-md text-gray-600 text-justify md:text-left pt-3   ">
-                    What truly sets our UI/UX design agency apart is our
-                    strategic, data-driven approach. We begin every project with
-                    a deep dive into user behavior, market trends, and your
-                    business objectives. Our team conducts extensive research,
-                    including user interviews and competitor analysis, to
-                    develop a clear understanding of the problems we need to
-                    solve. This phase is crucial for defining the project's
-                    strategy, creating user personas, and mapping out user
-                    flows. By focusing on a strong foundation, we ensure the
-                    final design is not just aesthetically pleasing, but a
-                    powerful solution that solves real-world user problems and
-                    delivers tangible business results.
+                  <p className=" pb-4  text-sm md:text-md text-gray-600 text-justify md:text-left pt-3   ">
+                  What truly sets our website design agency apart is our strategic, data-driven approach. We begin every project with a deep dive into user behavior, market trends, and your business objectives. Our team conducts extensive research, including user interviews and competitor analysis, to develop a clear understanding of the problems we need to solve. This phase is crucial for defining the website's architecture, creating user personas, and mapping out user flows. By focusing on a strong foundation, we ensure the final design is not just aesthetically pleasing, but a powerful solution that solves real-world user problems and delivers tangible business results.
                   </p>
 
                   <Link
@@ -644,11 +736,17 @@ export default function UIUXDesign() {
       </section>
 
       <div className="min-h-screen  bg-transparent font-inter antialiased overflow-hidden">
-        <WebDevServicesSection />
+      
+      <Ourservice/>
 
+      
         <WebDevelopmentProcessSection />
 
         <IndustriesSection />
+        
+  <WebDevServicesSection />
+
+
 
         <section className="py-12 px-4 bg-white">
           <div className="container mx-auto max-w-4xl">

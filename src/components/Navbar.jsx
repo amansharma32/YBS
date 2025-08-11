@@ -89,11 +89,13 @@ const serviceCategories = [
         name: "UI/UX Design",
         icon: <Smartphone className="w-4 h-4" />,
       },
+
       {
-        id: "website-design",
+        id: "website-design-services",
         name: "Website Design",
         icon: <Globe className="w-4 h-4" />,
       },
+      
       {
         id: "mobile-experience",
         name: "Mobile Experience",

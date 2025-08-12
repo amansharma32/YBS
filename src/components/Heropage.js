@@ -17,6 +17,8 @@ import OurServices from './sections/OurServices'
 import NewService from './sections/NewService'
 import Firespark from './sections/Firespark'
 import ProjectBasedPackages from './sections/ProjectBasedPackages'
+import Head from 'next/head'
+import Script from 'next/script'
 
 
 export default function Heropage() {
@@ -106,6 +108,30 @@ export default function Heropage() {
     return (
 
         <>
+    <Head>
+        {/* Google Search Console Verification */}
+        <meta
+          name="google-site-verification"
+          content="Ftz7mm5nTrwASoP0ex_oUdViQV9o6beKbbYaMI8RTBM"
+        />
+      </Head>
+
+      {/* Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-2VTHRMSF8W"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+      >
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-2VTHRMSF8W');
+        `}
+      </Script>
 
    <div
 

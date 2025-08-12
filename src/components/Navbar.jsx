@@ -97,7 +97,7 @@ const serviceCategories = [
       },
       
       {
-        id: "mobile-experience",
+        id: "mobile-experience-services",
         name: "Mobile Experience",
         icon: <Smartphone className="w-4 h-4" />,
       },

@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   
   title: {
-    default: "Top Web Development & Digital Marketing Company | India & Global | FLUX Digital",
+    default: "Top Web Development & Digital Marketing Company | FLUX Digital",
     template: "%s"  
   },
 

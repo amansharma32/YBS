@@ -53,11 +53,13 @@ const serviceCategories = [
         name: "Brand Consulting",
         icon: <PenTool className="w-4 h-4" />,
       },
+
       {
         id: "logo-design-services",
         name: "Logo Design",
         icon: <Box className="w-4 h-4" />,
       },
+
       {
         id: "product-design-services",
         name: "Industrial/Product Design",
@@ -102,7 +104,7 @@ const serviceCategories = [
         icon: <Smartphone className="w-4 h-4" />,
       },
       {
-        id: "commerce-experience",
+        id: "commerce-experience-services",
         name: "Commerce Experience",
         icon: <ShoppingCart className="w-4 h-4" />,
       },

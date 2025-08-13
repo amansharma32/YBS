@@ -138,9 +138,6 @@ export default function RootLayout({ children }) {
           `
         }} />
 
-       
-       
-
 
 </head>
 

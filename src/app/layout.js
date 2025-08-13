@@ -60,8 +60,8 @@ export const metadata = {
     "Premium Web Services",
   ],
 
+  
   robots: "index, follow",
- 
   appleMobileWebAppCapable: "yes",
   appleMobileWebAppTitle: "FLUX Digital",  
   appleMobileWebAppStatusBarStyle: "default",

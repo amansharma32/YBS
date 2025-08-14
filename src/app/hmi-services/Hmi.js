@@ -19,60 +19,46 @@ export default function hmi() {
 
     {
       question:
-        "Why is e-commerce experience so significant for my business ?",
+        "What can we expect from the HMI interface design services you offer ?",
       answer:
-        "The e-commerce experience is crucial because it directly shapes how customers perceive and interact with your brand. A seamless, intuitive, and engaging experience across all touchpoints is key to building customer loyalty and trust. While customer experience includes both online and offline interactions, a strong e-commerce design ensures your digital platform effectively guides users from initial discovery to a successful post-purchase journey.",
+        "The role of a human-machine interface is to convey the operating conditions of a device to develop an alert or response from the operator’s end. We ensure that HMI designs are customer-centric, intuitive, user-friendly, and cater well to unique requirements. We also adhere to an ergonomically perfect compliance-specific HMI design. With advanced technology, we also have HMI interfaces that enable the user to easily interact with computer programs, machines, or systems. We not only design and build hardware but also design and embed the operating software into the interface.",
     },
 
     {
-      question: "How important is e-commerce web design ?",
+      question: "Why should you adopt HMI for your business ?",
       answer:
-        "Your e-commerce web design is your brand's digital storefront and is often the first point of contact for new customers. A well-designed website not only creates a positive first impression but also directly impacts the user experience, leading to higher engagement and conversions. A poor design, in contrast, can frustrate users and drive them to competitors. Investing in innovative web design is essential to stay competitive and attract more customers.",
+        "For present-day operators who work in the connected industrial automation ecosystem, HMI system usability should be similar to user handheld devices. HMI/UI designs not only ensure ease of operation but also offer the expected operational efficiency. HMI cloud-based framework implementation can also be done across mobile, web, and embedded systems to achieve an improved Return on Investment (ROI) for your business. Our HMI design experts have collaborated with global customers to build cloud-based, operator-centric HMI plugins, software solutions, and more.",
     },
 
     {
-      question: "Do you offer e-commerce design services for food delivery apps ?",
+      question: "What are the advantages of HMI ?",
       answer:
-        "Yes, we specialize in providing tailored e-commerce design solutions for food delivery apps. Our focus is on creating user-friendly, visually appealing, and high-converting designs that enhance the overall customer experience, making the ordering process intuitive and enjoyable. We understand the specific needs of the food delivery industry and build solutions that drive user retention and sales.",
-    },
-
-    {
-      question:
-        "What makes for a great e-commerce design ?",
-      answer:
-        "A great e-commerce design is a perfect blend of aesthetics and functionality. It combines visually appealing fonts, colors, and graphics with compelling product content to create an engaging shopping experience. A successful design captivates customers, provides a seamless user journey, and is built on reliable platforms like Shopify, WooCommerce, and BigCommerce. This allows us to craft tailored, user-friendly online stores that meet diverse design and functionality needs.",
+        "HMIs are advanced software applications that run on present-day operating systems and are highly capable of working on various functions. They lay a bridge between complex logic and a human operator, allowing the operator to focus on key operations rather than the logic that implements the functions. HMI is flexible and customizable, which means you can modify and design the interface as per your requirements and preferences. This enables the creation of various screens, icons, buttons, and graphics that suit your operators and processes.",
     },
 
     {
       question:
-        "What are the main benefits of a great e-commerce design ?",
+        "How do your HMI services improve safety and efficiency ?",
       answer:
-        "A well-crafted e-commerce design leads to tangible business benefits, including higher conversion rates, increased customer retention, and stronger brand loyalty. It reduces bounce rates by providing a smooth and intuitive user journey and can significantly boost your return on investment (ROI) over time.",
+        "Our HMI designs are engineered to significantly improve both safety and efficiency. We create clear, intuitive interfaces that reduce cognitive load on operators, minimizing the risk of human error. By providing critical information in an easily digestible format and streamlining workflows, we enable operators to make faster, more informed decisions, which leads to a safer working environment and increased operational efficiency.",
+    },
+
+    {
+      question:
+        "What is the process for an HMI redesign ?",
+      answer:
+        "Our HMI redesign process begins with a comprehensive audit of your existing system to identify pain points and opportunities for improvement. We then conduct user research and stakeholder interviews to understand your operational goals and user needs. Based on this, we create new wireframes and interactive prototypes for testing. The final design is a modern, user-friendly interface that aligns with your current technology and operational best practices.",
     },
 
 
     {
       question:
-        "How long does a typical e-commerce design project take ?",
+        "How is accessibility addressed in your HMI designs ?",
       answer:
-        "The timeline for an e-commerce design project varies based on the scope and complexity. A smaller project, like a single-page redesign, might take a few weeks, while a full-scale online store build with custom features can take several months. We work closely with our clients to establish realistic timelines and milestones from the start.",
+        "We prioritize accessibility in all our HMI designs to ensure they are usable by a diverse range of operators. This includes considering factors such as color contrast for visibility, touch target sizes for ease of interaction, and customizable font sizes. Our designs adhere to ergonomic principles to reduce physical strain and can be adapted to various devices and input methods, making them inclusive and more effective for all users.",
     },
 
-    {
-      question:
-        "Can you help with redesigning an existing e-commerce website ?",
-
-      answer:
-        "Yes, we specialize in e-commerce website redesigns. We start with a comprehensive audit of your current site to identify areas for improvement. Our redesign process focuses on updating the visual identity, enhancing the user experience, and optimizing for conversions and overall performance.",
-    },
-
-    {
-      question:
-        "What is the difference between UI and UX design ?",
-
-      answer:
-        "UX (User Experience) design is about the overall feel of the experience—how easy or difficult it is for a user to accomplish their goals on your website. UI (User Interface) design is about the look and layout of the site—the visual elements like buttons, colors, and typography. Both are critical for a successful e-commerce design, and we provide expertise in both areas to create a cohesive and effective digital storefront.",
-    },
+   
 
   ];
 
@@ -285,147 +271,7 @@ export default function hmi() {
     
   ];
 
-  const WebDevelopmentProcessSection = () => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.2 });
-    const [openItemId, setOpenItemId] = useState(
-      webDevelopmentProcessSteps[0].id
-    );
-
-    const activeItem = webDevelopmentProcessSteps.find(
-      (item) => item.id === openItemId
-    );
-
-    return (
-      <section ref={ref} className="py-12     ">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-center mb-16 md:mb-24"
-          >
-            <span className="inline-block py-2 px-5 mb-6 text-xs font-semibold tracking-widest text-cyan-700 uppercase  rounded-full border border-cyan-800">
-              Our Methodology
-            </span>
-            <p className=" text-lg md:text-4xl text-gray-500  font-bold  mb-6 leading-tight">
-              Our Meticulous E-commerce Design Process  
- {" "}
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                {" "}
-               Concept to Conversion
-              </span>
-            </p>
-            <p className="text-sm   text-gray-500 max-w-3xl mx-auto">
-        Our meticulous process is the engine behind every e-commerce project, from initial concept to a fully launched storefront. We've designed a structured, transparent workflow to ensure a seamless journey defined by exceptional quality and efficiency. Every step is a true collaboration, dedicated to transforming your vision into a powerful, effective online store that captures attention and drives results.
-
-  </p>
-          </motion.div>
-
-          <div className="lg:grid flex  flex-col-reverse lg:grid-cols-12 lg:gap-12 xl:gap-16 items-start">
-            {/* Left Column: Accordion */}
-            <div className="lg:col-span-6 space-y-2 ">
-              {webDevelopmentProcessSteps.map((item, id) => (
-                <div
-                  key={item.id}
-                  className="rounded-lg   border-[1px] border-gray-200 transition-colors duration-300"
-                >
-                  <button
-                    type="button"
-                    className="flex justify-between items-center w-full p-5 md:p-6 text-left"
-                    onClick={() => setOpenItemId(item.id)}
-                  >
-                    <span
-                      className={`text-lg md:text-xl font-medium transition-colors duration-300 ${
-                        openItemId === item.id
-                          ? "text-cyan-500"
-                          : "text-gray-600 hover:text-cyan-400"
-                      }`}
-                    >
-                      {item.title}
-                    </span>
-                    <motion.div
-                      animate={{ rotate: openItemId === item.id ? 180 : 0 }}
-                      transition={{ duration: 0.3, ease: "easeOut" }}
-                      className={`transition-colors duration-300 ${
-                        openItemId === item.id
-                          ? "text-cyan-400"
-                          : "text-gray-500"
-                      }`}
-                    >
-                      <ChevronDown size={24} />
-                    </motion.div>
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {openItemId === item.id && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{
-                          opacity: 1,
-                          height: "auto",
-                          transition: {
-                            duration: 0.4,
-                            ease: [0.22, 1, 0.36, 1],
-                          },
-                        }}
-                        exit={{
-                          opacity: 0,
-                          height: 0,
-                          transition: {
-                            duration: 0.3,
-                            ease: [0.36, 0, 0.66, -0.56],
-                          },
-                        }}
-                        className="overflow-hidden"
-                      >
-                        <p className="px-6 pb-6 text-gray-500  text-sm leading-relaxed">
-                          {item.content}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-            </div>
-
-            {/* Right Column: Sticky Image */}
-            <div className=" pb-4 lg:col-span-6 mt-12 flex justify-center items-center lg:mt-0 lg:sticky lg:top-24">
-              <div className="relative w-full  h-full md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-cyan-900/20">
-                <AnimatePresence mode="wait">
-                  {activeItem && (
-                    <motion.img
-                      key={activeItem.id}
-                      src={activeItem.image}
-                      alt={activeItem.title}
-                      initial={{ opacity: 0, scale: 1.05 }}
-                      animate={{
-                        opacity: 1,
-                        scale: 1,
-                        transition: { duration: 0.5, ease: "easeOut" },
-                      }}
-                      exit={{
-                        opacity: 0,
-                        scale: 0.95,
-                        transition: { duration: 0.3, ease: "easeIn" },
-                      }}
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                </AnimatePresence>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-2xl font-bold text-white drop-shadow-lg">
-                    {activeItem?.title}
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  };
+  
 
   // Data for the industry service cards
   const industryServices = [
@@ -751,8 +597,7 @@ export default function hmi() {
       <Ourservice/>
 
       
-        <WebDevelopmentProcessSection />
-
+      
         <IndustriesSection />
         
   <WebDevServicesSection />

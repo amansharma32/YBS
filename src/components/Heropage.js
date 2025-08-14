@@ -44,7 +44,7 @@ export default function Heropage() {
 
     {
       id: 1,
-      video: 'https://res.cloudinary.com/dkbusg4bq/video/upload/v1751448992/we2_urqvbh.mp4',
+      video: 'https://res.cloudinary.com/dkbusg4bq/video/upload/v1755162775/unwatermark_stock-footage-abstract-digital-data-wave-with-glowing-particles-and-dynamic-lines-on-a-dark-background-concept_gdroba.mp4',
     }
  
   ];

@@ -5,14 +5,15 @@ import React, { useRef, useState } from "react";
 import { Store, Cpu, Palette, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Monitor,   ArrowUpCircle, RefreshCcw, Camera, Wrench } from 'lucide-react';
+import { LayoutGrid, LifeBuoy, ClipboardList } from 'lucide-react';
 
 import { Layout } from "lucide-react";
 
-import { Users, Grid, Zap, ClipboardList, Puzzle } from "lucide-react";
+import { Users, Grid, Zap , Puzzle } from "lucide-react";
 
 import { Laptop, ShoppingBag, ShieldCheck,  RefreshCw } from 'lucide-react';
 
-export default function CommerceExperience() {
+export default function hmi() {
 
   const faqs = [
 
@@ -547,43 +548,27 @@ export default function CommerceExperience() {
 
   const services = [
 
- {
-    icon: <Monitor className="text-4xl text-cyan-500"/>,
-    title: "E-commerce Website Design",
-    description: "Indulge in intuitive navigation, beautiful store designs, responsiveness, and flexible checkout options our eCommerce web design services offer.",
-    
+ 
+  {
+    icon: <LayoutGrid className="text-4xl text-cyan-500" />,
+    title: "HMI Interface Design",
+    description: "We define and craft intuitive, efficient, and user-friendly interfaces that simplify interaction with complex machines and devices. Our designs are built to reduce operator error and improve operational speed.",
   },
   {
-    icon: <Smartphone className="text-4xl text-cyan-500"/>,
-    title: "E-commerce Mobile App Design",
-    description: "Invest in advanced technologies to build top-notch mobile app designs that enhance customer engagement through custom-made and highly interactive models.",
-     
+    icon: <RefreshCcw className="text-4xl text-cyan-500" />,
+    title: "HMI Interface Redesign",
+    description: "Elevate your existing system with a complete HMI redesign. We transform outdated interfaces into modern, efficient, and user-friendly platforms that align with your current goals and technology.",
   },
   {
-    icon: <ArrowUpCircle className="text-4xl text-cyan-500"/>,
-    title: "E-commerce PWA",
-    description: "Give customers an unparalleled user experience to augment conversion rates, customer loyalty, loading times, and engagement rates through an app-like interaction.",
-    
+    icon: <LifeBuoy className="text-4xl text-cyan-500" />,
+    title: "Maintenance and Support",
+    description: "Ensure your HMI continues to perform at its best. Our ongoing maintenance and support services provide regular updates, security patches, and proactive care to guarantee sustained efficiency and reliability.",
   },
   {
-    icon: <RefreshCcw className="text-4xl text-cyan-500"/>,
-    title: "Ecommerce Website/App Revamp",
-    description: "Present a fresh outlook to your eCommerce website which matches business changes, customer preferences, and market trends, enabling ease of shopping.",
-    
+    icon: <ClipboardList className="text-4xl text-cyan-500" />,
+    title: "HMI Wireframing and Interactive Prototyping",
+    description: "Before a single line of code is written, we develop comprehensive wireframes and interactive prototypes. This crucial step ensures your HMI is expertly designed to meet user needs and functional requirements, de-risking the development process.",
   },
-  {
-    icon: <Camera className="text-4xl text-cyan-500"/>,
-    title: "Ecommerce Product Photo/Video Production",
-    description: "Portray a great brand impression to convey visual appeal and quality of products to hook customers swiftly through product photo/video production services.",
-    
-  },
-  {
-    icon: <Wrench className="text-4xl text-cyan-500" />,
-    title: "Ecommerce Design Support and Maintenance",
-    description: "Offer an amazing in-store experience to the users through regular and efficient support and maintenance services for eCommerce storefront design.",
-    
-  },
-   
    
   ];
 
@@ -618,9 +603,10 @@ export default function CommerceExperience() {
             className="text-3xl font-extrabold text-gray-900 mb-4 tracking-tight leading-tight"
           >
             <span className=" ">
-              Website Design
+             Human Machine Interface (HMI) Services
+
             </span>{" "}
-            Services We Offer
+             We Offer
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: -20 }}
@@ -684,13 +670,11 @@ export default function CommerceExperience() {
           </div>
 
           <div className="absolute w-full h-full p-9 bottom-0 flex flex-col md:flex-row justify-center md:justify-between items-center md:text-center mx-auto">
-            <p className="text-center  md:text-left font-thin text-white text-2xl md:text-4xl flex flex-col justify-center items-center h-full my-auto">
-              Commerce Experience
- Services
+            <p className="text-center  md:text-left font-thin text-white   text-2xl md:text-4xl flex flex-col justify-center items-center h-full my-auto">
+              Human Machine Interface (HMI) Services
               <br />
               <span className="text-center   text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">
-                Home / Commerce Experience
- Services
+                Home / Human Machine Interface (HMI)  Services
               </span>
             </p>
           </div>
@@ -724,17 +708,13 @@ export default function CommerceExperience() {
                     </span>
 
                     <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
-                      <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
-                        <Link href="https://www.fluxdigital.online/">
-                          Unleash Your Commerce Experience Power
-                        </Link>
-                      </span>
-                      <br />
+                      
+                      
                       <span className="font-light text-gray-700">
                         {" "}
                         <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
                           <span className="  ">
-                            Our End-to-End Design Services
+                            Our End-to-End  HMI   Services
                           </span>
                         </span>
                       </span>
@@ -742,15 +722,14 @@ export default function CommerceExperience() {
                   </div>
                   <p className="  text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
-              At FLUX Digital, we craft intuitive and engaging commerce experiences that put the shopper first. Our commerce experience services are at the heart of our digital offerings, helping brands build online platforms that are not only visually stunning but also seamless to navigate and designed to convert. We believe that a great user experience is the key to driving higher conversions, increasing average order value, and building lasting brand loyalty. Our expert designers meticulously craft every element of the e-commerce journey, ensuring it's not just beautiful, but also functional, accessible, and perfectly aligned with your brand's identity.
-
+            At FLUX Digital, we engineer intuitive and powerful interfaces that put the operator first. Our Human Machine Interface (HMI) services are central to our technology offerings, helping businesses build systems that are not only clear and responsive but also designed to enhance productivity and safety. We believe that a great user experience is the key to minimizing operator error, improving operational efficiency, and driving tangible business results. Our expert designers meticulously craft every element of the interface, ensuring it's not just functional, but also accessible, intuitive, and perfectly aligned with your specific operational needs.
 
 
                   </p>
 
                   <p className=" pb-4  text-sm md:text-md text-gray-600 text-justify md:text-left pt-3 ">
 
-                 What truly sets our commerce experience agency apart is our strategic, data-driven approach. We begin every project with a deep dive into shopper behavior, market trends, and your business objectives. Our team conducts extensive research, including user interviews and competitor analysis, to develop a clear understanding of the problems we need to solve. This phase is crucial for defining the e-commerce platform's architecture, creating shopper personas, and mapping out user flows specifically for a buying journey. By focusing on a strong foundation, we ensure the final design is not just aesthetically pleasing, but a powerful solution that solves real-world shopper pain points and delivers tangible business results.
+             What truly sets our HMI design agency apart is our strategic, data-driven approach. We begin every project with a deep dive into user workflows, operational requirements, and your core business objectives. Our team conducts extensive research, including operator interviews and task analysis, to develop a clear understanding of the challenges we need to solve. This phase is crucial for defining the system's architecture, creating detailed operator profiles, and mapping out user flows for critical processes. By focusing on this strong foundation, we ensure the final design is not just aesthetically pleasing, but a powerful solution that solves real-world operator pain points and delivers measurable improvements in efficiency and safety.
 
                   </p>
 

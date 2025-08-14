@@ -109,7 +109,7 @@ const serviceCategories = [
         icon: <ShoppingCart className="w-4 h-4" />,
       },
       {
-        id: "hmi",
+        id: "hmi-services",
         name: "Human Machine Interface",
         icon: <Cpu className="w-4 h-4" />,
       },

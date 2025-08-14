@@ -534,13 +534,13 @@ export default function UIUXDesign() {
         <div className="relative flex  h-[86vh] md:h-[67vh] w-full">
           <div className="box w-full h-full">
             <img
-              src="https://images.unsplash.com/photo-1681680603996-eb85ec3ceee9?q=80&w=2099&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://res.cloudinary.com/dkbusg4bq/image/upload/v1755156356/pic1_mcjwxl.webp"
               className=" hidden md:block  h-full w-full  object-center object-cover"
               alt="  Addressable Fire Alarm System"
             />
 
             <img
-              src="https://images.unsplash.com/photo-1681680603996-eb85ec3ceee9?q=80&w=2099&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://res.cloudinary.com/dkbusg4bq/image/upload/v1755156356/pic1_mcjwxl.webp"
               className=" md:hidden  h-full w-full object-center object-cover"
               alt="  Addressable Fire Alarm System"
             />

@@ -115,6 +115,7 @@ const serviceCategories = [
       },
     ],
   },
+
   {
     id: "technology",
     category: "Technology",
@@ -124,7 +125,7 @@ const serviceCategories = [
       "Building robust, scalable, and secure technology solutions for the modern web.",
     items: [
       {
-        id: "ai-ml",
+        id: "ai-and-ml-services",
         name: "AI & Machine Learning",
         icon: <BrainCircuit className="w-4 h-4" />,
       },
@@ -134,7 +135,7 @@ const serviceCategories = [
         icon: <Code className="w-4 h-4" />,
       },
       {
-        id: "mobile-development",
+        id: "mobile-app-development-services",
         name: "Mobile App Development",
         icon: <Smartphone className="w-4 h-4" />,
       },

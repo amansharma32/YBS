@@ -4,105 +4,98 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
- 
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 <url>
-
   <loc>https://www.fluxdigital.online/</loc>
-  
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
   <priority>1.00</priority>
-
 </url>
 
 <url>
   <loc>https://www.fluxdigital.online/solutions</loc>
-   
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
 
 <url>
   <loc>https://www.fluxdigital.online/services-overview</loc>
-   
-  <priority>0.80</priority>
-</url>
-
-
-<url>
-  <loc>https://www.fluxdigital.online/services/web-development</loc>
-  
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 <url>
   <loc>https://www.fluxdigital.online/services/logo-design-services</loc>
-   
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.fluxdigital.online/contact-us</loc>
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.fluxdigital.online/services/web-development</loc>
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.fluxdigital.online/services</loc>
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 <url>
   <loc>https://www.fluxdigital.online/services/product-design-services</loc>
-  
-  <priority>0.80</priority>
-</url>
-
-
-
-<url>
-  <loc>https://www.fluxdigital.online/contact-us</loc>
-  
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 <url>
   <loc>https://www.fluxdigital.online/services/graphic-design-services</loc>
-   
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 <url>
-  <loc>https://www.fluxdigital.online/services/2d-3d-visualization-services
-  </loc>
-  
+  <loc>https://www.fluxdigital.online/services/2d-3d-visualization-services</loc>
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 <url>
-  <loc>https://www.fluxdigital.online/services/ui-ux-design-services
-  </loc>
- 
+  <loc>https://www.fluxdigital.online/services/ui-ux-design-services</loc>
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 <url>
-  <loc>https://www.fluxdigital.online/services/website-design-services
-  </loc>
-  
+  <loc>https://www.fluxdigital.online/services/website-design-services</loc>
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 <url>
-  <loc>https://www.fluxdigital.online/services/mobile-experience-services
-  </loc>
-   
+  <loc>https://www.fluxdigital.online/services/mobile-experience-services</loc>
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 <url>
-  <loc>https://www.fluxdigital.online/services/commerce-experience-services
-  </loc>
-   
+  <loc>https://www.fluxdigital.online/services/commerce-experience-services</loc>
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 <url>
-
-  <loc>https://www.fluxdigital.online/services/hmi-services
-  </loc>
+  <loc>https://www.fluxdigital.online/services/hmi-services</loc>
+  <lastmod>2025-08-19T05:17:30+00:00</lastmod>
   <priority>0.80</priority>
-
 </url>
-
 
 
 </urlset>

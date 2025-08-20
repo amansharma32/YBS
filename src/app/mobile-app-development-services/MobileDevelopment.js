@@ -43,6 +43,29 @@ export default function MobileDevelopment() {
     },
 
 
+  {
+    question: "What is UI/UX design and why is it important for a mobile app?",
+    answer:
+      "UI stands for User Interface, which is the visual design of the app—the buttons, icons, colors, typography, and overall layout. UX stands for User Experience, which is the overall feeling a user has while interacting with the app—is it easy to use? Is it intuitive? A great app has both a beautiful UI and a seamless UX. Investing in professional UI/UX design is crucial because it leads to higher user retention, better engagement, and a more positive brand perception. A confusing or unattractive app will quickly be uninstalled, regardless of its functionality.",
+  },
+
+  {
+    question: "What is an MVP (Minimum Viable Product) and why should I consider it?",
+    answer:
+      "An MVP, or Minimum Viable Product, is a version of a new app with just enough features to satisfy early adopters and provide a functional base for future development. It's a strategic approach to app development that prioritizes core functionality and gets the app to market faster. This approach is highly valuable because it allows you to test your app idea with real users and gather feedback without the large initial investment of building a full-featured product. An MVP helps you validate your business concept, reduce risk, and inform which features to build next based on actual user data.",
+  },
+
+  {
+    question: "How long does it take to develop a mobile app?",
+    answer:
+      "The timeline for mobile app development varies significantly based on complexity, platform, and team size. A simple app with basic features might take 2-4 months from concept to launch. A moderately complex app with features like a login system, social media integration, or a payment gateway could take 4-8 months. Highly complex apps with advanced features like real-time data, AI integration, or intricate back-end systems can take 9-12 months or longer. The process is typically broken down into discovery and planning, UI/UX design, development, quality assurance (QA) testing, and final deployment. A detailed project plan from your development partner will provide a more precise timeline.",
+  },
+
+  {
+    question: "What happens after the app is launched?",
+    answer:
+      "App launch is just the beginning. Post-launch support and maintenance are crucial for the long-term success of your application. This includes fixing bugs, updating the app for new operating system versions (like iOS and Android updates), adding new features based on user feedback, and monitoring performance. A good development partner will offer a comprehensive maintenance package that includes regular updates and ongoing support to ensure your app remains secure, functional, and competitive in the market.",
+  },
 
   ];
 
@@ -57,30 +80,58 @@ export default function MobileDevelopment() {
        
       {
         icon: Users,
-        title: "Amazon Web Services (AWS)",
+        title: "DevOps Consulting",
         description:
-          "Power your operations with Amazon Web Services (AWS). We leverage AWS cloud computing to deliver fast, scalable, and secure solutions, giving you access to a wealth of on-demand services to support your business's growth.",
+          "We help you streamline your development workflow and boost software delivery reliability with our expert DevOps strategies.",
       },
 
       {
         icon: Grid,
-        title: "E-commerce",
+        title: "Data & Analytics",
         description:
-          "Our strategic e-commerce solutions are designed to bridge the gap between your storefront and your customers. We focus on building seamless and engaging digital experiences that drive sales and foster lasting customer relationships.",
+          "Turn your data into a powerful asset. Our analytics services give you the insights you need to make smarter business decisions.",
       },
 
       {
         icon: Grid,
-        title: "SAP Hybris",
+        title: "AI & Machine Learning",
         description:
-          "Enhance enterprise-level customer engagement with SAP Hybris. We provide robust e-commerce and product content management solutions tailored to large-scale operations, helping you deliver a consistent and personalized experience across all channels.",
+          "Unlock new possibilities with AI. We build intelligent solutions that deliver actionable insights and transform your business.",
       },
 
       {
         icon: Zap,
-        title: "WooCommerce",
+        title: "On-Demand App Development",
         description:
-          "Build and manage a powerful online store with our WooCommerce development services. We create unique e-commerce solutions on this flexible platform, giving you the tools to easily launch and grow your business.",
+          "Get a custom on-demand app that streamlines your operations and keeps your users engaged and coming back for more.",
+      },
+     
+      {
+        icon: Zap,
+        title: "Food Delivery App Development",
+        description:
+          "From seamless ordering to real-time tracking, our custom apps elevate your food delivery service for both you and your customers.",
+      },
+
+      {
+        icon: Zap,
+        title: "Enterprise Application Development",
+        description:
+          "We create custom enterprise applications that are innovative, scalable, and built to solve your unique business challenges.",
+      },
+     
+      {
+        icon: Zap,
+        title: "Mobile Experience (UX)",
+        description:
+          "Make every tap count. We craft intuitive and effortless mobile user experiences that delight your customers.",
+      },
+
+      {
+        icon: Zap,
+        title: "Mobile App Testing",
+        description:
+          "Ensure your app works perfectly every time. We perform comprehensive testing to guarantee flawless functionality and compatibility across all devices.",
       },
      
     ];
@@ -121,7 +172,9 @@ export default function MobileDevelopment() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
             {webDevServicesData.map((service, index) => (
+
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 40 }}
@@ -173,7 +226,9 @@ export default function MobileDevelopment() {
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
+
             ))}
+
           </div>
         </div>
 
@@ -245,8 +300,6 @@ export default function MobileDevelopment() {
     },
 
     
-
-    
   ];
 
   const WebDevelopmentProcessSection = () => {
@@ -261,6 +314,7 @@ export default function MobileDevelopment() {
     );
 
     return (
+
       <section ref={ref} className="py-12     ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
@@ -386,6 +440,7 @@ export default function MobileDevelopment() {
               </div>
             </div>
           </div>
+
         </div>
       </section>
     );

@@ -140,7 +140,7 @@ const serviceCategories = [
         icon: <Smartphone className="w-4 h-4" />,
       },
       {
-        id: "devops",
+        id: "devops-consulting-services",
         name: "DevOps Consulting",
         icon: <Server className="w-4 h-4" />,
       },

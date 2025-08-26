@@ -145,7 +145,7 @@ const serviceCategories = [
         icon: <Server className="w-4 h-4" />,
       },
       {
-        id: "data-analytics",
+        id: "data-analytics-services",
         name: "Data & Analytics",
         icon: <Database className="w-4 h-4" />,
       },

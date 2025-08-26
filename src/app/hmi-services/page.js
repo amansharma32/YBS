@@ -33,7 +33,7 @@ export const metadata = {
      
     description: "Partner with FLUX Digital for next-gen Human Machine Interface solutions that boost operational efficiency, improve safety, and provide a superior user experience.",
      
-    url: "https://www.fluxdigital.online/services/hmi-services",  
+    url: "https://www.fluxdigital.info/services/hmi-services",  
      
     type: "website", 
     images: [
@@ -47,7 +47,7 @@ export const metadata = {
   },
  
   alternates: {
-    canonical: "https://www.fluxdigital.online/services/hmi-services", 
+    canonical: "https://www.fluxdigital.info/services/hmi-services", 
   },
  
   twitter: { 

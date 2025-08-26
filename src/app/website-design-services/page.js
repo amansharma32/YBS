@@ -33,7 +33,7 @@ export const metadata = {
      
     description: "FLUX Digital builds visually appealing and functional websites optimized for user experience, search engines, and business goals.",
      
-    url: "https://www.fluxdigital.online/services/website-design-services",  
+    url: "https://www.fluxdigital.info/services/website-design-services",  
      
     type: "website", 
     images: [
@@ -47,7 +47,7 @@ export const metadata = {
   },
  
   alternates: {
-    canonical: "https://www.fluxdigital.online/services/website-design-services", 
+    canonical: "https://www.fluxdigital.info/services/website-design-services", 
   },
  
   twitter: { 

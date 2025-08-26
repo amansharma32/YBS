@@ -1,67 +1,53 @@
 "use client";
 import { useInView, motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ChevronRight, FileText, Sparkles } from "lucide-react";
+import { Apple, ChevronDown, ChevronRight, FileText, Globe, ServerCog, Smartphone, Sparkles } from "lucide-react";
 import React, { useRef, useState } from "react";
 import { Store, Cpu, Palette, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Monitor,   ArrowUpCircle, RefreshCcw, Camera, Wrench } from 'lucide-react';
 
 import { Layout } from "lucide-react";
 
 import { Users, Grid, Zap, ClipboardList, Puzzle } from "lucide-react";
+ 
+import {  FlaskConical, BarChart2, LineChart, ArrowRightLeft, TrendingUp } from 'lucide-react';
 
-import { Laptop, ShoppingBag, ShieldCheck,  RefreshCw } from 'lucide-react';
+export default function DataAnalytics() {
 
-export default function WebsiteDesignService() {
 
   const faqs = [
-
     {
-      question:
-        "How much do your web design services cost ?",
-      answer:
-        "The cost of our website design services is customized to fit your specific needs and the scope of your project. As a leading website design company, we focus on delivering exceptional value. We will provide a detailed quote after discussing your unique requirements and the expected project timeline.",
+      question: "What are the core advantages of using data analytics for my business?",
+      answer: "Data analytics unearths valuable knowledge about your company's performance, customer behaviors, and market dynamics. It's the key to making informed, data-driven decisions that sharpen your competitive edge and optimize your strategies."
     },
-
     {
-      question: "How do I get started with your website design services ?",
-      answer:
-        "Getting started is simple. Just contact us for a consultation. We'll discuss your project in detail, understand your vision, and provide a clear, comprehensive quote. Once you agree, we can begin transforming your ideas into a stunning and functional website.",
+      question: "How do you ensure data collection and analysis are precise?",
+      answer: "We guarantee data accuracy by utilizing top-tier analytics platforms and adhering to stringent practices for data gathering, cleaning, and interpretation. Our skilled analysts oversee every step to maintain the integrity of your information."
     },
-
     {
-      question: "Do you make websites mobile-friendly and responsive ?",
-      answer:
-        "Yes, we deliver fully responsive website design services to ensure your site works flawlessly across all devices—from desktops to tablets and smartphones. This approach gives you significant advantages in search engine rankings, helps you reach a wider audience, and ensures your message is delivered effectively to every user.",
+      question: "Which primary performance metrics do you focus on?",
+      answer: "The metrics we track are customized to your specific business goals, but they typically include key indicators like website traffic, conversion rates, customer acquisition costs, customer lifetime value, and return on investment (ROI)."
     },
-
     {
-      question:
-        "Why should I choose your website design services ?",
-      answer:
-        "As an established and trusted name in the industry, we have a proven track record of creating hundreds of successful website designs. We offer a combination of exceptional design themes, value-for-money services, and a cost-effective approach that sets us apart. Our team is dedicated to building a high-quality website that helps your business grow.",
+      question: "Can analytics help improve our marketing efforts?",
+      answer: "Yes, definitely. Analytics offers a clear view into which of your marketing channels and campaigns are succeeding and which ones require optimization or a strategic shift."
     },
-
     {
-      question:
-        "Do your web design services include Search Engine Optimization (SEO) ?",
-      answer:
-        "Yes, we build every website with SEO best practices in mind. Our design process includes structured code, fast loading speeds, and responsive layouts that are crucial for high search engine rankings. We ensure your website has a strong technical foundation to attract organic traffic from day one.",
+      question: "How does data analytics contribute to business growth?",
+      answer: "By discovering new opportunities, anticipating future market movements, and gaining a deeper understanding of customer needs, data analytics helps you make forward-thinking decisions that drive consistent and sustainable growth."
     },
-
-
     {
-      question:
-        "Do you provide ongoing website maintenance ?",
-      answer:
-        "Yes, we offer various maintenance and support packages to keep your website secure, up-to-date, and running smoothly after launch. We can handle everything from software updates and security monitoring to content changes and technical support, allowing you to focus on your business.",
+      question: "What's the difference between Data Analytics and Business Intelligence?",
+      answer: "Data Analytics is a broad discipline focused on using data to answer specific questions and uncover patterns. Business Intelligence is a more focused application that provides a snapshot of current and historical business operations, often through visual dashboards, to support ongoing decision-making."
     },
-
     {
-      question:
-        "Who is responsible for providing the website content ?",
-      answer:
-        "While our focus is on design and functionality, clients are typically responsible for providing all website content, including text, images, and brand assets. However, we can also offer professional copywriting and content creation services as an add-on to ensure your message is compelling and optimized for the web.",
+      question: "What is the typical timeframe for a data project?",
+      answer: "The duration of a project is highly dependent on its complexity and your specific requirements. A simple reporting project might be completed in a few weeks, while a more extensive data system build could take several months. We'll set a realistic and transparent timeline together from the start."
     },
+    {
+      question: "Is ongoing support included after a project is completed?",
+      answer: "Yes, we provide flexible support plans to ensure your analytics solutions continue to serve your needs effectively. This includes routine maintenance, performance monitoring, and assistance with any new data-related questions that arise as your business evolves."
+    }
   ];
 
   const [activeFaq, setActiveFaq] = useState(null);
@@ -71,44 +57,36 @@ export default function WebsiteDesignService() {
     const isInView = useInView(ref, { once: true, amount: 0.2 });
 
     const webDevServicesData = [
+
+       
       {
         icon: Users,
-        title: "Graphic Design",
+        title: "Amazon Web Services (AWS)",
         description:
-          "We help you communicate complex ideas, data, or instructions in a visually compelling and easily understandable manner. Our graphic design services create stunning visuals that capture attention, convey your message with clarity, and strengthen your brand's identity across all platforms.",
+          "Power your operations with Amazon Web Services (AWS). We leverage AWS cloud computing to deliver fast, scalable, and secure solutions, giving you access to a wealth of on-demand services to support your business's growth.",
       },
 
       {
         icon: Grid,
-        title: "Human-Machine Interface (HMI)",
+        title: "E-commerce",
         description:
-          "Our HMI designs are meticulously engineered for ergonomic soundness, helping to prevent errors and significantly reduce operator workload. We create intuitive control systems that simplify complex tasks and ensure reliable, efficient operations.",
+          "Our strategic e-commerce solutions are designed to bridge the gap between your storefront and your customers. We focus on building seamless and engaging digital experiences that drive sales and foster lasting customer relationships.",
+      },
+
+      {
+        icon: Grid,
+        title: "SAP Hybris",
+        description:
+          "Enhance enterprise-level customer engagement with SAP Hybris. We provide robust e-commerce and product content management solutions tailored to large-scale operations, helping you deliver a consistent and personalized experience across all channels.",
       },
 
       {
         icon: Zap,
-        title: "Commerce Experience",
+        title: "WooCommerce",
         description:
-          "We design and optimize digital touchpoints to create a positive user experience that directly impacts your bottom line. Our commerce experience services are built to enhance customer interactions, streamline the purchasing journey, and ultimately, increase sales and customer loyalty.",
+          "Build and manage a powerful online store with our WooCommerce development services. We create unique e-commerce solutions on this flexible platform, giving you the tools to easily launch and grow your business.",
       },
-      {
-        icon: Layout,
-        title: "Mobile Experience",
-        description:
-          "Unleash the full potential of mobile platforms with our specialized mobile experience services. We design and develop engaging mobile interfaces that make every moment of navigation effortless and enjoyable, fostering a strong connection with your users.",
-      },
-      {
-        icon: ClipboardList,
-        title: "UI/UX Design",
-        description:
-          "Leverage our expert insights to refine and enhance your existing digital products. Our consulting services provide a comprehensive audit of your current design, offering actionable recommendations to improve usability, accessibility, and overall design effectiveness.",
-      },
-      {
-        icon: Puzzle,
-        title: "Design Systems",
-        description:
-          "For large-scale projects, we build robust design systems to ensure consistency, efficiency, and scalability. This systematic approach provides a single source of truth for your brand's visual and interactive elements, empowering your teams to build new features quickly and maintain a cohesive brand identity.",
-      },
+     
     ];
 
     return (
@@ -138,7 +116,8 @@ export default function WebsiteDesignService() {
               <span className=" ">Services We Offer</span>
             </h2>
             <p className="text-sm text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              We deliver rapid and reliable UI/UX design solutions to help
+              We deliver rapid and reliable Data & Analytics
+ solutions to help
               organizations achieve their business goals by creating intuitive
               and engaging digital experiences.
             </p>
@@ -208,11 +187,12 @@ export default function WebsiteDesignService() {
  
 
   const webDevelopmentProcessSteps = [
+
     {
       id: "overview",
       title: "User Research",
       content:
-        "We begin by deeply understanding your target audience's expectations and needs. By analyzing market trends and your business goals, we lay the foundation for a website that is not only visually appealing but also user-friendly and engaging.",
+        "We begin by understanding what your users truly need from an e-commerce platform. By analyzing their browsing and purchasing behaviors, we define clear, user-specific goals for your website or app.",
 
       image:
         "https://images.unsplash.com/photo-1681949103006-70066fb25dfe?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -220,9 +200,9 @@ export default function WebsiteDesignService() {
 
     {
       id: "discovery",
-      title: "Wireframes",
+      title: "Wireframing",
       content:
-        "We create a visual blueprint of your website's structure and layout. This early-stage prototype gives you a clear picture of the final product and allows for valuable feedback before we move to more detailed design work.",
+        " Next, we plan the structure and layout of your online store. This includes strategically placing essential elements like the search bar, navigation menus, and product categories to create a logical flow.",
 
       image:
         "https://images.unsplash.com/photo-1618788372246-79faff0c3742?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -230,9 +210,9 @@ export default function WebsiteDesignService() {
 
     {
       id: "conceptualization",
-      title: "High-Fidelity Prototyping",
+      title: "User Flows",
       content:
-        "This phase brings the wireframe to life with realistic, interactive mockups. This allows us to test and refine the design and functionality, ensuring a seamless user experience before a single line of code is written.",
+        " We map out the exact path a user will take to complete a task, such as making a purchase. This ensures a seamless and intuitive journey from the first click to the final action.",
 
       image:
         "https://images.unsplash.com/photo-1542289539-059dea254938?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -240,9 +220,9 @@ export default function WebsiteDesignService() {
 
     {
       id: "design",
-      title: "User Flows",
+      title: "High-Fidelity Prototyping",
       content:
-        "We map out the complete journey a user will take on your website, from their first click to their final desired action (like making a purchase). This helps us optimize every step of their interaction.",
+        " This stage brings your e-commerce store to life. We create a detailed, interactive model that closely resembles the final product, incorporating your brand's visual language, colors, and typography.",
 
       image:
         "https://images.unsplash.com/photo-1634838128617-efdf64411694?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
@@ -252,7 +232,7 @@ export default function WebsiteDesignService() {
       id: "refinement",
       title: "Visual Design",
       content:
-        "This is where the magic happens. We focus on the aesthetics and presentation, incorporating your brand identity, color palettes, and typography to create a custom website that is visually stunning and organized.",
+        " As the core of the design process, visual design focuses on the aesthetic elements. We enhance the overall look and feel of the store by carefully working on every detail to create a stunning digital product.",
       image:
         "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
@@ -261,7 +241,7 @@ export default function WebsiteDesignService() {
       id: "refinement1",
       title: "Development Handover",
       content:
-        "Once the design is finalized, our design team hands over all assets and documentation to our skilled development team, who begin the engineering process. We ensure a smooth transition from design to development to build a robust and well-maintained website.",
+        " Once the design is finalized, we provide the development team with all the necessary prototypes, mockups, and documentation. This marks the start of the engineering phase to build your store.",
 
       image:
         "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -271,7 +251,7 @@ export default function WebsiteDesignService() {
       id: "refinement2",
       title: "QA & Validation",
       content:
-        "In the final stage, we perform a thorough review to ensure the website meets all project goals, user experience standards, and accessibility requirements. This validation guarantees that the new release is polished and ready to go live.",
+        " In the final step, we conduct quality assurance and validation to review all new releases. This ensures the finished product aligns with your business goals, meets accessibility standards, and delivers an excellent user experience.",
       image:
         "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
@@ -304,15 +284,17 @@ export default function WebsiteDesignService() {
               Our Methodology
             </span>
             <p className=" text-lg md:text-4xl text-gray-500  font-bold  mb-6 leading-tight">
-              Our Meticulous Website Design Process {" "}
+              Our Meticulous E-commerce Design Process  
+ {" "}
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 {" "}
-                Concept to Deployment
+               Concept to Conversion
               </span>
             </p>
             <p className="text-sm   text-gray-500 max-w-3xl mx-auto">
-             Our meticulous process is the engine behind every project, from the initial concept to final deployment. We've designed a structured, transparent workflow to ensure a smooth journey marked by exceptional quality and efficiency. Every step is a true collaboration, dedicated to transforming your vision into a powerful, effective digital product that captures attention and drives results in the digital world.
-            </p>
+        Our meticulous process is the engine behind every e-commerce project, from initial concept to a fully launched storefront. We've designed a structured, transparent workflow to ensure a seamless journey defined by exceptional quality and efficiency. Every step is a true collaboration, dedicated to transforming your vision into a powerful, effective online store that captures attention and drives results.
+
+  </p>
           </motion.div>
 
           <div className="lg:grid flex  flex-col-reverse lg:grid-cols-12 lg:gap-12 xl:gap-16 items-start">
@@ -537,36 +519,40 @@ export default function WebsiteDesignService() {
 
   const Ourservice = () => {
 
-  // An array of objects, where each object represents a specific service.
+
   const services = [
     {
-      title: "E-commerce Website Design",
-      description: "Boost your online sales with our conversion-focused E-commerce website design. We build powerful, functional platforms that turn visitors into customers.",
-      icon: <ShoppingBag className="text-4xl text-cyan-500" />
+      icon: <ServerCog className="w-12 h-12 text-cyan-500" />,
+      title: "Data Engineering",
+      description: "We build the robust infrastructure your business needs to manage and process large volumes of data efficiently in today's digital landscape.",
     },
     {
-      title: "Corporate Website Design",
-      description: "Build a professional online presence with our Corporate Website Design. We create sites that perfectly align with your brand identity and business objectives.",
-      icon: <ShieldCheck className="text-4xl text-cyan-500" />
+      icon: <FlaskConical className="w-12 h-12 text-cyan-500" />,
+      title: "Data Science",
+      description: "Transform your raw data into actionable insights, enabling you to make more informed and strategic decisions with greater confidence.",
     },
     {
-      title: "Applications & Dashboard",
-      description: "Solve business challenges and delight users with our Application & Dashboard design. We create intuitive web apps that are as effective as they are easy to use.",
-      icon: <Laptop className="text-4xl text-cyan-500" />
+      icon: <BarChart2 className="w-12 h-12 text-cyan-500" />,
+      title: "Data Visualization",
+      description: "Our services create visually compelling and easy-to-understand charts and dashboards from complex data, simplifying information for key stakeholders.",
     },
     {
-      title: "Custom Website Design",
-      description: "Stand out from the crowd with our Custom Website Design. We create unique, personalized websites that are a perfect reflection of your brand's unique identity.",
-      icon: <Sparkles className="text-4xl text-cyan-500" />
+      icon: <LineChart className="w-12 h-12 text-cyan-500" />,
+      title: "Data Analytics",
+      description: "We apply advanced analytical methods to dissect and interpret your data, helping you uncover patterns and trends that drive business growth.",
     },
     {
-      title: "Redesign and Website Revamp",
-      description: "Maximize your results with our Redesign and Website Revamp services. We overhaul your existing site with a responsive design to drive more traffic, leads, and revenue.",
-      icon: <RefreshCw className="text-4xl text-cyan-500" />
+      icon: <ArrowRightLeft className="w-12 h-12 text-cyan-500" />,
+      title: "Data Migration",
+      description: "Ensure a smooth and secure transition of your data to new systems, cloud environments, or databases with our expert migration services.",
+    },
+    {
+      icon: <TrendingUp className="w-12 h-12 text-cyan-500" />,
+      title: "Business Intelligence",
+      description: "Leverage the power of your data to gain a competitive edge. We provide clear, insightful intelligence that empowers your business to succeed.",
     },
   ];
 
-  // Animation variants for the main container to create a staggered effect
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -577,11 +563,13 @@ export default function WebsiteDesignService() {
     },
   };
 
-  // Animation variants for each service card
+  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
     show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
+
 
   return (
     <div className="bg-gray-50  antialiased p-8 lg:p-16 min-h-screen flex items-center justify-center overflow-hidden">
@@ -594,9 +582,10 @@ export default function WebsiteDesignService() {
             className="text-3xl font-extrabold text-gray-900 mb-4 tracking-tight leading-tight"
           >
             <span className=" ">
-              Website Design
+             Our Core Data &
             </span>{" "}
-            Services We Offer
+                Analytics Services
+         
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: -20 }}
@@ -604,7 +593,8 @@ export default function WebsiteDesignService() {
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="text-sm text-gray-600 max-w-2xl mx-auto font-light"
           >
-            We've honed a strategic, results-driven approach to website design, empowering businesses to achieve their goals. Ready to see what our expertise can do for you?
+               Looking to transform your business with the power of data? At FLUX Digital, we provide swift, reliable, and results-driven Data & Analytics services designed to help you crush your business goals. Here's how our expertise can make a difference:
+         
           </motion.p>
         </header>
 
@@ -622,7 +612,7 @@ export default function WebsiteDesignService() {
               className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
             >
               <div className="flex items-center mb-6">
-                <div className="flex-shrink-0 p-3 bg-cyan-50 rounded-xl">
+                <div className="flex-shrink-0 p-3  rounded-xl">
                   {service.icon}
                 </div>
                 <h3 className="ml-4 text-xl font-bold text-gray-900">
@@ -661,10 +651,14 @@ export default function WebsiteDesignService() {
 
           <div className="absolute w-full h-full p-9 bottom-0 flex flex-col md:flex-row justify-center md:justify-between items-center md:text-center mx-auto">
             <p className="text-center  md:text-left font-thin text-white text-2xl md:text-4xl flex flex-col justify-center items-center h-full my-auto">
-              Website Design Services
+              Data & Analytics
+
+ Services
               <br />
               <span className="text-center   text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">
-                Home / Website Design Services
+               Data & Analytics
+
+ Services
               </span>
             </p>
           </div>
@@ -700,7 +694,7 @@ export default function WebsiteDesignService() {
                     <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                       <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
                         <Link href="https://www.fluxdigital.info/">
-                          Unleash Your Website Design Power
+                         Unlock the Power of Data to Drive Growth
                         </Link>
                       </span>
                       <br />
@@ -708,18 +702,26 @@ export default function WebsiteDesignService() {
                         {" "}
                         <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
                           <span className="  ">
-                            Our End-to-End Design Services
+                            Our End-to-End Data & Analytics
+ Services
                           </span>
                         </span>
                       </span>
                     </p>
                   </div>
                   <p className="  text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
-                    At FLUX Digital, we craft intuitive and engaging websites that put the user first. Our website design services are at the heart of our digital offerings, helping brands build online platforms that are not only visually stunning but also seamless to navigate. We believe that a great user experience is the key to driving higher conversions, building brand loyalty, and simplifying complex user journeys. Our expert designers meticulously craft every element of the website interface, ensuring it's not just beautiful, but also functional, accessible, and perfectly aligned with your brand's identity.
+
+            At FLUX Digital, Data & Analytics are at the very heart of our digital offerings. We believe that a powerful online presence isn't just about beautiful design—it's about understanding and leveraging the information that shapes every user interaction. Our expert team transforms raw data into actionable insights, helping brands build and optimize platforms that don't just look good, but are also designed to convert, increase average order value, and build lasting brand loyalty. We don't just provide reports; we provide a clear roadmap for success driven by numbers.
+
+
                   </p>
 
-                  <p className=" pb-4  text-sm md:text-md text-gray-600 text-justify md:text-left pt-3   ">
-                  What truly sets our website design agency apart is our strategic, data-driven approach. We begin every project with a deep dive into user behavior, market trends, and your business objectives. Our team conducts extensive research, including user interviews and competitor analysis, to develop a clear understanding of the problems we need to solve. This phase is crucial for defining the website's architecture, creating user personas, and mapping out user flows. By focusing on a strong foundation, we ensure the final design is not just aesthetically pleasing, but a powerful solution that solves real-world user problems and delivers tangible business results.
+                  <p className=" pb-4  text-sm md:text-md text-gray-600 text-justify md:text-left pt-3 ">
+
+              What truly sets our Data & Analytics agency apart is our strategic, data-driven approach. We begin every project with a deep dive into user behavior, market trends, and your specific business objectives. Our team conducts extensive research, including advanced analytics, A/B testing, and user journey mapping, to develop a clear understanding of the problems we need to solve.
+<br /> <br />
+This phase is crucial for defining key performance indicators (KPIs), creating comprehensive dashboards, and mapping out user flows to identify friction points and opportunities for optimization. By focusing on a strong, data-driven foundation, we ensure that every strategic decision is backed by evidence, leading to powerful solutions that solve real-world user pain points and deliver tangible business results.
+
                   </p>
 
                   <Link

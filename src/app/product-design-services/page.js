@@ -37,7 +37,7 @@ export const metadata = {
     title: "Innovative Industrial Product Design & Prototyping | FLUX Digital",
     description: "Partner with FLUX Digital to bring your product ideas to life. Our industrial design and engineering services help you innovate and stand out in the global marketplace.",
 
-    url: "https://www.fluxdigital.online/services/product-design-services",  
+    url: "https://www.fluxdigital.info/services/product-design-services",  
     type: "website",
   
     images: [
@@ -51,7 +51,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.fluxdigital.online/services/product-design-services", 
+    canonical: "https://www.fluxdigital.info/services/product-design-services", 
   },
 
   twitter: {

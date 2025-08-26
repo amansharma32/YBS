@@ -36,7 +36,7 @@ export const metadata = {
      
     description: "Our UI/UX design services transform digital products into user-friendly and engaging experiences that drive customer satisfaction and loyalty.",
      
-    url: "https://www.fluxdigital.online/services/ui-ux-design-services",  
+    url: "https://www.fluxdigital.info/services/ui-ux-design-services",  
      
     type: "website", 
     images: [
@@ -50,7 +50,7 @@ export const metadata = {
   },
  
   alternates: {
-    canonical: "https://www.fluxdigital.online/services/ui-ux-design-services", 
+    canonical: "https://www.fluxdigital.info/services/ui-ux-design-services", 
   },
  
   twitter: { 

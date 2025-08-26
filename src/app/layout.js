@@ -67,7 +67,7 @@ export const metadata = {
   appleMobileWebAppStatusBarStyle: "default",
  
   alternates: {
-    canonical: "https://www.fluxdigital.online/",
+    canonical: "https://www.fluxdigital.info/",
   },
 
 
@@ -85,7 +85,7 @@ export const metadata = {
   openGraph: { 
     title: 'Global Web Development & Digital Marketing Partner | FLUX Digital', 
     description: 'FLUX Digital is a premier web development and digital marketing company in India, offering responsive e-commerce, SEO, and IT solutions to B2B/B2C clients worldwide.',
-    url: 'https://www.fluxdigital.online',
+    url: 'https://www.fluxdigital.info',
     siteName: 'FLUX Digital',
     type: "website",  
      

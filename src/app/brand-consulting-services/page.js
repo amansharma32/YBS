@@ -42,7 +42,7 @@ export const metadata = {
      
     description: "Partner with FLUX Digital for innovative branding consulting, from strategic brand development to impactful identity design, for businesses worldwide.",
      
-    url: "https://www.fluxdigital.online/services/brand-consulting-services",  
+    url: "https://www.fluxdigital.info/services/brand-consulting-services",  
      
     type: "website", 
     images: [
@@ -56,7 +56,7 @@ export const metadata = {
   },
  
   alternates: {
-    canonical: "https://www.fluxdigital.online/services/brand-consulting-services", 
+    canonical: "https://www.fluxdigital.info/services/brand-consulting-services", 
   },
  
   twitter: { 

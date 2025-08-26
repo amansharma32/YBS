@@ -48,7 +48,7 @@ export const metadata = {
 
     description: "Partner with FLUX Digital, a leading web development agency, to transform your business with cutting-edge website and web application solutions for global markets.",
 
-    url: "https://www.fluxdigital.online/services/web-development",  
+    url: "https://www.fluxdigital.info/services/web-development",  
 
     type: "website",
 
@@ -64,7 +64,7 @@ export const metadata = {
 
  
   alternates: {
-    canonical: "https://www.fluxdigital.online/services/web-development", 
+    canonical: "https://www.fluxdigital.info/services/web-development", 
   },
 
   

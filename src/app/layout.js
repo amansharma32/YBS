@@ -123,7 +123,7 @@ export default function RootLayout({ children }) {
 
   
 <head>
-<meta name="google-site-verification" content="rQHEhCNg8AL1P5vSQIZ3WDlVDEFdTr2-vsAZDnUERR4" />
+<meta name="google-site-verification" content="SEDZuQ3IVG3P4L0uD_xKdLsSaYy9OqzcPsfy-FfWO_s" />
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-2VTHRMSF8W"></Script>
 

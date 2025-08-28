@@ -108,30 +108,7 @@ export default function Heropage() {
     return (
 
         <>
- <Head>
-        {/*
-          Google Analytics requires the script to be in the <head> section.
-          The next/script component with the 'afterInteractive' strategy
-          will automatically inject these scripts into the document's <head>
-          after the page has become interactive, which is the recommended approach for performance.
-        */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-2VTHRMSF8W"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-2VTHRMSF8W');
-          `}
-        </Script>
-      </Head>
-
-      {/* Rest of your page content */}
-    
-
+  
       {/* Google Analytics */}
    
 

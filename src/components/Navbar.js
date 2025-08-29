@@ -150,7 +150,7 @@ const serviceCategories = [
         icon: <Database className="w-4 h-4" />,
       },
       {
-        id: "ecommerce",
+        id: "e-commerce-services",
         name: "E-commerce Platforms",
         icon: <CreditCard className="w-4 h-4" />,
       },

@@ -42,7 +42,7 @@ export const metadata = {
      
     description: "FLUX Digital specializes in advanced 2D & 3D visualisation, from detailed product renders to immersive architectural experiences for global clients.",
      
-    url: "https://www.fluxdigital.info/services/2d-3d-visualization-services",  
+    url: "https://www.fluxdigital.online/services/2d-3d-visualization-services",  
      
     type: "website", 
     images: [
@@ -56,7 +56,7 @@ export const metadata = {
   },
  
   alternates: {
-    canonical: "https://www.fluxdigital.info/services/2d-3d-visualization-services", 
+    canonical: "https://www.fluxdigital.online/services/2d-3d-visualization-services", 
   },
  
   twitter: { 

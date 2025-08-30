@@ -38,7 +38,7 @@ export const metadata = {
 
     description: "Accelerate your development cycle with FLUX Digital, a leading DevOps agency. We deliver end-to-end solutions for CI/CD, cloud migration, and infrastructure management.",
 
-    url: "https://www.fluxdigital.info/services/devops-consulting-services",  
+    url: "https://www.fluxdigital.online/services/devops-consulting-services",  
 
     type: "website",
 
@@ -54,7 +54,7 @@ export const metadata = {
 
  
   alternates: {
-    canonical: "https://www.fluxdigital.info/services/devops-consulting-services", 
+    canonical: "https://www.fluxdigital.online/services/devops-consulting-services", 
   },
 
   

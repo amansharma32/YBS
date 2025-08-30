@@ -29,7 +29,7 @@ export const metadata = {
   openGraph: {
     title: "Mobile App Development Services | FLUX Digital",
     description: "FLUX Digital specializes in creating innovative and high-performance mobile applications for businesses globally. Partner with us to build your next great app.",
-    url: "https://www.fluxdigital.info/services/mobile-app-development-services",  
+    url: "https://www.fluxdigital.online/services/mobile-app-development-services",  
     type: "website",
     images: [
       {
@@ -43,7 +43,7 @@ export const metadata = {
 
  
   alternates: {
-    canonical: "https://www.fluxdigital.info/services/mobile-app-development-services", 
+    canonical: "https://www.fluxdigital.online/services/mobile-app-development-services", 
   },
 
    

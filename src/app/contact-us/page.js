@@ -35,7 +35,7 @@ export const metadata = {
   openGraph: {
     title: "Connect with FLUX Digital | Your Global Digital Transformation Partner",
     description: "Reach out to FLUX Digital for bespoke web, marketing, and IT solutions. Let's discuss how we can elevate your business globally.",
-    url: "https://www.fluxdigital.info/contact-us",  
+    url: "https://www.fluxdigital.online/contact-us",  
     type: "website",
     images: [
       {
@@ -48,7 +48,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.fluxdigital.info/contact-us", 
+    canonical: "https://www.fluxdigital.online/contact-us", 
   },
 
   twitter: {

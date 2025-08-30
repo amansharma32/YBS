@@ -31,7 +31,7 @@ export const metadata = {
      
     description: "Partner with FLUX Digital to harness the power of artificial intelligence and machine learning for data-driven decisions, process automation, and intelligent solutions.",
      
-    url: "https://www.fluxdigital.info/services/ai-and-ml-services",  
+    url: "https://www.fluxdigital.online/services/ai-and-ml-services",  
      
     type: "website", 
     images: [
@@ -45,7 +45,7 @@ export const metadata = {
   },
  
   alternates: {
-    canonical: "https://www.fluxdigital.info/services/ai-and-ml-services", 
+    canonical: "https://www.fluxdigital.online/services/ai-and-ml-services", 
   },
  
   twitter: { 

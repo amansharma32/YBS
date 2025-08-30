@@ -38,7 +38,7 @@ export const metadata = {
   openGraph: {
     title: "Global Digital Excellence: Web Dev, Marketing & IT by FLUX Digital",
     description: "Partner with FLUX Digital for cutting-edge web development, strategic digital campaigns, and secure IT infrastructure across the USA, Europe, Australia, Switzerland, and Dubai.",
-    url: "https://www.fluxdigital.info/services-overview",  
+    url: "https://www.fluxdigital.online/services-overview",  
     type: "website",
     images: [
       {
@@ -52,7 +52,7 @@ export const metadata = {
 
  
   alternates: {
-    canonical: "https://www.fluxdigital.info/services-overview",  
+    canonical: "https://www.fluxdigital.online/services-overview",  
   },
 
    

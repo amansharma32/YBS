@@ -44,7 +44,7 @@ export const metadata = {
    
     description: "Get a clear understanding of FLUX Digital's approximate pricing for comprehensive digital services, designed for businesses globally and in India.",
      
-    url: "https://www.fluxdigital.info/solutions",  
+    url: "https://www.fluxdigital.online/solutions",  
      
     type: "website",
     
@@ -61,7 +61,7 @@ export const metadata = {
 
   
   alternates: {
-    canonical: "https://www.fluxdigital.info/solutions",  
+    canonical: "https://www.fluxdigital.online/solutions",  
   },
 
   

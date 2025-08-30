@@ -38,7 +38,7 @@ export const metadata = {
      
     description: "FLUX Digital crafts compelling mobile experiences with a focus on user-centric design and flawless functionality for apps and responsive websites.",
      
-    url: "https://www.fluxdigital.info/services/mobile-experience-services",  
+    url: "https://www.fluxdigital.online/services/mobile-experience-services",  
      
     type: "website", 
     images: [
@@ -52,7 +52,7 @@ export const metadata = {
   },
  
   alternates: {
-    canonical: "https://www.fluxdigital.info/services/mobile-experience-services", 
+    canonical: "https://www.fluxdigital.online/services/mobile-experience-services", 
   },
  
   twitter: { 

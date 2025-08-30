@@ -38,7 +38,7 @@ export const metadata = {
      
     description: "Partner with FLUX Digital for impactful graphic design and visual branding that captures attention and communicates your brand's unique story.",
      
-    url: "https://www.fluxdigital.info/services/graphic-design-services",  
+    url: "https://www.fluxdigital.online/services/graphic-design-services",  
      
     type: "website", 
     images: [
@@ -52,7 +52,7 @@ export const metadata = {
   },
  
   alternates: {
-    canonical: "https://www.fluxdigital.info/services/graphic-design-services", 
+    canonical: "https://www.fluxdigital.online/services/graphic-design-services", 
   },
  
   twitter: { 

@@ -34,7 +34,7 @@ export const metadata = {
 
     title: "Global Logo Design & Brand Identity Services | FLUX Digital",
     description: "FLUX Digital creates powerful brand identities through custom logo design. Let us help you build a visual identity that resonates with your audience.",
-    url: "https://www.fluxdigital.info/services/logo-design-services",  
+    url: "https://www.fluxdigital.online/services/logo-design-services",  
     type: "website",
 
     images: [
@@ -51,7 +51,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.fluxdigital.info/services/logo-design-services",  
+    canonical: "https://www.fluxdigital.online/services/logo-design-services",  
   },
  
   twitter: { 

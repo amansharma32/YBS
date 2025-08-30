@@ -1,6 +1,6 @@
 "use client";
 import { useInView, motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, LinkIcon, Sparkles, Users } from "lucide-react";
+import { ChevronDown, Handshake, LinkIcon, Sparkles, TabletSmartphone, Users } from "lucide-react";
 import React, { useRef, useState } from "react";
 import { Store, Cpu, Palette, ArrowRight } from "lucide-react";
 import WhyUsInnovativeSection from "@/components/sections/WhyUsInnovativeSection";
@@ -134,41 +134,29 @@ export default function Ecomm() {
 
     const webDevServicesData = [
       {
-        title: "DevOps Strategy & Roadmap",
-        description:
-          "We begin by identifying bottlenecks in your existing processes to build a custom DevOps roadmap that perfectly aligns with your organizational goals. This ensures we promote scalable workflows for an optimized process across your entire team.",
-        icon: <Rocket className="h-6 w-6 mr-3 text-teal-400" />,
-      },
-      {
-        title: "Technology & Tooling Consulting",
-        description:
-          "We provide expert guidance to help you select the right tools and technologies for your DevOps environment. We assess your unique requirements, analyze available options, and recommend solutions that are precisely tailored to your specific goals and use cases.",
-        icon: <Settings className="h-6 w-6 mr-3 text-teal-400" />,
-      },
-      {
-        title: "Automation & CI/CD",
-        description:
-          "Our experts implement efficient DevOps automation to reduce manual errors and standardize processes, often using languages like Python. We also create automated CI/CD pipelines that seamlessly handle integration, testing, and deployment. This leads to quicker, more reliable updates and a faster time-to-market.",
-        icon: <FlaskConical className="h-6 w-6 mr-3 text-teal-400" />,
-      },
-      {
-        title: "Containerization & Infrastructure Management",
-        description:
-          "As leading DevOps specialists, we manage everything from microservices architecture to the implementation of tools like Docker and Kubernetes. We automate the scaling and deployment of your microservices, helping you build and manage a truly agile and resilient infrastructure.",
-        icon: <Cloud className="h-6 w-6 mr-3 text-teal-400" />,
-      },
-      {
-        title: "Real-time Monitoring & Alerting",
-        description:
-          "Through continuous, real-time monitoring, we track the performance and health of your infrastructure components. This allows us to quickly troubleshoot issues, optimize resources for maximum efficiency, and ensure consistency in all your deployments.",
-        icon: <Monitor className="h-6 w-6 mr-3 text-teal-400" />,
-      },
-      {
-        title: "Integrated Security (DevSecOps)",
-        description:
-          "Our security practices are built into every stage of the DevOps pipeline. By proactively addressing vulnerabilities and adhering to regulatory standards, our DevSecOps approach ensures your software delivery process is secure and reliable from start to finish.",
-        icon: <ShieldCheck className="h-6 w-6 mr-3 text-teal-400" />,
-      },
+    title: "Partnerships with Industry Leaders",
+    description:
+      "Leveraging strategic alliances with technology leaders, we build your storefront on a foundation of enhanced security, seamless integration, and cutting-edge technology.",
+    icon: <Handshake className="h-6 w-6 mr-3 text-teal-400" />,
+  },
+  {
+    title: "Unified Omnichannel Experience",
+    description:
+      "We specialize in creating a consistent brand presence across all channels—online, mobile, and in-store—for a unified and seamless customer experience.",
+    icon: <TabletSmartphone className="h-6 w-6 mr-3 text-teal-400" />,
+  },
+  {
+    title: "Proven Track Record",
+    description:
+      "With a portfolio of successful projects and years of expertise, we have a demonstrated ability to boost conversions, improve user experience, and drive tangible business growth.",
+    icon: <Trophy className="h-6 w-6 mr-3 text-teal-400" />,
+  },
+  {
+    title: "Dedicated and Certified Experts",
+    description:
+      "Our team of qualified and extensively trained professionals is equipped to handle even the most complex development challenges, providing top-tier solutions that help your business thrive.",
+    icon: <GraduationCap className="h-6 w-6 mr-3 text-teal-400" />,
+  },
     ];
 
     return (
@@ -193,13 +181,13 @@ export default function Ecomm() {
               Our Expertise
             </span>
             <h2 className=" text-lg md:text-4xl  font-bold text-gray-900  mb-3 md:mb-6 leading-tight">
-              Our Comprehensive DevOps Services
+             Why Choose Us for E-commerce Development Services ?
+
             </h2>
             <p className="text-sm text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              We offer fast, dependable DevOps consulting to help organizations
-              achieve their business goals. Want to know how we can help your
-              business thrive? Let's take a look at our services.
-            </p>
+          Are you ready to choose a reliable digital partner to help with your e-commerce development ? We stand out as a top e-commerce development company for many reasons.
+
+ </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -265,74 +253,53 @@ export default function Ecomm() {
   };
 
  
-  const webDevelopmentProcessSteps = [
-    {
-      id: "req-gathering",
-      title: "Assessment and Planning",
-      content:
-        "We begin by thoroughly assessing your existing development and operations processes. By identifying opportunities for improvement and visualizing your desired state, we create a tailored DevOps roadmap. This plan includes clear KPIs and milestones to ensure every step contributes measurable value to your business.",
-      image:
-        "https://images.unsplash.com/photo-1681949103006-70066fb25dfe?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
+ const webDevelopmentProcessSteps = [
+  {
+    id: "user-research",
+    title: "Discovery and User Research",
+    content: "Our process begins with an in-depth discovery phase. We work with your team to understand your business model, goals, and pain points. By analyzing your target audience and market, we gain the insights needed to craft a solution that is perfectly aligned with your business objectives.",
+    image: "https://images.unsplash.com/photo-1681949103006-70066fb25dfe?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: "platform-assessment",
+    title: "Platform Assessment and Strategy",
+    content: "Based on our research, we assess various e-commerce platforms to find the one that best fits your specific business processes and goals. We analyze each platform's features, scalability, and functionality to recommend the most suitable and effective solution for you.",
+    image: "https://images.unsplash.com/photo-1618788372246-79faff0c3742?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: "design-copywriting",
+    title: "Design and Content Creation",
+    content: "We create a clear information architecture to ensure your site is easy to navigate and highly functional. Our design and copywriting teams work together to produce a visually appealing interface and compelling content that not only captures user attention but also drives engagement and conversions.",
+    image: "https://images.unsplash.com/photo-1542289539-059dea254938?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: "full-stack-development",
+    title: "Full-Stack Development",
+    content: "We develop a detailed technical roadmap, selecting the optimal technologies and tools for both frontend and backend development. Our focus is on building a robust, high-performing application with an exceptional user experience that maximizes your return on investment and accelerates business growth.",
+    image: "https://images.unsplash.com/photo-1634838128617-efdf64411694?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+  },
+  {
+    id: "quality-assurance",
+    title: "Quality Assurance and Testing",
+    content: "Every product we develop undergoes rigorous quality assurance to ensure it is bug-free and performs flawlessly. Our expert QA testers use a combination of automated and manual testing to identify and resolve any issues, guaranteeing a smooth and reliable user experience.",
+    image: "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: "cms-training-deployment",
+    title: "Deployment and CMS Training",
+    content: "After development is complete, we handle the deployment of your solution to your systems. We then provide comprehensive training to your team, ensuring they are fully prepared to manage the platform and maintain smooth, uninterrupted operations.",
+    image: "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: "support-maintenance",
+    title: "Ongoing Support and Optimization",
+    content: "Our partnership continues long after launch. We offer ongoing technical support and proactive maintenance, including regular updates and bug fixes, to ensure your platform remains high-performing, secure, and always ready to capture sales opportunities.",
+    image: "https://images.unsplash.com/photo-1635875060146-80ec95d47043?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
 
-    {
-      id: "wireframe-prototyping",
-      title: "Continuous Integration (CI)",
 
-      content:
-        "Continuous Integration is essential for optimizing code quality and accelerating development cycles. We set up automated processes that integrate every code change into a shared repository. This includes automated testing to quickly detect issues, minimize bottlenecks, and identify bugs before they can impact later stages.",
-
-      image:
-        "https://images.unsplash.com/photo-1618788372246-79faff0c3742?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: "ui-ux-design",
-      title: "Continuous Testing",
-      content:
-        "As part of our services, we implement continuous testing to validate code changes against the highest standards. Automated testing is integrated throughout the DevOps lifecycle to detect issues across all environments. We configure frameworks to ensure adherence to performance, compliance, and security standards, creating a proactive defense against potential vulnerabilities.",
-      image:
-        "https://images.unsplash.com/photo-1542289539-059dea254938?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: "development",
-      title: "Continuous Delivery (CD)",
-      content:
-        "Continuous Delivery automates the preparation of every code build for production. This phase ensures that all deployment-ready changes are evaluated with automated testing. While the process is automated, a final manual verification is required before deployment, giving you control and flexibility while significantly minimizing time to market.",
-      image:
-        "https://images.unsplash.com/photo-1634838128617-efdf64411694?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
-    },
-    {
-      id: "quality-assurance",
-      title: "Continuous Deployment",
-
-      content:
-        "Continuous Deployment automates the entire release process, facilitating consistent and rapid code delivery to the production environment. With a CD pipeline that includes automated approvals and rollbacks, we ensure every release is secure and smooth. This minimizes manual intervention, making deployments more reliable and allowing your team to focus on innovation.",
-
-      image:
-        "https://images.unsplash.com/photo-1695374688412-4d6ff0bf6c6c?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: "deployment",
-      title: "Monitoring and Feedback",
-
-      content:
-        "We place great emphasis on maintaining system health and operational visibility. Our solutions include real-time monitoring and alerting systems that provide instant performance insights. This allows for proactive incident management, ensuring your infrastructure remains highly resilient.",
-
-      image:
-        "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: "maintenance-support",
-      title: "Ongoing Support and Optimization",
-
-      content:
-        "DevOps is a continuous journey, and we provide the ongoing support to ensure your infrastructure remains agile. Our dedicated team conducts regular audits, system evaluations, and performance monitoring to keep your environment responsive to new changes and positioned for long-term success.",
-
-      image:
-        "https://images.unsplash.com/photo-1635875060146-80ec95d47043?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-  ];
-
+ 
   // WebDevelopmentProcessSection Component Definition
   const WebDevelopmentProcessSection = () => {
     const ref = useRef(null);
@@ -622,7 +589,7 @@ const industryServices4 = [
               Success Stories
             </p>
             <h2 className=" text-xl md:text-4xl  font-bold    mb-4">
-              Featured DevOps Case Studies
+              Featured E-commerce Case Studies
             </h2>
             <p className=" text-sm md:text-xl text-gray-400 max-w-3xl mx-auto">
               Where innovation meets measurable business impact
@@ -758,8 +725,9 @@ const industryServices4 = [
             className="text-center mb-12 md:mb-16"
           >
             <h2 className=" text-lg md:text-4xl   font-bold text-gray-800 tracking-tight">
-              DevOps Services
+             E-commerce Services
             </h2>
+
             <p className="  md:mt-4  text-sm md:text-lg   text-gray-600">
               For Various Industries
             </p>
@@ -926,9 +894,9 @@ const industryServices4 = [
             className="text-center mb-12 md:mb-16"
           >
             <h2 className=" text-lg md:text-4xl   font-bold text-gray-800 tracking-tight">
-              The DevOps Advantage
+              The E-commerce Advantage
             </h2>
-            <p className="  md:mt-4  text-sm md:text-lg   text-gray-600">
+            <p className="md:mt-4  text-sm md:text-lg   text-gray-600">
               We Provide
             </p>
           </motion.div>
@@ -959,13 +927,7 @@ const industryServices4 = [
                   </p>
                 </div>
 
-                <a
-                  href="#"
-                  className="inline-flex items-center mt-6 font-semibold text-blue-600 hover:text-blue-800 group"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </a>
+                
               </motion.div>
             ))}
           </motion.div>
@@ -978,10 +940,11 @@ const industryServices4 = [
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-      <div className="p-4 md:p-8">
+      <div className="p-4 md:p-12   ">
         <div className="border-b border-gray-200  ">
           <ul className="-mb-px flex flex-wrap text-center text-sm font-medium text-gray-500  ">
             {tabData.map((tab, index) => (
+
               <li key={index} className="me-2" role="presentation">
                 <button
                   type="button"
@@ -999,10 +962,11 @@ const industryServices4 = [
                   disabled={tab.disabled}
                   aria-selected={activeTab === index}
                 >
-                  {tab.icon}
+                <img src={tab.icon} className=" w-full h-12 md:h-16" alt={tab.stacks} />
                   {tab.title}
                 </button>
               </li>
+
             ))}
           </ul>
         </div>
@@ -1017,9 +981,9 @@ const industryServices4 = [
             {/* The main grid container for the cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {tab.subTopics.map((subTopic, subIndex) => (
-                <div key={subIndex} className="flex flex-col">
+                <div key={subIndex} className="flex flex-col ">
                   {/* Card container with a fixed aspect ratio */}
-                  <div className="card h-56 flex justify-center items-center  w-56 aspect-square">
+                  <div className="card h-24 flex justify-center  items-center  w-full aspect-square">
                     <img
                       src={subTopic.image}
                       alt={subTopic.heading}
@@ -1063,285 +1027,244 @@ const industryServices4 = [
     },
   ];
 
+ 
+  const technologyStacks = {
+
+    frontend: [
+      {
+        title: "React",
+        img: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441834/react_4cfc715018_mr4li8.svg",
+        description: "Build fast-loading and optimized web applications with rapid page rendering features from the constructive and interactive technology of React.",
+        link: "#"
+      },
+      {
+        title: "Next.js",
+        img: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441832/next_js_7413084cb7_jy987e.svg",
+        description: "Build web applications of bespoke quality and quick loading times with the exceptional performance of the Next.js technology framework.",
+        link: "#"
+      },
+      {
+        title: "Vue.js",
+        img: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441832/Vuejs_9db22dd83c_eijjga.svg",
+        description: "Elevate customer engagement with visually stunning, scalable and reliable interfaces for web applications through the boundless possibilities of Vue.js.",
+        link: "#"
+      },
+      {
+        title: "Angular",
+        img: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441832/Angular_56306ec9d8_gocdng.svg",
+        description: "Transform your industry with the combination of agile concepts and the broad expertise of our Angular developers to give life to thoughtful web applications.",
+        link: "#"
+      }
+    ],
+
+    backend: [
+      {
+        title: "Python",
+        img: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441834/Python_54b43ad500_q2jriq.svg",
+        description: "Revolutionize your business with top-notch web applications, dynamic websites, and desktop apps to rewrite your brand’s success story with the promise of Python.",
+        link: "#"
+      },
+      {
+        title: "Node.js",
+        img: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441832/Node_js_bdf692ea23_itlxxm.svg",
+        description: "Develop quick and scalable web pages with real-time Node.js technology to highlight your business’s digital strength with solution-focused applications.",
+        link: "#"
+      },
+      {
+        title: "PHP",
+        img: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441833/php_a3a7eccfb0_phmctj.svg",
+        description: "Get assistance from a robust codebase to get dynamic, swift and flexible PHP web development solutions for highly interactive web pages.",
+        link: "#"
+      }
+    ],
+
+    database: [
+      {
+        title: "MySQL",
+        img: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441833/Mysql_8dd00fedbf_fckj9c.svg",
+        description: "Well-suited for database management, MySQL is easy to install. Get the most robust database system to build mission-critical applications.",
+        link: "#"
+      },
+      {
+        title: "MongoDB",
+        img: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1753441832/Mongo_1af6329c73_las3o5.svg",
+        description: "Incorporate the flexible schema of MongoDB to scale up and make queries much faster, while following all key features of modern databases.",
+        link: "#"
+      }
+    ],
+
+    integrations: [
+      {
+        title: "PayPal",
+        img: "https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-color.svg",
+        description: "Manage payment complexities for your ecommerce storefronts with PayPal to allow custom payment flows, pre-authorized payments, and reconciliation of funds from various sources.",
+        link: "#"
+      },
+      {
+        title: "Stripe",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/2560px-Stripe_Logo%2C_revised_2016.svg.png",
+        description: "Integrate Stripe with your ecommerce websites and mobile applications to support a wide range of payment options and ensure high-end security to protect businesses and customers.",
+        link: "#"
+      },
+      {
+        title: "ERP",
+        img: "https://img.freepik.com/premium-vector/erp-software-solutions-line-icon-with-cloud_116137-13824.jpg",
+        description: "Integrate your ecommerce platform with ERP to automate manual processes. Integrate payment information, order details, shipping, and customer details to reduce human errors.",
+        link: "#"
+      },
+      {
+        title: "CRM",
+        img: "https://www.arenasolutions.com/wp-content/uploads/What-is-Customer-Relationship-Management.png",
+        description: "Get seamless integrations to your e-commerce systems, where CRM improves customer relationship management through expanded software functionality and automated actions.",
+        link: "#"
+      },
+      {
+        title: "PIM",
+        img: "https://img.freepik.com/premium-vector/pim-letter-logo-design-technology-company-pim-logo-design-black-white-color-combination-pim-logo-pim-vector-pim-design-pim-icon-pim-alphabet-pim-typography-logo-design_229120-162046.jpg",
+        description: "Improve customer experience, minimise errors, and boost product search functions with Product Information Management (PIM) integrations to scale your marketing and sales efforts.",
+        link: "#"
+      }
+    ],
+
+    cloud: [
+      {
+        title: "Google Cloud Platform",
+        img: "https://download.logo.wine/logo/Google_Cloud_Platform/Google_Cloud_Platform-Logo.wine.png",
+        description: "Secure, reliable, scalable cloud services that enable fast deployment, enable smart decisions and save costs.",
+        link: "#"
+      },
+      {
+        title: "Amazon Web Services",
+        img: "https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png",
+        description: "Provides reliable, affordable, and on-demand cloud services that enhance access, mobility and collaboration.",
+        link: "#"
+      },
+      {
+        title: "Microsoft Azure",
+        img: "https://download.logo.wine/logo/Microsoft_Azure/Microsoft_Azure-Logo.wine.png",
+        description: "Build future-ready cloud solutions, optimise workloads, simplify IT management, and get maximum ROI.",
+        link: "#"
+      }
+    ]
+  };
+
   const tabData = [
     {
-      title: "Core Services",
-      // Use the imported Cpu component instead of a raw SVG.
-      icon: <Cpu className="mr-2 h-5 w-5" />,
-      subTopics: [
-        {
-          heading: "Python",
-          text: "Revolutionise your business with top-notch web applications, dynamic websites, and desktop apps to rewrite your brand’s success story with the promise of Python.",
-          // Added a placeholder image URL for the subtopic.
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg",
-        },
-
-        {
-          heading: "BASH/Shell",
-          text: "We utilise the capabilities of BASH/Shell for automating system tasks and scripting in Unix-based environments, enhancing operational efficiency.",
-          image: "https://cdn-icons-png.flaticon.com/512/919/919837.png",
-        },
-
-        {
-          heading: "GO",
-          text: "Used for its efficiency, concurrency support, simplicity, scalability, and strong standard library, making it ideal for high-performance, concurrent applications and cloud-native development.",
-          image: "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png",
-        },
-        {
-          heading: "Ruby",
-          text: "Ruby is a dynamic, open-source, object-oriented programming language known for its readability and focus on simplicity and productivity.",
-          image: "https://cdn-icons-png.flaticon.com/512/6132/6132219.png",
-        },
-      ],
+      title: "Frontend",
+      stacks: "Frontend stack",
+      icon: "https://mobile.fhstp.ac.at/wp-content/uploads/2022/02/800px-Nextjs-logo.svg_.png",
+      disabled: false,
+      subTopics: technologyStacks.frontend.map(item => ({
+        image: item.img,
+        heading: item.title,
+        text: item.description,
+      })),
     },
-
     {
-      title: "Version Control",
-      // Use the imported GitBranch component.
-      icon: <GitBranch className="mr-2 h-5 w-5" />,
-      subTopics: [
-        {
-          heading: "GitHub",
-          text: "We use GitHub to host, review, and manage code, thereby enabling effortless collaboration and version control.",
-          image: "https://cdn-icons-png.flaticon.com/512/3291/3291695.png",
-        },
-        {
-          heading: "Bitbucket",
-          text: "Our team uses this powerful repository for Git and Mercurial, ensuring efficient code control and integration with different development tools.",
-          image: "https://cdn-icons-png.flaticon.com/512/6125/6125001.png",
-        },
-        {
-          heading: "Gitlab",
-          text: "With Gitlab, we execute DevOps lifecycle management, right from source code control to CI/CD, which scales project collaboration and transparency.",
-          image: "https://cdn-icons-png.flaticon.com/512/5968/5968853.png",
-        },
-        {
-          heading: "Azure DevOps",
-          text: "Azure DevOps has been helping us provide CI/CD, version control, and project management to ease collaboration and scale delivery cycles.",
-          image:
-            "https://logos-world.net/wp-content/uploads/2024/10/Azure-DevOps-Logo-500x281.png",
-        },
-        // Added the new "Source Code Control" subtopic here.
-      ],
+      title: "Backend",
+      stacks: "Backend stack",
+      icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png",
+      disabled: false,
+      subTopics: technologyStacks.backend.map(item => ({
+        image: item.img,
+        heading: item.title,
+        text: item.description,
+      })),
     },
-
     {
-      title: "CI/CD & DevOps",
-      // Use the imported PlayCircle component.
-      icon: <PlayCircle className="mr-2 h-5 w-5" />,
-      subTopics: [
-        {
-          heading: "Jenkins",
-          text: "Our experts use Jenkins, an open-source automation tool, that streamlines CI/CD, testing and deployment.",
-          image: "https://icon.icepanel.io/Technology/svg/Jenkins.svg",
-        },
-        {
-          heading: "GitLab CI",
-          text: "By using this built-in CI/CD tool, we automate testing and deployment, while improving code quality and resulting in quicker release cycles.",
-          image: "https://miro.medium.com/1*XON7HtEQCgYqJ5FChk8WBQ.png",
-        },
-        {
-          heading: "Circle CI",
-          text: "We use CircleCI to provide flexible CI/CD solutions that expedite software delivery while keeping exceptional reliability.",
-          image:
-            "https://images.seeklogo.com/logo-png/48/2/circleci-logo-png_seeklogo-482238.png",
-        },
-        {
-          heading: "Travis CI",
-          text: "With Travis CI, we incorporate an automated CI/CD service for the GitHub projects, thereby enabling rapid code deployment.",
-          image: "https://cdn.worldvectorlogo.com/logos/travis-ci.svg",
-        },
-        {
-          heading: "GitHub Actions",
-          text: "We leverage GitHub actions to automate workflows directly in GitHub, focusing on improved efficiency throughout code and production.",
-          image:
-            "https://cdn.prod.website-files.com/65264f6bf54e751c3a776db1/66d86964333d11e0a1f1da9e_github_actions.png",
-        },
-        {
-          heading: "Argo CD",
-          text: "Our team uses Argo CD, the declarative GitOps tool to facilitate the automation of deployment to Kubernetes, scaling application management.",
-          image:
-            "https://www-mkt-uploads.s3.fr-par.scw.cloud/Argo_1_e1630327305635_1_2e54cbf464.png",
-        },
-        {
-          heading: "TeamCity",
-          text: "With this powerful CI/CD server, we enable building automation and prompt feedback crucial in executing quality-centric and scalable deployments.",
-          image:
-            "https://www.qbssoftware.com/dach/wp-content/uploads/sites/4/2024/07/TEAMCITY-2.png",
-        },
-      ],
+      title: "Database",
+      icon: "https://cdn-icons-png.freepik.com/512/8686/8686102.png",
+      stacks: "Database stack",
+      disabled: false,
+      subTopics: technologyStacks.database.map(item => ({
+        image: item.img,
+        heading: item.title,
+        text: item.description,
+      })),
     },
-
     {
-      title: "Container & Cloud",
-      // Use the imported Cloud component.
-      icon: <Cloud className="mr-2 h-5 w-5" />,
-      subTopics: [
-        {
-          heading: "Kubernetes",
-          text: "With Kubernetes, we automate scaling, deployment, and management of containerised applications, to improve scalability and resilience.",
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/500px-Kubernetes_logo_without_workmark.svg.png",
-        },
-        {
-          heading: "Docker",
-          text: "We utilise the applications of Docker, the containerisation platform to ensure consistent app deployment that scales flexibility and speed.",
-          image:
-            "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png",
-        },
-        {
-          heading: "Docker Swarm",
-          text: "Our team orchestrates Docker containers, to facilitate high-end scaling and application management in clusters.",
-          image:
-            "https://cycle.io/images/blog/2024/03/docker-swarm-alternative-cycle/resources/images/hero.svg",
-        },
-        {
-          heading: "OpenShift",
-          text: "We use OpenShift, the Kubernetes platform to automate app deployment and scaling which ensures consistency in diverse environments.",
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/OpenShift-LogoType.svg/1917px-OpenShift-LogoType.svg.png",
-        },
-        {
-          heading: "Google Cloud Platform",
-          text: "Secure, reliable, scalable cloud services that enable fast deployment, enable smart decisions and save costs.",
-          image:
-            "https://download.logo.wine/logo/Google_Cloud_Platform/Google_Cloud_Platform-Logo.wine.png",
-        },
-        {
-          heading: "Amazon Web Services",
-          text: "Provides reliable, affordable, and on-demand cloud services that enhance access, mobility and collaboration.",
-          image:
-            "https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png",
-        },
-        {
-          heading: "Microsoft Azure",
-          text: "Build future-ready cloud solutions, optimise workloads, simplify IT management, and get maximum ROI.",
-          image:
-            "https://download.logo.wine/logo/Microsoft_Azure/Microsoft_Azure-Logo.wine.png",
-        },
-      ],
+      title: "Integrations",
+      icon: "https://cdn.vectorstock.com/i/500p/33/57/integration-icon-data-systems-vector-53143357.jpg",
+      stacks: "Integrations",
+      disabled: false,
+      subTopics: technologyStacks.integrations.map(item => ({
+        image: item.img,
+        heading: item.title,
+        text: item.description,
+      })),
     },
-
     {
-      title: "Infrastructure & Monitoring",
-      // Use the imported Activity component.
-      icon: <Activity className="mr-2 h-5 w-5" />,
-      subTopics: [
-        {
-          heading: "Grafana OSS",
-          text: "Grafana OSS helps us visualise metrics, thus helping teams track application health and real-time performance.",
-          image:
-            "https://flecs.tech/wp-content/uploads/2021/08/grafana.png.webp",
-        },
-        {
-          heading: "Prometheus",
-          text: "The use of Prometheus has been beneficial to us for analysing metrics, managing alerts and enhancing system health.",
-          image:
-            "https://cdn.iconscout.com/icon/free/png-128/free-prometheus-icon-svg-png-download-282488.png?f=webp",
-        },
-        {
-          heading: "Nagios",
-          text: "We use Nagios to monitor networks and infrastructure, which assures system uptime and issue detection.",
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/8/80/Nagios_logo.png",
-        },
-        {
-          heading: "Splunk",
-          text: "Using Splunk, we transform logs into actionable insights, enabling teams to manage system health proactively and scale troubleshooting.",
-          image: "https://img.icons8.com/?size=512&id=49188&format=png",
-        },
-        {
-          heading: "Zabbix",
-          text: "With Zabbix, we enable proactive troubleshooting and maintenance that offer enterprise-specific tracking of networks and applications.",
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/5/5d/Zabbix_logo_square.svg",
-        },
-        {
-          heading: "Datadog",
-          text: "As an Application Performance Monitoring (APM) tool, Datadog is a tool used for cloud-scale applications and track tools, servers, databases, and services. It offers a secure platform to facilitate operations, cloud migrations, and tracking core business metrics.",
-          image:
-            "https://imgix.datadoghq.com/img/about/presskit/logo-v/dd_vertical_white.png?auto=format&fit=max&w=847&dpr=2",
-        },
-
-        {
-          heading: "Terraform",
-          text: "With Terraform, we adopt smooth provisioning of cloud infrastructure, enabling reusable and versioned infrastructure for quick scaling.",
-          image:
-            "https://ms-devlabs.gallerycdn.vsassets.io/extensions/ms-devlabs/custom-terraform-tasks/0.1.36/1748364894361/Microsoft.VisualStudio.Services.Icons.Default",
-        },
-
-        {
-          heading: "Ansible",
-          text: "We use Ansible, the configuration management tool that automates complex tasks, thereby improving deployment speed and minimising errors.",
-          image:
-            "https://images.icon-icons.com/2389/PNG/512/ansible_logo_icon_145495.png",
-        },
-
-        {
-          heading: "Chef",
-          text: "Our experts use Chef, which facilitates automation and configuration management, thus enabling consistent environment management.",
-          image:
-            "https://www.chef.io/images/cheflibraries/brand/symbol-2x-min.png?sfvrsn=dc337982_0",
-        },
-        {
-          heading: "Puppet",
-          text: "We leverage Puppet, which offers a declarative model that automates configuration, thus minimising manual bugs and making system management efficient.",
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Puppet_boxes_logo.svg/1200px-Puppet_boxes_logo.svg.png",
-        },
-      ],
-    },
-
-    {
-      title: "Databases",
-      // Use the imported Database component.
-      icon: <Database className="mr-2 h-5 w-5" />,
-      subTopics: [
-        {
-          heading: "MySQL",
-          text: "Well-suited for database management, MySQL is easy to install. Get the most robust database system to build mission-critical applications.",
-          image: "https://www.logo.wine/a/logo/MySQL/MySQL-Logo.wine.svg",
-        },
-        {
-          heading: "PostgreSQL",
-          text: "Leverage the cost-effective benefits of PostgreSQL, the object-relational database management system for high data integrity and flexibility.",
-          image: "https://cdn.iconscout.com/icon/free/png-256/free-postgresql-icon-svg-png-download-1175120.png",
-        },
-        {
-          heading: "MongoDB",
-          text: "Incorporate the flexible schema of MongoDB to scale up and make queries much faster, while following all key features of modern databases.",
-          image: "https://images.icon-icons.com/2699/PNG/512/mongodb_logo_icon_170944.png",
-        },
-        {
-          heading: "Redis",
-          text: "We work with Redis to scale the app performance and ensure fast data retrieval, minimising the load on conventional databases.",
-          image: "https://download.logo.wine/logo/Redis/Redis-Logo.wine.png",
-        },
-        {
-          heading: "Elasticsearch",
-          text: "Make it easy to deploy data aggregation operations and simplify the unstructured query processing with the business intelligence of Elasticsearch.",
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Elasticsearch_logo.svg/2560px-Elasticsearch_logo.svg.png",
-        },
-        {
-          heading: "Firebase",
-          text: "Make it easier to get collaborative and immersive experiences with Firebase using data synchronisation, and without thinking about networking code.",
-          image: "https://1000logos.net/wp-content/uploads/2024/05/Firebase-Logo.png",
-        },
-        {
-          heading: "Supabase",
-          text: "We use this open-source backend to enable real-time database management and include API generation, thus improving rapid development.",
-          image: "https://supabase.com/_next/image?url=https%3A%2F%2Ffrontend-assets.supabase.com%2Fwww%2F29ee6a2992c3%2F_next%2Fstatic%2Fmedia%2Flogo-preview.50e72501.jpg&w=3840&q=75",
-        },
-        {
-          heading: "Cassandra",
-          text: "Using the distributed NoSQL database known as Cassandra, we make it ideal for handling large data volumes for all systems.",
-          image: "https://www.logo.wine/a/logo/Apache_Cassandra/Apache_Cassandra-Logo.wine.svg",
-        },
-      ],
+      title: "Cloud",
+      icon: "https://marketplace.canva.com/EAFJCFl0HDw/1/0/1600w/canva-blue-modern-cloud-service-logo--o0mh2MdOPM.jpg",
+      stacks: "Cloud stack",
+      disabled: false,
+      subTopics: technologyStacks.cloud.map(item => ({
+        image: item.img,
+        heading: item.title,
+        text: item.description,
+      })),
     },
   ];
+
+
+    const ecommercePlatforms = [
+    {
+      title: "Adobe Commerce",
+      img: "https://www.solveda.com/wp-content/uploads/2024/03/Adobe-Commerce-logo.webp",
+      description: "Deliver a modern, personalized shopping experience with this flexible, composable e-commerce platform.",
+      link: "#"
+    },
+    {
+      title: "Commercetools",
+      img: "https://constructor.com/hs-fs/hubfs/commercetools-logo.png?width=2000&height=720&name=commercetools-logo.png",
+      description: "Build and manage high-speed, scalable, and exceptional storefronts with this API-first headless commerce solution.",
+      link: "#"
+    },
+    {
+      title: "SAP Hybris",
+      img: "https://cdn.prod.website-files.com/616ef101d9f2a359845dab27/6436ee77669e1e211608c975_Sap-Hybris-logo.webp",
+      description: "Enhance customer experiences and manage data effectively with a robust CRM tool built for personalized commerce.",
+      link: "#"
+    },
+    {
+      title: "Shopify",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopify_logo_2018.svg/2560px-Shopify_logo_2018.svg.png",
+      description: "Easily build and grow your online store with a user-friendly platform that simplifies online selling for businesses of all sizes.",
+      link: "#"
+    },
+    {
+      title: "Salesforce",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/1024px-Salesforce.com_logo.svg.png",
+      description: "Create and manage online stores, inventory, and payment processing from a single, unified commerce platform.",
+      link: "#"
+    },
+    {
+      title: "BigCommerce",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Bc-logo-dark.svg/2560px-Bc-logo-dark.svg.png",
+      description: "Scale your business with a customizable, user-friendly, and enterprise-grade e-commerce platform.",
+      link: "#"
+    },
+    {
+      title: "WooCommerce",
+      img: "https://www.businessbloomer.com/wp-content/uploads/2017/01/woocommerce-logo-color-black@2x.png",
+      description: "Turn any WordPress site into a fully functional online store with advanced and highly customizable e-commerce features.",
+      link: "#"
+    },
+    {
+      title: "Medusa Commerce",
+      img: "https://images.0xw.app/images/Medusa.png",
+      description: "Build reliable and high-performing e-commerce applications for modern, custom shopping experiences.",
+      link: "#"
+    },
+    {
+      title: "Magento",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGtJOPnrvzxA25T_fbXrdlc-TzJj95GAOSfQ&s",
+      description: "Elevate the online shopping journey with a powerful platform known for extensive scalability and customization.",
+      link: "#"
+    }
+
+  ];
+
 
   return (
     <>
@@ -1370,20 +1293,15 @@ const industryServices4 = [
               </p>
 
               <p className=" text-sm md:w-6/12 py-6">
-                To stay ahead of the curve, we provide expert DevOps consulting
-                and development services. We focus on automating your
-                organization's processes while adhering to continuous delivery
-                and continuous integration. At Flux Digital, our comprehensive
-                DevOps approach is designed to streamline your application
-                delivery and significantly enhance your operational efficiency.
-              </p>
+             Our comprehensive approach ensures every aspect of your e-commerce platform is meticulously planned and executed for success. We believe that success begins with a deep understanding of your business. Our approach is not one-size-fits-all; instead, we partner with you to analyze your specific goals, target audience, and competitive landscape. By focusing on metrics that matter—such as boosting conversions, improving user experience, and accelerating business growth—we craft a customized strategy that ensures your e-commerce platform is a powerful asset, not just an online storefront.
+  </p>
 
               <div className="flex flex-col items-center justify-center ">
                 {/* Container for the images. Uses flexbox for layout. */}
                 {/* It's responsive, switching from a single column on small screens to a row on larger ones. */}
                 <div className="flex py-4 flex-col sm:flex-row md:space-y-8 sm:space-y-0 md:space-x-8 md:max-w-6xl mx-auto">
-                  <a
-                    href="#_"
+                  <Link
+                    href="/contact-us"
                     className="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold   group"
                   >
                     <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
@@ -1392,7 +1310,7 @@ const industryServices4 = [
                       Let's Connect
                     </span>
                     <span className="absolute inset-0 border-2 border-white  "></span>
-                  </a>
+                  </Link>
                   {images.map((image) => (
                     // Card container for each image with a shadow and rounded corners.
                     <div
@@ -1445,7 +1363,7 @@ const industryServices4 = [
 
                     <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                       <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
-                        <Link href="https://www.fluxdigital.info/">
+                        <Link href="https://www.fluxdigital.online/">
                   E-commerce Development Services to 
 
                         </Link>
@@ -1490,7 +1408,42 @@ We offer a full suite of e-commerce development services, including strategic pl
 
         <WebDevServicesSection />
 
+
+<p className=" text-gray-600 text-xl px-4 md:text-4xl font-semibold text-center my-10 md:my-16 font-sans">
+  Technologies We Use For <br /> E-commerce
+</p>
+
         <Techstack />
+
+
+<p className=" text-gray-600 text-xl px-4 md:text-4xl font-semibold text-center my-10 md:my-16 font-sans">
+Ecommerce Development  <br /> Platforms
+</p>
+
+         <div className="bg-white w-full min-h-screen p-4 md:p-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {ecommercePlatforms.map((platform, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-start p-4 rounded-xl   transition-all duration-300 ease-in-out border-[1px] border-transparent hover:border-cyan-600 hover:scale-105 cursor-pointer"
+          >
+            <div className="w-full h-24 aspect-square flex items-center justify-center">
+              <img
+                src={platform.img}
+                alt={platform.title}
+                className="w-full h-full object-contain rounded-xl"
+              />
+            </div>
+            <h3 className="font-bold text-gray-900 my-4 text-center">
+              {platform.title}
+            </h3>
+            <p className="text-sm text-gray-500 text-center">
+              {platform.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
         
 
         <WebDevelopmentProcessSection />

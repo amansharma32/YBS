@@ -40,7 +40,7 @@ export const metadata = {
     description: "Harness the power of your data with FLUX Digital's expert services. We provide the tools and analysis to help you make informed business decisions.",
      
     // Kept the correct URL for data analytics services
-    url: "https://www.fluxdigital.info/services/data-analytics-services",  
+    url: "https://www.fluxdigital.online/services/data-analytics-services",  
      
     type: "website", 
     images: [
@@ -56,7 +56,7 @@ export const metadata = {
  
   alternates: {
     // Corrected the canonical URL to match the service
-    canonical: "https://www.fluxdigital.info/services/data-analytics-services", 
+    canonical: "https://www.fluxdigital.online/services/data-analytics-services", 
   },
  
   twitter: { 

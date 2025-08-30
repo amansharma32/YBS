@@ -67,7 +67,7 @@ export const metadata = {
   appleMobileWebAppStatusBarStyle: "default",
  
   alternates: {
-    canonical: "https://www.fluxdigital.info/",
+    canonical: "https://www.fluxdigital.online/",
   },
 
 

@@ -155,7 +155,7 @@ const serviceCategories = [
         icon: <CreditCard className="w-4 h-4" />,
       },
       {
-        id: "qa-testing",
+        id: "quality-assurance-services",
         name: "Quality Assurance",
         icon: <TestTube2 className="w-4 h-4" />,
       },

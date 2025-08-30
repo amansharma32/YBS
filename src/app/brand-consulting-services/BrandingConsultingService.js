@@ -949,7 +949,7 @@ export default function BrandingConsultingService() {
                         <p className="text-center font-sans md:text-left font-thin text-white text-3xl md:text-5xl flex flex-col justify-center items-center h-full my-auto">
                           Brand Consulting Services
                             <br />
-                            <span className="text-center font-sans  text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">Home /  Brand Consulting Services
+                            <span className="text-center font-sans  text-[10px] md:text-[15px] pt-5 w-full md:text-start uppercase">Branding /  Brand Consulting Services
                             </span>
                         </p>
                     </div>

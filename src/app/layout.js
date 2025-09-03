@@ -149,6 +149,7 @@ export default function RootLayout({ children }) {
         <SpeedInsights />
         {children}
         <Footer />
+        
       </body>
     </html>
   );

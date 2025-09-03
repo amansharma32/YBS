@@ -160,7 +160,7 @@ const serviceCategories = [
         icon: <TestTube2 className="w-4 h-4" />,
       },
       {
-        id: "cloud-service",
+        id: "cloud-services",
         name: "Cloud Service",
         icon: <Cloud className="w-4 h-4" />,
       },

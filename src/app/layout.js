@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import WatsapButton from "@/components/watsap";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -144,6 +145,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
+        <WatsapButton phoneNumber="+917017915594" />
+
       <Analytics />
         <Navbar />
         <SpeedInsights />

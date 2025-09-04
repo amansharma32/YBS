@@ -20,16 +20,16 @@ const geistMono = Geist_Mono({
 export const metadata = {
   
   title: {
-    default: "Top Web Development & Digital Marketing Company | FLUX Digital",
+    default: "Top Web Development & Digital Marketing Company | Beyond Solutions",
     template: "%s"  
   },
 
   
-  description: "FLUX Digital is a leading web development and digital marketing company, delivering responsive e-commerce websites, SEO services, B2B/B2C portals, and IT solutions globally. Transform your business with us.",
+  description: "Beyond Solutions is a leading web development and digital marketing company, delivering responsive e-commerce websites, SEO services, B2B/B2C portals, and IT solutions globally. Transform your business with us.",
  
   keywords: [
 
-    "FLUX Digital",
+    "Beyond Solutions",
     "Website Designing Company",
     "Web Development Company",
     "Digital Marketing Company",
@@ -64,30 +64,30 @@ export const metadata = {
   
   robots: "index, follow",
   appleMobileWebAppCapable: "yes",
-  appleMobileWebAppTitle: "FLUX Digital",  
+  appleMobileWebAppTitle: "Beyond Solutions",  
   appleMobileWebAppStatusBarStyle: "default",
  
   alternates: {
-    canonical: "https://www.fluxdigital.online/",
+    canonical: "https://www.yourbeyondsolutions.com/",
   },
 
 
   twitter: {
     site: "@fluxdigital",
-    title: "Top Web Dev & Digital Marketing Agency | India & Global | FLUX Digital", 
+    title: "Top Web Dev & Digital Marketing Agency | India & Global | Beyond Solutions", 
     description: "Transform your business with expert web development, digital marketing, and IT solutions. Serving B2B, B2C, D2C clients worldwide from India.",
     
     card: "summary_large_image", 
     image: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=630&q=80",  
-    imageAlt: "Expert Website Designing and Development, Digital Marketing Services | FLUX Digital ",  
+    imageAlt: "Expert Website Designing and Development, Digital Marketing Services | Beyond Solutions ",  
   },
 
  
   openGraph: { 
-    title: 'Global Web Development & Digital Marketing Partner | FLUX Digital', 
-    description: 'FLUX Digital is a premier web development and digital marketing company in India, offering responsive e-commerce, SEO, and IT solutions to B2B/B2C clients worldwide.',
+    title: 'Global Web Development & Digital Marketing Partner | Beyond Solutions', 
+    description: 'Beyond Solutions is a premier web development and digital marketing company in India, offering responsive e-commerce, SEO, and IT solutions to B2B/B2C clients worldwide.',
     url: 'https://www.fluxdigital.info',
-    siteName: 'FLUX Digital',
+    siteName: 'Beyond Solutions',
     type: "website",  
      
     images: [
@@ -95,17 +95,17 @@ export const metadata = {
         url: 'https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=630&q=80',
         width: 1200,
         height: 630,
-        alt: 'Website Designing and Development Services for Global Businesses | FLUX Digital',  
+        alt: 'Website Designing and Development Services for Global Businesses | Beyond Solutions',  
       },
       {
         url: 'https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80',
         width: 800,
         height: 600,
-        alt: 'Responsive E-commerce Website Design and SEO Services | FLUX Digital',  
+        alt: 'Responsive E-commerce Website Design and SEO Services | Beyond Solutions',  
       },
     ],
     locale: 'en_IN',
-    creator: "FLUX Digital",
+    creator: "Beyond Solutions",
   },
 
   
@@ -125,7 +125,7 @@ export default function RootLayout({ children }) {
   
 <head>
 
-<meta name="google-site-verification" content="Ftz7mm5nTrwASoP0ex_oUdViQV9o6beKbbYaMI8RTBM" />
+<meta name="google-site-verification" content="6TIad8xQLrwu0z0uKJ9oL7Y-Y8PpIZLFHmryi2tJjws" />
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-2VTHRMSF8W"></Script>
 

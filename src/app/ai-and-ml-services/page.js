@@ -3,9 +3,9 @@ import Aiml from './Aiml'
 
 export const metadata = {
   
-  title: "AI & Machine Learning Services | FLUX Digital",
+  title: "AI & Machine Learning Services | Beyond Solutions",
   
-  description: "FLUX Digital offers comprehensive AI and Machine Learning services, from predictive analytics and deep learning to natural language processing. Leverage our expertise to innovate and grow.",
+  description: "Beyond Solutions offers comprehensive AI and Machine Learning services, from predictive analytics and deep learning to natural language processing. Leverage our expertise to innovate and grow.",
 
   keywords: [
     "ai services",
@@ -18,7 +18,7 @@ export const metadata = {
     "data science services",
     "ai consulting",
     "ml development",
-    "FLUX Digital AI"
+    "Beyond Solutions AI"
   ],
   
 
@@ -27,11 +27,11 @@ export const metadata = {
    
   openGraph: {
      
-    title: "Transform Your Business with AI & ML | FLUX Digital",
+    title: "Transform Your Business with AI & ML | Beyond Solutions",
      
-    description: "Partner with FLUX Digital to harness the power of artificial intelligence and machine learning for data-driven decisions, process automation, and intelligent solutions.",
+    description: "Partner with Beyond Solutions to harness the power of artificial intelligence and machine learning for data-driven decisions, process automation, and intelligent solutions.",
      
-    url: "https://www.fluxdigital.online/services/ai-and-ml-services",  
+    url: "https://www.yourbeyondsolutions.com/services/ai-and-ml-services",  
      
     type: "website", 
     images: [
@@ -39,19 +39,19 @@ export const metadata = {
         url: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1755156356/pic2_kxlkw9.webp",
         width: 1200,
         height: 630,
-        alt: "FLUX Digital's AI and machine learning services for business transformation.",
+        alt: "Beyond Solutions's AI and machine learning services for business transformation.",
       },
     ],
   },
  
   alternates: {
-    canonical: "https://www.fluxdigital.online/services/ai-and-ml-services", 
+    canonical: "https://www.yourbeyondsolutions.com/services/ai-and-ml-services", 
   },
  
   twitter: { 
     card: "summary_large_image", 
-    title: "Custom AI & Machine Learning Solutions | FLUX Digital", 
-    description: "From custom models to scalable platforms, FLUX Digital delivers intelligent AI and ML solutions that drive innovation and competitive advantage for your business.", 
+    title: "Custom AI & Machine Learning Solutions | Beyond Solutions", 
+    description: "From custom models to scalable platforms, Beyond Solutions delivers intelligent AI and ML solutions that drive innovation and competitive advantage for your business.", 
     image: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1755156356/pic2_kxlkw9.webp", 
   },
 };

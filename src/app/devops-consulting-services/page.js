@@ -3,10 +3,10 @@ import DevOps from './DevOps'
 
 export const metadata = {
    
-  title: "Leading DevOps Services & Solutions | FLUX Digital",
+  title: "Leading DevOps Services & Solutions | Beyond Solutions",
   
   
-  description: "Optimize your software delivery pipeline with FLUX Digital's expert DevOps services. We specialize in CI/CD, automation, cloud infrastructure, and security for global businesses.",
+  description: "Optimize your software delivery pipeline with Beyond Solutions's expert DevOps services. We specialize in CI/CD, automation, cloud infrastructure, and security for global businesses.",
 
  
   keywords: [
@@ -27,18 +27,18 @@ export const metadata = {
     "SaaS DevOps",
     "agile development",
     "software delivery automation",
-    "FLUX Digital DevOps",
+    "Beyond Solutions DevOps",
     "global DevOps solutions",
   ],
    
   robots: "index, follow",
  
   openGraph: {
-    title: "DevOps Automation & Cloud Solutions for Global Businesses | FLUX Digital",
+    title: "DevOps Automation & Cloud Solutions for Global Businesses | Beyond Solutions",
 
-    description: "Accelerate your development cycle with FLUX Digital, a leading DevOps agency. We deliver end-to-end solutions for CI/CD, cloud migration, and infrastructure management.",
+    description: "Accelerate your development cycle with Beyond Solutions, a leading DevOps agency. We deliver end-to-end solutions for CI/CD, cloud migration, and infrastructure management.",
 
-    url: "https://www.fluxdigital.online/services/devops-consulting-services",  
+    url: "https://www.yourbeyondsolutions.com/services/devops-consulting-services",  
 
     type: "website",
 
@@ -47,14 +47,14 @@ export const metadata = {
         url: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
         width: 1200,
         height: 630,
-        alt: "FLUX Digital's expert DevOps and cloud automation services for global businesses.",
+        alt: "Beyond Solutions's expert DevOps and cloud automation services for global businesses.",
       },
     ],
   },
 
  
   alternates: {
-    canonical: "https://www.fluxdigital.online/services/devops-consulting-services", 
+    canonical: "https://www.yourbeyondsolutions.com/services/devops-consulting-services", 
   },
 
   
@@ -62,9 +62,9 @@ export const metadata = {
    
     card: "summary_large_image",
     
-    title: "Expert DevOps Solutions for Global Businesses | FLUX Digital",
+    title: "Expert DevOps Solutions for Global Businesses | Beyond Solutions",
     
-    description: "From CI/CD to cloud migration, FLUX Digital delivers comprehensive DevOps solutions worldwide. Streamline your operations with our expert agency.",
+    description: "From CI/CD to cloud migration, Beyond Solutions delivers comprehensive DevOps solutions worldwide. Streamline your operations with our expert agency.",
     
     image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D", 
   },

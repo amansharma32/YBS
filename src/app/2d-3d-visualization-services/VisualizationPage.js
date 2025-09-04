@@ -517,7 +517,7 @@ export default function VisualizationPage() {
 
                                         <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                                             <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
-                                                <Link href='https://www.fluxdigital.online/' >
+                                                <Link href='https://www.yourbeyondsolutions.com/' >
                                                    Unleash Your 2D / 3D Visualisation Power
                                                 </Link>
                                             </span><br />
@@ -532,7 +532,7 @@ export default function VisualizationPage() {
                                     <p className=" font-sans text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
 
-                             At FLUX Digital, our 2D / 3D Visualisation Services are a core part of our design expertise, helping brands bring concepts to life in stunning detail. We believe that visually captivating content is essential for communicating complex ideas and leaving a lasting impression. Our designers transform your initial concepts into powerful, visually engaging graphics that not only enhance communication but also reinforce your brand's message. We work closely with you to understand your audience and business goals, ensuring every design is both beautiful and strategic. From a single product render to a full-scale architectural walkthrough, our creative process is focused on delivering visualizations that make your brand stand out in a competitive global market.
+                             At Beyond Solutions, our 2D / 3D Visualisation Services are a core part of our design expertise, helping brands bring concepts to life in stunning detail. We believe that visually captivating content is essential for communicating complex ideas and leaving a lasting impression. Our designers transform your initial concepts into powerful, visually engaging graphics that not only enhance communication but also reinforce your brand's message. We work closely with you to understand your audience and business goals, ensuring every design is both beautiful and strategic. From a single product render to a full-scale architectural walkthrough, our creative process is focused on delivering visualizations that make your brand stand out in a competitive global market.
 
 
 

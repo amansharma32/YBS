@@ -658,7 +658,7 @@ export default function QualityServices() {
 
                     <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                       <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
-                        <Link href="https://www.fluxdigital.online/">
+                        <Link href="https://www.yourbeyondsolutions.com/">
                          Why Our QA Services Stand Out
 
                         </Link>

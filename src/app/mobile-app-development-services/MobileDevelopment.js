@@ -736,7 +736,7 @@ export default function MobileDevelopment() {
 
                     <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                       <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
-                        <Link href="https://www.fluxdigital.online/">
+                        <Link href="https://www.yourbeyondsolutions.com/">
                           Unleash Your Mobile App Development Power
                         </Link>
                       </span>
@@ -753,7 +753,7 @@ export default function MobileDevelopment() {
                   </div>
                   <p className="  text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
-             At FLUX Digital, we believe a great app is more than just code; it's a direct connection to your audience. We specialize in end-to-end mobile app development, creating robust and intuitive applications for both iOS and Android. Our approach is to build mobile experiences that not only perform flawlessly but also enhance your brand and engage your users from the very first tap. We transform your ideas into powerful, native-feeling applications that deliver real value and a competitive edge.
+             At Beyond Solutions, we believe a great app is more than just code; it's a direct connection to your audience. We specialize in end-to-end mobile app development, creating robust and intuitive applications for both iOS and Android. Our approach is to build mobile experiences that not only perform flawlessly but also enhance your brand and engage your users from the very first tap. We transform your ideas into powerful, native-feeling applications that deliver real value and a competitive edge.
 
 
                   </p>

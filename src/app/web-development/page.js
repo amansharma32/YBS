@@ -7,7 +7,7 @@ export const metadata = {
   title: "Top Web Development Company | Global Website Development Services Agency",
   
   
-  description: "Transform your business with FLUX Digital's expert web development services. We provide innovative solutions globally to B2B, B2C, D2C businesses, and more. Contact us today!",
+  description: "Transform your business with Beyond Solutions's expert web development services. We provide innovative solutions globally to B2B, B2C, D2C businesses, and more. Contact us today!",
 
  
   keywords: [
@@ -23,7 +23,7 @@ export const metadata = {
     "global web development",
     "web solutions provider",
     "expert web developers",
-    "FLUX Digital web development",
+    "Beyond Solutions web development",
     "innovative web solutions",
     "scalable web applications",
     "web development USA",
@@ -44,11 +44,11 @@ export const metadata = {
   robots: "index, follow",
  
   openGraph: {
-    title: "Global Web Development Services for B2B, B2C, D2C | FLUX Digital",
+    title: "Global Web Development Services for B2B, B2C, D2C | Beyond Solutions",
 
-    description: "Partner with FLUX Digital, a leading web development agency, to transform your business with cutting-edge website and web application solutions for global markets.",
+    description: "Partner with Beyond Solutions, a leading web development agency, to transform your business with cutting-edge website and web application solutions for global markets.",
 
-    url: "https://www.fluxdigital.online/services/web-development",  
+    url: "https://www.yourbeyondsolutions.com/services/web-development",  
 
     type: "website",
 
@@ -57,14 +57,14 @@ export const metadata = {
         url: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
         width: 1200,
         height: 630,
-        alt: "FLUX Digital's expert web development services for global businesses.",
+        alt: "Beyond Solutions's expert web development services for global businesses.",
       },
     ],
   },
 
  
   alternates: {
-    canonical: "https://www.fluxdigital.online/services/web-development", 
+    canonical: "https://www.yourbeyondsolutions.com/services/web-development", 
   },
 
   
@@ -72,9 +72,9 @@ export const metadata = {
    
     card: "summary_large_image",
     
-    title: "Expert Web Development for Global Businesses | FLUX Digital",
+    title: "Expert Web Development for Global Businesses | Beyond Solutions",
     
-    description: "From B2B to D2C, FLUX Digital delivers innovative web development solutions worldwide. Elevate your online presence with our expert agency.",
+    description: "From B2B to D2C, Beyond Solutions delivers innovative web development solutions worldwide. Elevate your online presence with our expert agency.",
     
     image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D", 
   },

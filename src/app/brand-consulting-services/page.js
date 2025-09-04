@@ -4,9 +4,9 @@ import BrandingConsultingService from './BrandingConsultingService'
 
 export const metadata = {
   
-  title: "Top Branding Consulting & Brand Strategy Agency | Global | FLUX Digital",
+  title: "Top Branding Consulting & Brand Strategy Agency | Global | Beyond Solutions",
   
-  description: "Elevate your brand with FLUX Digital's expert branding consulting services. We offer comprehensive brand strategy, identity, and design solutions for businesses globally.",
+  description: "Elevate your brand with Beyond Solutions's expert branding consulting services. We offer comprehensive brand strategy, identity, and design solutions for businesses globally.",
 
   keywords: [
     "branding consulting",
@@ -21,7 +21,7 @@ export const metadata = {
     "brand development company",
     "strategic branding",
     "brand management",
-    "FLUX Digital branding",
+    "Beyond Solutions branding",
     "branding agency India",
     "branding consultant USA",
     "brand strategy Europe",
@@ -38,11 +38,11 @@ export const metadata = {
    
   openGraph: {
      
-    title: "Global Branding & Brand Identity Solutions | FLUX Digital Consulting",
+    title: "Global Branding & Brand Identity Solutions | Beyond Solutions Consulting",
      
-    description: "Partner with FLUX Digital for innovative branding consulting, from strategic brand development to impactful identity design, for businesses worldwide.",
+    description: "Partner with Beyond Solutions for innovative branding consulting, from strategic brand development to impactful identity design, for businesses worldwide.",
      
-    url: "https://www.fluxdigital.online/services/brand-consulting-services",  
+    url: "https://www.yourbeyondsolutions.com/services/brand-consulting-services",  
      
     type: "website", 
     images: [
@@ -50,19 +50,19 @@ export const metadata = {
         url: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", //  
         width: 1200,
         height: 630,
-        alt: "FLUX Digital's expert branding consulting and brand strategy services.",
+        alt: "Beyond Solutions's expert branding consulting and brand strategy services.",
       },
     ],
   },
  
   alternates: {
-    canonical: "https://www.fluxdigital.online/services/brand-consulting-services", 
+    canonical: "https://www.yourbeyondsolutions.com/services/brand-consulting-services", 
   },
  
   twitter: { 
     card: "summary_large_image", 
-    title: "Strategic Brand Consulting for Global Growth | FLUX Digital", 
-    description: "Build a powerful brand identity with FLUX Digital. Our branding consulting services drive recognition and growth for businesses worldwide.", 
+    title: "Strategic Brand Consulting for Global Growth | Beyond Solutions", 
+    description: "Build a powerful brand identity with Beyond Solutions. Our branding consulting services drive recognition and growth for businesses worldwide.", 
     image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
   },
 };

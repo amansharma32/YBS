@@ -198,7 +198,7 @@ export default function BrandingConsultingService() {
 
     const [activeFaq, setActiveFaq] = useState(null);
 
-    // Define the content data for Flux Digital's web development services
+    // Define the content data for Beyond Solutions's web development services
 
     const WebDevServicesSection = () => {
         const ref = useRef(null);
@@ -315,8 +315,8 @@ export default function BrandingConsultingService() {
             id: 1,
             title: "Web Development Services to Make Your Project a Digital Stand-Out",
             paragraphs: [
-                "Web development services at Flux Digital empower businesses to build cutting-edge web-based software, ensuring an exceptional digital user experience. As a leading web development partner, we combine a team of seasoned experts, advanced technologies, and innovative tools, adhering to the latest industry trends to form the cornerstone of your business’s online growth.",
-                "At Flux Digital, we meticulously focus on every facet of web development, guaranteeing a seamless and efficient process for your business. From crafting responsive designs and ensuring improved performance to building robust functionality, we specialize in delivering custom web development solutions for stunning, user-friendly, and highly engaging websites, eCommerce storefronts, web applications, CMS, SaaS platforms, and enterprise applications. Our goal is to ensure your online presence not only stands out but truly shines in the digital landscape."
+                "Web development services at Beyond Solutions empower businesses to build cutting-edge web-based software, ensuring an exceptional digital user experience. As a leading web development partner, we combine a team of seasoned experts, advanced technologies, and innovative tools, adhering to the latest industry trends to form the cornerstone of your business’s online growth.",
+                "At Beyond Solutions, we meticulously focus on every facet of web development, guaranteeing a seamless and efficient process for your business. From crafting responsive designs and ensuring improved performance to building robust functionality, we specialize in delivering custom web development solutions for stunning, user-friendly, and highly engaging websites, eCommerce storefronts, web applications, CMS, SaaS platforms, and enterprise applications. Our goal is to ensure your online presence not only stands out but truly shines in the digital landscape."
             ]
         }
     ];
@@ -996,7 +996,7 @@ export default function BrandingConsultingService() {
 
                                         <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                                             <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
-                                                <Link href='https://www.fluxdigital.online/' >
+                                                <Link href='https://www.yourbeyondsolutions.com/' >
                                                     Brand Consulting  Services to Make
                                                 </Link>
                                             </span><br />
@@ -1013,7 +1013,7 @@ export default function BrandingConsultingService() {
 
 
                                         Brand Consulting Services – Elevate Your Business Identity with Strategic Branding
-                                        A strong brand is the foundation of business success, shaping customer perceptions and fostering long-term loyalty. At Flux Digital, our Brand Consulting services empower businesses to develop a distinctive and memorable brand identity that stands out in today’s competitive market. We go beyond aesthetics, crafting a strategic brand narrative that aligns with your vision, values, and audience expectations.
+                                        A strong brand is the foundation of business success, shaping customer perceptions and fostering long-term loyalty. At Beyond Solutions, our Brand Consulting services empower businesses to develop a distinctive and memorable brand identity that stands out in today’s competitive market. We go beyond aesthetics, crafting a strategic brand narrative that aligns with your vision, values, and audience expectations.
 
                                         Our Logo Design service creates a unique and impactful visual identity that differentiates your business while maintaining professionalism and appeal. To ensure consistency across all platforms, our Brand Collateral service develops cohesive design elements for business cards, letterheads, packaging, and marketing materials. With Graphic Design, we transform complex ideas into visually engaging content that enhances communication and strengthens brand messaging.
 
@@ -1024,7 +1024,7 @@ export default function BrandingConsultingService() {
 
                                         To maximize your brand’s reach, our Digital Marketing team delivers data-driven strategies that drive engagement, conversions, and growth. Our Social Media Management service ensures consistent and meaningful interactions with your audience through curated content calendars and platform-specific campaigns. Finally, our Branding solutions guarantee a unified identity across every customer touchpoint—establishing trust, recognition, and a lasting impression.
 
-                                        Partner with Flux Digital to build a brand that not only stands out but also connects deeply with your audience, driving long-term success in the digital world.
+                                        Partner with Beyond Solutions to build a brand that not only stands out but also connects deeply with your audience, driving long-term success in the digital world.
 
                                     </p>
 

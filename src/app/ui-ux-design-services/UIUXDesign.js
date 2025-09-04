@@ -586,7 +586,7 @@ export default function UIUXDesign() {
 
                     <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                       <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
-                        <Link href="https://www.fluxdigital.online/">
+                        <Link href="https://www.yourbeyondsolutions.com/">
                           Unleash Your UI/UX Design Power
                         </Link>
                       </span>
@@ -602,7 +602,7 @@ export default function UIUXDesign() {
                     </p>
                   </div>
                   <p className=" font-sans text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
-                    At FLUX Digital, we design intuitive and engaging digital
+                    At Beyond Solutions, we design intuitive and engaging digital
                     experiences that put the user first. Our UI/UX design
                     services are at the heart of our digital offerings, helping
                     brands build websites, applications, and platforms that are

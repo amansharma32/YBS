@@ -25,7 +25,7 @@ export const metadata = {
   openGraph: {
     title: "Expert QA & Software Testing | Global and India-Based",
     description: "Partner with us for expert QA services delivered from India's tech hubs, including Delhi. We help businesses worldwide ensure their software is secure, reliable, and provides an exceptional user experience.",
-    url: "https://www.fluxdigital.online/services/quality-assurance-services",
+    url: "https://www.yourbeyondsolutions.com/services/quality-assurance-services",
     type: "website",
     images: [
       {
@@ -37,7 +37,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.fluxdigital.online/services/quality-assurance-services",
+    canonical: "https://www.yourbeyondsolutions.com/services/quality-assurance-services",
   },
   twitter: {
     card: "summary_large_image",

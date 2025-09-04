@@ -134,7 +134,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="order-3">
             <p className="text-sm text-center md:text-end text-neutral-400">
-              © {new Date().getFullYear()} FLUX Digital. All rights reserved.
+              © {new Date().getFullYear()} Beyond Solutions. All rights reserved.
             </p>
           </div>
         </div>

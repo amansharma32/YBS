@@ -593,7 +593,7 @@ export default function DataAnalytics() {
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="text-sm text-gray-600 max-w-2xl mx-auto font-light"
           >
-               Looking to transform your business with the power of data? At FLUX Digital, we provide swift, reliable, and results-driven Data & Analytics services designed to help you crush your business goals. Here's how our expertise can make a difference:
+               Looking to transform your business with the power of data? At Beyond Solutions, we provide swift, reliable, and results-driven Data & Analytics services designed to help you crush your business goals. Here's how our expertise can make a difference:
          
           </motion.p>
         </header>
@@ -693,7 +693,7 @@ export default function DataAnalytics() {
 
                     <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                       <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
-                        <Link href="https://www.fluxdigital.online/">
+                        <Link href="https://www.yourbeyondsolutions.com/">
                          Unlock the Power of Data to Drive Growth
                         </Link>
                       </span>
@@ -711,7 +711,7 @@ export default function DataAnalytics() {
                   </div>
                   <p className="  text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
-            At FLUX Digital, Data & Analytics are at the very heart of our digital offerings. We believe that a powerful online presence isn't just about beautiful design—it's about understanding and leveraging the information that shapes every user interaction. Our expert team transforms raw data into actionable insights, helping brands build and optimize platforms that don't just look good, but are also designed to convert, increase average order value, and build lasting brand loyalty. We don't just provide reports; we provide a clear roadmap for success driven by numbers.
+            At Beyond Solutions, Data & Analytics are at the very heart of our digital offerings. We believe that a powerful online presence isn't just about beautiful design—it's about understanding and leveraging the information that shapes every user interaction. Our expert team transforms raw data into actionable insights, helping brands build and optimize platforms that don't just look good, but are also designed to convert, increase average order value, and build lasting brand loyalty. We don't just provide reports; we provide a clear roadmap for success driven by numbers.
 
 
                   </p>

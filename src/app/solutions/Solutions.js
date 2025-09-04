@@ -407,7 +407,7 @@ const addOnServices = [
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="max-w-4xl mx-auto md:text-left text-center text-gray-500 mb-16">
-            The approximate pricing for FLUX Digital's comprehensive service packages considers both the domestic (Indian) and international markets.
+            The approximate pricing for Beyond Solutions's comprehensive service packages considers both the domestic (Indian) and international markets.
         </motion.p>
         </div>
   
@@ -421,7 +421,7 @@ const addOnServices = [
           <h3 className="font-bold  md:text-2xl text-lg text-teal-600 mb-3">Important Disclaimer</h3>
 
           <p className="text-gray-600 text-sm leading-relaxed">
-            These are approximate ranges and serve as a general guide. Actual pricing for FLUX Digital's services will depend on numerous factors, including:
+            These are approximate ranges and serve as a general guide. Actual pricing for Beyond Solutions's services will depend on numerous factors, including:
           </p>
           <ul className="text-gray-600 text-sm list-disc list-inside mt-2 space-y-1">
             <li>Specific Scope & Complexity</li>
@@ -484,7 +484,7 @@ const addOnServices = [
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.1 }}
             className="max-w-7xl mx-auto text-center  md:text-left text-gray-500 py-12">
-            This pricing structure aims to provide flexibility and transparency, allowing FLUX Digital to cater to a broad spectrum of clients while ensuring profitability and high-quality service delivery across both domestic and international markets.
+            This pricing structure aims to provide flexibility and transparency, allowing Beyond Solutions to cater to a broad spectrum of clients while ensuring profitability and high-quality service delivery across both domestic and international markets.
         </motion.p>
       </div>
     </div>

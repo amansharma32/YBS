@@ -1306,7 +1306,7 @@ export default function DevOps() {
                 To stay ahead of the curve, we provide expert DevOps consulting
                 and development services. We focus on automating your
                 organization's processes while adhering to continuous delivery
-                and continuous integration. At Flux Digital, our comprehensive
+                and continuous integration. At Beyond Solutions, our comprehensive
                 DevOps approach is designed to streamline your application
                 delivery and significantly enhance your operational efficiency.
               </p>
@@ -1378,7 +1378,7 @@ export default function DevOps() {
 
                     <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                       <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
-                        <Link href="https://www.fluxdigital.online/">
+                        <Link href="https://www.yourbeyondsolutions.com/">
                           DevOps Services to Make
                         </Link>
                       </span>
@@ -1394,7 +1394,7 @@ export default function DevOps() {
                     </p>
                   </div>
                   <p className=" font-sans text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
-                    DevOps services at Flux Digital empower businesses
+                    DevOps services at Beyond Solutions empower businesses
                     to build cutting-edge web-based software, ensuring an
                     exceptional digital user experience. As a leading web
                     development partner, we combine a team of seasoned experts,
@@ -1412,7 +1412,7 @@ export default function DevOps() {
                     platform-specific campaigns. Finally, our Branding solutions
                     guarantee a unified identity across every customer
                     touchpoint—establishing trust, recognition, and a lasting
-                    impression. Partner with Flux Digital to build a brand that
+                    impression. Partner with Beyond Solutions to build a brand that
                     not only stands out but also connects deeply with your
                     audience, driving long-term success in the digital world.
                   </p>

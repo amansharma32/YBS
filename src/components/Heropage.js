@@ -173,7 +173,7 @@ export default function Heropage() {
                                 <p className='p-anime'>Into Real Projects</p>
                                 <p className='p-anime'> That Deliver Results</p>
                                 <p className=' py-5 text-white-50 relative  z-10 text-sm md:text-lg  pointer-events-none'>
-                                 Hi,  We are Flux Digital, a agency based in india   <br /> 
+                                 Hi,  We are Beyond Solutions, a agency based in india   <br /> 
                                with passion for all web services. </p>
  
                             </div>

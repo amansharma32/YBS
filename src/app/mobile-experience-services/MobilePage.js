@@ -684,7 +684,7 @@ export default function MobilePage() {
 
                     <p className="  text-lg md:text-2xl text-center md:text-left font-bold text-gray-900  mb-2 leading-tight">
                       <span className="bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent">
-                        <Link href="https://www.fluxdigital.online/">
+                        <Link href="https://www.yourbeyondsolutions.com/">
                           Unleash Your Website Design Power
                         </Link>
                       </span>
@@ -701,7 +701,7 @@ export default function MobilePage() {
                   </div>
                   <p className="  text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
-                At FLUX Digital, we craft intuitive and engaging mobile experiences that put the user first. Our mobile experience services are at the heart of our digital offerings, helping brands build online platforms that are not only visually stunning but also seamless to navigate on any device. We believe that a great user experience is the key to driving higher conversions, building brand loyalty, and simplifying complex user journeys. Our expert designers meticulously craft every element of the mobile interface, ensuring it’s not just beautiful, but also functional, accessible, and perfectly aligned with your brand's identity.
+                At Beyond Solutions, we craft intuitive and engaging mobile experiences that put the user first. Our mobile experience services are at the heart of our digital offerings, helping brands build online platforms that are not only visually stunning but also seamless to navigate on any device. We believe that a great user experience is the key to driving higher conversions, building brand loyalty, and simplifying complex user journeys. Our expert designers meticulously craft every element of the mobile interface, ensuring it’s not just beautiful, but also functional, accessible, and perfectly aligned with your brand's identity.
 
                   </p>
 

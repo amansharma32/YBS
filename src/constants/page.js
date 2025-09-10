@@ -58,18 +58,11 @@ export const logoIconsList = [
   {
     imgPath: "/6.png",
   },
-  {
-    imgPath: "/7.png",
-  },
+
   {
     imgPath: "/8.png",
   },
-  {
-    imgPath: "/9.png",
-  },
-  {
-    imgPath: "/10.png",
-  },
+  
 ];
 
 export const abilities = [

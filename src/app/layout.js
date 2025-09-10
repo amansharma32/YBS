@@ -20,12 +20,12 @@ const geistMono = Geist_Mono({
 export const metadata = {
   
   title: {
-    default: "Top Web Development & Digital Marketing Company | Beyond Solutions",
+    default: "Top Web Development & Digital Marketing Company in Global| Beyond Solutions ",
     template: "%s"  
   },
 
   
-  description: "Beyond Solutions is a leading web development and digital marketing company, delivering responsive e-commerce websites, SEO services, B2B/B2C portals, and IT solutions globally. Transform your business with us.",
+  description: "Beyond Solutions is a leading web development and digital marketing company, delivering responsive e-commerce websites, SEO services, B2B/B2C portals, and IT solutions globally. Transform your business with us. Web Development USA , India, UK, Australia, Dubai, Switzerland , Europe.",
  
   keywords: [
 
@@ -74,7 +74,7 @@ export const metadata = {
 
   twitter: {
     site: "@fluxdigital",
-    title: "Top Web Dev & Digital Marketing Agency | India & Global | Beyond Solutions", 
+    title: "Top Web Dev & Digital Marketing Agency | USA And Europe | Beyond Solutions", 
     description: "Transform your business with expert web development, digital marketing, and IT solutions. Serving B2B, B2C, D2C clients worldwide from India.",
     
     card: "summary_large_image", 

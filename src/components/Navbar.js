@@ -438,16 +438,16 @@ function Header() {
   }, []);
 
   const pathname = usePathname();
-  const [logoSrc, setLogoSrc] = useState("/flux.webp");
+  const [logoSrc, setLogoSrc] = useState("https://res.cloudinary.com/dkbusg4bq/image/upload/v1757502145/be_zitelj.png");
   const [logoSize, setLogoSize] = useState({ width: "140", height: "50" });
 
   useEffect(() => {
     if (pathname) {
       if (pathname === "/") {
-        setLogoSrc("/flux.webp");
+        setLogoSrc("https://res.cloudinary.com/dkbusg4bq/image/upload/v1757502145/be_zitelj.png");
         setLogoSize({ width: "140", height: "50" });
       } else {
-        setLogoSrc("/flux.webp");
+        setLogoSrc("https://res.cloudinary.com/dkbusg4bq/image/upload/v1757502145/be_zitelj.png");
         setLogoSize({ width: "140", height: "50" });
       }
     }

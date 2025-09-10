@@ -165,7 +165,7 @@ const serviceCategories = [
         icon: <Cloud className="w-4 h-4" />,
       },
       {
-        id: "cyber-security",
+        id: "cyber-security-services",
         name: "Cyber Security",
         icon: <BrickWallFire className="w-4 h-4" />,
       },

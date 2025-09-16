@@ -82,8 +82,9 @@ export const metadata = {
 export default function page() {
   return (
     <>
-    
+
     <CyberSecurity/>
+    
     </>
   )
 }

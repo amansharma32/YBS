@@ -146,7 +146,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
 
-        <WatsapButton phoneNumber="+917017915594" />
+        <WatsapButton phoneNumber="+919205104767" />
 
       <Analytics />
         <Navbar />

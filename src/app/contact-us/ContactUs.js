@@ -486,8 +486,8 @@ Sec-70, </p>
                   <div>
                     <p className=" md:text-lg font-medium text-gray-800">Email</p>
                     <p className="text-cyan-600 hover:underline mt-1 transition-colors duration-200">
-                      <a   className=' text-sm' href={`mailto:${activeLocation === 'india' ? 'fluxdigital2005@gmail.com' : 'fluxdigital2005@gmail.com'}`}>
-                        {activeLocation === 'india' ? 'fluxdigital2005@gmail.com' : 'fluxdigital2005@gmail.com'}
+                      <a   className=' text-sm' href={`mailto:${activeLocation === 'india' ? 'ronnieromano2482@gmail.com' : 'ronnieromano2482@gmail.com'}`}>
+                        {activeLocation === 'india' ? 'ronnieromano2482@gmail.com' : 'ronnieromano2482@gmail.com'}
                       </a>
                     </p>
                   </div>
@@ -501,7 +501,7 @@ Sec-70, </p>
                   <div>
                     <p className=" md:text-lg font-medium text-gray-800">Phone</p>
                     <p className="text-gray-600 mt-1">
-                      {activeLocation === 'india' ? '7017915594' : 'processing...'}
+                      {activeLocation === 'india' ? '9205104767' : 'processing...'}
                     </p>
                     <p className="text-gray-500 text-sm">
                       {activeLocation === 'india' ? 'Mon - Fri : 10am - 6pm IST' : 'Mon - Fri: 9am - 6pm EST'}

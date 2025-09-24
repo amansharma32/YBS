@@ -48,8 +48,8 @@ const footerLinks = {
 const footerConnect = {
   title: "Connect",
   items: [
-    { label: "Contact Number", value: "7017915594", type: "tel", href: "tel:7017915594" }, 
-    { label: "Email", value: "fluxdigital2005@gmail.com", type: "email", href: "mailto:fluxdigital2005@gmail.com" },
+    { label: "Contact Number", value: "9205104767", type: "tel", href: "tel:9205104767" }, 
+    { label: "Email", value: "ronnieromano2482@gmail.com", type: "email", href: "mailto:ronnieromano2482@gmail.com" },
     
   ],
 };

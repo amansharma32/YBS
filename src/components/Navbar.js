@@ -438,17 +438,17 @@ function Header() {
   }, []);
 
   const pathname = usePathname();
-  const [logoSrc, setLogoSrc] = useState("https://res.cloudinary.com/dmnl4rifd/image/upload/v1759393935/YBS_LOGO_xv6mug.png");
-  const [logoSize, setLogoSize] = useState({ width: "140", height: "50" });
+  const [logoSrc, setLogoSrc] = useState("https://res.cloudinary.com/dmnl4rifd/image/upload/v1759395848/ybs_2_cw8piw.png");
+  const [logoSize, setLogoSize] = useState({ width: "120", height: "90" });
 
   useEffect(() => {
     if (pathname) {
       if (pathname === "/") {
-        setLogoSrc("https://res.cloudinary.com/dmnl4rifd/image/upload/v1759393935/YBS_LOGO_xv6mug.png");
-        setLogoSize({ width: "140", height: "50" });
+        setLogoSrc("https://res.cloudinary.com/dmnl4rifd/image/upload/v1759395848/ybs_2_cw8piw.png");
+        setLogoSize({ width: "120", height: "90" });
       } else {
-        setLogoSrc("https://res.cloudinary.com/dmnl4rifd/image/upload/v1759393935/YBS_LOGO_xv6mug.png");
-        setLogoSize({ width: "140", height: "50" });
+        setLogoSrc("https://res.cloudinary.com/dmnl4rifd/image/upload/v1759395848/ybs_2_cw8piw.png");
+        setLogoSize({ width: "120", height: "90" });
       }
     }
   }, [pathname]);
@@ -571,7 +571,7 @@ function Header() {
                       width={logoSize.width}
                       height={logoSize.height}
                       alt="Picture"
-                      className="md:h-[60px] md:w-auto my-3"
+                      className=" w-full  h-full"
                       style={{
                         width: `${logoSize.width}px`,
                         height: `${logoSize.height}px`,

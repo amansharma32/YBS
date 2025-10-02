@@ -48,8 +48,9 @@ const footerLinks = {
 const footerConnect = {
   title: "Connect",
   items: [
-    { label: "Contact Number", value: "9205104767", type: "tel", href: "tel:9205104767" }, 
-    { label: "Email", value: "ronnieromano2482@gmail.com", type: "email", href: "mailto:ronnieromano2482@gmail.com" },
+
+    { label: "Contact Number", value: "920-5104-767", type: "tel", href: "tel:9205104767" }, 
+    { label: "Email", value: "info@yourbeyondsolutions.com", type: "email", href: "mailto:yourbeyondsolutions@gmail.com" },
     
   ],
 };

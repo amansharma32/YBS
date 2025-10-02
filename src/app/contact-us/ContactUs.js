@@ -171,8 +171,8 @@ const ContactUs = () => {
         if (validateForm()) {
           
             emailjs
-                .sendForm("service_v8aigeg", "template_9niaqbr", form.current, {
-                    publicKey: "KKPUCueXdqx5nscVL",
+                .sendForm("service_vgeg", "template_iaqbr", form.current, {
+                    publicKey: "KKPUCuex5nscVL",
                 })
                 .then(() => {
                  

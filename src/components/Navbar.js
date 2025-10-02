@@ -438,16 +438,16 @@ function Header() {
   }, []);
 
   const pathname = usePathname();
-  const [logoSrc, setLogoSrc] = useState("https://res.cloudinary.com/dkbusg4bq/image/upload/v1757502145/be_zitelj.png");
+  const [logoSrc, setLogoSrc] = useState("https://res.cloudinary.com/dmnl4rifd/image/upload/v1759393935/YBS_LOGO_xv6mug.png");
   const [logoSize, setLogoSize] = useState({ width: "140", height: "50" });
 
   useEffect(() => {
     if (pathname) {
       if (pathname === "/") {
-        setLogoSrc("https://res.cloudinary.com/dkbusg4bq/image/upload/v1757502145/be_zitelj.png");
+        setLogoSrc("https://res.cloudinary.com/dmnl4rifd/image/upload/v1759393935/YBS_LOGO_xv6mug.png");
         setLogoSize({ width: "140", height: "50" });
       } else {
-        setLogoSrc("https://res.cloudinary.com/dkbusg4bq/image/upload/v1757502145/be_zitelj.png");
+        setLogoSrc("https://res.cloudinary.com/dmnl4rifd/image/upload/v1759393935/YBS_LOGO_xv6mug.png");
         setLogoSize({ width: "140", height: "50" });
       }
     }

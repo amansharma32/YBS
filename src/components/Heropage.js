@@ -209,7 +209,7 @@ export default function Heropage() {
 
 <OurServices/>
 
-<LogoShowcase />
+{/* <LogoShowcase /> */}
 
 <CaseStudy/>
 

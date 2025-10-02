@@ -127,7 +127,7 @@ export default function ServiceCards() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-left    pt-20 text-gray-900 sm:text-5xl lg:text-6xl tracking-tight"
           >
-            Our <span className="bg-clip-text text-transparent bg-gradient-to-r to-[#0093E9] from-cyan-600">Premium</span> Services
+            Our <span className="bg-clip-text text-transparent bg-gradient-to-r to-[#0093E9] from-red-600">Premium</span> Services
           </motion.h2>
         </div>
 
@@ -158,7 +158,7 @@ export default function ServiceCards() {
                     className="object-cover w-full h-full"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                  <div className="absolute top-4 right-4 flex items-center justify-center w-12 h-12 rounded-full bg-white/90 text-indigo-600 text-2xl shadow-sm">
+                  <div className="absolute top-4 right-4 flex items-center justify-center w-12 h-12 rounded-full bg-white/90 text-red-600 text-2xl shadow-sm">
                     {service.icon}
                   </div>
                 </motion.div>
@@ -173,7 +173,7 @@ export default function ServiceCards() {
                   </p>
                   <a
                     href="#"
-                    className="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-500 transition-colors duration-200 group/link"
+                    className="inline-flex items-center text-red-600 font-medium hover:text-red-500 transition-colors duration-200 group/link"
                   >
                     {service.link}
                     <svg

@@ -213,7 +213,7 @@ export default function Heropage() {
 
 <CaseStudy/>
 
-<NewService/>
+{/* <NewService/> */}
 
 <ProjectBasedPackages/>
             

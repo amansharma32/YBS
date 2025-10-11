@@ -50,7 +50,7 @@ const footerConnect = {
   items: [
 
     { label: "Contact Number", value: "920-5104-767", type: "tel", href: "tel:9205104767" }, 
-    { label: "Email", value: "info@yourbeyondsolutions.com", type: "email", href: "mailto:yourbeyondsolutions@gmail.com" },
+    { label: "Email", value: "yourbeyondsolutions@gmail.com", type: "email", href: "mailto:yourbeyondsolutions@gmail.com" },
     
   ],
 };

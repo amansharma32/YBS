@@ -418,12 +418,7 @@ const ContactUs = () => {
           >
            <img src="https://cdn-icons-png.flaticon.com/512/14009/14009677.png" className=' h-9 w-9' alt="" /> <strong>INDIA  </strong>
           </button>
-          <button
-            onClick={() => setActiveLocation('usa')}
-            className={`flex-1 py-3 px-4 rounded-xl text-base font-medium transition-colors duration-200 flex items-center justify-center gap-2 ${activeLocation === 'usa' ? 'bg-cyan-500 text-white shadow-md' : 'text-gray-700 hover:bg-gray-200'}`}
-          > 
-            <img src="https://cdn-icons-png.flaticon.com/512/206/206626.png"  className=' h-9 w-9' alt="" /><strong> USA  </strong>
-          </button>
+        
         </div>
 
         {showMap && (
@@ -435,8 +430,10 @@ const ContactUs = () => {
           >
             {/* Left Side: Map Container */}
             <div className="w-full   rounded-xl overflow-hidden shadow-lg border border-gray-200">
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.937462191515!2d77.02752827554416!3d28.39095677579762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d22c3ae1907e1%3A0x3f36ee7e064eac62!2sREACH%20MY%20TOWER!5e0!3m2!1sen!2sin!4v1753353636367!5m2!1sen!2sin" width="600" height="450"   allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d847.5184527731385!2d77.10390461626876!3d28.432550703961603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1f54c18cd21d%3A0xe5382e71003dc375!2sOrchid%20Centre!5e1!3m2!1sen!2sin!4v1760187497053!5m2!1sen!2sin" width="600" height="450"   allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
+
+           
 
             {/* Right Side: Contact Details */}
             <motion.div
@@ -447,7 +444,7 @@ const ContactUs = () => {
               className=" md:space-y-7  p-4 md:p-14    rounded-xl bg-gray-50 border border-gray-100 shadow-inner   flex flex-col justify-center" // Added flex-col & justify-center for vertical alignment
             >
               <h3 className=" text-lg md:text-3xl font-bold text-gray-800">
-                {activeLocation === 'india' ? 'Digital Flux India' : 'Digital Flux Inc. USA'}
+                {activeLocation === 'india' ? 'YBS' : 'YBS USA'}
               </h3>
               <div className="space-y-6"> {/* Changed grid to space-y for vertical stacking */}
                 {/* Address */}
@@ -485,8 +482,8 @@ const ContactUs = () => {
                   <div>
                     <p className=" md:text-lg font-medium text-gray-800">Email</p>
                     <p className="text-cyan-600 hover:underline mt-1 transition-colors duration-200">
-                      <a   className=' text-sm' href={`mailto:${activeLocation === 'india' ? 'ronnieromano2482@gmail.com' : 'ronnieromano2482@gmail.com'}`}>
-                        {activeLocation === 'india' ? 'ronnieromano2482@gmail.com' : 'ronnieromano2482@gmail.com'}
+                      <a   className=' text-sm' href={`mailto:${activeLocation === 'india' ? 'yourbeyondsolutions@gmail.com' : 'yourbeyondsolutions@gmail.com'}`}>
+                        {activeLocation === 'india' ? 'yourbeyondsolutions@gmail.com' : 'yourbeyondsolutions@gmail.com'}
                       </a>
                     </p>
                   </div>

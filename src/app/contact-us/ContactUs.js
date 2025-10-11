@@ -461,18 +461,17 @@ const ContactUs = () => {
                       <>
                        <div className=' text-sm'>
                         <p className="text-gray-600 mt-1"></p>
-                        <p className="text-gray-600">#603, Reach My Tower
-Sec-70, </p>
-                        <p className="text-gray-600">Gurugram-122001</p>
+                        <p className="text-gray-600">Golf Course Rd, Sector 53,  </p>
+                        <p className="text-gray-600">Gurugram, Haryana 122011</p>
                         </div>
                       </>
                     ) : (
                       <>
-                       <div className=' text-sm'>
-                         <p className="text-gray-600 mt-1">456 Innovation Drive</p>
-                        <p className="text-gray-600">New York, NY 10001</p>
-                        <p className="text-gray-600">United States</p>
-                       </div>
+                        <div className=' text-sm'>
+                        <p className="text-gray-600 mt-1"></p>
+                        <p className="text-gray-600">Golf Course Rd, Sector 53,  </p>
+                        <p className="text-gray-600">Gurugram, Haryana 122011</p>
+                        </div>
                       </>
                     )}
                   </div>

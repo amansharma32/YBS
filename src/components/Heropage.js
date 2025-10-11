@@ -19,6 +19,7 @@ import Firespark from './sections/Firespark'
 import ProjectBasedPackages from './sections/ProjectBasedPackages'
 import Head from 'next/head'
 import Script from 'next/script'
+import Count from './Count'
 
 
 export default function Heropage() {
@@ -110,7 +111,7 @@ export default function Heropage() {
         <>
   
       {/* Google Analytics */}
-   
+    {/* <Count/> */}
 
    <div
 

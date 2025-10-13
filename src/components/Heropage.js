@@ -45,7 +45,7 @@ export default function Heropage() {
 
     {
       id: 1,
-      video: 'https://res.cloudinary.com/dkbusg4bq/video/upload/v1755162775/unwatermark_stock-footage-abstract-digital-data-wave-with-glowing-particles-and-dynamic-lines-on-a-dark-background-concept_gdroba.mp4',
+      video: 'https://www.pexels.com/download/video/18069701/',
     }
  
   ];

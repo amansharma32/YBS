@@ -438,16 +438,16 @@ function Header() {
   }, []);
 
   const pathname = usePathname();
-  const [logoSrc, setLogoSrc] = useState("https://res.cloudinary.com/dmnl4rifd/image/upload/v1759395848/ybs_2_cw8piw.png");
+  const [logoSrc, setLogoSrc] = useState("https://res.cloudinary.com/dmnl4rifd/image/upload/v1760336774/4k-preimium_bj8yld.webp");
   const [logoSize, setLogoSize] = useState({ width: "120", height: "90" });
 
   useEffect(() => {
     if (pathname) {
       if (pathname === "/") {
-        setLogoSrc("https://res.cloudinary.com/dmnl4rifd/image/upload/v1759395848/ybs_2_cw8piw.png");
+        setLogoSrc("https://res.cloudinary.com/dmnl4rifd/image/upload/v1760336774/4k-preimium_bj8yld.webp");
         setLogoSize({ width: "120", height: "90" });
       } else {
-        setLogoSrc("https://res.cloudinary.com/dmnl4rifd/image/upload/v1759395848/ybs_2_cw8piw.png");
+        setLogoSrc("https://res.cloudinary.com/dmnl4rifd/image/upload/v1760336774/4k-preimium_bj8yld.webp");
         setLogoSize({ width: "120", height: "90" });
       }
     }

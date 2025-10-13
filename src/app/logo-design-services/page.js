@@ -3,9 +3,9 @@ import LogoDesignService from './LogoDesignService'
 
 export const metadata = {
  
-  title: "Custom Logo Design Services | Top Logo Creation Agency | Beyond Solutions",
+  title: "Custom Logo Design Services | Top Logo Creation Agency | Beyond Solutions (YBS)",
    
-  description: "Craft a memorable brand identity with Beyond Solutions's custom logo design services. We create unique and impactful logos for businesses globally. Partner with our expert team today!",
+  description: "Craft a memorable brand identity with Beyond Solutions (YBS)'s custom logo design services. We create unique and impactful logos for businesses globally. Partner with our expert team today!",
  
   keywords: [
     "logo design services",
@@ -32,8 +32,8 @@ export const metadata = {
   
   openGraph: { 
 
-    title: "Global Logo Design & Brand Identity Services | Beyond Solutions",
-    description: "Beyond Solutions creates powerful brand identities through custom logo design. Let us help you build a visual identity that resonates with your audience.",
+    title: "Global Logo Design & Brand Identity Services | Beyond Solutions (YBS)",
+    description: "Beyond Solutions (YBS) creates powerful brand identities through custom logo design. Let us help you build a visual identity that resonates with your audience.",
     url: "https://www.yourbeyondsolutions.com/services/logo-design-services",  
     type: "website",
 
@@ -43,7 +43,7 @@ export const metadata = {
         url: "https://www.pexels.com/photo/marketing-slogan-on-paper-7661139/", 
         width: 1200,
         height: 630,
-        alt: "Beyond Solutions's custom logo and brand identity design services.",
+        alt: "Beyond Solutions (YBS)'s custom logo and brand identity design services.",
       },
 
     ],
@@ -58,9 +58,9 @@ export const metadata = {
 
     card: "summary_large_image", 
 
-    title: "Create a Memorable Logo for Your Brand | Beyond Solutions",
+    title: "Create a Memorable Logo for Your Brand | Beyond Solutions (YBS)",
 
-    description: "From concept to final design, Beyond Solutions delivers creative and professional logos that make your brand stand out. Serving clients worldwide.",
+    description: "From concept to final design, Beyond Solutions (YBS) delivers creative and professional logos that make your brand stand out. Serving clients worldwide.",
 
     image: "https://www.pexels.com/photo/marketing-slogan-on-paper-7661139/",
   },

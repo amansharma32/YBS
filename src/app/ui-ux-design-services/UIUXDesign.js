@@ -602,7 +602,7 @@ export default function UIUXDesign() {
                     </p>
                   </div>
                   <p className=" font-sans text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
-                    At Beyond Solutions, we design intuitive and engaging digital
+                    At Beyond Solutions (YBS), we design intuitive and engaging digital
                     experiences that put the user first. Our UI/UX design
                     services are at the heart of our digital offerings, helping
                     brands build websites, applications, and platforms that are

@@ -6,7 +6,7 @@ export const metadata = {
 
   title: "Top Cyber Security Company | Global Cyber Security Services Agency",
 
-  description: "Protect your business with Beyond Solutions' expert cybersecurity services. We provide innovative solutions globally for B2B, B2C, D2C businesses, and more. Contact us today!",
+  description: "Protect your business with Beyond Solutions (YBS)' expert cybersecurity services. We provide innovative solutions globally for B2B, B2C, D2C businesses, and more. Contact us today!",
 
 
   keywords: [
@@ -29,7 +29,7 @@ export const metadata = {
     "PCI DSS compliance",
     "security consulting",
     "global cyber security",
-    "Beyond Solutions cyber security",
+    "Beyond Solutions (YBS) cyber security",
     "expert cyber security services",
     "cyber security USA",
     "cyber security Europe",
@@ -45,9 +45,9 @@ export const metadata = {
 
   openGraph: {
 
-    title: "Global Cyber Security Services for B2B, B2C, D2C | Beyond Solutions",
+    title: "Global Cyber Security Services for B2B, B2C, D2C | Beyond Solutions (YBS)",
 
-    description: "Partner with Beyond Solutions, a leading cybersecurity agency, to protect your business with cutting-edge security solutions for global markets.",
+    description: "Partner with Beyond Solutions (YBS), a leading cybersecurity agency, to protect your business with cutting-edge security solutions for global markets.",
 
     url: "https://www.yourbeyondsolutions.com/services/cyber-security-services",
 
@@ -59,7 +59,7 @@ export const metadata = {
         url: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
     width: 1200,
         height: 630,
-        alt: "Beyond Solutions's expert cybersecurity services for global businesses.",
+        alt: "Beyond Solutions (YBS)'s expert cybersecurity services for global businesses.",
       },
     ],
   },
@@ -71,9 +71,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Expert Cyber Security for Global Businesses | Beyond Solutions",
+    title: "Expert Cyber Security for Global Businesses | Beyond Solutions (YBS)",
 
-    description: "From B2B to D2C, Beyond Solutions delivers innovative cybersecurity solutions worldwide. Protect your business with our expert agency.",
+    description: "From B2B to D2C, Beyond Solutions (YBS) delivers innovative cybersecurity solutions worldwide. Protect your business with our expert agency.",
 
     image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
   },

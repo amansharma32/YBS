@@ -4,9 +4,9 @@ import BrandingConsultingService from './BrandingConsultingService'
 
 export const metadata = {
   
-  title: "Top Branding Consulting & Brand Strategy Agency | Global | Beyond Solutions",
+  title: "Top Branding Consulting & Brand Strategy Agency | Global | Beyond Solutions (YBS)",
   
-  description: "Elevate your brand with Beyond Solutions's expert branding consulting services. We offer comprehensive brand strategy, identity, and design solutions for businesses globally.",
+  description: "Elevate your brand with Beyond Solutions (YBS)'s expert branding consulting services. We offer comprehensive brand strategy, identity, and design solutions for businesses globally.",
 
   keywords: [
     "branding consulting",
@@ -21,7 +21,7 @@ export const metadata = {
     "brand development company",
     "strategic branding",
     "brand management",
-    "Beyond Solutions branding",
+    "Beyond Solutions (YBS) branding",
     "branding agency India",
     "branding consultant USA",
     "brand strategy Europe",
@@ -38,9 +38,9 @@ export const metadata = {
    
   openGraph: {
      
-    title: "Global Branding & Brand Identity Solutions | Beyond Solutions Consulting",
+    title: "Global Branding & Brand Identity Solutions | Beyond Solutions (YBS) Consulting",
      
-    description: "Partner with Beyond Solutions for innovative branding consulting, from strategic brand development to impactful identity design, for businesses worldwide.",
+    description: "Partner with Beyond Solutions (YBS) for innovative branding consulting, from strategic brand development to impactful identity design, for businesses worldwide.",
      
     url: "https://www.yourbeyondsolutions.com/services/brand-consulting-services",  
      
@@ -50,7 +50,7 @@ export const metadata = {
         url: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", //  
         width: 1200,
         height: 630,
-        alt: "Beyond Solutions's expert branding consulting and brand strategy services.",
+        alt: "Beyond Solutions (YBS)'s expert branding consulting and brand strategy services.",
       },
     ],
   },
@@ -61,8 +61,8 @@ export const metadata = {
  
   twitter: { 
     card: "summary_large_image", 
-    title: "Strategic Brand Consulting for Global Growth | Beyond Solutions", 
-    description: "Build a powerful brand identity with Beyond Solutions. Our branding consulting services drive recognition and growth for businesses worldwide.", 
+    title: "Strategic Brand Consulting for Global Growth | Beyond Solutions (YBS)", 
+    description: "Build a powerful brand identity with Beyond Solutions (YBS). Our branding consulting services drive recognition and growth for businesses worldwide.", 
     image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
   },
 };

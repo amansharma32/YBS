@@ -4,9 +4,9 @@ import VisualizationPage from './VisualizationPage'
 
 export const metadata = {
   
-  title: "Professional 2D & 3D Visualisation Services | Beyond Solutions",
+  title: "Professional 2D & 3D Visualisation Services | Beyond Solutions (YBS)",
   
-  description: "Bring your ideas to life with Beyond Solutions's 2D & 3D visualisation services. We create photorealistic renders, architectural walkthroughs, and product models.",
+  description: "Bring your ideas to life with Beyond Solutions (YBS)'s 2D & 3D visualisation services. We create photorealistic renders, architectural walkthroughs, and product models.",
 
   keywords: [
     "2D visualisation services",
@@ -22,7 +22,7 @@ export const metadata = {
     "interactive 3D",
     "3D product configurators",
     "industrial visualisation",
-    "Beyond Solutions visualisation",
+    "Beyond Solutions (YBS) visualisation",
     "visualisation agency India",
     "3D rendering USA",
     "visualisation services Europe",
@@ -38,9 +38,9 @@ export const metadata = {
    
   openGraph: {
      
-    title: "2D & 3D Visualisation for Architecture & Products | Beyond Solutions",
+    title: "2D & 3D Visualisation for Architecture & Products | Beyond Solutions (YBS)",
      
-    description: "Beyond Solutions specializes in advanced 2D & 3D visualisation, from detailed product renders to immersive architectural experiences for global clients.",
+    description: "Beyond Solutions (YBS) specializes in advanced 2D & 3D visualisation, from detailed product renders to immersive architectural experiences for global clients.",
      
     url: "https://www.yourbeyondsolutions.com/services/2d-3d-visualization-services",  
      
@@ -50,7 +50,7 @@ export const metadata = {
         url: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
         width: 1200,
         height: 630,
-        alt: "Beyond Solutions's 2D and 3D visualisation services for architectural and product design.",
+        alt: "Beyond Solutions (YBS)'s 2D and 3D visualisation services for architectural and product design.",
       },
     ],
   },
@@ -61,8 +61,8 @@ export const metadata = {
  
   twitter: { 
     card: "summary_large_image", 
-    title: "Expert 2D/3D Visualisation & Rendering | Beyond Solutions", 
-    description: "Transform your concepts into stunning visuals with Beyond Solutions. Our 2D/3D visualisation services deliver photorealistic quality and creative impact.", 
+    title: "Expert 2D/3D Visualisation & Rendering | Beyond Solutions (YBS)", 
+    description: "Transform your concepts into stunning visuals with Beyond Solutions (YBS). Our 2D/3D visualisation services deliver photorealistic quality and creative impact.", 
     image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D", 
   },
 };

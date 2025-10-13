@@ -488,7 +488,7 @@ const servicesData = [
                   </div>
                   <p className="  text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
-          At Beyond Solutions, we transform raw data into a strategic asset. Our AI and Machine Learning services are at the forefront of our technology offerings, helping businesses build intelligent systems that not only automate processes but also generate deep, predictive insights. We believe that a data-centric approach is the key to unlocking new efficiencies, driving competitive advantage, and fueling sustainable growth. Our expert data scientists and engineers meticulously architect every solution, ensuring it's not just technologically advanced but also secure, scalable, and perfectly aligned with your specific business objectives.
+          At Beyond Solutions (YBS), we transform raw data into a strategic asset. Our AI and Machine Learning services are at the forefront of our technology offerings, helping businesses build intelligent systems that not only automate processes but also generate deep, predictive insights. We believe that a data-centric approach is the key to unlocking new efficiencies, driving competitive advantage, and fueling sustainable growth. Our expert data scientists and engineers meticulously architect every solution, ensuring it's not just technologically advanced but also secure, scalable, and perfectly aligned with your specific business objectives.
 
                   </p>
 

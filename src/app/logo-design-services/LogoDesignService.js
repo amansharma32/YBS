@@ -45,7 +45,7 @@ export default function LogoDesignService() {
 
     const [activeFaq, setActiveFaq] = useState(null);
 
-    // Define the content data for Beyond Solutions's web development services
+    // Define the content data for Beyond Solutions (YBS)'s web development services
 
     const WebDevServicesSection = () => {
         const ref = useRef(null);
@@ -503,7 +503,7 @@ export default function LogoDesignService() {
                                     <p className=" font-sans text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
 
-                                      At Beyond Solutions, our expert logo designing service is the cornerstone of a powerful brand. We believe a logo is more than just an image; it's the visual representation of your brand's essence, values, and vision. Our professional designers work closely with you to understand your business and audience, crafting a custom logo that is unique, memorable, and impactful. Whether you're a startup or an established enterprise, our creative process is driven by strategy to ensure your brand's new visual identity stands out in a competitive global market and resonates deeply with your target customers
+                                      At Beyond Solutions (YBS), our expert logo designing service is the cornerstone of a powerful brand. We believe a logo is more than just an image; it's the visual representation of your brand's essence, values, and vision. Our professional designers work closely with you to understand your business and audience, crafting a custom logo that is unique, memorable, and impactful. Whether you're a startup or an established enterprise, our creative process is driven by strategy to ensure your brand's new visual identity stands out in a competitive global market and resonates deeply with your target customers
 
                                    
 

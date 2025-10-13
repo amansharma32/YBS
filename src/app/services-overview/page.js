@@ -6,14 +6,14 @@ import ServicePage from './ServicePage'
 export const metadata = {
    
   // Max ~60-70 characters.
-  title: "Premium Web Dev, Digital Marketing & IT Solutions Worldwide | Beyond Solutions",
+  title: "Premium Web Dev, Digital Marketing & IT Solutions Worldwide | Beyond Solutions (YBS)",
   
    
-  description: "Elevate your enterprise with Beyond Solutions's bespoke web development, advanced digital marketing, and robust IT solutions. Serving discerning clients in the USA, Europe, Australia, Switzerland, Dubai, and beyond.",
+  description: "Elevate your enterprise with Beyond Solutions (YBS)'s bespoke web development, advanced digital marketing, and robust IT solutions. Serving discerning clients in the USA, Europe, Australia, Switzerland, Dubai, and beyond.",
 
   
   keywords: [
-    "Beyond Solutions",
+    "Beyond Solutions (YBS)",
     "digital services",
     "web development company",
     "digital marketing agency",
@@ -36,8 +36,8 @@ export const metadata = {
   robots: "index, follow",
   
   openGraph: {
-    title: "Global Digital Excellence: Web Dev, Marketing & IT by Beyond Solutions",
-    description: "Partner with Beyond Solutions for cutting-edge web development, strategic digital campaigns, and secure IT infrastructure across the USA, Europe, Australia, Switzerland, and Dubai.",
+    title: "Global Digital Excellence: Web Dev, Marketing & IT by Beyond Solutions (YBS)",
+    description: "Partner with Beyond Solutions (YBS) for cutting-edge web development, strategic digital campaigns, and secure IT infrastructure across the USA, Europe, Australia, Switzerland, and Dubai.",
     url: "https://www.yourbeyondsolutions.com/services-overview",  
     type: "website",
     images: [
@@ -45,7 +45,7 @@ export const metadata = {
         url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&h=630&q=75",  
         width: 1200,
         height: 630,
-        alt: "Beyond Solutions's comprehensive digital services for global businesses.",
+        alt: "Beyond Solutions (YBS)'s comprehensive digital services for global businesses.",
       },
     ],
   },
@@ -58,8 +58,8 @@ export const metadata = {
    
   twitter: {
     card: "summary_large_image",
-    title: "Transform Your Business Globally | Beyond Solutions Services",
-    description: "Beyond Solutions offers innovative web solutions, strategic digital campaigns, and robust IT services for businesses in key markets worldwide, including USA, Europe, and UAE.",
+    title: "Transform Your Business Globally | Beyond Solutions (YBS) Services",
+    description: "Beyond Solutions (YBS) offers innovative web solutions, strategic digital campaigns, and robust IT services for businesses in key markets worldwide, including USA, Europe, and UAE.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&h=630&q=75",  
   },
 };

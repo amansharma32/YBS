@@ -133,7 +133,7 @@ export default function Heropage() {
                 autoPlay
                 loop
                 muted
-                poster="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.1.0&auto=format&fit=crop&w=900&q=60"
+                poster="https://images.pexels.com/photos/18069696/pexels-photo-18069696.png"
                 playsInline
                 type="video/mp4"
                 className=" w-full h-full object-cover brightness-[100%]"
@@ -174,7 +174,7 @@ export default function Heropage() {
                                 <p className='p-anime'>Into Real Projects</p>
                                 <p className='p-anime'> That Deliver Results</p>
                                 <p className=' py-5 text-white-50 relative  z-10 text-sm md:text-lg  pointer-events-none'>
-                                 Hi,  We are Beyond Solutions, a agency based in india   <br /> 
+                                 Hi, At Your Beyond Solutions (YBS), a agency based in india   <br /> 
                                with passion for all web services. </p>
  
                             </div>

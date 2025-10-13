@@ -43,7 +43,7 @@ export default function ProductDesign() {
 
     const [activeFaq, setActiveFaq] = useState(null);
 
-    // Define the content data for Beyond Solutions's web development services
+    // Define the content data for Beyond Solutions (YBS)'s web development services
 
     const WebDevServicesSection = () => {
         const ref = useRef(null);
@@ -513,7 +513,7 @@ export default function ProductDesign() {
                                     <p className=" font-sans text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
 
-                                        At Beyond Solutions, our Product Design Services are your strategic partner in innovation. We specialize in transforming your initial concepts into tangible, market-ready products that not only delight users but also drive significant business growth. Our comprehensive approach combines meticulous research and user-centric design with advanced engineering, ensuring every product is not only beautiful but also functional, manufacturable, and commercially viable. Whether you are launching a new consumer product or developing an industrial tool, our expert team delivers end-to-end solutions that make your product stand out in a competitive global market.
+                                        At Beyond Solutions (YBS), our Product Design Services are your strategic partner in innovation. We specialize in transforming your initial concepts into tangible, market-ready products that not only delight users but also drive significant business growth. Our comprehensive approach combines meticulous research and user-centric design with advanced engineering, ensuring every product is not only beautiful but also functional, manufacturable, and commercially viable. Whether you are launching a new consumer product or developing an industrial tool, our expert team delivers end-to-end solutions that make your product stand out in a competitive global market.
 
 
 

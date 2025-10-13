@@ -5,11 +5,11 @@ import { useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
 // Image URLs
-const BRANDING_IMG = 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.1.0&auto=format&fit=crop&w=900&q=60';
-const UIUX_IMG = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.1.0&auto=format&fit=crop&w=900&q=60';
-const ECOMMERCE_IMG = 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-4.1.0&auto=format&fit=crop&w=900&q=60';
-const WEBAPP_IMG = 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.1.0&auto=format&fit=crop&w=900&q=60';
-const MOBILEAPP_IMG = 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.1.0&auto=format&fit=crop&w=900&q=60';
+const BRANDING_IMG = 'https://images.unsplash.com/photo-1658863025658-4a259cc68fc9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1625';
+const UIUX_IMG = 'https://images.unsplash.com/photo-1587440871875-191322ee64b0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2071';
+const ECOMMERCE_IMG = 'https://images.unsplash.com/photo-1606964212858-c215029db704?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070';
+const WEBAPP_IMG = 'https://images.unsplash.com/photo-1678690832310-cf614292671d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1689';
+const MOBILEAPP_IMG = 'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070';
 const DEVOPS_IMG = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.1.0&auto=format&fit=crop&w=900&q=60';
 
 const services = [
@@ -127,7 +127,7 @@ export default function ServiceCards() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-left    pt-20 text-gray-900 sm:text-5xl lg:text-6xl tracking-tight"
           >
-            Our <span className="bg-clip-text text-transparent bg-gradient-to-r to-[#0093E9] from-red-600">Premium</span> Services
+            Our <span className="">Premium</span> Services
           </motion.h2>
         </div>
 
@@ -149,7 +149,7 @@ export default function ServiceCards() {
               <div className="h-full bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 transition-all duration-300">
                 {/* Image Container */}
                 <motion.div
-                  className="relative h-48 overflow-hidden"
+                  className="relative  h-80 w-full overflow-hidden"
                   variants={imageVariants}
                 >
                   <img
@@ -158,9 +158,7 @@ export default function ServiceCards() {
                     className="object-cover w-full h-full"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                  <div className="absolute top-4 right-4 flex items-center justify-center w-12 h-12 rounded-full bg-white/90 text-red-600 text-2xl shadow-sm">
-                    {service.icon}
-                  </div>
+                 
                 </motion.div>
 
                 {/* Content */}

@@ -98,8 +98,8 @@ const TypeWriterNew = () => {
             <div className="flex flex-col lg:flex-row items-center gap-12">
               {/* Left Column - Interactive Typography */}
               <div className="lg:w-1/2">
-                <h2 className="text-3xl md:text-6xl font-bold   text-white mb-8 leading-tight">
-                  <Typewriter text="Beyond Solutions Partnership" speed={80} />
+                <h2 className="text-3xl md:text-4xl font-bold   text-white mb-8 leading-tight">
+                  <Typewriter text="Beyond Solutions (YBS) Partnership" speed={80} />
                 </h2>
                 
                 <div className="space-y-6">
@@ -154,7 +154,7 @@ const TypeWriterNew = () => {
 
 const ConsoleAnimation = () => {
   const [lines, setLines] = useState([
-    { text: "$ flux.initPartnership()", color: "text-green-400", show: false },
+    { text: "$ YBS.initPartnership()", color: "text-green-400", show: false },
     { text: "> Initializing digital transformation...", color: "text-gray-400", show: false },
     { text: "> Analyzing business potential...", color: "text-gray-400", show: false },
     { text: "> Found optimal growth pathways:", color: "text-cyan-400", show: false }

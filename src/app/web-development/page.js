@@ -7,7 +7,7 @@ export const metadata = {
   title: "Top Web Development Company | Global Website Development Services Agency",
   
   
-  description: "Transform your business with Beyond Solutions's expert web development services. We provide innovative solutions globally to B2B, B2C, D2C businesses, and more. Contact us today!",
+  description: "Transform your business with Beyond Solutions (YBS)'s expert web development services. We provide innovative solutions globally to B2B, B2C, D2C businesses, and more. Contact us today!",
 
  
   keywords: [
@@ -23,7 +23,7 @@ export const metadata = {
     "global web development",
     "web solutions provider",
     "expert web developers",
-    "Beyond Solutions web development",
+    "Beyond Solutions (YBS) web development",
     "innovative web solutions",
     "scalable web applications",
     "web development USA",
@@ -44,9 +44,9 @@ export const metadata = {
   robots: "index, follow",
  
   openGraph: {
-    title: "Global Web Development Services for B2B, B2C, D2C | Beyond Solutions",
+    title: "Global Web Development Services for B2B, B2C, D2C | Beyond Solutions (YBS)",
 
-    description: "Partner with Beyond Solutions, a leading web development agency, to transform your business with cutting-edge website and web application solutions for global markets.",
+    description: "Partner with Beyond Solutions (YBS), a leading web development agency, to transform your business with cutting-edge website and web application solutions for global markets.",
 
     url: "https://www.yourbeyondsolutions.com/services/web-development",  
 
@@ -57,7 +57,7 @@ export const metadata = {
         url: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
         width: 1200,
         height: 630,
-        alt: "Beyond Solutions's expert web development services for global businesses.",
+        alt: "Beyond Solutions (YBS)'s expert web development services for global businesses.",
       },
     ],
   },
@@ -72,9 +72,9 @@ export const metadata = {
    
     card: "summary_large_image",
     
-    title: "Expert Web Development for Global Businesses | Beyond Solutions",
+    title: "Expert Web Development for Global Businesses | Beyond Solutions (YBS)",
     
-    description: "From B2B to D2C, Beyond Solutions delivers innovative web development solutions worldwide. Elevate your online presence with our expert agency.",
+    description: "From B2B to D2C, Beyond Solutions (YBS) delivers innovative web development solutions worldwide. Elevate your online presence with our expert agency.",
     
     image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D", 
   },

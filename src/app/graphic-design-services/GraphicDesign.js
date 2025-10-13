@@ -27,24 +27,24 @@ export default function GraphicDesign() {
     const faqs = [
 
         {
-            question: "What graphic design services does Beyond Solutions provide ?",
-            answer: "Beyond Solutions offers a comprehensive range of graphic design services to help businesses establish a strong visual brand presence. Our expertise includes everything from web design and app interface design to branding and logo design, social media creatives, and print collateral design. We cater to diverse design requirements to ensure your brand stands out across all digital and print channels."
+            question: "What graphic design services does Beyond Solutions (YBS) provide ?",
+            answer: "Beyond Solutions (YBS) offers a comprehensive range of graphic design services to help businesses establish a strong visual brand presence. Our expertise includes everything from web design and app interface design to branding and logo design, social media creatives, and print collateral design. We cater to diverse design requirements to ensure your brand stands out across all digital and print channels."
         },
 
         {
-            question: "How does Beyond Solutions ensure top-quality graphic design ?",
-            answer: "At Beyond Solutions, we have a team of highly experienced graphic designers who blend creativity with industry best practices to deliver outstanding results. We follow a collaborative approach, working closely with clients to understand their vision and deliver designs that perfectly align with their brand identity and business goals. Our commitment to quality and attention to detail is what sets us apart."
+            question: "How does Beyond Solutions (YBS) ensure top-quality graphic design ?",
+            answer: "At Beyond Solutions (YBS), we have a team of highly experienced graphic designers who blend creativity with industry best practices to deliver outstanding results. We follow a collaborative approach, working closely with clients to understand their vision and deliver designs that perfectly align with their brand identity and business goals. Our commitment to quality and attention to detail is what sets us apart."
         },
 
         {
-            question: "Can Beyond Solutions handle projects of all sizes ?",
+            question: "Can Beyond Solutions (YBS) handle projects of all sizes ?",
             answer: "Absolutely! We have the expertise and resources to handle both small and large-scale graphic design projects. Whether you need a single social media creative, a full suite of marketing materials, or a complete branding overhaul, our team is prepared to meet your needs and deliver exceptional results efficiently."
         },
 
 
 
         {
-            question: "How does the graphic design process work at Beyond Solutions ?",
+            question: "How does the graphic design process work at Beyond Solutions (YBS) ?",
             answer: "Our graphic design process is structured to be transparent and collaborative. It begins with a detailed discovery phase to understand your specific requirements. We then move to conceptualizing and creating initial drafts. The final design is refined through an iterative feedback loop with you, ensuring the end product not only meets but exceeds your expectations and elevates your brand's visual presence."
         },
        
@@ -547,7 +547,7 @@ export default function GraphicDesign() {
                                     <p className=" font-sans text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
 
-                                 At Beyond Solutions, our Graphic Design Services are a core part of our brand-building expertise. We believe that visually captivating content is essential for communicating complex ideas and leaving a lasting impression. Our designers transform your initial concepts into powerful, visually engaging graphics that not only enhance communication but also reinforce your brand's message. We work closely with you to understand your audience and business goals, ensuring every design is both beautiful and strategic. From a single social media post to a full marketing campaign, our creative process is focused on delivering designs that make your brand stand out in a competitive global market.
+                                 At Beyond Solutions (YBS), our Graphic Design Services are a core part of our brand-building expertise. We believe that visually captivating content is essential for communicating complex ideas and leaving a lasting impression. Our designers transform your initial concepts into powerful, visually engaging graphics that not only enhance communication but also reinforce your brand's message. We work closely with you to understand your audience and business goals, ensuring every design is both beautiful and strategic. From a single social media post to a full marketing campaign, our creative process is focused on delivering designs that make your brand stand out in a competitive global market.
 
 
 

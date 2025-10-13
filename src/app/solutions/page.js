@@ -3,14 +3,14 @@ import Solutions from './Solutions';
 
 export const metadata = {
    
-  title: "Transparent Digital Service Pricing | India & Global | Beyond Solutions",
+  title: "Transparent Digital Service Pricing | India & Global | Beyond Solutions (YBS)",
   
   
-  description: "Explore Beyond Solutions's transparent pricing guide for web development, digital marketing, and IT solutions. Approximate costs for clients in India and worldwide.",
+  description: "Explore Beyond Solutions (YBS)'s transparent pricing guide for web development, digital marketing, and IT solutions. Approximate costs for clients in India and worldwide.",
 
    
   keywords: [
-    "Beyond Solutions pricing",
+    "Beyond Solutions (YBS) pricing",
     "digital service cost",
     "web development pricing",
     "digital marketing rates",
@@ -40,9 +40,9 @@ export const metadata = {
   
   openGraph: {
    
-    title: "Transparent Pricing: Web Dev, Marketing & IT Solutions | Beyond Solutions",
+    title: "Transparent Pricing: Web Dev, Marketing & IT Solutions | Beyond Solutions (YBS)",
    
-    description: "Get a clear understanding of Beyond Solutions's approximate pricing for comprehensive digital services, designed for businesses globally and in India.",
+    description: "Get a clear understanding of Beyond Solutions (YBS)'s approximate pricing for comprehensive digital services, designed for businesses globally and in India.",
      
     url: "https://www.yourbeyondsolutions.com/solutions",  
      
@@ -53,7 +53,7 @@ export const metadata = {
         url: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&h=630&q=75", 
         width: 1200,
         height: 630,
-        alt: "Beyond Solutions's transparent pricing guide for digital services.",
+        alt: "Beyond Solutions (YBS)'s transparent pricing guide for digital services.",
       },
     
     ],
@@ -69,9 +69,9 @@ export const metadata = {
   
     card: "summary_large_image",
    
-    title: "Clear Digital Service Costs | Beyond Solutions Pricing Guide",
+    title: "Clear Digital Service Costs | Beyond Solutions (YBS) Pricing Guide",
    
-    description: "Understand the approximate costs for web, marketing, and IT projects with Beyond Solutions's transparent pricing guide for global and Indian markets.",
+    description: "Understand the approximate costs for web, marketing, and IT projects with Beyond Solutions (YBS)'s transparent pricing guide for global and Indian markets.",
    
     image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&h=630&q=75",  
   },

@@ -4,10 +4,10 @@ import DataAnalytics from './DataAnalytics'
 export const metadata = {
   
   // Updated title to reflect data and analytics services
-  title: "Data-Driven Solutions & Analytics Services | Beyond Solutions",
+  title: "Data-Driven Solutions & Analytics Services | Beyond Solutions (YBS)",
   
   // New description highlighting the value of data services
-  description: "Beyond Solutions offers comprehensive data and analytics services, including business intelligence, data science, and visualization. Turn your data into strategic insights.",
+  description: "Beyond Solutions (YBS) offers comprehensive data and analytics services, including business intelligence, data science, and visualization. Turn your data into strategic insights.",
 
   // Replaced all graphic design keywords with data and analytics terms
   keywords: [
@@ -21,7 +21,7 @@ export const metadata = {
     "machine learning services",
     "strategic insights",
     "BI dashboards",
-    "Beyond Solutions data",
+    "Beyond Solutions (YBS) data",
     "data analytics India",
     "data solutions USA",
     "analytics Europe",
@@ -34,10 +34,10 @@ export const metadata = {
   openGraph: {
      
     // Updated Open Graph title for data services
-    title: "Unlock Insights with Data & Analytics | Beyond Solutions",
+    title: "Unlock Insights with Data & Analytics | Beyond Solutions (YBS)",
      
     // New Open Graph description
-    description: "Harness the power of your data with Beyond Solutions's expert services. We provide the tools and analysis to help you make informed business decisions.",
+    description: "Harness the power of your data with Beyond Solutions (YBS)'s expert services. We provide the tools and analysis to help you make informed business decisions.",
      
     // Kept the correct URL for data analytics services
     url: "https://www.yourbeyondsolutions.com/services/data-analytics-services",  
@@ -62,9 +62,9 @@ export const metadata = {
   twitter: { 
     card: "summary_large_image", 
     // Updated Twitter card title
-    title: "Transform Data into Actionable Insights | Beyond Solutions", 
+    title: "Transform Data into Actionable Insights | Beyond Solutions (YBS)", 
     // Updated Twitter card description
-    description: "From raw data to interactive dashboards, Beyond Solutions delivers data and analytics services that empower your business with a clear, data-driven strategy.", 
+    description: "From raw data to interactive dashboards, Beyond Solutions (YBS) delivers data and analytics services that empower your business with a clear, data-driven strategy.", 
     // New image URL for the Twitter card
     image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D", 
   },

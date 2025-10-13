@@ -40,9 +40,9 @@ export default function OurStorySection() {
               loop
               muted
               playsInline
-              poster="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=80"
+              poster="https://images.pexels.com/photos/20703618/pexels-photo-20703618.jpeg"
             >
-              <source src="https://videos.pexels.com/video-files/18069473/18069473-uhd_1440_2560_24fps.mp4" type="video/mp4" />
+              <source src="https://www.pexels.com/download/video/12080630/" />
               Your browser does not support the video tag.
             </video>
             

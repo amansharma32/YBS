@@ -5,7 +5,7 @@ import Ecomm from './Ecomm'
 export const metadata = {
 
   title: "E-commerce Development Company | Custom Online Store Solutions",
-  description: "Drive sales and enhance customer experience with Beyond Solutions's expert e-commerce development services. We create custom online stores for B2B, B2C, and D2C businesses globally. Contact us today!",
+  description: "Drive sales and enhance customer experience with Beyond Solutions (YBS)'s expert e-commerce development services. We create custom online stores for B2B, B2C, and D2C businesses globally. Contact us today!",
 
   keywords: [
     "e-commerce development company",
@@ -31,8 +31,8 @@ export const metadata = {
   robots: "index, follow",
  
   openGraph: {
-    title: "Expert E-commerce Development Services | Beyond Solutions",
-    description: "Partner with Beyond Solutions, a leading e-commerce development agency, to create scalable and secure online stores that boost conversions and grow your business.",
+    title: "Expert E-commerce Development Services | Beyond Solutions (YBS)",
+    description: "Partner with Beyond Solutions (YBS), a leading e-commerce development agency, to create scalable and secure online stores that boost conversions and grow your business.",
     url: "https://www.yourbeyondsolutions.com/services/e-commerce-services",
     type: "website",
     images: [
@@ -40,7 +40,7 @@ export const metadata = {
         url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ_ml8fg5SD0UYM1XD1lIaFZkvmeUrC386ozeEIAKTvkzgehcN-ABA9fSZtbC-uovLCFI&usqp=CAU",
         width: 1200,
         height: 630,
-        alt: "Beyond Solutions's expert web development services for global businesses.",
+        alt: "Beyond Solutions (YBS)'s expert web development services for global businesses.",
       },
     ],
   },
@@ -51,8 +51,8 @@ export const metadata = {
   
   twitter: {
     card: "summary_large_image",
-    title: "E-commerce Solutions for Global Businesses | Beyond Solutions",
-    description: "From custom platforms to advanced integrations, Beyond Solutions delivers innovative e-commerce solutions worldwide. Elevate your online presence with our expert agency.",
+    title: "E-commerce Solutions for Global Businesses | Beyond Solutions (YBS)",
+    description: "From custom platforms to advanced integrations, Beyond Solutions (YBS) delivers innovative e-commerce solutions worldwide. Elevate your online presence with our expert agency.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ_ml8fg5SD0UYM1XD1lIaFZkvmeUrC386ozeEIAKTvkzgehcN-ABA9fSZtbC-uovLCFI&usqp=CAU",
   },
 };

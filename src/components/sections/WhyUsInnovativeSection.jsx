@@ -52,7 +52,7 @@ const WhyFluxDigital = () => {
         {/* Headline */}
         <div className={`text-center mb-16 transition-all duration-700 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-lg md:text-5xl   font-bold text-gray-900 mb-4">
-            Why <span className=" ">Beyond Solutions</span>?
+            Why <span className=" ">Beyond Solutions (YBS)</span>?
           </p>
           <p className=" text-sm md:text-xl text-gray-600 max-w-3xl mx-auto">
             We blend strategy, design, and technology to create digital experiences that drive real business results.

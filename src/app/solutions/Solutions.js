@@ -120,7 +120,7 @@ function CustomAndAddonSection({ market }) {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className=" text-center md:text-left mb-12"
             >
-                <h2 className="text-2xl  font-bold text-gray-800">IV. The "FLUX Custom" Solution & Add-ons</h2>
+                <h2 className="text-2xl  font-bold text-gray-800">IV. The "Beyond Solutions (YBS) Custom" Solution & Add-ons</h2>
                 <p className="text-md text-gray-500 mt-2">For highly unique or complex needs, and standalone specialized services that require a tailored approach.
 </p>
             </motion.div>
@@ -133,9 +133,9 @@ function CustomAndAddonSection({ market }) {
             >
 
             <div className="box flex flex-col text-left   ">
-                  <h3 className="text-2xl font-bold text-gray-900">The "FLUX Custom" Solution</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">The "Beyond Solutions (YBS) Custom" Solution</h3>
                 <p className="text-gray-600 mt-2 mb-4">
-                The "FLUX Custom" Solution: Pricing for custom projects and enterprise-level engagements will be determined after an in-depth discovery and requirements gathering phase. These can range from ₹3,00,000+ (INR/project or monthly retainer) to $15,000+ (USD/project or monthly retainer), depending on the scale and complexity of the project.
+                The "Beyond Solutions (YBS) Custom" Solution: Pricing for custom projects and enterprise-level engagements will be determined after an in-depth discovery and requirements gathering phase. These can range from ₹3,00,000+ (INR/project or monthly retainer) to $15,000+ (USD/project or monthly retainer), depending on the scale and complexity of the project.
 
                 </p>
              
@@ -407,7 +407,7 @@ const addOnServices = [
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="max-w-4xl mx-auto md:text-left text-center text-gray-500 mb-16">
-            The approximate pricing for Beyond Solutions's comprehensive service packages considers both the domestic (Indian) and international markets.
+            The approximate pricing for Beyond Solutions (YBS)'s comprehensive service packages considers both the domestic (Indian) and international markets.
         </motion.p>
         </div>
   
@@ -421,7 +421,7 @@ const addOnServices = [
           <h3 className="font-bold  md:text-2xl text-lg text-teal-600 mb-3">Important Disclaimer</h3>
 
           <p className="text-gray-600 text-sm leading-relaxed">
-            These are approximate ranges and serve as a general guide. Actual pricing for Beyond Solutions's services will depend on numerous factors, including:
+            These are approximate ranges and serve as a general guide. Actual pricing for Beyond Solutions (YBS)'s services will depend on numerous factors, including:
           </p>
           <ul className="text-gray-600 text-sm list-disc list-inside mt-2 space-y-1">
             <li>Specific Scope & Complexity</li>
@@ -484,7 +484,7 @@ const addOnServices = [
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.1 }}
             className="max-w-7xl mx-auto text-center  md:text-left text-gray-500 py-12">
-            This pricing structure aims to provide flexibility and transparency, allowing Beyond Solutions to cater to a broad spectrum of clients while ensuring profitability and high-quality service delivery across both domestic and international markets.
+            This pricing structure aims to provide flexibility and transparency, allowing Beyond Solutions (YBS) to cater to a broad spectrum of clients while ensuring profitability and high-quality service delivery across both domestic and international markets.
         </motion.p>
       </div>
     </div>

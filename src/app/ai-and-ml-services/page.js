@@ -3,9 +3,9 @@ import Aiml from './Aiml'
 
 export const metadata = {
   
-  title: "AI & Machine Learning Services | Beyond Solutions",
+  title: "AI & Machine Learning Services | Beyond Solutions (YBS)",
   
-  description: "Beyond Solutions offers comprehensive AI and Machine Learning services, from predictive analytics and deep learning to natural language processing. Leverage our expertise to innovate and grow.",
+  description: "Beyond Solutions (YBS) offers comprehensive AI and Machine Learning services, from predictive analytics and deep learning to natural language processing. Leverage our expertise to innovate and grow.",
 
   keywords: [
     "ai services",
@@ -18,7 +18,7 @@ export const metadata = {
     "data science services",
     "ai consulting",
     "ml development",
-    "Beyond Solutions AI"
+    "Beyond Solutions (YBS) AI"
   ],
   
 
@@ -27,9 +27,9 @@ export const metadata = {
    
   openGraph: {
      
-    title: "Transform Your Business with AI & ML | Beyond Solutions",
+    title: "Transform Your Business with AI & ML | Beyond Solutions (YBS)",
      
-    description: "Partner with Beyond Solutions to harness the power of artificial intelligence and machine learning for data-driven decisions, process automation, and intelligent solutions.",
+    description: "Partner with Beyond Solutions (YBS) to harness the power of artificial intelligence and machine learning for data-driven decisions, process automation, and intelligent solutions.",
      
     url: "https://www.yourbeyondsolutions.com/services/ai-and-ml-services",  
      
@@ -39,7 +39,7 @@ export const metadata = {
         url: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1755156356/pic2_kxlkw9.webp",
         width: 1200,
         height: 630,
-        alt: "Beyond Solutions's AI and machine learning services for business transformation.",
+        alt: "Beyond Solutions (YBS)'s AI and machine learning services for business transformation.",
       },
     ],
   },
@@ -50,8 +50,8 @@ export const metadata = {
  
   twitter: { 
     card: "summary_large_image", 
-    title: "Custom AI & Machine Learning Solutions | Beyond Solutions", 
-    description: "From custom models to scalable platforms, Beyond Solutions delivers intelligent AI and ML solutions that drive innovation and competitive advantage for your business.", 
+    title: "Custom AI & Machine Learning Solutions | Beyond Solutions (YBS)", 
+    description: "From custom models to scalable platforms, Beyond Solutions (YBS) delivers intelligent AI and ML solutions that drive innovation and competitive advantage for your business.", 
     image: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1755156356/pic2_kxlkw9.webp", 
   },
 };

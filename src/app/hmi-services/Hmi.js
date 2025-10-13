@@ -568,7 +568,7 @@ export default function hmi() {
                   </div>
                   <p className="  text-sm md:text-md text-gray-600 text-justify  md:text-left pt-3   ">
 
-            At Beyond Solutions, we engineer intuitive and powerful interfaces that put the operator first. Our Human Machine Interface (HMI) services are central to our technology offerings, helping businesses build systems that are not only clear and responsive but also designed to enhance productivity and safety. We believe that a great user experience is the key to minimizing operator error, improving operational efficiency, and driving tangible business results. Our expert designers meticulously craft every element of the interface, ensuring it's not just functional, but also accessible, intuitive, and perfectly aligned with your specific operational needs.
+            At Beyond Solutions (YBS), we engineer intuitive and powerful interfaces that put the operator first. Our Human Machine Interface (HMI) services are central to our technology offerings, helping businesses build systems that are not only clear and responsive but also designed to enhance productivity and safety. We believe that a great user experience is the key to minimizing operator error, improving operational efficiency, and driving tangible business results. Our expert designers meticulously craft every element of the interface, ensuring it's not just functional, but also accessible, intuitive, and perfectly aligned with your specific operational needs.
 
 
                   </p>

@@ -4,9 +4,9 @@ import Hmi from './Hmi'
 
 export const metadata = {
   
-  title: "Human Machine Interface (HMI) Services & Solutions | Beyond Solutions",
+  title: "Human Machine Interface (HMI) Services & Solutions | Beyond Solutions (YBS)",
   
-  description: "Beyond Solutions provides expert Human Machine Interface (HMI) services to create intuitive, efficient, and safe control systems. Enhance user experience and operational productivity.",
+  description: "Beyond Solutions (YBS) provides expert Human Machine Interface (HMI) services to create intuitive, efficient, and safe control systems. Enhance user experience and operational productivity.",
 
   keywords: [
     "hmi services",
@@ -18,7 +18,7 @@ export const metadata = {
     "control panel design",
     "operator interface",
     "industrial automation",
-    "Beyond Solutions HMI",
+    "Beyond Solutions (YBS) HMI",
     "hmi solutions",
     "HMI design services"
   ],
@@ -29,9 +29,9 @@ export const metadata = {
    
   openGraph: {
      
-    title: "Intuitive HMI Design & Development | Beyond Solutions",
+    title: "Intuitive HMI Design & Development | Beyond Solutions (YBS)",
      
-    description: "Partner with Beyond Solutions for next-gen Human Machine Interface solutions that boost operational efficiency, improve safety, and provide a superior user experience.",
+    description: "Partner with Beyond Solutions (YBS) for next-gen Human Machine Interface solutions that boost operational efficiency, improve safety, and provide a superior user experience.",
      
     url: "https://www.yourbeyondsolutions.com/services/hmi-services",  
      
@@ -41,7 +41,7 @@ export const metadata = {
         url: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1755156356/pic2_kxlkw9.webp",
         width: 1200,
         height: 630,
-        alt: "Beyond Solutions's human-machine interface (HMI) services for industrial control systems.",
+        alt: "Beyond Solutions (YBS)'s human-machine interface (HMI) services for industrial control systems.",
       },
     ],
   },
@@ -52,8 +52,8 @@ export const metadata = {
  
   twitter: { 
     card: "summary_large_image", 
-    title: "Boost Productivity with Advanced HMI Services | Beyond Solutions", 
-    description: "Design and develop intelligent HMI systems with Beyond Solutions. Our solutions focus on user-centric design to optimize control, enhance safety, and drive productivity.", 
+    title: "Boost Productivity with Advanced HMI Services | Beyond Solutions (YBS)", 
+    description: "Design and develop intelligent HMI systems with Beyond Solutions (YBS). Our solutions focus on user-centric design to optimize control, enhance safety, and drive productivity.", 
     image: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1755156356/pic2_kxlkw9.webp", 
   },
 };

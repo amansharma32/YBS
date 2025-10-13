@@ -3,12 +3,12 @@ import MobileDevelopment from './MobileDevelopment'
 export const metadata = {
    
 
-  title: "Professional Mobile App Development Services | Beyond Solutions",
-  description: "Beyond Solutions offers comprehensive mobile app development for iOS and Android. We build custom, user-centric apps that drive engagement and business growth.",
+  title: "Professional Mobile App Development Services | Beyond Solutions (YBS)",
+  description: "Beyond Solutions (YBS) offers comprehensive mobile app development for iOS and Android. We build custom, user-centric apps that drive engagement and business growth.",
 
    
   keywords: [
-    "Beyond Solutions mobile app",
+    "Beyond Solutions (YBS) mobile app",
     "mobile app development services",
     "iOS app development",
     "Android app development",
@@ -27,8 +27,8 @@ export const metadata = {
 
  
   openGraph: {
-    title: "Mobile App Development Services | Beyond Solutions",
-    description: "Beyond Solutions specializes in creating innovative and high-performance mobile applications for businesses globally. Partner with us to build your next great app.",
+    title: "Mobile App Development Services | Beyond Solutions (YBS)",
+    description: "Beyond Solutions (YBS) specializes in creating innovative and high-performance mobile applications for businesses globally. Partner with us to build your next great app.",
     url: "https://www.yourbeyondsolutions.com/services/mobile-app-development-services",  
     type: "website",
     images: [
@@ -36,7 +36,7 @@ export const metadata = {
         url: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1755156356/pic1_mcjwxl.webp",  
         width: 1200,
         height: 630,
-        alt: "Beyond Solutions's mobile app development services.",
+        alt: "Beyond Solutions (YBS)'s mobile app development services.",
       },
     ],
   },
@@ -49,7 +49,7 @@ export const metadata = {
    
   twitter: {
     card: "summary_large_image",
-    title: "Build Your Next App with Beyond Solutions",
+    title: "Build Your Next App with Beyond Solutions (YBS)",
     description: "From concept to launch, we provide end-to-end mobile app development services. Get a free consultation for your iOS or Android project today.",
     image: "https://res.cloudinary.com/dkbusg4bq/image/upload/v1755156356/pic1_mcjwxl.webp",  
   },

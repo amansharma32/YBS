@@ -157,8 +157,24 @@ export default function RootLayout({ children }) {
 
   
 <head>
+ <meta itemProp="name" content="YBS" />
+
 
 <meta name="google-site-verification" content="3c-1lT1k3BJMvtFYw2Q5bGH-g3i7A80CbHwFnMeUnuA" />
+
+   <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Beyond Solutions (YBS)",
+              "url": "https://www.yourbeyondsolutions.com",
+              "alternateName": "Beyond Solutions (YBS)",
+            }),
+          }}
+        />
+
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-DQZDJVZSS0"></Script>
 
@@ -173,6 +189,25 @@ export default function RootLayout({ children }) {
         }} />
 
 
+  <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+
+
+        <link
+          rel="preload"
+          href="/fonts/Poppins/Poppins-Medium.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+        
 </head>
 
       <body

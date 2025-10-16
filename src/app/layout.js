@@ -92,6 +92,7 @@ export const metadata = {
 ],
 
 
+
   
   robots: "index, follow",
   appleMobileWebAppCapable: "yes",
@@ -159,7 +160,7 @@ export default function RootLayout({ children }) {
 
 <meta name="google-site-verification" content="3c-1lT1k3BJMvtFYw2Q5bGH-g3i7A80CbHwFnMeUnuA" />
 
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-PK9VZTVG2F "></Script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-DQZDJVZSS0"></Script>
 
         <script dangerouslySetInnerHTML={{
           __html: `
@@ -167,7 +168,7 @@ export default function RootLayout({ children }) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-PK9VZTVG2F');
+            gtag('config', 'G-DQZDJVZSS0');
           `
         }} />
 
